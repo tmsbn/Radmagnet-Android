@@ -180,7 +180,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-
+            default:
 
         }
 
