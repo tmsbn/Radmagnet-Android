@@ -16,6 +16,7 @@ public class Networking {
     private static RestInterface sRestService;
 
     public static RestInterface getRestClient() {
+
         if (sRestService == null) {
 
             String DATE_FORMAT = "dd/MM/yyyy";
