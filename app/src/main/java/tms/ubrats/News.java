@@ -12,21 +12,91 @@ import io.realm.annotations.PrimaryKey;
  */
 public class News extends RealmObject {
 
-    String postType;
+    private String postType;
 
     @PrimaryKey
-    String postId;
+    private String postId;
 
-    Date timeStamp;
+    private Date createdDate;
 
-    boolean active;
-    String headline;
-    String imageUrl;
-    String creator;
-    String creatorDp;
+    private boolean active;
+    private String headline;
+    private String imageUrl;
+    private String creator;
+    private String creatorDp;
 
     @Ignore
-    String sourceUrl;
+    private String source;
 
+    public String getPostType() {
+        return postType;
+    }
 
+    public String getPostId() {
+        return postId;
+    }
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public String getHeadline() {
+        return headline;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public String getCreatorDp() {
+        return creatorDp;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setPostType(String postType) {
+        this.postType = postType;
+    }
+
+    public void setPostId(String postId) {
+        this.postId = postId;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public void setHeadline(String headline) {
+        this.headline = headline;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+
+    public void setCreatorDp(String creatorDp) {
+        this.creatorDp = creatorDp;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
 }

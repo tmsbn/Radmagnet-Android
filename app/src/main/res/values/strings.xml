@@ -5,5 +5,16 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="cannotReachServer_msg">Cannot reach server! Please check your connection</string>
+    <string name="noUpdatesAvaliable_msg">No updates available</string>
+
+    <string-array name="categories">
+        <item>news</item>
+        <item>life hacks</item>
+        <item>events</item>
+        <item>Student Business</item>
+        <item>City Hotspots</item>
+        <item>Deals</item>
+
+    </string-array>
 
 </resources>

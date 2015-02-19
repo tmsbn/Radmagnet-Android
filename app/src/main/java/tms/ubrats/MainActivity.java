@@ -4,11 +4,9 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,13 +15,12 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import de.keyboardsurfer.android.widget.crouton.Crouton;
-import de.keyboardsurfer.android.widget.crouton.Style;
 import io.realm.Realm;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
@@ -32,7 +29,7 @@ import retrofit.RetrofitError;
 import retrofit.client.Response;
 
 
-public class MainActivity extends ActionBarActivity implements AdapterView.OnItemClickListener, SearchView.OnQueryTextListener {
+public class MainActivity extends BaseActivity implements AdapterView.OnItemClickListener, SearchView.OnQueryTextListener, SwipeRefreshLayout.OnRefreshListener, SearchView.OnCloseListener {
 
 
     private final int SPLASH_DISPLAY_LENGTH = 1000;
@@ -44,7 +41,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     DrawerLayout mDrawerLayout;
 
     @InjectView(R.id.categories_list)
-    ListView mCategoriesList;
+    ListView mCategoriesLv;
 
     @InjectView(R.id.toolbar)
     Toolbar mToolbar;
@@ -55,15 +52,17 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     @InjectView(R.id.branding)
     TextView mBranding;
 
-    @InjectView(R.id.swipeLayout)
+    @InjectView(R.id.swipeNewsLayout)
     SwipeRefreshLayout mSwipeLayout;
 
 
     ActionBarDrawerToggle mDrawerToggle;
 
+
     SearchView mSearchView;
 
     NewsAdapter mNewsAdapter;
+    CategoriesAdapter mCategoriesAdapter;
 
 
     @Override
@@ -73,16 +72,31 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
         ButterKnife.inject(this);
         setupToolBar();
-        setupSideBar();
-        setupListView();
+        setupCategoriesList();
+        setupNewsList();
         fetchLatestNews();
 
     }
 
-    private void setupSideBar() {
+    private void setupNewsList() {
 
-        mCategoriesList.setOnItemClickListener(this);
-        mSwipeLayout.setRefreshing(true);
+        mNewsAdapter = new NewsAdapter(this, getAllResults(), true);
+        mNewsLv.setAdapter(mNewsAdapter);
+
+
+        mSwipeLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+
+        mSwipeLayout.setOnRefreshListener(this);
+    }
+
+    private void setupCategoriesList() {
+
+        mCategoriesAdapter = new CategoriesAdapter(this, getConfig().categories);
+        mCategoriesLv.setAdapter(mCategoriesAdapter);
+        mCategoriesLv.setOnItemClickListener(this);
 
     }
 
@@ -97,50 +111,80 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
     }
 
-    private void setupListView() {
-
-        mNewsAdapter = new NewsAdapter(this, null, true);
-    }
 
     private void fetchLatestNews() {
 
-        Networking.getRestClient().getAnnouncements("", new GetNewsCallback());
+        long lastUpdatedDate = mPrefs.getLong(LAST_UPDATED, -1);
+        String date = (lastUpdatedDate != -1) ? String.valueOf(lastUpdatedDate) : "";
+        Networking.getRestClient().getAnnouncements(date, new GetNewsCallback());
+    }
 
+    @Override
+    public void onRefresh() {
+        fetchLatestNews();
+    }
+
+    @Override
+    public boolean onClose() {
+
+        mNewsAdapter.updateRealmResults(getAllResults());
+
+        return true;
     }
 
     private class GetNewsCallback implements Callback<NewsResponse> {
 
+
         @Override
-        public void success(NewsResponse newsResponse, Response response) {
+        public void success(final NewsResponse newsResponse, Response response) {
 
-            final ArrayList<News> newsList = newsResponse.newsList;
-            Realm realm = Realm.getInstance(MainActivity.this);
-            realm.executeTransaction(new Realm.Transaction() {
-                @Override
-                public void execute(Realm realm) {
-                    realm.copyToRealmOrUpdate(newsList);
+            final ArrayList<News> newsList = newsResponse.data;
+            if (newsList == null || newsList.size() == 0) {
+                Toast.makeText(MainActivity.this, getString(R.string.noUpdatesAvaliable_msg), Toast.LENGTH_SHORT).show();
+            } else {
 
-                }
-            });
+                Toast.makeText(MainActivity.this, newsList.size() + "", Toast.LENGTH_SHORT).show();
+                Realm realm = Realm.getInstance(MainActivity.this);
+                realm.executeTransaction(new Realm.Transaction() {
+                    @Override
+                    public void execute(Realm realm) {
+                        realm.copyToRealmOrUpdate(newsList);
+                       // realm.refresh();
+                        mPrefs.edit().putLong(LAST_UPDATED, newsResponse.date.getTime() / 1000).apply();
+
+                    }
+                });
+
+            }
+
+            mSwipeLayout.setRefreshing(false);
 
 
         }
+
 
         @Override
         public void failure(RetrofitError error) {
 
-            Crouton.makeText(MainActivity.this, getString(R.string.cannotReachServer_msg), Style.INFO);
-            refreshList();
+            Toast.makeText(MainActivity.this, getString(R.string.cannotReachServer_msg), Toast.LENGTH_SHORT).show();
+            mSwipeLayout.setRefreshing(false);
 
         }
+
     }
 
-    private void refreshList() {
+    @Override
+    protected void onDestroy() {
+        Realm.getInstance(this).close();
+        super.onDestroy();
+    }
+
+    private RealmResults<News> getAllResults() {
 
         Realm realm = Realm.getInstance(MainActivity.this);
         RealmQuery<News> query = realm.where(News.class);
-        RealmResults<News> results = query.findAll();
-        mNewsAdapter.updateRealmResults(results);
+
+        return query.findAll();
     }
 
     @Override
@@ -162,6 +206,12 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
             mDrawerLayout.closeDrawers();
             return;
         }
+
+        if (!mSearchView.isIconified()) {
+            mSearchView.onActionViewCollapsed();
+            return;
+        }
+
         super.onBackPressed();
     }
 
@@ -172,6 +222,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         getMenuInflater().inflate(R.menu.menu_main, menu);
         mSearchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
         mSearchView.setOnQueryTextListener(this);
+        mSearchView.setOnCloseListener(this);
 
         return true;
     }
@@ -194,13 +245,18 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
     @Override
     public boolean onQueryTextSubmit(String s) {
+        mSearchView.onActionViewCollapsed();
 
         return true;
     }
 
     @Override
     public boolean onQueryTextChange(String s) {
-        Log.v("searchTerm", s);
+
+        RealmResults<News> realmResults = Realm.getInstance(this).where(News.class).contains("headline", s, false).findAllSorted("createdDate");
+        mNewsAdapter.updateRealmResults(realmResults);
+
         return true;
+
     }
 }

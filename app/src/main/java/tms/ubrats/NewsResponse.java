@@ -7,5 +7,5 @@ import java.util.Date;
 public class NewsResponse {
 
     Date date;
-    ArrayList<News> newsList;
+    ArrayList<News> data;
 }

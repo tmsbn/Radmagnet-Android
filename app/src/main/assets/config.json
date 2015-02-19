@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "name": "Events",
+      "color": "red"
+    },
+    {
+      "name": "University News",
+      "color": "blue"
+    },
+    {
+      "name": "Life Hacks",
+      "color": "green"
+    },
+    {
+      "name": "Deals",
+      "color": "white"
+    },
+    {
+      "name": "Student Business",
+      "color": "yellow"
+    }
+  ]
+}

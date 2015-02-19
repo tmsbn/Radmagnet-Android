@@ -9,10 +9,14 @@ import android.widget.Filterable;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+
 import io.realm.RealmBaseAdapter;
 import io.realm.RealmResults;
 
 public class NewsAdapter extends RealmBaseAdapter<News> implements Filterable {
+
+
 
     public NewsAdapter(Context context, RealmResults<News> realmResults, boolean automaticUpdate) {
         super(context, realmResults, automaticUpdate);
@@ -25,16 +29,21 @@ public class NewsAdapter extends RealmBaseAdapter<News> implements Filterable {
 
         if (convertView == null) {
 
-            convertView = inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
+            convertView = inflater.inflate(R.layout.lv_rw_news, parent, false);
             viewHolder = new ViewHolder();
-            viewHolder.timeStampTv = (TextView) convertView.findViewById(android.R.id.text1);
+            viewHolder.dateTv = (TextView) convertView.findViewById(R.id.date);
+            viewHolder.bookmarkIbtn = (ImageButton) convertView.findViewById(R.id.bookmark);
+            viewHolder.headlineTv = (TextView) convertView.findViewById(R.id.headline);
             convertView.setTag(viewHolder);
 
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        return null;
+        viewHolder.headlineTv.setText(getItem(position).getHeadline());
+        viewHolder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT).format(getItem(position).getCreatedDate()));
+
+        return convertView;
     }
 
     public RealmResults<News> getRealmResults() {
@@ -48,7 +57,7 @@ public class NewsAdapter extends RealmBaseAdapter<News> implements Filterable {
 
     private static class ViewHolder {
 
-        TextView timeStampTv;
+        TextView dateTv;
         TextView headlineTv;
         ImageButton bookmarkIbtn;
     }
