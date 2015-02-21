@@ -7,4 +7,12 @@ public class Category {
 
     String name;
     String color;
+    boolean isSelected = false;
+
+
+    public Category(String name, String color, boolean isSelected) {
+        this.name = name;
+        this.color = color;
+        this.isSelected = isSelected;
+    }
 }

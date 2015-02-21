@@ -3,4 +3,14 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="?attr/colorPrimary"
-    android:minHeight="?attr/actionBarSize" />
+    android:minHeight="?attr/actionBarSize">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_bookmark" />
+
+
+</android.support.v7.widget.Toolbar>

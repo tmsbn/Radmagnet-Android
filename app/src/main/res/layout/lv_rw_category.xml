@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/transparent_selector"
     android:orientation="vertical"
     android:paddingBottom="15dp"
-    android:paddingTop="15dp">
+    android:paddingTop="15dp"
+    tools:ignore="RtlHardcoded">
 
     <ImageView
         android:id="@+id/thumbnail"
@@ -13,7 +15,8 @@
         android:layout_height="5dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="10dp" />
+        android:layout_marginRight="10dp"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/category"
@@ -24,7 +27,7 @@
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:text="This is some long typical headline" />
+        tools:text="Category Name" />
 
 
 </RelativeLayout>

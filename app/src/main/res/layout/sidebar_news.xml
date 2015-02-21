@@ -13,24 +13,25 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/material_blue_grey_800"
-        android:gravity="center" />
+        android:gravity="center"
+        android:visibility="gone" />
 
 
     <ListView
         android:id="@+id/categories_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:divider="@android:color/transparent"
+        android:listSelector="@color/translucent"
         android:scrollbars="vertical" />
 
     <Button
-        android:text="@string/savedRads_txt"
         android:id="@+id/showBookMarks"
-        android:textSize="20sp"
-        android:textColor="@android:color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/savedRads_txt"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
 
 
 </LinearLayout>

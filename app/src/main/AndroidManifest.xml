@@ -11,7 +11,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name"
+            android:launchMode="singleTop" />
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name">
@@ -32,7 +33,7 @@
         <activity
             android:name=".BookmarkActivity"
             android:label="@string/title_activity_bookmark"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

@@ -13,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -66,6 +65,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     CategoriesAdapter mCategoriesAdapter;
 
     String mSearchQuery = "";
+    String mSelectedCategory = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,17 +95,20 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     }
 
     @OnClick(R.id.showBookMarks)
-    public void showBookmarks(){
+    public void showBookmarks() {
 
-        Intent intent=new Intent(this,BookmarkActivity.class);
+        Intent intent = new Intent(this, BookmarkActivity.class);
         startActivity(intent);
     }
 
     private void setupCategoriesList() {
 
-        mCategoriesAdapter = new CategoriesAdapter(this, getConfig().categories);
+        ArrayList<Category> categories = getConfig().categories;
+        categories.add(0, new Category(getString(R.string.allTheRad_txt), "#" + Integer.toHexString(getResources().getColor(android.R.color.white)), true));
+        mCategoriesAdapter = new CategoriesAdapter(this, categories);
         mCategoriesLv.setAdapter(mCategoriesAdapter);
         mCategoriesLv.setOnItemClickListener(this);
+
 
     }
 
@@ -114,6 +117,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.app_name, R.string.app_name);
         mBranding.setText("UBrats");
 
@@ -200,8 +204,12 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
         if (!mSearchQuery.equals("")) {
             realmQuery = realmQuery.contains("headline", mSearchQuery, false);
-
         }
+
+        if (!mSelectedCategory.equals("") && !mSelectedCategory.equals(getResources().getString(R.string.allTheRad_txt))) {
+            realmQuery = realmQuery.contains("postType", mSelectedCategory, false);
+        }
+
         return realmQuery.findAllSorted("createdDate", false);
 
     }
@@ -280,6 +288,10 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 break;
 
             case R.id.categories_list:
+
+                mCategoriesAdapter.setSelectedCategory(position);
+                mSelectedCategory = mCategoriesAdapter.getItem(position).name;
+                mNewsAdapter.updateRealmResults(getRealmData());
 
                 break;
         }

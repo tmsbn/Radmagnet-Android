@@ -3,7 +3,6 @@ package tms.ubrats;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +28,7 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
     public BookmarksAdapter(Context context, RealmResults<News> realmResults, boolean automaticUpdate) {
 
         mRealmResults = realmResults;
-        mContext=context;
+        mContext = context;
 
         if (context == null) {
             throw new IllegalArgumentException("Context cannot be null");
@@ -64,7 +63,6 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
     }
 
 
-
     @Override
     public void onBindViewHolder(BookmarksViewHolder holder, int position) {
 
@@ -91,7 +89,7 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
 
     @Override
     public void onSetSwipeBackground(BookmarksViewHolder bookmarksViewHolder, int reaction) {
-       bookmarksViewHolder.itemView.setBackgroundResource(R.color.dark_gray);
+        bookmarksViewHolder.itemView.setBackgroundResource(R.color.dark_gray);
 
     }
 
@@ -107,12 +105,14 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
     @Override
     public void onPerformAfterSwipeReaction(final BookmarksViewHolder bookmarksViewHolder, int result, int reaction) {
 
-        Realm.getInstance(mContext).executeTransaction(new Realm.Transaction() {
-            @Override
-            public void execute(Realm realm) {
-                mRealmResults.get(bookmarksViewHolder.getPosition()).setBookmarked(false);
-            }
-        });
+        if (reaction == RecyclerViewSwipeManager.AFTER_SWIPE_REACTION_REMOVE_ITEM) {
+            Realm.getInstance(mContext).executeTransaction(new Realm.Transaction() {
+                @Override
+                public void execute(Realm realm) {
+                    mRealmResults.get(bookmarksViewHolder.getPosition()).setBookmarked(false);
+                }
+            });
+        }
 
     }
 
