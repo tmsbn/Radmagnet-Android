@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 import io.realm.RealmBaseAdapter;
 import io.realm.RealmResults;
@@ -41,7 +42,7 @@ public class NewsAdapter extends RealmBaseAdapter<News> implements Filterable {
         }
 
         viewHolder.headlineTv.setText(getItem(position).getHeadline());
-        viewHolder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT).format(getItem(position).getCreatedDate()));
+        viewHolder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(getItem(position).getCreatedDate()));
 
         return convertView;
     }
@@ -61,4 +62,6 @@ public class NewsAdapter extends RealmBaseAdapter<News> implements Filterable {
         TextView headlineTv;
         ImageButton bookmarkIbtn;
     }
+
+
 }

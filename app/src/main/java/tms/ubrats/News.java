@@ -24,6 +24,15 @@ public class News extends RealmObject {
     private String imageUrl;
     private String creator;
     private String creatorDp;
+    private boolean isBookmarked=false;
+
+    public boolean isBookmarked() {
+        return isBookmarked;
+    }
+
+    public void setBookmarked(boolean isBookmarked) {
+        this.isBookmarked = isBookmarked;
+    }
 
     @Ignore
     private String source;

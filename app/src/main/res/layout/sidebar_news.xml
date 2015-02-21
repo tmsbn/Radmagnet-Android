@@ -4,7 +4,7 @@
     android:layout_width="240dp"
     android:layout_height="match_parent"
     android:layout_gravity="left|start"
-    android:background="@android:color/white"
+    android:background="@color/dark_gray"
     android:orientation="vertical">
 
     <TextView
@@ -19,9 +19,18 @@
     <ListView
         android:id="@+id/categories_list"
         android:layout_width="match_parent"
-        android:background="@color/dark_gray"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+
         android:divider="@android:color/transparent"
         android:scrollbars="vertical" />
+
+    <Button
+        android:text="@string/savedRads_txt"
+        android:id="@+id/showBookMarks"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>

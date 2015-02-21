@@ -1,5 +1,6 @@
 package tms.ubrats;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,6 +23,7 @@ import java.util.ArrayList;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
 import io.realm.Realm;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
@@ -55,15 +58,14 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     @InjectView(R.id.swipeNewsLayout)
     SwipeRefreshLayout mSwipeLayout;
 
-
     ActionBarDrawerToggle mDrawerToggle;
-
 
     SearchView mSearchView;
 
     NewsAdapter mNewsAdapter;
     CategoriesAdapter mCategoriesAdapter;
 
+    String mSearchQuery = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,9 +82,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     private void setupNewsList() {
 
-        mNewsAdapter = new NewsAdapter(this, getAllResults(), true);
+        mNewsAdapter = new NewsAdapter(this, getRealmData(), true);
         mNewsLv.setAdapter(mNewsAdapter);
-
+        mNewsLv.setOnItemClickListener(this);
 
         mSwipeLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light,
@@ -90,6 +92,13 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 android.R.color.holo_red_light);
 
         mSwipeLayout.setOnRefreshListener(this);
+    }
+
+    @OnClick(R.id.showBookMarks)
+    public void showBookmarks(){
+
+        Intent intent=new Intent(this,BookmarkActivity.class);
+        startActivity(intent);
     }
 
     private void setupCategoriesList() {
@@ -114,9 +123,16 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     private void fetchLatestNews() {
 
-        long lastUpdatedDate = mPrefs.getLong(LAST_UPDATED, -1);
+        long lastUpdatedDate = mPrefs.getLong(LAST_UPDATED_KEY, -1);
         String date = (lastUpdatedDate != -1) ? String.valueOf(lastUpdatedDate) : "";
         Networking.getRestClient().getAnnouncements(date, new GetNewsCallback());
+
+        mSwipeLayout.post(new Runnable() {
+            @Override
+            public void run() {
+                mSwipeLayout.setRefreshing(true);
+            }
+        });
     }
 
     @Override
@@ -127,7 +143,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     @Override
     public boolean onClose() {
 
-        mNewsAdapter.updateRealmResults(getAllResults());
+        mNewsAdapter.updateRealmResults(getRealmData());
 
         return true;
     }
@@ -149,8 +165,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                     @Override
                     public void execute(Realm realm) {
                         realm.copyToRealmOrUpdate(newsList);
-                       // realm.refresh();
-                        mPrefs.edit().putLong(LAST_UPDATED, newsResponse.date.getTime() / 1000).apply();
+                        mPrefs.edit().putLong(LAST_UPDATED_KEY, newsResponse.date.getTime() / 1000).apply();
 
                     }
                 });
@@ -179,12 +194,16 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         super.onDestroy();
     }
 
-    private RealmResults<News> getAllResults() {
+    private RealmResults<News> getRealmData() {
 
-        Realm realm = Realm.getInstance(MainActivity.this);
-        RealmQuery<News> query = realm.where(News.class);
+        RealmQuery<News> realmQuery = Realm.getInstance(this).where(News.class);
 
-        return query.findAll();
+        if (!mSearchQuery.equals("")) {
+            realmQuery = realmQuery.contains("headline", mSearchQuery, false);
+
+        }
+        return realmQuery.findAllSorted("createdDate", false);
+
     }
 
     @Override
@@ -209,6 +228,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
         if (!mSearchView.isIconified()) {
             mSearchView.onActionViewCollapsed();
+            mSearchQuery = "";
             return;
         }
 
@@ -241,6 +261,29 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+        switch (parent.getId()) {
+
+            case R.id.newsList:
+
+
+                ArrayList<String> realmIds = new ArrayList<>();
+                RealmResults<News> results = mNewsAdapter.getRealmResults();
+                for (News news : results) {
+                    realmIds.add(news.getPostId());
+                }
+
+                Intent intent = new Intent(this, DetailsActivity.class);
+                intent.putExtra("position", position);
+                intent.putExtra("realmIds", realmIds);
+                startActivity(intent);
+
+                break;
+
+            case R.id.categories_list:
+
+                break;
+        }
+
     }
 
     @Override
@@ -251,12 +294,14 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     }
 
     @Override
-    public boolean onQueryTextChange(String s) {
+    public boolean onQueryTextChange(String query) {
 
-        RealmResults<News> realmResults = Realm.getInstance(this).where(News.class).contains("headline", s, false).findAllSorted("createdDate");
-        mNewsAdapter.updateRealmResults(realmResults);
+        mSearchQuery = query;
+        mNewsAdapter.updateRealmResults(getRealmData());
 
         return true;
 
     }
+
+
 }

@@ -20,7 +20,7 @@ public abstract class BaseActivity extends ActionBarActivity {
 
     SharedPreferences mPrefs;
 
-    protected String LAST_UPDATED="last_updated";
+    protected String LAST_UPDATED_KEY ="last_updated";
 
     @Override
     protected void onCreate(Bundle bundle) {
