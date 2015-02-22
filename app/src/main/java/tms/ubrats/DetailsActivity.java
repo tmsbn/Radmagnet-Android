@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import io.realm.Realm;
 
 
 public class DetailsActivity extends BaseActivity implements ViewPager.OnPageChangeListener,NewsFragment.OnFragmentInteractionListener {
@@ -53,7 +54,11 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
 
     }
 
-
+    @Override
+    protected void onDestroy() {
+        Realm.getInstance(this).close();
+        super.onDestroy();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

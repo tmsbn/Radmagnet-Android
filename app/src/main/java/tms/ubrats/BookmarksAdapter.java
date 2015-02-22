@@ -25,6 +25,8 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
     private RealmResults<News> mRealmResults;
     Context mContext;
 
+    BookmarkListener bookmarkListener;
+
     public BookmarksAdapter(Context context, RealmResults<News> realmResults, boolean automaticUpdate) {
 
         mRealmResults = realmResults;
@@ -46,7 +48,12 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
             });
         }
 
+
         setHasStableIds(true);
+    }
+
+    public void setOnItemClickedListener(BookmarkListener bookmarkListener) {
+        this.bookmarkListener = bookmarkListener;
     }
 
     @Override
@@ -64,11 +71,20 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
 
 
     @Override
-    public void onBindViewHolder(BookmarksViewHolder holder, int position) {
+    public void onBindViewHolder(BookmarksViewHolder holder, final int position) {
 
 
         holder.headlineTv.setText(mRealmResults.get(position).getHeadline());
         holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mRealmResults.get(position).getCreatedDate()));
+        holder.mContainer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (bookmarkListener != null)
+                    bookmarkListener.onItemClick(mRealmResults.get(position));
+            }
+        });
+
     }
 
 
@@ -130,6 +146,7 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
             headlineTv = (TextView) v.findViewById(R.id.headline);
             dateTv = (TextView) v.findViewById(R.id.date);
 
+
         }
 
 
@@ -144,5 +161,10 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
     public void updateRealmResults(RealmResults<News> realmResults) {
         this.mRealmResults = realmResults;
         notifyDataSetChanged();
+    }
+
+    public interface BookmarkListener {
+
+        public void onItemClick(News news);
     }
 }

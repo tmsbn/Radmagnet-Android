@@ -1,5 +1,6 @@
 package tms.ubrats;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,6 +14,8 @@ import com.h6ah4i.android.widget.advrecyclerview.animator.SwipeDismissItemAnimat
 import com.h6ah4i.android.widget.advrecyclerview.swipeable.RecyclerViewSwipeManager;
 import com.h6ah4i.android.widget.advrecyclerview.touchguard.RecyclerViewTouchActionGuardManager;
 
+import java.util.ArrayList;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.realm.Realm;
@@ -20,7 +23,7 @@ import io.realm.RealmQuery;
 import io.realm.RealmResults;
 
 
-public class BookmarkActivity extends ActionBarActivity implements SearchView.OnQueryTextListener, SearchView.OnCloseListener {
+public class BookmarkActivity extends ActionBarActivity implements SearchView.OnQueryTextListener, SearchView.OnCloseListener, BookmarksAdapter.BookmarkListener {
 
     @InjectView(R.id.bookmarksList)
     RecyclerView mBookmarksRv;
@@ -67,6 +70,7 @@ public class BookmarkActivity extends ActionBarActivity implements SearchView.On
 
         mRecyclerViewTouchActionGuardManager.attachRecyclerView(mBookmarksRv);
         mRecyclerViewSwipeManager.attachRecyclerView(mBookmarksRv);
+        mBookmarkAdapter.setOnItemClickedListener(this);
 
 
     }
@@ -79,7 +83,7 @@ public class BookmarkActivity extends ActionBarActivity implements SearchView.On
             realmQuery = realmQuery.contains("headline", mSearchQuery, false);
         }
 
-        realmQuery.equalTo("isBookmarked",true);
+        realmQuery.equalTo("isBookmarked", true);
 
         return realmQuery.findAllSorted("createdDate", false);
 
@@ -108,6 +112,7 @@ public class BookmarkActivity extends ActionBarActivity implements SearchView.On
 
         mRecyclerViewSwipeManager.release();
         mRecyclerViewTouchActionGuardManager.release();
+        Realm.getInstance(this).close();
 
         super.onDestroy();
     }
@@ -143,5 +148,18 @@ public class BookmarkActivity extends ActionBarActivity implements SearchView.On
 
         mBookmarkAdapter.updateRealmResults(getRealmData());
         return true;
+    }
+
+    @Override
+    public void onItemClick(News news) {
+
+        ArrayList<String> realmIds = new ArrayList<>();
+        realmIds.add(news.getPostId());
+
+
+        Intent intent = new Intent(this, DetailsActivity.class);
+        intent.putExtra("position", 0);
+        intent.putExtra("realmIds", realmIds);
+        startActivity(intent);
     }
 }
