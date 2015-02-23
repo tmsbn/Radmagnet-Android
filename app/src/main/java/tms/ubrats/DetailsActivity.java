@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,7 +39,13 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
             finish();
 
         mRealmIds=realmIds;
+        setupActionBar();
         setupData();
+
+    }
+
+    private void setupActionBar(){
+        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
     }
 

@@ -12,12 +12,12 @@ import android.widget.ListView;
 public class SplashActivity extends ActionBarActivity {
 
 
-    private final int SPLASH_DISPLAY_LENGTH = 1000;
+    private final int SPLASH_DISPLAY_LENGTH = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
 
         new Handler().postDelayed(new Runnable(){
             @Override

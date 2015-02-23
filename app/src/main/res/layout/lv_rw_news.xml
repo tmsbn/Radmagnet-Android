@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:descendantFocusability="blocksDescendants"
     android:orientation="vertical">
 
     <TextView
@@ -22,7 +21,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/headline"
 
-        android:text="12 February 2014 @ 3:14" />
+        tools:text="12 February 2014 @ 3:14" />
 
     <ImageButton
         android:id="@+id/bookmark"

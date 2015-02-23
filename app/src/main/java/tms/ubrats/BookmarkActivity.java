@@ -49,9 +49,13 @@ public class BookmarkActivity extends ActionBarActivity implements SearchView.On
 
         setupToolBar();
         setupNewsList();
+        setupActionBar();
 
     }
+    private void setupActionBar(){
+       setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
+    }
     private void setupNewsList() {
 
         //touchguard manager

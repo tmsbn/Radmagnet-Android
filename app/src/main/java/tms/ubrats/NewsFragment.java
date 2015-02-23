@@ -79,8 +79,8 @@ public class NewsFragment extends Fragment {
         mNews = Realm.getInstance(getActivity()).where(News.class).equalTo("postId", mPostId, true).findFirst();
         if (mNews != null) {
 
-            mHeadlineTv.setText((mNews.getHeadline() != null) ? mNews.getHeadline() : "");
-            mDateTv.setText((mNews.getCreatedDate() != null) ? new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mNews.getCreatedDate()) : "");
+            mHeadlineTv.setText((mNews.getHeadline() != null) ? mNews.getHeadline() : "glue");
+            mDateTv.setText((mNews.getCreatedDate() != null) ? new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mNews.getCreatedDate()) : "bla");
             updateBookmarkButton();
 
         } else {

@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
@@ -31,13 +34,13 @@ import retrofit.RetrofitError;
 import retrofit.client.Response;
 
 
-public class MainActivity extends BaseActivity implements AdapterView.OnItemClickListener, SearchView.OnQueryTextListener, SwipeRefreshLayout.OnRefreshListener, SearchView.OnCloseListener {
+public class MainActivity extends BaseActivity implements AdapterView.OnItemClickListener, SearchView.OnQueryTextListener, SwipeRefreshLayout.OnRefreshListener, SearchView.OnCloseListener, NewsAdapter.NewsItemClickListener {
 
 
     private final int SPLASH_DISPLAY_LENGTH = 1000;
 
     @InjectView(R.id.newsList)
-    ListView mNewsLv;
+    RecyclerView mNewsRv;
 
     @InjectView(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
@@ -82,9 +85,13 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     private void setupNewsList() {
 
+       final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mNewsRv.setLayoutManager(linearLayoutManager);
+        mNewsRv.setItemAnimator(new DefaultItemAnimator());
         mNewsAdapter = new NewsAdapter(this, getRealmData(), true);
-        mNewsLv.setAdapter(mNewsAdapter);
-        mNewsLv.setOnItemClickListener(this);
+        mNewsRv.setAdapter(mNewsAdapter);
+        mNewsAdapter.setOnItemClickedListener(this);
 
         mSwipeLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light,
@@ -150,6 +157,21 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         mNewsAdapter.updateRealmResults(getRealmData());
 
         return true;
+    }
+
+    @Override
+    public void onItemClick(News newsItem, int position) {
+
+        ArrayList<String> realmIds = new ArrayList<>();
+        RealmResults<News> results = mNewsAdapter.getRealmResults();
+        for (News news : results) {
+            realmIds.add(news.getPostId());
+        }
+
+        Intent intent = new Intent(this, DetailsActivity.class);
+        intent.putExtra("position", position);
+        intent.putExtra("realmIds", realmIds);
+        startActivity(intent);
     }
 
     private class GetNewsCallback implements Callback<NewsResponse> {
@@ -273,17 +295,6 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
             case R.id.newsList:
 
-
-                ArrayList<String> realmIds = new ArrayList<>();
-                RealmResults<News> results = mNewsAdapter.getRealmResults();
-                for (News news : results) {
-                    realmIds.add(news.getPostId());
-                }
-
-                Intent intent = new Intent(this, DetailsActivity.class);
-                intent.putExtra("position", position);
-                intent.putExtra("realmIds", realmIds);
-                startActivity(intent);
 
                 break;
 
