@@ -25,7 +25,7 @@
     },
     {
       "name": "Hotspots",
-      "color": "yellow",
+      "color": "cyan",
       "value": "hotspots"
 
     }

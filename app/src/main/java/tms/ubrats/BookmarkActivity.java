@@ -2,7 +2,6 @@ package tms.ubrats;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
@@ -47,11 +46,11 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
 
         ButterKnife.inject(this);
 
-        setupToolBar();
+        setupActionBar(true);
         setupNewsList();
-        setupActionBar();
 
     }
+
 
 
     private void setupNewsList() {
@@ -89,14 +88,6 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
 
         return realmQuery.findAllSorted("createdDate", false);
 
-    }
-
-    private void setupToolBar() {
-
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
 
@@ -154,7 +145,7 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
     }
 
     @Override
-    public void onItemClick(News news,int positon) {
+    public void onItemClick(News news, int positon) {
 
         ArrayList<String> realmIds = new ArrayList<>();
         for (News newsIterator : mBookmarkAdapter.getRealmResults())

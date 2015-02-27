@@ -39,7 +39,7 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
             finish();
 
         mRealmIds=realmIds;
-        setupActionBar();
+        setupActionBar(true);
         setupData();
 
     }
@@ -133,4 +133,6 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
                 return 0;
         }
     }
+
+
 }

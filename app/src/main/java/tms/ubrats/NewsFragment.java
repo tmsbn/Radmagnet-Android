@@ -77,8 +77,12 @@ public class NewsFragment extends Fragment {
 
     @Override
     public void onPrepareOptionsMenu(Menu menu) {
+
         shareMenuItem = menu.findItem(R.id.menu_share);
         mShareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(shareMenuItem);
+        BaseActivity activity = (BaseActivity) getActivity();
+        String title = (activity).getTitleFromConfig(mNews.getCategory());
+        activity.setActionBarTitle(title);
         setShareIntent();
 
         super.onPrepareOptionsMenu(menu);

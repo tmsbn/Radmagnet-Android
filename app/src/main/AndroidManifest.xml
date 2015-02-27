@@ -25,13 +25,13 @@
         </activity>
         <activity
             android:name=".DetailsActivity"
-            android:label="@string/title_activity_details"
+            android:label="@string/details_txt"
             android:parentActivityName=".MainActivity">
 
         </activity>
         <activity
             android:name=".BookmarkActivity"
-            android:label="@string/title_activity_bookmark"
+            android:label="@string/savedRads_txt"
             android:parentActivityName=".MainActivity" />
     </application>
 

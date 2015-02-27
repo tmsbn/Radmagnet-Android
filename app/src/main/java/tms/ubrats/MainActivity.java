@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
@@ -16,7 +15,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,7 +28,6 @@ import io.realm.Realm;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
 import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
-import jp.wasabeef.recyclerview.animators.adapters.SlideInBottomAnimationAdapter;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -76,7 +73,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         setContentView(R.layout.activity_main);
 
         ButterKnife.inject(this);
-        setupActionBar();
+        setupActionBar(false);
         setupToolBar();
         setupCategoriesList();
         setupNewsList();
@@ -86,12 +83,14 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     private void setupNewsList() {
 
-       final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mNewsRv.setLayoutManager(linearLayoutManager);
-       mNewsRv.setItemAnimator(new SlideInUpAnimator());
+        SlideInUpAnimator slideInUpAnimator = new SlideInUpAnimator();
+        slideInUpAnimator.setChangeDuration(1000);
+        mNewsRv.setItemAnimator(slideInUpAnimator);
         mNewsAdapter = new NewsAdapter(this, getRealmData(), true);
-       // SlideInBottomAnimationAdapter slideInBottomAnimationAdapter=new SlideInBottomAnimationAdapter(mNewsAdapter);
+        // SlideInBottomAnimationAdapter slideInBottomAnimationAdapter=new SlideInBottomAnimationAdapter(mNewsAdapter);
         //slideInBottomAnimationAdapter.setDuration(700);
 
         mNewsRv.setAdapter(mNewsAdapter);
@@ -115,7 +114,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     private void setupCategoriesList() {
 
         ArrayList<Category> categories = getConfig().categories;
-        categories.add(0, new Category(getString(R.string.allTheRad_txt), "#" + Integer.toHexString(getResources().getColor(android.R.color.white)),"", true));
+        categories.add(0, new Category(getString(R.string.allTheRad_txt), "#" + Integer.toHexString(getResources().getColor(android.R.color.white)), "", true));
         mCategoriesAdapter = new CategoriesAdapter(this, categories);
         mCategoriesLv.setAdapter(mCategoriesAdapter);
         mCategoriesLv.setOnItemClickListener(this);
@@ -306,6 +305,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 mCategoriesAdapter.setSelectedCategory(position);
                 mSelectedCategory = mCategoriesAdapter.getItem(position).value;
                 mNewsAdapter.updateRealmResults(getRealmData());
+                mDrawerLayout.closeDrawers();
 
                 break;
         }

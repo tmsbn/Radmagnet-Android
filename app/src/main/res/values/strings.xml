@@ -24,5 +24,6 @@
     <string name="savedRads_txt">SAVED RADS</string>
     <string name="allTheRad_txt">All the Rad</string>
     <string name="missingHeadline_txt">Missing headline</string>
+    <string name="details_txt">Details</string>
 
 </resources>
