@@ -44,10 +44,8 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
 
     }
 
-    private void setupActionBar(){
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
-    }
+
 
     public void setupData(){
 

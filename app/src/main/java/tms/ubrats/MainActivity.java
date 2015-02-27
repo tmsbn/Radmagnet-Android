@@ -53,8 +53,6 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     @InjectView(R.id.toolbar)
     Toolbar mToolbar;
 
-    @InjectView(R.id.left_drawer)
-    LinearLayout mLeftDrawer;
 
     @InjectView(R.id.branding)
     TextView mBranding;
@@ -78,6 +76,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         setContentView(R.layout.activity_main);
 
         ButterKnife.inject(this);
+        setupActionBar();
         setupToolBar();
         setupCategoriesList();
         setupNewsList();
@@ -126,7 +125,6 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     private void setupToolBar() {
 
-        setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);

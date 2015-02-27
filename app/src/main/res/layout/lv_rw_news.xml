@@ -18,8 +18,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
-        android:scaleType="centerCrop"
-        android:layout_below="@+id/categoryColor" />
+        android:layout_below="@+id/categoryColor"
+        android:background="@color/gray"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/category"
@@ -34,46 +35,53 @@
         tools:ignore="MissingPrefix"
         tools:text="University News" />
 
-
-    <TextView
-        android:id="@+id/headline"
-        fontPath="fonts/AlegreyaSans-Bold.otf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/bar"
-        android:layout_marginBottom="7dp"
-        android:padding="7dp"
-        android:textSize="22sp"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        tools:ignore="MissingPrefix"
-        tools:text="This is some long typical headline" />
-
     <LinearLayout
-        android:id="@+id/bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:padding="7dp">
+        android:background="@drawable/transparent_gradiant"
+        android:orientation="vertical">
+
 
         <TextView
-            android:id="@+id/creator"
-            android:layout_width="0dp"
+            android:id="@+id/headline"
+            fontPath="fonts/AlegreyaSans-Bold.otf"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="16sp"
+            android:layout_marginBottom="7dp"
+            android:padding="7dp"
             android:textColor="@android:color/white"
-            tools:text="Thomas" />
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:ignore="MissingPrefix"
+            tools:text="This is some long typical headline" />
 
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:textColor="@android:color/white"
-            tools:text="12 February 2014 @ 3:14" />
+            android:orientation="horizontal"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/creator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                tools:text="Thomas" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                tools:text="12 February 2014 @ 3:14" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

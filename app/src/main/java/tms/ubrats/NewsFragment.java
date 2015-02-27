@@ -15,7 +15,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -39,6 +42,9 @@ public class NewsFragment extends Fragment {
 
     @InjectView(R.id.date)
     public TextView mDateTv;
+
+    @InjectView(R.id.newsDetailImage)
+    public ImageView mNewsDetailIv;
 
 
     @InjectView(R.id.bookmark)
@@ -105,7 +111,7 @@ public class NewsFragment extends Fragment {
 
         mNews = Realm.getInstance(getActivity()).where(News.class).equalTo("postId", mPostId, true).findFirst();
         if (mNews != null) {
-
+            Picasso.with(getActivity()).load(mNews.getImageUrl()).into(mNewsDetailIv);
             mHeadlineTv.setText((mNews.getHeadline() != null) ? mNews.getHeadline() : getActivity().getString(R.string.missingHeadline_txt));
             mDateTv.setText((mNews.getCreatedDate() != null) ? new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mNews.getCreatedDate()) : "bla");
             updateBookmarkButton();

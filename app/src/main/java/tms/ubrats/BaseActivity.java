@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -32,6 +33,14 @@ public abstract class BaseActivity extends ActionBarActivity {
         super.onCreate(bundle);
         mPrefs = getSharedPreferences("news_data", MODE_PRIVATE);
 
+
+    }
+
+    protected void setupActionBar(){
+        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
     }
 

@@ -23,7 +23,7 @@ import io.realm.RealmQuery;
 import io.realm.RealmResults;
 
 
-public class BookmarkActivity extends ActionBarActivity implements SearchView.OnQueryTextListener, SearchView.OnCloseListener, BookmarksAdapter.BookmarkListener {
+public class BookmarkActivity extends BaseActivity implements SearchView.OnQueryTextListener, SearchView.OnCloseListener, BookmarksAdapter.BookmarkListener {
 
     @InjectView(R.id.bookmarksList)
     RecyclerView mBookmarksRv;
@@ -53,10 +53,6 @@ public class BookmarkActivity extends ActionBarActivity implements SearchView.On
 
     }
 
-    private void setupActionBar() {
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-
-    }
 
     private void setupNewsList() {
 
@@ -100,6 +96,7 @@ public class BookmarkActivity extends ActionBarActivity implements SearchView.On
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
 
