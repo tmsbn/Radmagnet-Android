@@ -2,12 +2,20 @@ package tms.ubrats;
 
 
 import android.content.Context;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -23,6 +31,10 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
     Context mContext;
 
     NewsItemClickListener mListener;
+
+    private int lastPosition = -1;
+
+    int height;
 
     public NewsAdapter(Context context, RealmResults<News> realmResults, boolean automaticUpdate) {
 
@@ -46,7 +58,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         }
 
 
-        // setHasStableIds(true);
+        setHasStableIds(true);
     }
 
     public void setOnItemClickedListener(NewsItemClickListener listener) {
@@ -62,21 +74,33 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
     }
 
 
-
     @Override
     public void onBindViewHolder(NewsHolder holder, final int position) {
 
+        final News news = mRealmResults.get(position);
+        holder.headlineTv.setText(news.getHeadline());
+        holder.creatorTv.setText(news.getCreator());
+        holder.categoryTv.setText(news.getCategory().toUpperCase());
 
-        holder.headlineTv.setText(mRealmResults.get(position).getHeadline());
-        holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mRealmResults.get(position).getCreatedDate()));
+        Picasso.with(mContext).load(mRealmResults.get(position).getImageUrl()).into(holder.newsImageIv);
+        holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(news.getCreatedDate()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if (mListener != null)
-                    mListener.onItemClick(mRealmResults.get(position), position);
+                    mListener.onItemClick(news, position);
             }
         });
+
+        if (mContext instanceof BaseActivity) {
+            BaseActivity activity = (BaseActivity) mContext;
+            int color = activity.getColorFromCategory(news.getCategory());
+            holder.categoryLine.setBackgroundColor(color);
+            Drawable drawable = holder.categoryTv.getBackground();
+            drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
+        }
+
 
     }
 
@@ -97,14 +121,22 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
 
         TextView dateTv;
         TextView headlineTv;
+        TextView creatorTv;
         ImageButton bookmarkIbtn;
+        View categoryLine;
+        TextView categoryTv;
+        ImageView newsImageIv;
 
 
         public NewsHolder(View v) {
             super(v);
+            categoryTv = (TextView) v.findViewById(R.id.category);
+            creatorTv = (TextView) v.findViewById(R.id.creator);
+            categoryLine = v.findViewById(R.id.categoryColor);
             dateTv = (TextView) v.findViewById(R.id.date);
             bookmarkIbtn = (ImageButton) v.findViewById(R.id.bookmark);
             headlineTv = (TextView) v.findViewById(R.id.headline);
+            newsImageIv= (ImageView) v.findViewById(R.id.newsListImage);
         }
 
 
@@ -113,10 +145,25 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
     public void updateRealmResults(RealmResults<News> realmResults) {
         this.mRealmResults = realmResults;
         notifyDataSetChanged();
+
+
     }
 
     public static interface NewsItemClickListener {
 
         public void onItemClick(News news, int position);
     }
+
+    private void setAnimation(View viewToAnimate, int position) {
+        // If the bound view wasn't previously displayed on screen, it's animated
+
+
+        Animation animation = AnimationUtils.loadAnimation(mContext, (position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_top);
+        viewToAnimate.startAnimation(animation);
+        lastPosition = position;
+
+
+    }
+
+
 }

@@ -6,11 +6,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.h6ah4i.android.widget.advrecyclerview.swipeable.RecyclerViewSwipeManager;
 import com.h6ah4i.android.widget.advrecyclerview.swipeable.SwipeableItemAdapter;
 import com.h6ah4i.android.widget.advrecyclerview.utils.AbstractSwipeableItemViewHolder;
+import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -76,12 +78,13 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
 
         holder.headlineTv.setText(mRealmResults.get(position).getHeadline());
         holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mRealmResults.get(position).getCreatedDate()));
-        holder.mContainer.setOnClickListener(new View.OnClickListener() {
+        Picasso.with(mContext).load(mRealmResults.get(position).getImageUrl()).into(holder.icon);
+        holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if (bookmarkListener != null)
-                    bookmarkListener.onItemClick(mRealmResults.get(position));
+                    bookmarkListener.onItemClick(mRealmResults.get(position), position);
             }
         });
 
@@ -105,7 +108,7 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
 
     @Override
     public void onSetSwipeBackground(BookmarksViewHolder bookmarksViewHolder, int reaction) {
-        bookmarksViewHolder.itemView.setBackgroundResource(R.color.dark_gray);
+       // bookmarksViewHolder.itemView.setBackgroundResource(R.color.dark_gray);
 
     }
 
@@ -137,14 +140,16 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
 
         protected TextView headlineTv;
         protected TextView dateTv;
-        protected ViewGroup mContainer;
+        protected ViewGroup container;
+        protected ImageView icon;
 
 
         public BookmarksViewHolder(View v) {
             super(v);
-            mContainer = (ViewGroup) v.findViewById(R.id.container);
+            container = (ViewGroup) v.findViewById(R.id.container);
             headlineTv = (TextView) v.findViewById(R.id.headline);
             dateTv = (TextView) v.findViewById(R.id.date);
+            icon = (ImageView) v.findViewById(R.id.newsImage);
 
 
         }
@@ -152,7 +157,7 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
 
         @Override
         public View getSwipeableContainerView() {
-            return mContainer;
+            return container;
         }
 
 
@@ -165,6 +170,6 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
 
     public interface BookmarkListener {
 
-        public void onItemClick(News news);
+        public void onItemClick(News news,int position);
     }
 }

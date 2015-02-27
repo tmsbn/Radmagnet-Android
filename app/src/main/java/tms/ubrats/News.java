@@ -12,7 +12,7 @@ import io.realm.annotations.PrimaryKey;
  */
 public class News extends RealmObject {
 
-    private String postType;
+    private String category;
 
     @PrimaryKey
     private String postId;
@@ -26,6 +26,7 @@ public class News extends RealmObject {
     private String creatorDp;
     private boolean isBookmarked=false;
 
+
     public boolean isBookmarked() {
         return isBookmarked;
     }
@@ -37,9 +38,7 @@ public class News extends RealmObject {
     @Ignore
     private String source;
 
-    public String getPostType() {
-        return postType;
-    }
+
 
     public String getPostId() {
         return postId;
@@ -73,8 +72,12 @@ public class News extends RealmObject {
         return source;
     }
 
-    public void setPostType(String postType) {
-        this.postType = postType;
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public void setPostId(String postId) {

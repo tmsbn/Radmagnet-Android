@@ -52,10 +52,12 @@ public class BookmarkActivity extends ActionBarActivity implements SearchView.On
         setupActionBar();
 
     }
-    private void setupActionBar(){
-       setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+
+    private void setupActionBar() {
+        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
     }
+
     private void setupNewsList() {
 
         //touchguard manager
@@ -155,14 +157,15 @@ public class BookmarkActivity extends ActionBarActivity implements SearchView.On
     }
 
     @Override
-    public void onItemClick(News news) {
+    public void onItemClick(News news,int positon) {
 
         ArrayList<String> realmIds = new ArrayList<>();
-        realmIds.add(news.getPostId());
+        for (News newsIterator : mBookmarkAdapter.getRealmResults())
+            realmIds.add(newsIterator.getPostId());
 
 
         Intent intent = new Intent(this, DetailsActivity.class);
-        intent.putExtra("position", 0);
+        intent.putExtra("position", positon);
         intent.putExtra("realmIds", realmIds);
         startActivity(intent);
     }

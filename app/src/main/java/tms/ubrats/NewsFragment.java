@@ -1,11 +1,17 @@
 package tms.ubrats;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.MenuItemCompat;
+import android.support.v7.widget.ShareActionProvider;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -40,6 +46,10 @@ public class NewsFragment extends Fragment {
 
     News mNews;
 
+    MenuItem shareMenuItem;
+
+    private ShareActionProvider mShareActionProvider;
+
 
     public static NewsFragment newInstance(String postId) {
         NewsFragment fragment = new NewsFragment();
@@ -55,8 +65,23 @@ public class NewsFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mPostId = getArguments().getString(ARG_PARAM1);
-
+            setHasOptionsMenu(true);
         }
+    }
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        shareMenuItem = menu.findItem(R.id.menu_share);
+        mShareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(shareMenuItem);
+        setShareIntent();
+
+        super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+
+        super.onCreateOptionsMenu(menu, inflater);
     }
 
     @Override
@@ -75,11 +100,13 @@ public class NewsFragment extends Fragment {
 
         super.onResume();
 
+        if (mPostId == null)
+            return;
 
         mNews = Realm.getInstance(getActivity()).where(News.class).equalTo("postId", mPostId, true).findFirst();
         if (mNews != null) {
 
-            mHeadlineTv.setText((mNews.getHeadline() != null) ? mNews.getHeadline() : "glue");
+            mHeadlineTv.setText((mNews.getHeadline() != null) ? mNews.getHeadline() : getActivity().getString(R.string.missingHeadline_txt));
             mDateTv.setText((mNews.getCreatedDate() != null) ? new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mNews.getCreatedDate()) : "bla");
             updateBookmarkButton();
 
@@ -138,6 +165,20 @@ public class NewsFragment extends Fragment {
     public interface OnFragmentInteractionListener {
 
         public void onFragmentInteraction(Uri uri);
+    }
+
+
+    // Call to update the share intent
+    private void setShareIntent() {
+
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Check out this Rad Stuff!");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, mNews.getHeadline());
+
+        if (mShareActionProvider != null) {
+            mShareActionProvider.setShareIntent(sharingIntent);
+        }
     }
 
 }

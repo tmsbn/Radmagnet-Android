@@ -3,6 +3,7 @@
 
     <color name="yellow">#FFFF00</color>
     <color name="dark_gray">#ff272727</color>
+    <color name="gray">#333333</color>
     <color name="translucent">#6000</color>
 
 </resources>

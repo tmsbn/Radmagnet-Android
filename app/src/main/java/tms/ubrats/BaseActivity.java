@@ -1,6 +1,8 @@
 package tms.ubrats;
 
+import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -10,6 +12,9 @@ import com.google.gson.Gson;
 import org.apache.commons.io.IOUtils;
 
 import java.io.InputStream;
+import java.util.ArrayList;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * Created by tmsbn on 2/18/15.
@@ -20,12 +25,12 @@ public abstract class BaseActivity extends ActionBarActivity {
 
     SharedPreferences mPrefs;
 
-    protected String LAST_UPDATED_KEY ="last_updated";
+    protected String LAST_UPDATED_KEY = "last_updated";
 
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        mPrefs=getSharedPreferences("news_data",MODE_PRIVATE);
+        mPrefs = getSharedPreferences("news_data", MODE_PRIVATE);
 
 
     }
@@ -49,5 +54,21 @@ public abstract class BaseActivity extends ActionBarActivity {
 
         } else
             return sConfig;
+    }
+
+    public int getColorFromCategory(String postType) {
+
+        ArrayList<Category> categories = getConfig().categories;
+        for (Category category : categories) {
+            if (category.value.equalsIgnoreCase(postType))
+                return Color.parseColor(category.color);
+        }
+
+        return Color.WHITE;
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

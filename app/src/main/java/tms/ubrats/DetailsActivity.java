@@ -78,6 +78,14 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
+        switch(id){
+
+            case R.id.menu_share:
+
+
+                break;
+
+        }
 
         return super.onOptionsItemSelected(item);
     }

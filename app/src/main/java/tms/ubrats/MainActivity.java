@@ -29,6 +29,8 @@ import butterknife.OnClick;
 import io.realm.Realm;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
+import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
+import jp.wasabeef.recyclerview.animators.adapters.SlideInBottomAnimationAdapter;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -88,8 +90,11 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
        final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mNewsRv.setLayoutManager(linearLayoutManager);
-        mNewsRv.setItemAnimator(new DefaultItemAnimator());
+       mNewsRv.setItemAnimator(new SlideInUpAnimator());
         mNewsAdapter = new NewsAdapter(this, getRealmData(), true);
+       // SlideInBottomAnimationAdapter slideInBottomAnimationAdapter=new SlideInBottomAnimationAdapter(mNewsAdapter);
+        //slideInBottomAnimationAdapter.setDuration(700);
+
         mNewsRv.setAdapter(mNewsAdapter);
         mNewsAdapter.setOnItemClickedListener(this);
 
@@ -111,7 +116,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     private void setupCategoriesList() {
 
         ArrayList<Category> categories = getConfig().categories;
-        categories.add(0, new Category(getString(R.string.allTheRad_txt), "#" + Integer.toHexString(getResources().getColor(android.R.color.white)), true));
+        categories.add(0, new Category(getString(R.string.allTheRad_txt), "#" + Integer.toHexString(getResources().getColor(android.R.color.white)),"", true));
         mCategoriesAdapter = new CategoriesAdapter(this, categories);
         mCategoriesLv.setAdapter(mCategoriesAdapter);
         mCategoriesLv.setOnItemClickListener(this);
@@ -228,8 +233,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
             realmQuery = realmQuery.contains("headline", mSearchQuery, false);
         }
 
-        if (!mSelectedCategory.equals("") && !mSelectedCategory.equals(getResources().getString(R.string.allTheRad_txt))) {
-            realmQuery = realmQuery.contains("postType", mSelectedCategory, false);
+        if (!mSelectedCategory.equals("")) {
+            realmQuery = realmQuery.contains("category", mSelectedCategory, false);
         }
 
         return realmQuery.findAllSorted("createdDate", false);
@@ -301,7 +306,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
             case R.id.categories_list:
 
                 mCategoriesAdapter.setSelectedCategory(position);
-                mSelectedCategory = mCategoriesAdapter.getItem(position).name;
+                mSelectedCategory = mCategoriesAdapter.getItem(position).value;
                 mNewsAdapter.updateRealmResults(getRealmData());
 
                 break;

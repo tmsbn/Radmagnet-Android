@@ -2,6 +2,8 @@ package tms.ubrats;
 
 import android.app.Application;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+
 /**
  * Created by tmsbn on 2/18/15.
  */
@@ -9,6 +11,18 @@ public class BaseApplication extends Application {
 
 
    public static String DATE_FORMAT="dd MMMM yyyy @ hh:mm aa";
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                        .setDefaultFontPath("fonts/AlegreyaSans-Regular.otf")
+                        .setFontAttrId(R.attr.fontPath)
+                        .build()
+        );
+
+    }
+
 
     public static enum Categories {
 

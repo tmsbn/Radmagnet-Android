@@ -2,23 +2,32 @@
   "categories": [
     {
       "name": "Events",
-      "color": "red"
+      "color": "red",
+      "value": "events"
     },
     {
       "name": "University News",
-      "color": "blue"
+      "color": "blue",
+      "value": "uninews"
+
     },
     {
       "name": "Life Hacks",
-      "color": "green"
+      "color": "green",
+      "value": "lifehacks"
+
     },
     {
       "name": "Deals",
-      "color": "white"
+      "color": "magenta",
+      "value": "deals"
+
     },
     {
-      "name": "Student Business",
-      "color": "yellow"
+      "name": "Hotspots",
+      "color": "yellow",
+      "value": "hotspots"
+
     }
   ]
 }
