@@ -26,11 +26,12 @@
         android:scrollbars="vertical" />
 
     <Button
+        android:layout_marginTop="20dp"
         android:id="@+id/showBookMarks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/savedRads_txt"
-        android:textColor="@android:color/white"
+        android:textColor="@color/dark_gray"
         android:textSize="20sp" />
 
 

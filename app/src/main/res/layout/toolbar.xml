@@ -2,7 +2,7 @@
     android:id="@+id/toolbar"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/white"
+    android:background="@drawable/bg_card"
     android:minHeight="?attr/actionBarSize">
 
 

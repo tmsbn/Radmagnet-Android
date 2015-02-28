@@ -3,6 +3,7 @@ package tms.ubrats;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -66,6 +67,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     String mSearchQuery = "";
     String mSelectedCategory = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -238,6 +240,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     }
 
+
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
@@ -272,7 +275,23 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        mSearchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        MenuItemCompat.setOnActionExpandListener(menuItem, new MenuItemCompat.OnActionExpandListener() {
+
+            @Override
+            public boolean onMenuItemActionExpand(MenuItem item) {
+                mSwipeLayout.setEnabled(false);
+                return true;
+            }
+
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem item) {
+                mSwipeLayout.setEnabled(true);
+                return true;
+            }
+        });
+
+        mSearchView = (SearchView) menuItem.getActionView();
         mSearchView.setOnQueryTextListener(this);
         mSearchView.setOnCloseListener(this);
 
@@ -324,6 +343,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
         mSearchQuery = query;
         mNewsAdapter.updateRealmResults(getRealmData());
+        mNewsAdapter.setSearchTerm(query);
 
         return true;
 

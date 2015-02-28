@@ -52,7 +52,6 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
     }
 
 
-
     private void setupNewsList() {
 
         //touchguard manager
@@ -133,6 +132,7 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
     public boolean onQueryTextChange(String query) {
         mSearchQuery = query;
         mBookmarkAdapter.updateRealmResults(getRealmData());
+        mBookmarkAdapter.setSearchTerm(query);
 
         return true;
     }
@@ -156,5 +156,18 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
         intent.putExtra("position", positon);
         intent.putExtra("realmIds", realmIds);
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+
+        if (!mSearchView.isIconified()) {
+            mSearchView.onActionViewCollapsed();
+            mSearchQuery = "";
+            return;
+        }
+
+        super.onBackPressed();
     }
 }

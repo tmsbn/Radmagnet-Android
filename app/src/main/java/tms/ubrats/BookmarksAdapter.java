@@ -2,6 +2,9 @@ package tms.ubrats;
 
 
 import android.content.Context;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +31,8 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
     Context mContext;
 
     BookmarkListener bookmarkListener;
+
+    String mSearchTerm="";
 
     public BookmarksAdapter(Context context, RealmResults<News> realmResults, boolean automaticUpdate) {
 
@@ -75,10 +80,10 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
     @Override
     public void onBindViewHolder(BookmarksViewHolder holder, final int position) {
 
-
-        holder.headlineTv.setText(mRealmResults.get(position).getHeadline());
-        holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mRealmResults.get(position).getCreatedDate()));
-        Picasso.with(mContext).load(mRealmResults.get(position).getImageUrl()).into(holder.icon);
+        News news=mRealmResults.get(position);
+        holder.headlineTv.setText(news.getHeadline());
+        holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(news.getCreatedDate()));
+        Picasso.with(mContext).load(news.getImageUrl()).into(holder.icon);
         holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,6 +92,16 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
                     bookmarkListener.onItemClick(mRealmResults.get(position), position);
             }
         });
+
+        if (mContext instanceof BaseActivity) {
+            BaseActivity activity = (BaseActivity) mContext;
+            holder.headlineTv.setText(activity.highlight(mSearchTerm,news.getHeadline()));
+            int color = activity.getColorFromCategory(news.getCategory());
+            holder.categoryTv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
+            holder.categoryTv.setBackgroundColor(color);
+            Drawable drawable = holder.categoryTv.getBackground();
+            drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
+        }
 
     }
 
@@ -142,6 +157,7 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
         protected TextView dateTv;
         protected ViewGroup container;
         protected ImageView icon;
+        protected TextView categoryTv;
 
 
         public BookmarksViewHolder(View v) {
@@ -150,6 +166,8 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
             headlineTv = (TextView) v.findViewById(R.id.headline);
             dateTv = (TextView) v.findViewById(R.id.date);
             icon = (ImageView) v.findViewById(R.id.newsImage);
+            categoryTv = (TextView) v.findViewById(R.id.category);
+
 
 
         }
@@ -166,6 +184,11 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
     public void updateRealmResults(RealmResults<News> realmResults) {
         this.mRealmResults = realmResults;
         notifyDataSetChanged();
+    }
+
+    public void setSearchTerm(String searchTerm) {
+        if (searchTerm != null)
+            mSearchTerm = searchTerm;
     }
 
     public interface BookmarkListener {

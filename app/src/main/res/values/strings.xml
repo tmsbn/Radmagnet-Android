@@ -25,5 +25,7 @@
     <string name="allTheRad_txt">All the Rad</string>
     <string name="missingHeadline_txt">Missing headline</string>
     <string name="details_txt">Details</string>
+    <string name="notif_content">We are missing you at RadMagnet</string>
+    <string name="notif_title">RadMagent</string>
 
 </resources>

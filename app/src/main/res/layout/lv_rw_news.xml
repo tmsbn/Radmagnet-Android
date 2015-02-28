@@ -20,6 +20,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/categoryColor"
         android:background="@color/gray"
+        android:focusable="false"
         android:scaleType="centerCrop" />
 
     <TextView
@@ -69,8 +70,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
-                tools:text="Thomas" />
+                android:textSize="14sp"
+                fontPath="fonts/AlegreyaSans-Bold.otf"
+                tools:text="Thomas"
+                tools:ignore="MissingPrefix" />
 
             <TextView
                 android:id="@+id/date"
@@ -78,8 +81,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="@android:color/white"
-                android:textSize="16sp"
-                tools:text="12 February 2014 @ 3:14" />
+                android:textSize="14sp"
+                fontPath="fonts/AlegreyaSans-Bold.otf"
+                tools:text="12 February 2014 @ 3:14"
+                tools:ignore="MissingPrefix" />
 
         </LinearLayout>
 

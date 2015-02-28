@@ -12,6 +12,8 @@ public class BaseApplication extends Application {
 
    public static String DATE_FORMAT="dd MMMM yyyy @ hh:mm aa";
 
+    public static int NOTIF_REQUEST_CODE=1506;
+
     @Override
     public void onCreate() {
         super.onCreate();

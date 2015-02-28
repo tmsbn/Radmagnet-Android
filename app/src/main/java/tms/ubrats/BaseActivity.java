@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.text.style.BackgroundColorSpan;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -15,6 +16,7 @@ import com.google.gson.Gson;
 import org.apache.commons.io.IOUtils;
 
 import java.io.InputStream;
+import java.text.Normalizer;
 import java.util.ArrayList;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -38,7 +40,6 @@ public abstract class BaseActivity extends ActionBarActivity {
         mPrefs = getSharedPreferences("news_data", MODE_PRIVATE);
 
 
-
     }
 
     protected void setupActionBar(boolean withTitle) {
@@ -47,14 +48,14 @@ public abstract class BaseActivity extends ActionBarActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        if(withTitle) {
+        if (withTitle) {
             SpannableString s = new SpannableString(getTitle().toString().toUpperCase());
             CalligraphyTypefaceSpan typefaceSpan = new CalligraphyTypefaceSpan(TypefaceUtils.load(getAssets(), "fonts/AlegreyaSans-BoldItalic.otf"));
             s.setSpan(typefaceSpan, 0, s.length(),
                     Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             getSupportActionBar().setTitle(s);
             getSupportActionBar().setDisplayShowTitleEnabled(true);
-        }else{
+        } else {
             getSupportActionBar().setLogo(getResources().getDrawable(R.drawable.ic_branding));
             getSupportActionBar().setDisplayShowTitleEnabled(false);
 
@@ -111,10 +112,39 @@ public abstract class BaseActivity extends ActionBarActivity {
     }
 
     public void setActionBarTitle(String title) {
-        SpannableString s =new SpannableString(title.toUpperCase());
+        SpannableString s = new SpannableString(title.toUpperCase());
         CalligraphyTypefaceSpan typefaceSpan = new CalligraphyTypefaceSpan(TypefaceUtils.load(getAssets(), "fonts/AlegreyaSans-BoldItalic.otf"));
         s.setSpan(typefaceSpan, 0, s.length(),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         getSupportActionBar().setTitle(s);
+    }
+
+    public CharSequence highlight(String search, String originalText) {
+        // ignore case and accents
+        // the same thing should have been done for the search text
+        if (search.equals(""))
+            return originalText;
+
+        String normalizedText = Normalizer.normalize(originalText, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "").toLowerCase();
+
+        int start = normalizedText.indexOf(search);
+        if (start < 0) {
+            // not found, nothing to to
+            return originalText;
+        } else {
+            // highlight each appearance in the original text
+            // while searching in normalized text
+            Spannable highlighted = new SpannableString(originalText);
+            while (start >= 0) {
+                int spanStart = Math.min(start, originalText.length());
+                int spanEnd = Math.min(start + search.length(), originalText.length());
+
+                highlighted.setSpan(new BackgroundColorSpan(Color.parseColor("#e4d90c")), spanStart, spanEnd, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+                start = normalizedText.indexOf(search, spanEnd);
+            }
+
+            return highlighted;
+        }
     }
 }

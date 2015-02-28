@@ -35,6 +35,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
     private int lastPosition = -1;
 
     int height;
+    String mSearchTerm = "";
 
     public NewsAdapter(Context context, RealmResults<News> realmResults, boolean automaticUpdate) {
 
@@ -78,9 +79,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
     public void onBindViewHolder(NewsHolder holder, final int position) {
 
         final News news = mRealmResults.get(position);
-        holder.headlineTv.setText(news.getHeadline());
         holder.creatorTv.setText(news.getCreator());
-        holder.categoryTv.setText(news.getCategory().toUpperCase());
 
         Picasso.with(mContext).load(mRealmResults.get(position).getImageUrl()).into(holder.newsImageIv);
         holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(news.getCreatedDate()));
@@ -93,11 +92,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             }
         });
 
+
         if (mContext instanceof BaseActivity) {
             BaseActivity activity = (BaseActivity) mContext;
+            holder.headlineTv.setText(activity.highlight(mSearchTerm,news.getHeadline()));
+
             int color = activity.getColorFromCategory(news.getCategory());
             holder.categoryLine.setBackgroundColor(color);
             Drawable drawable = holder.categoryTv.getBackground();
+            holder.categoryTv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
             drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
         }
 
@@ -136,10 +139,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             dateTv = (TextView) v.findViewById(R.id.date);
             bookmarkIbtn = (ImageButton) v.findViewById(R.id.bookmark);
             headlineTv = (TextView) v.findViewById(R.id.headline);
-            newsImageIv= (ImageView) v.findViewById(R.id.newsListImage);
+            newsImageIv = (ImageView) v.findViewById(R.id.newsListImage);
         }
 
 
+    }
+
+    public void setSearchTerm(String searchTerm) {
+        if (searchTerm != null)
+            mSearchTerm = searchTerm;
     }
 
     public void updateRealmResults(RealmResults<News> realmResults) {
@@ -148,6 +156,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
 
 
     }
+
 
     public static interface NewsItemClickListener {
 
