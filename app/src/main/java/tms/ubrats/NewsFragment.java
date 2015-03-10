@@ -14,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -53,9 +54,16 @@ public class NewsFragment extends Fragment {
     @InjectView(R.id.newsImage)
     public ImageView mNewsIv;
 
+    @InjectView(R.id.category)
+    public View mCategory;
+
 
     @InjectView(R.id.categoryColor)
     public View mCategoryColor;
+
+
+    @InjectView(R.id.webView)
+    public WebView mWebView;
 
 
     @InjectView(R.id.bookmark)
@@ -83,6 +91,7 @@ public class NewsFragment extends Fragment {
         if (getArguments() != null) {
             mPostId = getArguments().getString(ARG_PARAM1);
             setHasOptionsMenu(true);
+
         }
     }
 
@@ -111,6 +120,7 @@ public class NewsFragment extends Fragment {
 
         View fragmentView = inflater.inflate(R.layout.fragment_news, container, false);
         ButterKnife.inject(this, fragmentView);
+        mCategory.setVisibility(View.GONE);
 
 
         return fragmentView;
@@ -126,22 +136,29 @@ public class NewsFragment extends Fragment {
 
         mNews = Realm.getInstance(getActivity()).where(News.class).equalTo("postId", mPostId, true).findFirst();
         if (mNews != null) {
-            Picasso.with(getActivity()).load(mNews.getImageUrl()).into(mNewsIv);
-            Picasso.with(getActivity()).load(mNews.getCreatorDp()).transform(new CircleTransform()).into(mCreatorDpIv);
-            mHeadlineTv.setText((mNews.getHeadline() != null) ? mNews.getHeadline() : getActivity().getString(R.string.missingHeadline_txt));
-            mDateTv.setText((mNews.getCreatedDate() != null) ? new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mNews.getCreatedDate()) : "bla");
-            mCreatorTv.setText((mNews.getHeadline() != null) ? mNews.getCreator() : "");
 
-            int color = ((BaseActivity)getActivity()).getColorFromCategory(mNews.getCategory());
-            mCategoryColor.setBackgroundColor(color);
 
+            setupTopDetails();
             updateBookmarkButton();
+            setupWebView();
 
         } else {
             mBookmarkIbtn.setVisibility(View.GONE);
         }
 
         Log.v("onResume", "onResume of Fragment was called");
+
+    }
+
+    private void setupTopDetails(){
+
+        Picasso.with(getActivity()).load(mNews.getImageUrl()).into(mNewsIv);
+        Picasso.with(getActivity()).load(mNews.getCreatorDp()).transform(new CircleTransform()).into(mCreatorDpIv);
+        mHeadlineTv.setText((mNews.getHeadline() != null) ? mNews.getHeadline() : getActivity().getString(R.string.missingHeadline_txt));
+        mDateTv.setText((mNews.getCreatedDate() != null) ? new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mNews.getCreatedDate()) : "bla");
+        mCreatorTv.setText((mNews.getHeadline() != null) ? mNews.getCreator() : "");
+        int color = ((BaseActivity)getActivity()).getColorFromCategory(mNews.getCategory());
+        mCategoryColor.setBackgroundColor(color);
 
     }
 
@@ -153,6 +170,12 @@ public class NewsFragment extends Fragment {
         } else {
             mBookmarkIbtn.setActivated(false);
         }
+
+    }
+
+    public void setupWebView(){
+
+        mWebView.loadUrl("file:///android_asset/web/universitynews.php");
 
     }
 

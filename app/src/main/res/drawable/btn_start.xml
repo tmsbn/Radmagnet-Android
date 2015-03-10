@@ -6,7 +6,7 @@
         android:width="4dp"
         android:color="@android:color/white" />
 
-    <solid android:color="@android:color/transparent" />
+    <solid android:color="@color/start_color_selector" />
 
     <padding
         android:bottom="8dp"
