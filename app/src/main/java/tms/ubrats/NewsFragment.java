@@ -18,6 +18,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.melnykov.fab.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
@@ -43,12 +44,22 @@ public class NewsFragment extends Fragment {
     @InjectView(R.id.date)
     public TextView mDateTv;
 
-    @InjectView(R.id.newsDetailImage)
-    public ImageView mNewsDetailIv;
+    @InjectView(R.id.creator)
+    public TextView mCreatorTv;
+
+    @InjectView(R.id.creatorDp)
+    public ImageView mCreatorDpIv;
+
+    @InjectView(R.id.newsImage)
+    public ImageView mNewsIv;
+
+
+    @InjectView(R.id.categoryColor)
+    public View mCategoryColor;
 
 
     @InjectView(R.id.bookmark)
-    public ImageButton mBookmarkIbtn;
+    public FloatingActionButton mBookmarkIbtn;
 
     News mNews;
 
@@ -115,9 +126,15 @@ public class NewsFragment extends Fragment {
 
         mNews = Realm.getInstance(getActivity()).where(News.class).equalTo("postId", mPostId, true).findFirst();
         if (mNews != null) {
-            Picasso.with(getActivity()).load(mNews.getImageUrl()).into(mNewsDetailIv);
+            Picasso.with(getActivity()).load(mNews.getImageUrl()).into(mNewsIv);
+            Picasso.with(getActivity()).load(mNews.getCreatorDp()).transform(new CircleTransform()).into(mCreatorDpIv);
             mHeadlineTv.setText((mNews.getHeadline() != null) ? mNews.getHeadline() : getActivity().getString(R.string.missingHeadline_txt));
             mDateTv.setText((mNews.getCreatedDate() != null) ? new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mNews.getCreatedDate()) : "bla");
+            mCreatorTv.setText((mNews.getHeadline() != null) ? mNews.getCreator() : "");
+
+            int color = ((BaseActivity)getActivity()).getColorFromCategory(mNews.getCategory());
+            mCategoryColor.setBackgroundColor(color);
+
             updateBookmarkButton();
 
         } else {

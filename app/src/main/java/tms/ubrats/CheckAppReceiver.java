@@ -10,6 +10,9 @@ import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.support.v4.app.NotificationCompat;
 
+import io.realm.Realm;
+import io.realm.RealmResults;
+
 public class CheckAppReceiver extends BroadcastReceiver {
 
 
@@ -27,11 +30,36 @@ public class CheckAppReceiver extends BroadcastReceiver {
                 .setLargeIcon(BitmapFactory.decodeResource(res, R.drawable.ic_launcher))
                 .setWhen(System.currentTimeMillis())
                 .setAutoCancel(true)
+                .setLocalOnly(true)
                 .setContentTitle(context.getString(R.string.notif_title))
                 .setContentText(context.getString(R.string.notif_content));
 
-        Notification notification =builder.build();
+        Notification notification = builder.build();
         notificationManager.notify(BaseApplication.NOTIF_REQUEST_CODE, notification);
+
+        /**
+         * Database manintainance
+         */
+        Realm realm = Realm.getInstance(context);
+        final RealmResults<News> results = realm.allObjects(News.class);
+        final int size = results.size();
+        realm.beginTransaction();
+        realm.executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+
+                if (size >= 100) {
+                    for (int i = 0; i < 25; i++) {
+                        results.last().removeFromRealm();
+                    }
+
+                }
+
+
+            }
+        });
+
+        realm.close();
 
 
     }

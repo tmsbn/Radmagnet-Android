@@ -194,7 +194,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 realm.executeTransaction(new Realm.Transaction() {
                     @Override
                     public void execute(Realm realm) {
+
                         realm.copyToRealmOrUpdate(newsList);
+
                         mPrefs.edit().putLong(LAST_UPDATED_KEY, newsResponse.date.getTime() / 1000).apply();
 
                     }

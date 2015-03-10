@@ -7,37 +7,88 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
+import com.viewpagerindicator.CirclePageIndicator;
+
+import java.util.ArrayList;
 import java.util.Calendar;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+import butterknife.OnClick;
 
-public class SplashActivity extends ActionBarActivity {
+
+public class SplashActivity extends BaseActivity {
 
 
     AlarmManager mAlarmManager;
 
     private static final int REPEAT_NOTIF_AFTER_DAYS = 3;
 
+    @InjectView(R.id.introPager)
+    AutoScrollViewPager mIntroPager;
+
+    @InjectView(R.id.splashScreen)
+    ImageView mSplashScreenIv;
+
+    @InjectView(R.id.circlePagerIndicator)
+    CirclePageIndicator mCirclePageIndicator;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        ButterKnife.inject(this);
 
         int SPLASH_DISPLAY_LENGTH = 2000;
         setupReminderNotification();
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
-                SplashActivity.this.startActivity(mainIntent);
-                SplashActivity.this.finish();
+                mSplashScreenIv.setVisibility(View.GONE);
+                setUpPager();
+
             }
         }, SPLASH_DISPLAY_LENGTH);
+
     }
+
+    public void setUpPager(){
+
+        ArrayList<Integer> imageIdList = new ArrayList<>();
+        imageIdList.add(R.drawable.bg_intro_1);
+        imageIdList.add(R.drawable.bg_intro_2);
+
+
+        mIntroPager.setAdapter(new ImagePagerAdapter(this,imageIdList));
+        mIntroPager.setAutoScrollDurationFactor(8);
+        mIntroPager.setInterval(5000);
+        mIntroPager.setCycle(false);
+        mIntroPager.startAutoScroll();
+
+        mCirclePageIndicator.setViewPager(mIntroPager);
+
+    }
+
+    @OnClick(R.id.StartButton)
+    public void skipButton(){
+
+        Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
+        SplashActivity.this.startActivity(mainIntent);
+        SplashActivity.this.finish();
+
+    }
+
+
+
+
 
     public void setupReminderNotification() {
 

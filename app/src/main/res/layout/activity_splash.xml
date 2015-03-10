@@ -1,17 +1,48 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/gray"
     android:layout_height="match_parent"
+    android:background="@color/gray"
     tools:context=".MainActivity">
 
+
+    <tms.ubrats.AutoScrollViewPager
+        android:id="@+id/introPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/StartButton"
+        android:textAppearance="@style/TextAppearance.Italics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/btn_start"
+        android:text="@string/start_txt"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:minHeight="0dp"
+        tools:ignore="MissingPrefix" />
+
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/circlePagerIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp" />
+
+
     <ImageView
+        android:id="@+id/splashScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerInside"
-        android:background="@android:color/transparent"
-        android:src="@drawable/bg_splash_screen"
         android:layout_centerInParent="true"
-        android:text="Splash Screen" />
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/bg_splash_screen" />
 
 </RelativeLayout>

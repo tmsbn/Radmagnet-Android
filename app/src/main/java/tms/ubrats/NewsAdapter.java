@@ -82,6 +82,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         holder.creatorTv.setText(news.getCreator());
 
         Picasso.with(mContext).load(mRealmResults.get(position).getImageUrl()).into(holder.newsImageIv);
+        Picasso.with(mContext).load(mRealmResults.get(position).getCreatorDp()).transform(new CircleTransform()).into(holder.creatorDp);
         holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(news.getCreatedDate()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,6 +126,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         TextView dateTv;
         TextView headlineTv;
         TextView creatorTv;
+        ImageView creatorDp;
         ImageButton bookmarkIbtn;
         View categoryLine;
         TextView categoryTv;
@@ -132,6 +134,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
 
 
         public NewsHolder(View v) {
+
             super(v);
             categoryTv = (TextView) v.findViewById(R.id.category);
             creatorTv = (TextView) v.findViewById(R.id.creator);
@@ -139,7 +142,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             dateTv = (TextView) v.findViewById(R.id.date);
             bookmarkIbtn = (ImageButton) v.findViewById(R.id.bookmark);
             headlineTv = (TextView) v.findViewById(R.id.headline);
-            newsImageIv = (ImageView) v.findViewById(R.id.newsListImage);
+            newsImageIv = (ImageView) v.findViewById(R.id.newsImage);
+            creatorDp= (ImageView) v.findViewById(R.id.creatorDp);
         }
 
 
@@ -165,8 +169,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
 
     private void setAnimation(View viewToAnimate, int position) {
         // If the bound view wasn't previously displayed on screen, it's animated
-
-
         Animation animation = AnimationUtils.loadAnimation(mContext, (position > lastPosition) ? R.anim.up_from_bottom : R.anim.down_from_top);
         viewToAnimate.startAnimation(animation);
         lastPosition = position;

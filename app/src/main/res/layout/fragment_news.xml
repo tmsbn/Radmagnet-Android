@@ -1,41 +1,34 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="tms.ubrats.NewsFragment">
 
-    <ImageView
-        android:id="@+id/newsDetailImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop" />
+    <include
+        android:id="@+id/newsDetailsLayout"
+        layout="@layout/lv_rw_news" />
 
-    <TextView
-        android:id="@+id/headline"
-        fontPath="fonts/AlegreyaSans-Bold.otf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="7dp"
-        android:layout_marginBottom="10dp"
-        android:textSize="18sp"
-        tools:ignore="MissingPrefix"
-        tools:text="Headline" />
 
-    <TextView
-        android:id="@+id/date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="7dp"
-        android:textColor="@color/material_blue_grey_950"
-        tools:text="date" />
-
-    <ImageButton
+    <com.melnykov.fab.FloatingActionButton
         android:id="@+id/bookmark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_bookmark" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="-30dp"
+        android:src="@drawable/ic_bookmark"
+        fab:fab_colorNormal="@color/red"
+        fab:fab_colorPressed="@color/red" />
+
+    <WebView
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/newsDetailsLayout" />
 
 
-</LinearLayout>
+</RelativeLayout>
