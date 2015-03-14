@@ -46,7 +46,7 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
 
         ButterKnife.inject(this);
 
-        setupActionBar(true);
+        setupActionBar(true,null);
         setupNewsList();
 
     }

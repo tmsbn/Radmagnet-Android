@@ -29,6 +29,7 @@ import io.realm.Realm;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
 import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
+import jp.wasabeef.recyclerview.animators.adapters.SlideInBottomAnimationAdapter;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -75,9 +76,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         setContentView(R.layout.activity_main);
 
         ButterKnife.inject(this);
-        setupActionBar(false);
-        setupToolBar();
-        setupCategoriesList();
+        setupActionBar(false, (Toolbar) findViewById(R.id.toolbar));
+        setupDrawer();
+
         setupNewsList();
         fetchLatestNews();
 
@@ -92,10 +93,10 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         slideInUpAnimator.setChangeDuration(1000);
         mNewsRv.setItemAnimator(slideInUpAnimator);
         mNewsAdapter = new NewsAdapter(this, getRealmData(), true);
-        // SlideInBottomAnimationAdapter slideInBottomAnimationAdapter=new SlideInBottomAnimationAdapter(mNewsAdapter);
-        //slideInBottomAnimationAdapter.setDuration(700);
+        SlideInBottomAnimationAdapter slideInBottomAnimationAdapter = new SlideInBottomAnimationAdapter(mNewsAdapter);
+        slideInBottomAnimationAdapter.setDuration(700);
 
-        mNewsRv.setAdapter(mNewsAdapter);
+        mNewsRv.setAdapter(slideInBottomAnimationAdapter);
         mNewsAdapter.setOnItemClickedListener(this);
 
         mSwipeLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
@@ -124,13 +125,15 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     }
 
-    private void setupToolBar() {
+    private void setupDrawer() {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.app_name, R.string.app_name);
         mBranding.setText("UBrats");
+
+        setupCategoriesList();
 
 
     }
@@ -139,7 +142,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     private void fetchLatestNews() {
 
         long lastUpdatedDate = mPrefs.getLong(LAST_UPDATED_KEY, -1);
-        String date = (lastUpdatedDate != -1) ? String.valueOf(lastUpdatedDate) : "";
+        String date = (lastUpdatedDate != -1) ? String.valueOf(lastUpdatedDate) : "0";
         Networking.getRestClient().getAnnouncements(date, new GetNewsCallback());
 
         mSwipeLayout.post(new Runnable() {

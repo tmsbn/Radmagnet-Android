@@ -3,13 +3,18 @@ package tms.ubrats;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.BackgroundColorSpan;
 import android.util.Log;
+import android.view.View;
 
 import com.google.gson.Gson;
 
@@ -42,26 +47,7 @@ public abstract class BaseActivity extends ActionBarActivity {
 
     }
 
-    protected void setupActionBar(boolean withTitle) {
 
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-
-        if (withTitle) {
-            SpannableString s = new SpannableString(getTitle().toString().toUpperCase());
-            CalligraphyTypefaceSpan typefaceSpan = new CalligraphyTypefaceSpan(TypefaceUtils.load(getAssets(), "fonts/AlegreyaSans-BoldItalic.otf"));
-            s.setSpan(typefaceSpan, 0, s.length(),
-                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-            getSupportActionBar().setTitle(s);
-            getSupportActionBar().setDisplayShowTitleEnabled(true);
-        } else {
-            getSupportActionBar().setLogo(getResources().getDrawable(R.drawable.ic_branding));
-            getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-        }
-
-    }
 
 
     public ConfigVars getConfig() {
@@ -106,18 +92,22 @@ public abstract class BaseActivity extends ActionBarActivity {
         return "";
     }
 
+
+    public Drawable applyColorToDrawable(int drawableId, int color) {
+
+        Drawable drawable = getResources().getDrawable(drawableId);
+        drawable.setColorFilter(new
+                PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
+
+        return drawable;
+    }
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
-    public void setActionBarTitle(String title) {
-        SpannableString s = new SpannableString(title.toUpperCase());
-        CalligraphyTypefaceSpan typefaceSpan = new CalligraphyTypefaceSpan(TypefaceUtils.load(getAssets(), "fonts/AlegreyaSans-BoldItalic.otf"));
-        s.setSpan(typefaceSpan, 0, s.length(),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        getSupportActionBar().setTitle(s);
-    }
+
 
     public CharSequence highlight(String search, String originalText) {
         // ignore case and accents
@@ -146,5 +136,35 @@ public abstract class BaseActivity extends ActionBarActivity {
 
             return highlighted;
         }
+    }
+
+    protected void setupActionBar(boolean withTitle,Toolbar toolbar) {
+
+        setSupportActionBar(toolbar);
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeButtonEnabled(true);
+
+        if (withTitle) {
+
+            actionBar.setTitle(getStyledActionTitle(getTitle()));
+            actionBar.setDisplayShowTitleEnabled(true);
+        } else {
+            actionBar.setLogo(getResources().getDrawable(R.drawable.ic_branding));
+            actionBar.setDisplayShowTitleEnabled(false);
+
+        }
+
+    }
+
+    public SpannableString getStyledActionTitle(CharSequence title){
+
+        SpannableString s = new SpannableString(getTitle().toString().toUpperCase());
+        CalligraphyTypefaceSpan typefaceSpan = new CalligraphyTypefaceSpan(TypefaceUtils.load(getAssets(), "fonts/AlegreyaSans-BoldItalic.otf"));
+        s.setSpan(typefaceSpan, 0, s.length(),
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        return s;
+
     }
 }

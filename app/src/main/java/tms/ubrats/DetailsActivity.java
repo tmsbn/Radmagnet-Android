@@ -4,6 +4,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -39,7 +40,6 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
             finish();
 
         mRealmIds=realmIds;
-        setupActionBar(true);
         setupData();
 
     }
@@ -78,7 +78,7 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
         int id = item.getItemId();
         switch(id){
 
-            case R.id.menu_share:
+            case R.id.share:
 
 
                 break;
@@ -108,7 +108,7 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
 
     }
 
-    private class NewsDetailPagerAdapter extends FragmentPagerAdapter{
+    private class NewsDetailPagerAdapter extends FragmentStatePagerAdapter {
 
         ArrayList<String> mRealmIds;
 

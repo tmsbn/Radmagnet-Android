@@ -1,14 +1,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="tms.ubrats.NewsFragment">
 
-    <ScrollView
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <include
+        android:id="@+id/newsDetailsLayout"
+        layout="@layout/lv_rw_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
 
 
         <LinearLayout
@@ -17,34 +32,20 @@
             android:descendantFocusability="blocksDescendants"
             android:orientation="vertical">
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@android:color/transparent" />
 
-            <include
-                android:id="@+id/newsDetailsLayout"
-                layout="@layout/lv_rw_news" />
 
             <WebView
                 android:id="@+id/webView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/newsDetailsLayout" />
+                android:layout_height="match_parent" />
 
 
         </LinearLayout>
     </ScrollView>
-
-
-    <com.melnykov.fab.FloatingActionButton
-        android:id="@+id/bookmark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="-30dp"
-        android:src="@drawable/ic_bookmark"
-        fab:fab_colorNormal="@color/red"
-        fab:fab_colorPressed="@color/red" />
 
 
 </RelativeLayout>

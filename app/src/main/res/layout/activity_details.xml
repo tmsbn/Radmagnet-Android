@@ -5,7 +5,6 @@
     android:orientation="vertical"
     tools:context="tms.ubrats.DetailsActivity">
 
-    <include layout="@layout/toolbar" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/newsPager"

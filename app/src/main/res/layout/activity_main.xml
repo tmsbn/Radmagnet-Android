@@ -2,9 +2,8 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <!-- The main content view -->
+
     <include layout="@layout/layout_news" />
-    <!-- The navigation drawer -->
     <include layout="@layout/sidebar_news" />
 
 </android.support.v4.widget.DrawerLayout>

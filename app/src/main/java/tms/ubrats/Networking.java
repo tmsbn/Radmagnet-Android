@@ -20,11 +20,12 @@ import retrofit.RestAdapter;
 import retrofit.android.AndroidLog;
 import retrofit.converter.GsonConverter;
 import retrofit.http.GET;
+import retrofit.http.Path;
 import retrofit.http.Query;
 
 public class Networking {
 
-    private static final String URL = "http://www.finree.com/api";
+    private static final String URL = "http://radmagnet.com/GET";
 
     private static RestInterface sRestService;
 
@@ -76,8 +77,9 @@ public class Networking {
         @GET("/config.json")
         void getConfig(Callback<ConfigVars> callback);
 
-        @GET("/fetch.php")
-        void getAnnouncements(@Query("date") String date, Callback<NewsResponse> callback);
+
+        @GET("/highlights/{date}")
+        void getAnnouncements(@Path("date") String date, Callback<NewsResponse> callback);
 
 
     }
