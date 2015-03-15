@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="20dp" />
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <stroke
-        android:width="4dp"
-        android:color="@android:color/white" />
+    <item android:drawable="@drawable/btn_start_p" android:state_pressed="true" />
+    <item android:drawable="@drawable/btn_start_n" />
 
-    <solid android:color="@color/start_color_selector" />
-
-    <padding
-        android:bottom="8dp"
-        android:left="10dp"
-        android:right="10dp"
-        android:top="8dp" />
-</shape> 
+</selector>

@@ -93,10 +93,10 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         slideInUpAnimator.setChangeDuration(1000);
         mNewsRv.setItemAnimator(slideInUpAnimator);
         mNewsAdapter = new NewsAdapter(this, getRealmData(), true);
-        SlideInBottomAnimationAdapter slideInBottomAnimationAdapter = new SlideInBottomAnimationAdapter(mNewsAdapter);
-        slideInBottomAnimationAdapter.setDuration(700);
+        //SlideInBottomAnimationAdapter slideInBottomAnimationAdapter = new SlideInBottomAnimationAdapter(mNewsAdapter);
+        //slideInBottomAnimationAdapter.setDuration(700);
 
-        mNewsRv.setAdapter(slideInBottomAnimationAdapter);
+        mNewsRv.setAdapter(mNewsAdapter);
         mNewsAdapter.setOnItemClickedListener(this);
 
         mSwipeLayout.setColorSchemeResources(android.R.color.holo_blue_bright,

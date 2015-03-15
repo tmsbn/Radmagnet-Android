@@ -214,6 +214,7 @@ public class NewsFragment extends BaseFragment {
                 mNews.setBookmarked(!mNews.isBookmarked());
             }
         });
+        updateBookmarkButton();
 
 
     }
@@ -239,7 +240,8 @@ public class NewsFragment extends BaseFragment {
         bookmarkMenuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                updateBookmarkButton();
+                bookMarkItem();
+
                 return true;
             }
         });

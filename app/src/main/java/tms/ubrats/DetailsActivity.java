@@ -2,12 +2,14 @@ package tms.ubrats;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -56,6 +58,32 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
         if(position!=-1){
             mViewPager.setCurrentItem(position);
         }
+
+        mViewPager.beginFakeDrag();
+
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mViewPager.fakeDragBy(-40);
+
+                Handler handler2 = new Handler();
+                handler2.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mViewPager.endFakeDrag();
+                    }
+                }, 100);
+            }
+        }, 100);
+
+
+
+
+
+
+
 
     }
 
