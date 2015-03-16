@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,7 +22,6 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 import io.realm.Realm;
-import io.realm.RealmBaseAdapter;
 import io.realm.RealmChangeListener;
 import io.realm.RealmResults;
 
@@ -101,10 +101,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
 
 
 
-
         if (mContext instanceof BaseActivity) {
             BaseActivity activity = (BaseActivity) mContext;
-            holder.headlineTv.setText(activity.highlight(mSearchTerm,news.getHeadline()));
+            holder.headlineTv.setText(activity.highlight(mSearchTerm, news.getHeadline()));
 
             int color = activity.getColorFromCategory(news.getCategory());
             holder.categoryLine.setBackgroundColor(color);
@@ -115,8 +114,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
 
 
     }
-
-
 
 
     @Override
@@ -141,6 +138,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         View categoryLine;
         TextView categoryTv;
         ImageView newsImageIv;
+        FrameLayout frameLayout;
 
 
         public NewsHolder(View v) {
@@ -153,7 +151,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             bookmarkIbtn = (ImageButton) v.findViewById(R.id.bookmark);
             headlineTv = (TextView) v.findViewById(R.id.headline);
             newsImageIv = (ImageView) v.findViewById(R.id.newsImage);
-            creatorDp= (ImageView) v.findViewById(R.id.creatorDp);
+            creatorDp = (ImageView) v.findViewById(R.id.creatorDp);
+            frameLayout = (FrameLayout) v.findViewById(R.id.specific_details);
         }
 
 

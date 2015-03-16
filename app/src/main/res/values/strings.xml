@@ -42,5 +42,7 @@
     <string name="yourFeedbackCouldNotBeSend_msg">Unable to contact server</string>
     <string name="sending_txt">SENDING..</string>
     <string name="sent_txt">SENT!</string>
+    <string name="discount_txt">discount</string>
+    <string name="percentage_txt">%</string>
 
 </resources>

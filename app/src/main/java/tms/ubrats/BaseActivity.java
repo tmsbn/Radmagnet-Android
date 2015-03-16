@@ -82,11 +82,11 @@ public abstract class BaseActivity extends ActionBarActivity {
         return Color.WHITE;
     }
 
-    public String getTitleFromConfig(String postType) {
+    public String getTitleFromConfig(String categoryName) {
 
         ArrayList<Category> categories = getConfig().categories;
         for (Category category : categories) {
-            if (category.value.equalsIgnoreCase(postType))
+            if (category.value.equalsIgnoreCase(categoryName))
                 return category.name;
         }
 
@@ -97,7 +97,7 @@ public abstract class BaseActivity extends ActionBarActivity {
     public Drawable applyColorToDrawable(int drawableId, int color) {
 
         Drawable drawable = getResources().getDrawable(drawableId);
-        drawable.setColorFilter(new
+        drawable.mutate().setColorFilter(new
                 PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
 
         return drawable;

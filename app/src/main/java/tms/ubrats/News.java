@@ -14,8 +14,13 @@ public class News extends RealmObject {
 
     private String category;
 
+
     @PrimaryKey
+    private String id;
+
+
     private String postId;
+
 
     private Date createdDate;
 
@@ -24,8 +29,17 @@ public class News extends RealmObject {
     private String imageUrl;
     private String creator;
     private String creatorDp;
-    private boolean isBookmarked=false;
 
+    private boolean isBookmarked = false;
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public boolean isBookmarked() {
         return isBookmarked;
@@ -37,7 +51,6 @@ public class News extends RealmObject {
 
     @Ignore
     private String source;
-
 
 
     public String getPostId() {

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        tools:text="50" />
+
+    <TextView
+        android:id="@+id/specific_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/percentage"
+        android:textSize="12sp"
+        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:textColor="@android:color/white"
+        android:text="@string/discount_txt" />
+
+    <TextView
+        android:id="@+id/specific_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/percentage"
+        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:textColor="@android:color/white"
+        android:text="@string/percentage_txt" />
+
+</RelativeLayout>

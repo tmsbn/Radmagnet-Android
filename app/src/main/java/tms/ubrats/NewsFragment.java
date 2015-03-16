@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -34,7 +35,7 @@ public class NewsFragment extends BaseFragment {
 
     public static final String ARG_PARAM1 = "param1";
 
-    private String mPostId;
+    private String mId;
 
     private OnFragmentInteractionListener mListener;
 
@@ -65,6 +66,12 @@ public class NewsFragment extends BaseFragment {
     public WebView mWebView;
 
 
+
+
+
+    @InjectView(R.id.newsCategoryTitle)
+    public TextView newsCategoryTitle;
+
     @InjectView(R.id.scrollView)
     public ScrollView mScrollView;
 
@@ -76,6 +83,8 @@ public class NewsFragment extends BaseFragment {
     MenuItem shareMenuItem, bookmarkMenuItem;
 
     private ShareActionProvider mShareActionProvider;
+
+    private String newsDetailsURL="http://www.radmagnet.com/GET/details/";
 
 
     public static NewsFragment newInstance(String postId) {
@@ -92,7 +101,7 @@ public class NewsFragment extends BaseFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mPostId = getArguments().getString(ARG_PARAM1);
+            mId = getArguments().getString(ARG_PARAM1);
         }
     }
 
@@ -165,10 +174,10 @@ public class NewsFragment extends BaseFragment {
 
     private void setupAllViews(){
 
-        if (mPostId == null)
+        if (mId == null)
             return;
 
-        mNews = Realm.getInstance(getActivity()).where(News.class).equalTo("postId", mPostId, true).findFirst();
+        mNews = Realm.getInstance(getActivity()).where(News.class).equalTo("id", mId, true).findFirst();
         if (mNews != null) {
 
             color = ((BaseActivity) getActivity()).getColorFromCategory(mNews.getCategory());
@@ -186,10 +195,14 @@ public class NewsFragment extends BaseFragment {
 
     }
 
+    private void setupSpecificDetails(){
+
+    }
+
 
     private void setupTopDetails() {
 
-        toolbar.setTitle(getBaseActivity().getStyledActionTitle(mNews.getCategory()));
+        newsCategoryTitle.setText(getBaseActivity().getTitleFromConfig(mNews.getCategory()));
         Picasso.with(getActivity()).load(mNews.getImageUrl()).into(mNewsIv);
         Picasso.with(getActivity()).load(mNews.getCreatorDp()).transform(new CircleTransform()).into(mCreatorDpIv);
         mHeadlineTv.setText((mNews.getHeadline() != null) ? mNews.getHeadline() : getActivity().getString(R.string.missingHeadline_txt));
@@ -202,7 +215,7 @@ public class NewsFragment extends BaseFragment {
 
     public void setupWebView() {
 
-        mWebView.loadUrl("file:///android_asset/web/universitynews.php");
+        mWebView.loadUrl(newsDetailsURL+mNews.getCategory()+"/"+mNews.getPostId());
 
     }
 

@@ -1,0 +1,16 @@
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:minHeight="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/newsCategoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:textSize="22sp" />
+
+
+</android.support.v7.widget.Toolbar>

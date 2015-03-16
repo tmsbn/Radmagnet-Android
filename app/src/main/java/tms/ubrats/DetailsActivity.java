@@ -2,14 +2,9 @@ package tms.ubrats;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -17,11 +12,10 @@ import java.util.ArrayList;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import butterknife.OnClick;
 import io.realm.Realm;
 
 
-public class DetailsActivity extends BaseActivity implements ViewPager.OnPageChangeListener,NewsFragment.OnFragmentInteractionListener {
+public class DetailsActivity extends BaseActivity implements ViewPager.OnPageChangeListener, NewsFragment.OnFragmentInteractionListener {
 
     public ArrayList<String> mRealmIds;
 
@@ -37,52 +31,25 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
         ButterKnife.inject(this);
 
         ArrayList<String> realmIds = getIntent().getStringArrayListExtra("realmIds");
-        position= getIntent().getIntExtra("position",-1);
+        position = getIntent().getIntExtra("position", -1);
         if (realmIds == null || realmIds.isEmpty())
             finish();
 
-        mRealmIds=realmIds;
+        mRealmIds = realmIds;
         setupData();
 
     }
 
 
+    public void setupData() {
 
-
-    public void setupData(){
-
-        NewsDetailPagerAdapter newsDetailPagerAdapter=new NewsDetailPagerAdapter(mRealmIds);
+        NewsDetailPagerAdapter newsDetailPagerAdapter = new NewsDetailPagerAdapter(mRealmIds);
         mViewPager.setAdapter(newsDetailPagerAdapter);
         mViewPager.setOnPageChangeListener(this);
 
-        if(position!=-1){
+        if (position != -1) {
             mViewPager.setCurrentItem(position);
         }
-
-        mViewPager.beginFakeDrag();
-
-
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                mViewPager.fakeDragBy(-40);
-
-                Handler handler2 = new Handler();
-                handler2.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mViewPager.endFakeDrag();
-                    }
-                }, 100);
-            }
-        }, 100);
-
-
-
-
-
-
 
 
     }
@@ -104,7 +71,7 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-        switch(id){
+        switch (id) {
 
             case R.id.share:
 
@@ -140,10 +107,10 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
 
         ArrayList<String> mRealmIds;
 
-        public NewsDetailPagerAdapter(ArrayList<String> realmIds){
+        public NewsDetailPagerAdapter(ArrayList<String> realmIds) {
 
             super(getSupportFragmentManager());
-            mRealmIds=realmIds;
+            mRealmIds = realmIds;
         }
 
 

@@ -41,6 +41,12 @@
             tools:ignore="MissingPrefix"
             tools:text="University News" />
 
+        <FrameLayout
+            android:id="@+id/specific_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/category" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,9 +60,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:padding="7dp"
-                android:textAppearance="@style/TextAppearance.Bold"
+                android:textAppearance="@style/TextAppearance.BoldItalics"
                 android:textColor="@android:color/white"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 tools:ignore="MissingPrefix"
                 tools:text="This is some long typical headline" />
@@ -64,8 +70,8 @@
             <LinearLayout
                 android:id="@+id/bar"
                 android:layout_width="match_parent"
-                android:background="@drawable/transparent_gradient"
                 android:layout_height="wrap_content"
+                android:background="@drawable/transparent_gradient"
                 android:orientation="horizontal"
                 android:padding="7dp">
 
@@ -92,9 +98,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
+                    android:gravity="right"
                     android:textColor="@android:color/white"
                     android:textSize="16sp"
-                    android:gravity="right"
                     tools:ignore="MissingPrefix"
                     tools:text="12 February 2014 @ 3:14" />
 

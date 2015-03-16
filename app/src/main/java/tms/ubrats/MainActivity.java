@@ -206,7 +206,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         ArrayList<String> realmIds = new ArrayList<>();
         RealmResults<News> results = mNewsAdapter.getRealmResults();
         for (News news : results) {
-            realmIds.add(news.getPostId());
+            realmIds.add(news.getId());
         }
 
         Intent intent = new Intent(this, DetailsActivity.class);
@@ -225,6 +225,11 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
             if (newsList == null || newsList.size() == 0) {
                 Toast.makeText(MainActivity.this, getString(R.string.noUpdatesAvaliable_msg), Toast.LENGTH_SHORT).show();
             } else {
+
+
+                for(News news:newsList){
+                    news.setId(news.getCategory()+news.getPostId());
+                }
 
                 Toast.makeText(MainActivity.this, newsList.size() + "", Toast.LENGTH_SHORT).show();
                 Realm realm = Realm.getInstance(MainActivity.this);
