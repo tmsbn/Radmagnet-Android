@@ -13,7 +13,7 @@
 
     <Button
         android:id="@+id/StartButton"
-        android:textAppearance="@style/TextAppearance.Italics"
+        android:textAppearance="@style/TextAppearance.BoldItalics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

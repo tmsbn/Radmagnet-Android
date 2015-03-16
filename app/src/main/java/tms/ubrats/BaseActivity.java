@@ -14,6 +14,7 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.BackgroundColorSpan;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 
 import com.google.gson.Gson;
@@ -165,6 +166,11 @@ public abstract class BaseActivity extends ActionBarActivity {
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         return s;
+
+    }
+
+    public int getValueInDp(int valueInDp){
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, valueInDp, getResources().getDisplayMetrics());
 
     }
 

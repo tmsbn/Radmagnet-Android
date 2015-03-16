@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,12 +25,10 @@ import java.util.ArrayList;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import butterknife.OnClick;
 import io.realm.Realm;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
 import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
-import jp.wasabeef.recyclerview.animators.adapters.SlideInBottomAnimationAdapter;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -48,6 +47,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     @InjectView(R.id.categories_list)
     ListView mCategoriesLv;
+
+    @InjectView(R.id.otherOptions_list)
+    ListView mOtherOptionsLv;
 
     @InjectView(R.id.toolbar)
     Toolbar mToolbar;
@@ -107,12 +109,6 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         mSwipeLayout.setOnRefreshListener(this);
     }
 
-    @OnClick(R.id.showBookMarks)
-    public void showBookmarks() {
-
-        Intent intent = new Intent(this, BookmarkActivity.class);
-        startActivity(intent);
-    }
 
     private void setupCategoriesList() {
 
@@ -121,8 +117,44 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         mCategoriesAdapter = new CategoriesAdapter(this, categories);
         mCategoriesLv.setAdapter(mCategoriesAdapter);
         mCategoriesLv.setOnItemClickListener(this);
+//        mCategoriesLv.addFooterView(LayoutInflater.from(this).inflate(R.layout.horizontal_line, null));
 
 
+    }
+
+    private void setupOtherSideBarOptions() {
+
+
+        ArrayList<Category> options = new ArrayList<>();
+        options.add(new Category(getString(R.string.radsILove_txt), "#333333"));
+        options.add(new Category(getString(R.string.feedback_txt), "#D9E021"));
+
+        mOtherOptionsLv.setAdapter(new OtherOptionsAdapter(this, options));
+
+
+        mOtherOptionsLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent;
+                switch (position) {
+
+                    case 0:
+
+                         intent = new Intent(MainActivity.this, BookmarkActivity.class);
+                        startActivity(intent);
+
+
+                        break;
+
+                    case 1:
+
+                         intent = new Intent(MainActivity.this, FeedbackActivity.class);
+                        startActivity(intent);
+
+                        break;
+                }
+            }
+        });
     }
 
     private void setupDrawer() {
@@ -134,6 +166,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         mBranding.setText("UBrats");
 
         setupCategoriesList();
+
+        setupOtherSideBarOptions();
 
 
     }

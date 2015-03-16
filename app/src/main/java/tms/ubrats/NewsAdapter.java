@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 import io.realm.Realm;
+import io.realm.RealmBaseAdapter;
 import io.realm.RealmChangeListener;
 import io.realm.RealmResults;
 
@@ -74,6 +75,11 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         return new NewsHolder(itemView);
     }
 
+    @Override
+    public long getItemId(int position) {
+
+        return mRealmResults.get(position).getPostId().hashCode();
+    }
 
     @Override
     public void onBindViewHolder(NewsHolder holder, final int position) {
@@ -81,8 +87,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         final News news = mRealmResults.get(position);
         holder.creatorTv.setText(news.getCreator());
 
-        Picasso.with(mContext).load(mRealmResults.get(position).getImageUrl()).into(holder.newsImageIv);
-        Picasso.with(mContext).load(mRealmResults.get(position).getCreatorDp()).transform(new CircleTransform()).into(holder.creatorDp);
+        Picasso.with(mContext).load(news.getImageUrl()).into(holder.newsImageIv);
+        Picasso.with(mContext).load(news.getCreatorDp()).transform(new CircleTransform()).into(holder.creatorDp);
         holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(news.getCreatedDate()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +98,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
                     mListener.onItemClick(news, position);
             }
         });
+
+
 
 
         if (mContext instanceof BaseActivity) {
@@ -107,6 +115,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
 
 
     }
+
+
 
 
     @Override

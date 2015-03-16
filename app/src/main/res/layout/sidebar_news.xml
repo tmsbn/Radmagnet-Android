@@ -14,7 +14,7 @@
         android:background="@color/red"
         android:gravity="center"
         android:text="@string/dubai_txt"
-        android:textAppearance="@style/TextAppearance.Italics"
+        android:textAppearance="@style/TextAppearance.BoldItalics"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:visibility="visible" />
@@ -28,14 +28,19 @@
         android:listSelector="@color/translucent"
         android:scrollbars="vertical" />
 
-    <Button
-        android:id="@+id/showBookMarks"
+    <TextView
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+
+    <ListView
+
+        android:id="@+id/otherOptions_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/savedRads_txt"
-        android:textColor="@color/dark_gray"
-        android:textSize="20sp" />
+        android:divider="@android:color/transparent"
+        android:scrollbars="vertical" />
 
 
 </LinearLayout>

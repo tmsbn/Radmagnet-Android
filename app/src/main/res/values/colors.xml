@@ -2,9 +2,11 @@
 <resources>
 
     <color name="yellow">#FFFF00</color>
-    <color name="dark_gray">#ff272727</color>
+    <color name="dark_gray">#1A1A1A</color>
     <color name="gray">#333333</color>
     <color name="red">#ffaa1524</color>
     <color name="translucent">#6000</color>
+    <color name="dark_yellow">#D9E021</color>
+    <color name="dark_yellow_p">#ffa0a71f</color>
 
 </resources>

@@ -29,5 +29,18 @@
     <string name="skip_txt">Skip</string>
     <string name="start_txt">START</string>
     <string name="dubai_txt">DUBAI</string>
+    <string name="radsILove_txt">RADS I LOVE</string>
+    <string name="feedback_txt">FEEDBACK</string>
+    <string name="title_activity_feedback">Feedback</string>
+    <string name="yourName_txt">Your Name</string>
+    <string name="email_txt">Email</string>
+    <string name="feedAndComments_txt">Feedback or Comments</string>
+    <string name="sendIt_txt">SEND IT!</string>
+    <string name="required_txt">Required</string>
+    <string name="emailRequired_txt">This email is not rad</string>
+    <string name="unableToRetrieveUDID_msg">Unable to retrieve your UDID</string>
+    <string name="yourFeedbackCouldNotBeSend_msg">Unable to contact server</string>
+    <string name="sending_txt">SENDING..</string>
+    <string name="sent_txt">SENT!</string>
 
 </resources>

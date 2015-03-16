@@ -19,6 +19,7 @@ import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.android.AndroidLog;
 import retrofit.converter.GsonConverter;
+import retrofit.http.Body;
 import retrofit.http.GET;
 import retrofit.http.Path;
 import retrofit.http.Query;
@@ -80,6 +81,9 @@ public class Networking {
 
         @GET("/highlights/{date}")
         void getAnnouncements(@Path("date") String date, Callback<NewsResponse> callback);
+
+        @GET("/feedback")
+        void getFeedback(@Body Feedback feedback, Callback<Feedback.Output> callback);
 
 
     }

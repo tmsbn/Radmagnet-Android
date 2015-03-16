@@ -12,7 +12,7 @@
 
 
 
-    <style name="TextAppearance.Italics" parent="android:TextAppearance">
+    <style name="TextAppearance.BoldItalics" parent="android:TextAppearance">
         <item name="fontPath">fonts/AlegreyaSans-BoldItalic.otf</item>
     </style>
 

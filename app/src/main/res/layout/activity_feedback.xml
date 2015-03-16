@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="tms.ubrats.FeedbackActivity">
+
+    <include layout="@layout/toolbar_feedback" />
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:singleLine="true"
+        android:hint="@string/yourName_txt"
+        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:singleLine="true"
+        android:hint="@string/email_txt"
+        android:inputType="textEmailAddress"
+        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:hint="@string/feedAndComments_txt"
+        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:textSize="17sp" />
+
+</LinearLayout>

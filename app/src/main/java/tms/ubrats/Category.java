@@ -9,6 +9,7 @@ public class Category {
     String color;
     String value;
     boolean isSelected = false;
+    boolean isSection = false;
 
     public Category(String name, String color, String value, boolean isSelected) {
         this.name = name;
@@ -17,5 +18,8 @@ public class Category {
         this.isSelected = isSelected;
     }
 
-
+    public Category(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
 }

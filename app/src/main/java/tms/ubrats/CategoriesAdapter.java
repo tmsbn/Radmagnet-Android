@@ -44,6 +44,11 @@ public class CategoriesAdapter extends ArrayAdapter<Category> {
 
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.lv_rw_category, parent, false);
         }
+
+        ImageView thumbnailTv = (ImageView) convertView.findViewById(R.id.thumbnail);
+        TextView categoryTv = (TextView) convertView.findViewById(R.id.category);
+
+
         if (getItem(position).isSelected) {
             convertView.setActivated(true);
             previousSelected=position;
@@ -51,8 +56,6 @@ public class CategoriesAdapter extends ArrayAdapter<Category> {
         else
             convertView.setActivated(false);
 
-        ImageView thumbnailTv = (ImageView) convertView.findViewById(R.id.thumbnail);
-        TextView categoryTv = (TextView) convertView.findViewById(R.id.category);
 
         categoryTv.setText(category.name.toUpperCase(Locale.ENGLISH));
 
