@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Ubrats</string>
+    <string name="app_name">Radmagnet</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="cannotReachServer_msg">Cannot reach server! Please check your connection</string>

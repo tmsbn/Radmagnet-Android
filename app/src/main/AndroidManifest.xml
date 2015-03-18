@@ -32,7 +32,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".BookmarkActivity"
-            android:label="@string/savedRads_txt"
+            android:label="@string/radsILove_txt"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait" />
 

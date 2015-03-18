@@ -15,7 +15,7 @@
         android:layout_margin="7dp"
         android:singleLine="true"
         android:hint="@string/yourName_txt"
-        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:textAppearance="@style/TextAppearance.BlackItalics"
         android:textSize="17sp" />
 
     <EditText
@@ -26,7 +26,7 @@
         android:singleLine="true"
         android:hint="@string/email_txt"
         android:inputType="textEmailAddress"
-        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:textAppearance="@style/TextAppearance.BlackItalics"
         android:textSize="17sp" />
 
     <EditText
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
         android:hint="@string/feedAndComments_txt"
-        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:textAppearance="@style/TextAppearance.BlackItalics"
         android:textSize="17sp" />
 
 </LinearLayout>

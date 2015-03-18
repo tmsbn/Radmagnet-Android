@@ -99,6 +99,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
 
         if (news.getCreatorDp().equals(""))
             holder.creatorDp.setVisibility(View.GONE);
+        else
+            holder.creatorDp.setVisibility(View.VISIBLE);
 
         holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(news.getCreatedDate()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {

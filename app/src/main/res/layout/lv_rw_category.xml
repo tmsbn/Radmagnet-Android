@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/transparent_selector"
+    android:background="@drawable/transparent_gray_selector"
     android:orientation="vertical"
     android:paddingBottom="10dp"
     android:paddingTop="10dp"
@@ -25,7 +25,8 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/thumbnail"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="17sp"
+        android:textAppearance="@style/TextAppearance.BlackItalics"
         android:textStyle="bold"
         tools:text="Category Name" />
 

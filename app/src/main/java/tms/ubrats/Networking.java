@@ -26,7 +26,7 @@ import retrofit.http.Query;
 
 public class Networking {
 
-    private static final String URL = "http://radmagnet.com/GET";
+    private static final String URL = "http://radmagnet.com";
 
     private static RestInterface sRestService;
 
@@ -75,14 +75,14 @@ public class Networking {
 
     public interface RestInterface {
 
-        @GET("/config.json")
+        @GET("/GET/config.json")
         void getConfig(Callback<ConfigVars> callback);
 
 
-        @GET("/highlights/{date}")
+        @GET("/GET/highlights/{date}")
         void getAnnouncements(@Path("date") String date, Callback<NewsResponse> callback);
 
-        @GET("/feedback")
+        @GET("POST/beta/feedback")
         void getFeedback(@Body Feedback feedback, Callback<Feedback.Output> callback);
 
 

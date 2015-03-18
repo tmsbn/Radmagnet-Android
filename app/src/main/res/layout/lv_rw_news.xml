@@ -40,9 +40,9 @@
             android:layout_alignParentTop="true"
             android:layout_margin="10dp"
             android:background="@drawable/rounded_rectangle"
-            android:textAppearance="@style/TextAppearance.BoldItalics"
+            android:textAppearance="@style/TextAppearance.BlackItalics"
             android:textColor="@android:color/white"
-            android:textSize="16sp"
+            android:textSize="15sp"
             tools:ignore="MissingPrefix"
             tools:text="University News" />
 
@@ -70,6 +70,10 @@
                 android:textAppearance="@style/TextAppearance.Black"
                 android:textColor="@android:color/white"
                 android:textSize="22sp"
+                android:shadowDx="1"
+                android:shadowRadius="1"
+                android:shadowDy="1"
+                android:shadowColor="@color/translucent"
                 android:textStyle="bold"
                 tools:ignore="MissingPrefix"
                 tools:text="This is some long typical headline" />

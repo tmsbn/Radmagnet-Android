@@ -161,7 +161,7 @@ public abstract class BaseActivity extends ActionBarActivity {
     public SpannableString getStyledActionTitle(CharSequence title){
 
         SpannableString s = new SpannableString(getTitle().toString().toUpperCase());
-        CalligraphyTypefaceSpan typefaceSpan = new CalligraphyTypefaceSpan(TypefaceUtils.load(getAssets(), "fonts/AlegreyaSans-BoldItalic.otf"));
+        CalligraphyTypefaceSpan typefaceSpan = new CalligraphyTypefaceSpan(TypefaceUtils.load(getAssets(), "fonts/AlegreyaSans-BlackItalic.otf"));
         s.setSpan(typefaceSpan, 0, s.length(),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 

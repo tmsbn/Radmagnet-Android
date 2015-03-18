@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
     card_view:cardUseCompatPadding="true"
     card_view:cardCornerRadius="4dp">
@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clickable="true"
+        android:padding="7dp"
         tools:ignore="uselessParent">
 
 
@@ -21,7 +22,7 @@
             android:id="@+id/newsImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_margin="7dp"
+            android:layout_marginRight="7dp"
             android:scaleType="centerCrop"
             android:layout_alignParentLeft="true" />
 
@@ -39,7 +40,7 @@
                 android:textSize="18sp"
                 android:textColor="@android:color/black"
                 android:layout_marginBottom="7dp"
-                fontPath="fonts/AlegreyaSans-Bold.otf"
+                android:textAppearance="@style/TextAppearance.Bold"
                 tools:text="This is some long typical headline"
                 tools:ignore="MissingPrefix" />
 
