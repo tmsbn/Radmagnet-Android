@@ -3,6 +3,7 @@ package tms.ubrats;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -36,11 +37,9 @@ public class ImagePagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        ImageView imageView = new ImageView(context);
-        imageView.setImageResource(imageIdList.get(position));
-        imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-        (container).addView(imageView, 0);
-        return imageView;
+        View view = LayoutInflater.from(context).inflate(imageIdList.get(position),null);
+        (container).addView(view, 0);
+        return view;
     }
 
     @Override

@@ -1,7 +1,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
     android:background="@color/gray"
     tools:context=".MainActivity">
 
@@ -12,8 +14,7 @@
         android:layout_height="match_parent" />
 
     <Button
-        android:id="@+id/StartButton"
-        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:id="@+id/startButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -21,16 +22,20 @@
         android:layout_margin="15dp"
         android:background="@drawable/btn_start"
         android:text="@string/start_txt"
+        android:textAppearance="@style/TextAppearance.BoldItalics"
         android:textColor="@android:color/white"
         android:textSize="22sp"
-        android:minHeight="0dp"
+        android:alpha="0"
         tools:ignore="MissingPrefix" />
 
 
     <com.viewpagerindicator.CirclePageIndicator
         android:id="@+id/circlePagerIndicator"
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
+        app:radius="6dp"
+        app:strokeWidth="1dp"
+        android:padding="2dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="15dp" />
@@ -41,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:background="@android:color/transparent"
+        android:background="@color/gray"
         android:scaleType="centerInside"
         android:src="@drawable/bg_splash_screen" />
 

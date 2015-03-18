@@ -7,9 +7,11 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.viewpagerindicator.CirclePageIndicator;
@@ -38,6 +40,9 @@ public class SplashActivity extends BaseActivity {
     @InjectView(R.id.circlePagerIndicator)
     CirclePageIndicator mCirclePageIndicator;
 
+    @InjectView(R.id.startButton)
+    Button mStartButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +51,8 @@ public class SplashActivity extends BaseActivity {
 
         int SPLASH_DISPLAY_LENGTH = 2000;
         setupReminderNotification();
+
+
 
 
         new Handler().postDelayed(new Runnable() {
@@ -63,9 +70,8 @@ public class SplashActivity extends BaseActivity {
     public void setUpPager(){
 
         ArrayList<Integer> imageIdList = new ArrayList<>();
-        imageIdList.add(R.drawable.bg_intro_1);
-        imageIdList.add(R.drawable.bg_intro_2);
-
+        imageIdList.add(R.layout.layout_splash_1);
+        imageIdList.add(R.layout.layout_splash_2);
 
         mIntroPager.setAdapter(new ImagePagerAdapter(this,imageIdList));
         mIntroPager.setAutoScrollDurationFactor(8);
@@ -74,10 +80,30 @@ public class SplashActivity extends BaseActivity {
         mIntroPager.startAutoScroll();
 
         mCirclePageIndicator.setViewPager(mIntroPager);
+        mCirclePageIndicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if(position==1 && mStartButton.getAlpha()==0) {
+                    mStartButton.animate().setDuration(1200).alpha(1);
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
 
     }
 
-    @OnClick(R.id.StartButton)
+    @OnClick(R.id.startButton)
     public void skipButton(){
 
         Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
