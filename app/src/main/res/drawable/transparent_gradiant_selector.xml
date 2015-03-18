@@ -3,5 +3,5 @@
 
     <item android:drawable="@color/translucent" android:state_activated="true" />
     <item android:drawable="@color/translucent" android:state_pressed="true" />
-    <item android:drawable="@drawable/transparent_gradient" />
+    <item android:drawable="@drawable/bg_shade" />
 </selector>

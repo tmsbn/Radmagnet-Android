@@ -27,6 +27,11 @@
             android:focusable="false"
             android:scaleType="centerCrop" />
 
+        <ImageView
+            android:background="@drawable/bg_shade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
         <TextView
             android:id="@+id/category"
             android:layout_width="wrap_content"
@@ -35,7 +40,7 @@
             android:layout_alignParentTop="true"
             android:layout_margin="10dp"
             android:background="@drawable/rounded_rectangle"
-            android:textAppearance="@style/TextAppearance.Bold"
+            android:textAppearance="@style/TextAppearance.BoldItalics"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             tools:ignore="MissingPrefix"
@@ -51,7 +56,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
 
 
             <TextView
@@ -60,18 +67,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:padding="7dp"
-                android:textAppearance="@style/TextAppearance.BoldItalics"
+                android:textAppearance="@style/TextAppearance.Black"
                 android:textColor="@android:color/white"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 tools:ignore="MissingPrefix"
                 tools:text="This is some long typical headline" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#5FFF"/>
 
             <LinearLayout
                 android:id="@+id/bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/transparent_gradient"
                 android:orientation="horizontal"
                 android:padding="7dp">
 
@@ -89,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:textColor="@android:color/white"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     tools:ignore="MissingPrefix"
                     tools:text="Thomas" />
 
@@ -100,7 +111,7 @@
                     android:layout_weight="4"
                     android:gravity="right"
                     android:textColor="@android:color/white"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     tools:ignore="MissingPrefix"
                     tools:text="12 February 2014 @ 3:14" />
 

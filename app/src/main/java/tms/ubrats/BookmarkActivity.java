@@ -149,7 +149,7 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
 
         ArrayList<String> realmIds = new ArrayList<>();
         for (News newsIterator : mBookmarkAdapter.getRealmResults())
-            realmIds.add(newsIterator.getPostId());
+            realmIds.add(newsIterator.getId());
 
 
         Intent intent = new Intent(this, DetailsActivity.class);

@@ -17,4 +17,8 @@
         <item name="fontPath">fonts/AlegreyaSans-Bold.otf</item>
     </style>
 
+    <style name="TextAppearance.Black" parent="android:TextAppearance">
+        <item name="fontPath">fonts/AlegreyaSans-Black.otf</item>
+    </style>
+
 </resources>

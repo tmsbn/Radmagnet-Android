@@ -86,34 +86,40 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
 
         final News news = mRealmResults.get(position);
 
+        holder.creatorTv.setText(news.getCreator());
+
         try {
-            holder.creatorTv.setText(news.getCreator());
+
 
             Picasso.with(mContext).load(news.getImageUrl()).into(holder.newsImageIv);
             Picasso.with(mContext).load(news.getCreatorDp()).transform(new CircleTransform()).into(holder.creatorDp);
-            holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(news.getCreatedDate()));
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    if (mListener != null)
-                        mListener.onItemClick(news, position);
-                }
-            });
-
-
-            if (mContext instanceof BaseActivity) {
-                BaseActivity activity = (BaseActivity) mContext;
-                holder.headlineTv.setText(activity.highlight(mSearchTerm, news.getHeadline()));
-
-                int color = activity.getColorFromCategory(news.getCategory());
-                holder.categoryLine.setBackgroundColor(color);
-                Drawable drawable = holder.categoryTv.getBackground();
-                holder.categoryTv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
-                drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
-            }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
+        }
+
+        if (news.getCreatorDp().equals(""))
+            holder.creatorDp.setVisibility(View.GONE);
+
+        holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(news.getCreatedDate()));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (mListener != null)
+                    mListener.onItemClick(news, position);
+            }
+        });
+
+
+        if (mContext instanceof BaseActivity) {
+            BaseActivity activity = (BaseActivity) mContext;
+            holder.headlineTv.setText(activity.highlight(mSearchTerm, news.getHeadline()));
+
+            int color = activity.getColorFromCategory(news.getCategory());
+            holder.categoryLine.setBackgroundColor(color);
+            Drawable drawable = holder.categoryTv.getBackground();
+            holder.categoryTv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
+            drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
         }
 
 
