@@ -7,16 +7,16 @@
     android:background="@color/dark_gray"
     android:orientation="vertical">
 
-    <TextView
+    <ImageView
         android:id="@+id/branding"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/red"
+        android:layout_height="wrap_content"
+
         android:gravity="center"
         android:text="@string/dubai_txt"
         android:textAppearance="@style/TextAppearance.BoldItalics"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
+        android:src="@drawable/bg_top_sidebar"
+        android:scaleType="centerInside"
         android:visibility="visible" />
 
 

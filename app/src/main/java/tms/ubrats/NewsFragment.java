@@ -203,8 +203,12 @@ public class NewsFragment extends BaseFragment {
     private void setupTopDetails() {
 
         newsCategoryTitle.setText(getBaseActivity().getTitleFromConfig(mNews.getCategory()));
-        Picasso.with(getActivity()).load(mNews.getImageUrl()).into(mNewsIv);
-        Picasso.with(getActivity()).load(mNews.getCreatorDp()).transform(new CircleTransform()).into(mCreatorDpIv);
+        try {
+            Picasso.with(getActivity()).load(mNews.getImageUrl()).into(mNewsIv);
+            Picasso.with(getActivity()).load(mNews.getCreatorDp()).transform(new CircleTransform()).into(mCreatorDpIv);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         mHeadlineTv.setText((mNews.getHeadline() != null) ? mNews.getHeadline() : getActivity().getString(R.string.missingHeadline_txt));
         mDateTv.setText((mNews.getCreatedDate() != null) ? new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mNews.getCreatedDate()) : "bla");
         mCreatorTv.setText((mNews.getHeadline() != null) ? mNews.getCreator() : "");

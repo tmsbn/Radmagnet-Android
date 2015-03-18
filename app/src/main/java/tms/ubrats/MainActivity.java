@@ -54,10 +54,6 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     @InjectView(R.id.toolbar)
     Toolbar mToolbar;
 
-
-    @InjectView(R.id.branding)
-    TextView mBranding;
-
     @InjectView(R.id.swipeNewsLayout)
     SwipeRefreshLayout mSwipeLayout;
 
@@ -163,7 +159,6 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.app_name, R.string.app_name);
-        mBranding.setText("UBrats");
 
         setupCategoriesList();
 

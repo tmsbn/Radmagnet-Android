@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/transparent_selector"
     android:orientation="vertical"
-    android:paddingBottom="15dp"
-    android:paddingTop="15dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
     tools:ignore="RtlHardcoded">
 
     <ImageView

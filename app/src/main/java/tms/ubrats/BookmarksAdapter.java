@@ -83,7 +83,11 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
         News news=mRealmResults.get(position);
         holder.headlineTv.setText(news.getHeadline());
         holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(news.getCreatedDate()));
-        Picasso.with(mContext).load(news.getImageUrl()).into(holder.icon);
+        try {
+            Picasso.with(mContext).load(news.getImageUrl()).into(holder.icon);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

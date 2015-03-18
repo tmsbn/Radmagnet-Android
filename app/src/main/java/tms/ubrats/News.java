@@ -12,23 +12,23 @@ import io.realm.annotations.PrimaryKey;
  */
 public class News extends RealmObject {
 
-    private String category;
+    private String category="";
 
 
     @PrimaryKey
     private String id;
 
 
-    private String postId;
+    private String postId="";
 
 
     private Date createdDate;
 
     private boolean active;
-    private String headline;
-    private String imageUrl;
-    private String creator;
-    private String creatorDp;
+    private String headline="";
+    private String imageUrl="";
+    private String creator="";
+    private String creatorDp="";
 
     private boolean isBookmarked = false;
 
