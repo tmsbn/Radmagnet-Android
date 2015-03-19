@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="tms.ubrats">
+    package="com.radmagnet">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".BaseApplication"
+        android:name="com.radmagnet.BaseApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.radmagnet.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SplashActivity"
+            android:name="com.radmagnet.SplashActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -26,18 +26,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailsActivity"
+            android:name="com.radmagnet.DetailsActivity"
             android:label="@string/details_txt"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.radmagnet.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".BookmarkActivity"
+            android:name="com.radmagnet.BookmarkActivity"
             android:label="@string/radsILove_txt"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.radmagnet.MainActivity"
             android:screenOrientation="portrait" />
 
         <receiver
-            android:name=".CheckAppReceiver"
+            android:name="com.radmagnet.CheckAppReceiver"
             android:enabled="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -45,9 +45,9 @@
         </receiver>
 
         <activity
-            android:name=".FeedbackActivity"
+            android:name="com.radmagnet.FeedbackActivity"
             android:label="@string/title_activity_feedback"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="com.radmagnet.MainActivity"
             android:screenOrientation="portrait"/>
     </application>
 

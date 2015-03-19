@@ -89,8 +89,8 @@
     <orderEntry type="library" exported="" name="advrecyclerview-0.6.1" level="project" />
     <orderEntry type="library" exported="" name="calligraphy-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="realm-android-0.80.0" level="project" />
-    <orderEntry type="library" exported="" name="okio-1.2.0" level="project" />
     <orderEntry type="library" exported="" name="picasso-2.5.0" level="project" />
+    <orderEntry type="library" exported="" name="okio-1.2.0" level="project" />
     <orderEntry type="library" exported="" name="merge-1.1.1" level="project" />
     <orderEntry type="library" exported="" name="android-iconify-1.0.9" level="project" />
     <orderEntry type="library" exported="" name="support-v4-21.0.3" level="project" />

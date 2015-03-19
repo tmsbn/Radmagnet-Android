@@ -6,7 +6,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "tms.ubrats"
+        applicationId "com.radmagnet"
         minSdkVersion 16
         targetSdkVersion 21
         versionCode 1

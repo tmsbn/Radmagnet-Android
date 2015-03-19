@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="60dp"
+    android:layout_marginTop="-6dp"
     android:layout_gravity="center_horizontal"
     android:layout_height="wrap_content">
 
@@ -23,7 +24,7 @@
         android:id="@+id/day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignLeft="@+id/month"
         android:layout_below="@+id/month"
         android:textAppearance="@style/TextAppearance.BlackItalics"
         android:textColor="@android:color/white"
@@ -37,6 +38,7 @@
         android:layout_below="@+id/month"
         android:layout_toRightOf="@+id/day"
         android:text="th"
+        android:layout_marginLeft="2dp"
         android:textAppearance="@style/TextAppearance.BlackItalics"
         android:textColor="@android:color/white"
         android:textSize="13sp" />
