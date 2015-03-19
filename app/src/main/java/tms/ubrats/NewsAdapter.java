@@ -14,6 +14,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -113,15 +114,24 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         });
 
 
+
+
         if (mContext instanceof BaseActivity) {
             BaseActivity activity = (BaseActivity) mContext;
             holder.headlineTv.setText(activity.highlight(mSearchTerm, news.getHeadline()));
 
             int color = activity.getColorFromCategory(news.getCategory());
             holder.categoryLine.setBackgroundColor(color);
-            Drawable drawable = holder.categoryTv.getBackground();
+            Drawable drawable = holder.linearLayout.getBackground();
+
             holder.categoryTv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
             drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
+
+            if (news.getStartDate()!=null && news.getStartDate().getTime()!=0) {
+                EventsView mEventsView = new EventsView(mContext,holder.linearLayout);
+                mEventsView.setDate(news.getStartDate());
+                holder.linearLayout.addView(mEventsView);
+            }
         }
 
 
@@ -150,7 +160,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         View categoryLine;
         TextView categoryTv;
         ImageView newsImageIv;
-        FrameLayout frameLayout;
+        LinearLayout linearLayout;
 
 
         public NewsHolder(View v) {
@@ -164,7 +174,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             headlineTv = (TextView) v.findViewById(R.id.headline);
             newsImageIv = (ImageView) v.findViewById(R.id.newsImage);
             creatorDp = (ImageView) v.findViewById(R.id.creatorDp);
-            frameLayout = (FrameLayout) v.findViewById(R.id.specific_details);
+            linearLayout = (LinearLayout) v.findViewById(R.id.specific_details);
         }
 
 

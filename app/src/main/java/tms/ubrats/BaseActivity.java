@@ -110,6 +110,8 @@ public abstract class BaseActivity extends ActionBarActivity {
 
 
 
+
+
     public CharSequence highlight(String search, String originalText) {
         // ignore case and accents
         // the same thing should have been done for the search text

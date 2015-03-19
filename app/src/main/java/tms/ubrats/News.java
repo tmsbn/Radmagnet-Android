@@ -23,6 +23,7 @@ public class News extends RealmObject {
 
 
     private Date createdDate;
+    private Date startDate;
 
     private boolean active;
     private String headline="";
@@ -32,6 +33,13 @@ public class News extends RealmObject {
 
     private boolean isBookmarked = false;
 
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
 
     public String getId() {
         return id;

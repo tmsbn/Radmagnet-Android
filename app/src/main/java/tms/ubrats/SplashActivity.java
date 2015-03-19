@@ -53,27 +53,32 @@ public class SplashActivity extends BaseActivity {
         setupReminderNotification();
 
 
-
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
                 mSplashScreenIv.setVisibility(View.GONE);
-                setUpPager();
+
+                if (getPreferences(MODE_PRIVATE).getBoolean("showSplash", true)) {
+                    setUpPager();
+                    getPreferences(MODE_PRIVATE).edit().putBoolean("showSplash", false).apply();
+                } else {
+                    startFeed();
+                }
+
 
             }
         }, SPLASH_DISPLAY_LENGTH);
 
     }
 
-    public void setUpPager(){
+    public void setUpPager() {
 
         ArrayList<Integer> imageIdList = new ArrayList<>();
         imageIdList.add(R.layout.layout_splash_1);
         imageIdList.add(R.layout.layout_splash_2);
 
-        mIntroPager.setAdapter(new ImagePagerAdapter(this,imageIdList));
+        mIntroPager.setAdapter(new ImagePagerAdapter(this, imageIdList));
         mIntroPager.setAutoScrollDurationFactor(8);
         mIntroPager.setInterval(5000);
         mIntroPager.setCycle(false);
@@ -89,7 +94,7 @@ public class SplashActivity extends BaseActivity {
 
             @Override
             public void onPageSelected(int position) {
-                if(position==1 && mStartButton.getAlpha()==0) {
+                if (position == 1 && mStartButton.getAlpha() == 0) {
                     mStartButton.animate().setDuration(1200).alpha(1);
                 }
             }
@@ -104,16 +109,13 @@ public class SplashActivity extends BaseActivity {
     }
 
     @OnClick(R.id.startButton)
-    public void skipButton(){
+    public void startFeed() {
 
         Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
         SplashActivity.this.startActivity(mainIntent);
         SplashActivity.this.finish();
 
     }
-
-
-
 
 
     public void setupReminderNotification() {
