@@ -4,14 +4,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -40,16 +38,28 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
 
             //check if the data is coming from an intent
             String data = getIntent().getDataString();
-            Pattern pat = Pattern.compile("([0-9]+)");
-            Matcher mat = pat.matcher(data);
-            if (mat.find()) {
-                Log.d("yourTag", "group1" + mat.group(1));
-                realmIds = new ArrayList<>();
-                realmIds.add(mat.group(1));
+            if (data == null || data.isEmpty() || !data.contains(BaseApplication.NEWS_DETAILS_URL))
 
-            } else {
                 finish();
+
+            else {
+
+                data = data.replace("http://", "");
+                String[] parts = data.split("/");
+                if (parts.length == 5) {
+                    realmIds = new ArrayList<>();
+                    String id = parts[3] + parts[4];
+
+                    Realm realm = Realm.getInstance(this);
+                    News news = realm.where(News.class).contains("id", parts[3] + parts[4]).findFirst();
+                    if (news.isValid())
+                        realmIds.add(id);
+                    else
+                        NavUtils.navigateUpFromSameTask(this);
+                }
+
             }
+
         }
 
         mRealmIds = realmIds;

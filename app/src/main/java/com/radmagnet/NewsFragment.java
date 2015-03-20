@@ -323,10 +323,10 @@ public class NewsFragment extends BaseFragment {
 
         if (mNews.isBookmarked()) {
 
-            bookmarkMenuItem.setIcon(new IconDrawable(getActivity(), Iconify.IconValue.fa_bookmark).color(color).actionBarSize());
+            bookmarkMenuItem.setIcon(new IconDrawable(getActivity(), Iconify.IconValue.fa_heart).color(color).actionBarSize());
 
         } else {
-            bookmarkMenuItem.setIcon(new IconDrawable(getActivity(), Iconify.IconValue.fa_bookmark_o).color(color).actionBarSize());
+            bookmarkMenuItem.setIcon(new IconDrawable(getActivity(), Iconify.IconValue.fa_heart_o).color(color).actionBarSize());
         }
 
         bookmarkMenuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
