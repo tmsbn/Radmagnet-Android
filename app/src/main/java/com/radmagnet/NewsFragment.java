@@ -2,6 +2,8 @@ package com.radmagnet;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -54,7 +57,10 @@ public class NewsFragment extends BaseFragment {
     public ImageView mNewsIv;
 
     @InjectView(com.radmagnet.R.id.category)
-    public View mCategory;
+    public TextView mCategoryTv;
+
+    @InjectView(R.id.specific_details)
+    public LinearLayout mSpecificDetailsContainer;
 
 
     @InjectView(com.radmagnet.R.id.categoryColor)
@@ -64,8 +70,8 @@ public class NewsFragment extends BaseFragment {
     @InjectView(com.radmagnet.R.id.webView)
     public WebView mWebView;
 
-
-
+    @InjectView(R.id.location)
+    public TextView mLocation;
 
 
     @InjectView(com.radmagnet.R.id.newsCategoryTitle)
@@ -138,7 +144,7 @@ public class NewsFragment extends BaseFragment {
         ButterKnife.inject(this, fragmentView);
         setupToolbar(fragmentView);
 
-        mCategory.setVisibility(View.GONE);
+        mCategoryTv.setVisibility(View.GONE);
         setupAllViews();
 
         return fragmentView;
@@ -196,17 +202,53 @@ public class NewsFragment extends BaseFragment {
 
     private void setupTopDetails() {
 
+       //news category title in toolbar
         newsCategoryTitle.setText(getBaseActivity().getTitleFromConfig(mNews.getCategory()));
+
         try {
+            //news image
             Picasso.with(getActivity()).load(mNews.getImageUrl()).into(mNewsIv);
+
+            //creator display picture
             Picasso.with(getActivity()).load(mNews.getCreatorDp()).transform(new CircleTransform()).into(mCreatorDpIv);
         }catch (Exception e){
             e.printStackTrace();
         }
+
+        //news headline
         mHeadlineTv.setText((mNews.getHeadline() != null) ? mNews.getHeadline() : getActivity().getString(com.radmagnet.R.string.missingHeadline_txt));
+
+        //date
         mDateTv.setText((mNews.getCreatedDate() != null) ? new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(mNews.getCreatedDate()) : "bla");
+
+        //creator
         mCreatorTv.setText((mNews.getHeadline() != null) ? mNews.getCreator() : "");
+
+        //category color
         mCategoryColor.setBackgroundColor(color);
+
+        if (mNews.getStartDate() != null && mNews.getStartDate().getTime() != 0) {
+            Drawable drawable = mSpecificDetailsContainer.getBackground();
+            drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
+            EventsView eventsView = new EventsView(getActivity());
+            eventsView.setDate(mNews.getStartDate());
+            if (mSpecificDetailsContainer.getChildCount() < 2)
+                mSpecificDetailsContainer.addView(eventsView);
+
+            mSpecificDetailsContainer.setVisibility(View.VISIBLE);
+
+        }else{
+            mSpecificDetailsContainer.setVisibility(View.GONE);
+        }
+
+
+        //location
+        if (!mNews.getLocation().equals("")) {
+            mLocation.setText(mNews.getLocation());
+            mLocation.setVisibility(View.VISIBLE);
+        } else {
+            mLocation.setVisibility(View.GONE);
+        }
 
     }
 

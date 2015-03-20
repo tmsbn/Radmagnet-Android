@@ -15,6 +15,7 @@ import io.realm.RealmResults;
 
 public class CheckAppReceiver extends BroadcastReceiver {
 
+    int MAX_DB_COUNT = 50;
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -27,7 +28,7 @@ public class CheckAppReceiver extends BroadcastReceiver {
         Resources res = context.getResources();
         builder.setContentIntent(contentIntent)
                 .setSmallIcon(com.radmagnet.R.drawable.ic_launcher)
-                .setLargeIcon(BitmapFactory.decodeResource(res, com.radmagnet.R.drawable.ic_launcher))
+                .setLargeIcon(BitmapFactory.decodeResource(res, R.drawable.ic_launcher))
                 .setWhen(System.currentTimeMillis())
                 .setAutoCancel(true)
                 .setLocalOnly(true)
@@ -48,9 +49,11 @@ public class CheckAppReceiver extends BroadcastReceiver {
             @Override
             public void execute(Realm realm) {
 
-                if (size >= 100) {
-                    for (int i = 0; i < 25; i++) {
-                        results.last().removeFromRealm();
+                if (size >= MAX_DB_COUNT) {
+
+                    for (int i = size; i > MAX_DB_COUNT; i--) {
+                        if (!results.get(i).isBookmarked())
+                            results.get(i).removeFromRealm();
                     }
 
                 }

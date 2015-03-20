@@ -107,17 +107,12 @@ public class FeedbackActivity extends BaseActivity {
 
         if (!error) {
 
-            Feedback feedback = new Feedback();
-            feedback.name = name;
-            feedback.email = email;
-            feedback.comments = comment;
-            feedback.udid = android_id;
 
             mSendFeedback.setEnabled(false);
             mSendFeedback.setText(getString(com.radmagnet.R.string.sending_txt));
 
 
-            Networking.getRestClient().getFeedback(feedback, new Callback<Feedback.Output>() {
+            Networking.getRestClient().getFeedback(name, email, comment, android_id, new Callback<Feedback.Output>() {
                 @Override
                 public void success(Feedback.Output output, Response response) {
 

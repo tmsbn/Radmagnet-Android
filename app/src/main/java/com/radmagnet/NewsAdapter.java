@@ -88,21 +88,63 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
 
         holder.creatorTv.setText(news.getCreator());
 
+
+
+
         try {
 
-
+            //news image
             Picasso.with(mContext).load(news.getImageUrl()).into(holder.newsImageIv);
+
+            //creator display picture
             Picasso.with(mContext).load(news.getCreatorDp()).transform(new CircleTransform()).into(holder.creatorDp);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        if (news.getCreatorDp().equals(""))
-            holder.creatorDp.setVisibility(View.GONE);
-        else
-            holder.creatorDp.setVisibility(View.VISIBLE);
 
+        //date
         holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(news.getCreatedDate()));
+
+
+        if (mContext instanceof BaseActivity) {
+
+            //headline
+            BaseActivity activity = (BaseActivity) mContext;
+            holder.headlineTv.setText(activity.highlight(mSearchTerm, news.getHeadline()));
+
+            //category line
+            int color = activity.getColorFromCategory(news.getCategory());
+            holder.categoryLine.setBackgroundColor(color);
+            Drawable drawable = holder.linearLayout.getBackground();
+
+            //category
+            holder.categoryTv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
+            drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
+
+            //events
+            if (news.getStartDate() != null && news.getStartDate().getTime() != 0) {
+                EventsView eventsView = new EventsView(mContext);
+                eventsView.setDate(news.getStartDate());
+                if (holder.linearLayout.getChildCount() < 2)
+                    holder.linearLayout.addView(eventsView);
+
+            } else {
+                if (holder.linearLayout.getChildCount() > 1)
+                    holder.linearLayout.removeViewAt(1);
+            }
+
+            //location
+            if (!news.getLocation().equals("")) {
+                holder.location.setText(news.getLocation());
+                holder.location.setVisibility(View.VISIBLE);
+            } else {
+                holder.location.setVisibility(View.GONE);
+            }
+
+
+        }
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,36 +155,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         });
 
 
-        if (mContext instanceof BaseActivity) {
-            BaseActivity activity = (BaseActivity) mContext;
-            holder.headlineTv.setText(activity.highlight(mSearchTerm, news.getHeadline()));
-
-            int color = activity.getColorFromCategory(news.getCategory());
-            holder.categoryLine.setBackgroundColor(color);
-            Drawable drawable = holder.linearLayout.getBackground();
-
-            holder.categoryTv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
-            drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
-
-
-            if (news.getStartDate() != null && news.getStartDate().getTime() != 0) {
-                EventsView eventsView = new EventsView(mContext);
-                eventsView.setDate(news.getStartDate());
-                if (holder.linearLayout.getChildCount()<2)
-                    holder.linearLayout.addView(eventsView);
-
-            }
-
-            if(!news.getLocation().equals("")){
-                holder.location.setText(news.getLocation());
-                holder.location.setVisibility(View.VISIBLE);
-            }else{
-                holder.location.setVisibility(View.GONE);
-            }
-
-
-
-        }
 
 
     }
@@ -186,7 +198,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             newsImageIv = (ImageView) v.findViewById(com.radmagnet.R.id.newsImage);
             creatorDp = (ImageView) v.findViewById(com.radmagnet.R.id.creatorDp);
             linearLayout = (LinearLayout) v.findViewById(com.radmagnet.R.id.specific_details);
-            location= (TextView) v.findViewById(R.id.location);
+            location = (TextView) v.findViewById(R.id.location);
 
 
         }

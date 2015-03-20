@@ -20,6 +20,7 @@ import retrofit.RestAdapter;
 import retrofit.android.AndroidLog;
 import retrofit.converter.GsonConverter;
 import retrofit.http.Body;
+import retrofit.http.Field;
 import retrofit.http.GET;
 import retrofit.http.Path;
 
@@ -81,8 +82,8 @@ public class Networking {
         @GET("/GET/highlights/{date}")
         void getAnnouncements(@Path("date") String date, Callback<NewsResponse> callback);
 
-        @GET("POST/beta/feedback")
-        void getFeedback(@Body Feedback feedback, Callback<Feedback.Output> callback);
+        @GET("/POST/beta/feedback")
+        void getFeedback(@Field("name") String name, @Field("email") String email, @Field("comments") String comments, @Field("udid")String udid, Callback<Feedback.Output> callback);
 
 
     }
