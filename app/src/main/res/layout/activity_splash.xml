@@ -20,6 +20,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_margin="15dp"
+        android:includeFontPadding="false"
         android:background="@drawable/btn_start"
         android:text="@string/start_txt"
         android:textAppearance="@style/TextAppearance.BoldItalics"

@@ -119,6 +119,7 @@
                     android:layout_height="25dp"
                     android:background="@android:color/transparent"
                     android:focusable="false"
+                    android:layout_marginRight="5dp"
                     android:scaleType="centerCrop" />
 
                 <TextView

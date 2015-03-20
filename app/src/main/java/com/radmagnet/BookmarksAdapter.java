@@ -110,6 +110,8 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
     }
 
 
+
+
     @Override
     public int getItemCount() {
         return mRealmResults.size();

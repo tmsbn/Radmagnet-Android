@@ -5,10 +5,13 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -31,9 +34,23 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
         ButterKnife.inject(this);
 
         ArrayList<String> realmIds = getIntent().getStringArrayListExtra("realmIds");
-        position = getIntent().getIntExtra("position", -1);
-        if (realmIds == null || realmIds.isEmpty())
-            finish();
+        position = getIntent().getIntExtra("position", 0);
+
+        if (realmIds == null || realmIds.isEmpty()) {
+
+            //check if the data is coming from an intent
+            String data = getIntent().getDataString();
+            Pattern pat = Pattern.compile("([0-9]+)");
+            Matcher mat = pat.matcher(data);
+            if (mat.find()) {
+                Log.d("yourTag", "group1" + mat.group(1));
+                realmIds = new ArrayList<>();
+                realmIds.add(mat.group(1));
+
+            } else {
+                finish();
+            }
+        }
 
         mRealmIds = realmIds;
         setupData();

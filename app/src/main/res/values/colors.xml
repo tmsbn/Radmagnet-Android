@@ -5,9 +5,14 @@
     <color name="dark_gray">#1A1A1A</color>
     <color name="gray">#333333</color>
     <color name="bright_red">#fff20b22</color>
-    <color name="red">#ffaa1524</color>
+    <color name="red">#C1272D</color>
     <color name="translucent">#6000</color>
     <color name="dark_yellow">#D9E021</color>
     <color name="dark_yellow_p">#ffa0a71f</color>
+
+    <!--category colors-->
+    <color name="orange">#F7931E</color>
+    <color name="purple">#662D91</color>
+    <color name="green">#009245</color>
 
 </resources>

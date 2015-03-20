@@ -49,8 +49,11 @@ public class EventsView extends RelativeLayout {
                 String month = new SimpleDateFormat("MMM",Locale.US).format(date);
 
                 mDayTv.setText(day);
-                mMonthTv.setText(month);
-                mSuffixTv.setText(getDayNumberSuffix(Integer.parseInt(day)));
+                mMonthTv.setText(month.toUpperCase());
+                mSuffixTv.setText(getDayNumberSuffix(Integer.parseInt(day)).toUpperCase());
+
+            invalidate();
+            requestLayout();
 
 
         }catch (Exception e){

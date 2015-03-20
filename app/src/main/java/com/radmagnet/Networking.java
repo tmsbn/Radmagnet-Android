@@ -21,12 +21,14 @@ import retrofit.android.AndroidLog;
 import retrofit.converter.GsonConverter;
 import retrofit.http.Body;
 import retrofit.http.Field;
+import retrofit.http.FormUrlEncoded;
 import retrofit.http.GET;
+import retrofit.http.POST;
 import retrofit.http.Path;
 
 public class Networking {
 
-    private static final String URL = "http://radmagnet.com";
+    private static final String URL = "http://www.radmagnet.com";
 
     private static RestInterface sRestService;
 
@@ -82,7 +84,8 @@ public class Networking {
         @GET("/GET/highlights/{date}")
         void getAnnouncements(@Path("date") String date, Callback<NewsResponse> callback);
 
-        @GET("/POST/beta/feedback")
+        @FormUrlEncoded
+        @POST("/POST/beta/feedback")
         void getFeedback(@Field("name") String name, @Field("email") String email, @Field("comments") String comments, @Field("udid")String udid, Callback<Feedback.Output> callback);
 
 

@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -51,6 +52,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     @InjectView(com.radmagnet.R.id.toolbar)
     Toolbar mToolbar;
+
+
 
     @InjectView(com.radmagnet.R.id.swipeNewsLayout)
     SwipeRefreshLayout mSwipeLayout;
@@ -95,10 +98,10 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         mNewsRv.setAdapter(mNewsAdapter);
         mNewsAdapter.setOnItemClickedListener(this);
 
-        mSwipeLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
-                android.R.color.holo_green_light,
-                android.R.color.holo_orange_light,
-                android.R.color.holo_red_light);
+        mSwipeLayout.setColorSchemeResources(R.color.red,
+                R.color.orange,
+                R.color.green,
+                R.color.purple);
 
         mSwipeLayout.setOnRefreshListener(this);
     }
@@ -134,7 +137,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
                     case 0:
 
-                         intent = new Intent(MainActivity.this, BookmarkActivity.class);
+                        intent = new Intent(MainActivity.this, BookmarkActivity.class);
                         startActivity(intent);
 
 
@@ -142,7 +145,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
                     case 1:
 
-                         intent = new Intent(MainActivity.this, FeedbackActivity.class);
+                        intent = new Intent(MainActivity.this, FeedbackActivity.class);
                         startActivity(intent);
 
                         break;
@@ -172,12 +175,18 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         String date = (lastUpdatedDate != -1) ? String.valueOf(lastUpdatedDate) : "0";
         Networking.getRestClient().getAnnouncements(date, new GetNewsCallback());
 
+        showLoadingIcon(true);
+    }
+
+    private void showLoadingIcon(final boolean visibility) {
+
         mSwipeLayout.post(new Runnable() {
             @Override
             public void run() {
-                mSwipeLayout.setRefreshing(true);
+                mSwipeLayout.setRefreshing(visibility);
             }
         });
+
     }
 
     @Override
@@ -215,16 +224,18 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         public void success(final NewsResponse newsResponse, Response response) {
 
             final ArrayList<News> newsList = newsResponse.data;
+
             if (newsList == null || newsList.size() == 0) {
                 Toast.makeText(MainActivity.this, getString(com.radmagnet.R.string.noUpdatesAvaliable_msg), Toast.LENGTH_SHORT).show();
+
             } else {
+                int size= newsList.size();
 
-
-                for(News news:newsList){
-                    news.setId(news.getCategory()+news.getPostId());
+                for (News news : newsList) {
+                    news.setId(news.getCategory() + news.getPostId());
                 }
 
-                Toast.makeText(MainActivity.this, newsList.size() + "", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,  newsList.size() + " update"+(size>1?"s":"") + " available!", Toast.LENGTH_SHORT).show();
                 Realm realm = Realm.getInstance(MainActivity.this);
                 realm.executeTransaction(new Realm.Transaction() {
                     @Override
@@ -239,17 +250,19 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
             }
 
-            mSwipeLayout.setRefreshing(false);
+            showLoadingIcon(false);
 
 
         }
+
+
 
 
         @Override
         public void failure(RetrofitError error) {
 
             Toast.makeText(MainActivity.this, getString(com.radmagnet.R.string.cannotReachServer_msg), Toast.LENGTH_SHORT).show();
-            mSwipeLayout.setRefreshing(false);
+            showLoadingIcon(false);
 
         }
 

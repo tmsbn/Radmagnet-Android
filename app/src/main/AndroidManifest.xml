@@ -29,7 +29,16 @@
             android:name="com.radmagnet.DetailsActivity"
             android:label="@string/details_txt"
             android:parentActivityName="com.radmagnet.MainActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="www.radmagnet.com" />
+            </intent-filter>
+
+            </activity>
         <activity
             android:name="com.radmagnet.BookmarkActivity"
             android:label="@string/radsILove_txt"

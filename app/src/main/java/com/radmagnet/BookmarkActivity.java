@@ -115,8 +115,16 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
 
         int id = item.getItemId();
 
-        if (id == com.radmagnet.R.id.action_settings) {
-            return true;
+        if (id == android.R.id.home) {
+
+            if (!mSearchView.isIconified()) {
+                mSearchView.onActionViewCollapsed();
+                mSearchQuery = "";
+                return true;
+
+            }
+
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -170,4 +178,6 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
 
         super.onBackPressed();
     }
+
+
 }

@@ -97,7 +97,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             Picasso.with(mContext).load(news.getImageUrl()).into(holder.newsImageIv);
 
             //creator display picture
-            Picasso.with(mContext).load(news.getCreatorDp()).transform(new CircleTransform()).into(holder.creatorDp);
+            Picasso.with(mContext).load(news.getCreatorDp()).placeholder(R.drawable.ic_fb).transform(new CircleTransform()).into(holder.creatorDp);
         } catch (Exception e) {
             e.printStackTrace();
         }

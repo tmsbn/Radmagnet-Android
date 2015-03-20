@@ -2,6 +2,7 @@ package com.radmagnet;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.graphics.drawable.Drawable;
@@ -16,10 +17,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.joanzapata.android.iconify.IconDrawable;
 import com.joanzapata.android.iconify.Iconify;
@@ -73,6 +77,9 @@ public class NewsFragment extends BaseFragment {
     @InjectView(R.id.location)
     public TextView mLocation;
 
+    @InjectView(R.id.progressWebView)
+    ProgressBar mProgressBar;
+
 
     @InjectView(com.radmagnet.R.id.newsCategoryTitle)
     public TextView newsCategoryTitle;
@@ -85,11 +92,11 @@ public class NewsFragment extends BaseFragment {
     News mNews;
     int color = 0;
 
+    String url = "";
+
     MenuItem shareMenuItem, bookmarkMenuItem;
 
     private ShareActionProvider mShareActionProvider;
-
-    private String newsDetailsURL="http://www.radmagnet.com/GET/details/";
 
 
     public static NewsFragment newInstance(String postId) {
@@ -165,7 +172,6 @@ public class NewsFragment extends BaseFragment {
         });
 
 
-
     }
 
     @Override
@@ -174,10 +180,9 @@ public class NewsFragment extends BaseFragment {
         super.onResume();
 
 
-
     }
 
-    private void setupAllViews(){
+    private void setupAllViews() {
 
         if (mId == null)
             return;
@@ -202,7 +207,7 @@ public class NewsFragment extends BaseFragment {
 
     private void setupTopDetails() {
 
-       //news category title in toolbar
+        //news category title in toolbar
         newsCategoryTitle.setText(getBaseActivity().getTitleFromConfig(mNews.getCategory()));
 
         try {
@@ -210,8 +215,8 @@ public class NewsFragment extends BaseFragment {
             Picasso.with(getActivity()).load(mNews.getImageUrl()).into(mNewsIv);
 
             //creator display picture
-            Picasso.with(getActivity()).load(mNews.getCreatorDp()).transform(new CircleTransform()).into(mCreatorDpIv);
-        }catch (Exception e){
+            Picasso.with(getActivity()).load(mNews.getCreatorDp()).placeholder(R.drawable.ic_fb).transform(new CircleTransform()).into(mCreatorDpIv);
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -237,7 +242,7 @@ public class NewsFragment extends BaseFragment {
 
             mSpecificDetailsContainer.setVisibility(View.VISIBLE);
 
-        }else{
+        } else {
             mSpecificDetailsContainer.setVisibility(View.GONE);
         }
 
@@ -255,7 +260,41 @@ public class NewsFragment extends BaseFragment {
 
     public void setupWebView() {
 
-        mWebView.loadUrl(newsDetailsURL+mNews.getCategory()+"/"+mNews.getPostId());
+        url = BaseApplication.NEWS_DETAILS_URL + mNews.getCategory() + "/" + mNews.getPostId();
+        mWebView.loadUrl(url);
+        mWebView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                mProgressBar.setVisibility(View.VISIBLE);
+                super.onPageStarted(view, url, favicon);
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                mProgressBar.setVisibility(View.GONE);
+                super.onPageFinished(view, url);
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (url.startsWith("http:") || url.startsWith("https:")) {
+                    try {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                        return true;
+
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), "Oops! you can't open this link", Toast.LENGTH_SHORT).show();
+
+                    }
+
+                }
+                return false;
+
+            }
+        });
+
 
     }
 
@@ -310,7 +349,7 @@ public class NewsFragment extends BaseFragment {
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(com.radmagnet.R.string.checkOutThisRadStuff_txt));
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, mNews.getHeadline());
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, mNews.getHeadline() + "\n" + url);
                 startActivity(sharingIntent);
 
                 return false;
@@ -341,7 +380,6 @@ public class NewsFragment extends BaseFragment {
 
         public void onFragmentInteraction(Uri uri);
     }
-
 
 
 }

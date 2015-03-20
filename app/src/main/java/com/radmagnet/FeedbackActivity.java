@@ -116,10 +116,13 @@ public class FeedbackActivity extends BaseActivity {
                 @Override
                 public void success(Feedback.Output output, Response response) {
 
-                    if (output.success)
+                    if (output.success) {
                         mSendFeedback.setText(getString(com.radmagnet.R.string.sent_txt));
-                    else
+
+                    }
+                    else {
                         Toast.makeText(FeedbackActivity.this, getString(com.radmagnet.R.string.yourFeedbackCouldNotBeSend_msg), Toast.LENGTH_SHORT).show();
+                    }
 
                     enableFeedbackBtn();
 
