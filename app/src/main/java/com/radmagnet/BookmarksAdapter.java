@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.h6ah4i.android.widget.advrecyclerview.swipeable.RecyclerViewSwipeManager;
 import com.h6ah4i.android.widget.advrecyclerview.swipeable.SwipeableItemAdapter;
 import com.h6ah4i.android.widget.advrecyclerview.utils.AbstractSwipeableItemViewHolder;
+import com.radmagnet.models.News;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
@@ -102,7 +103,6 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
             holder.headlineTv.setText(activity.highlight(mSearchTerm,news.getHeadline()));
             int color = activity.getColorFromCategory(news.getCategory());
             holder.categoryTv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
-            holder.categoryTv.setBackgroundColor(color);
             Drawable drawable = holder.categoryTv.getBackground();
             drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
         }

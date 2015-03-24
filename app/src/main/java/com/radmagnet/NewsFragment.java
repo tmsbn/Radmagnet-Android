@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.joanzapata.android.iconify.IconDrawable;
 import com.joanzapata.android.iconify.Iconify;
+import com.radmagnet.models.News;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;

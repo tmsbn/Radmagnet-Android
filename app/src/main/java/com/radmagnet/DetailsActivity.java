@@ -1,13 +1,15 @@
 package com.radmagnet;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.radmagnet.models.News;
 
 import java.util.ArrayList;
 
@@ -52,10 +54,15 @@ public class DetailsActivity extends BaseActivity implements ViewPager.OnPageCha
 
                     Realm realm = Realm.getInstance(this);
                     News news = realm.where(News.class).contains("id", parts[3] + parts[4]).findFirst();
-                    if (news.isValid())
+                    if (news!=null && news.isValid())
                         realmIds.add(id);
-                    else
-                        NavUtils.navigateUpFromSameTask(this);
+                    else {
+                        //if the data doesn't exist in the db yet, go up to the parent
+                        Intent intent=new Intent(this,MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+
+                    }
                 }
 
             }

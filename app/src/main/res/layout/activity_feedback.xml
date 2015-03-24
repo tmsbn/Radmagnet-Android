@@ -1,53 +1,68 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.radmagnet.FeedbackActivity">
+    android:layout_height="match_parent">
 
-    <include
-        layout="@layout/toolbar_feedback"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp" />
+        android:orientation="vertical"
+        tools:context="com.radmagnet.FeedbackActivity">
+
+        <include
+            layout="@layout/toolbar_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
 
 
-    <EditText
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/yourName_txt"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.BlackItalics"
+            android:textSize="17sp" />
 
-        android:id="@+id/name"
-        android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/email_txt"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.BlackItalics"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="@string/feedAndComments_txt"
+            android:maxLines="10"
+            android:textAppearance="@style/TextAppearance.BlackItalics"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/copyright"
+        android:text="@string/copyright_txt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:hint="@string/yourName_txt"
-        android:singleLine="true"
-        android:textAppearance="@style/TextAppearance.BlackItalics"
-        android:textSize="17sp" />
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:hint="@string/email_txt"
-        android:inputType="textEmailAddress"
-        android:singleLine="true"
-        android:textAppearance="@style/TextAppearance.BlackItalics"
-        android:textSize="17sp" />
-
-    <EditText
-        android:id="@+id/comments"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:hint="@string/feedAndComments_txt"
-        android:maxLines="10"
-        android:textAppearance="@style/TextAppearance.BlackItalics"
-        android:textSize="17sp" />
-
-</LinearLayout>
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/light_gray"
+        android:textSize="12sp" />
+</RelativeLayout>

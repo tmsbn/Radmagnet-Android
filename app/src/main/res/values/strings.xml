@@ -45,5 +45,7 @@
     <string name="discount_txt">discount</string>
     <string name="percentage_txt">%</string>
     <string name="checkOutThisRadStuff_txt">Check out this Rad Stuff!</string>
+    <string name="beta_txt">BETA</string>
+    <string name="copyright_txt"><u>copyright @ 2015 RADMAGNET</u></string>
 
 </resources>

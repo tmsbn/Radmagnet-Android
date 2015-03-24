@@ -61,7 +61,7 @@ public class SplashActivity extends BaseActivity {
 
                 if (getPreferences(MODE_PRIVATE).getBoolean("showSplash", true)) {
                     setUpPager();
-                    getPreferences(MODE_PRIVATE).edit().putBoolean("showSplash", false).apply();
+
                 } else {
                     startFeed();
                 }
@@ -111,6 +111,7 @@ public class SplashActivity extends BaseActivity {
     @OnClick(com.radmagnet.R.id.startButton)
     public void startFeed() {
 
+        getPreferences(MODE_PRIVATE).edit().putBoolean("showSplash", false).apply();
         Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
         SplashActivity.this.startActivity(mainIntent);
         SplashActivity.this.finish();

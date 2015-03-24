@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import com.h6ah4i.android.widget.advrecyclerview.animator.SwipeDismissItemAnimator;
 import com.h6ah4i.android.widget.advrecyclerview.swipeable.RecyclerViewSwipeManager;
 import com.h6ah4i.android.widget.advrecyclerview.touchguard.RecyclerViewTouchActionGuardManager;
+import com.radmagnet.models.News;
 
 import java.util.ArrayList;
 
@@ -90,6 +91,7 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
     }
 
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -97,6 +99,7 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
         mSearchView = (SearchView) menu.findItem(com.radmagnet.R.id.action_search).getActionView();
         mSearchView.setOnQueryTextListener(this);
         mSearchView.setOnCloseListener(this);
+
         return true;
     }
 
@@ -121,7 +124,6 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
                 mSearchView.onActionViewCollapsed();
                 mSearchQuery = "";
                 return true;
-
             }
 
 
@@ -138,9 +140,18 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
 
     @Override
     public boolean onQueryTextChange(String query) {
+
+        //if query is of length 1 no need to do any filtering
+        if (query.length() <= 1) {
+            mSearchQuery = "";
+        } else {
+            mSearchQuery = query;
+        }
+
         mSearchQuery = query;
         mBookmarkAdapter.updateRealmResults(getRealmData());
         mBookmarkAdapter.setSearchTerm(query);
+
 
         return true;
     }

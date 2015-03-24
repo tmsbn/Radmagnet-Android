@@ -10,6 +10,9 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
+import com.radmagnet.models.ConfigVars;
+import com.radmagnet.models.Feedback;
+import com.radmagnet.models.NewsResponse;
 
 import java.lang.reflect.Type;
 import java.util.Date;
@@ -19,7 +22,6 @@ import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.android.AndroidLog;
 import retrofit.converter.GsonConverter;
-import retrofit.http.Body;
 import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;
 import retrofit.http.GET;

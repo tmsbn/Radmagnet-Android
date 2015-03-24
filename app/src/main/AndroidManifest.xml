@@ -31,11 +31,15 @@
             android:parentActivityName="com.radmagnet.MainActivity"
             android:screenOrientation="portrait" >
 
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.radmagnet.MainActivity" />
+
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="http" android:host="www.radmagnet.com" />
+                <data android:scheme="http" android:host="www.radmagnet.com" android:path="GET/details" />
             </intent-filter>
 
             </activity>

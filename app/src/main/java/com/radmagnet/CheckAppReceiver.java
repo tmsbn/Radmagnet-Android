@@ -10,6 +10,8 @@ import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.support.v4.app.NotificationCompat;
 
+import com.radmagnet.models.News;
+
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -42,7 +44,7 @@ public class CheckAppReceiver extends BroadcastReceiver {
          * Database manintainance
          */
         Realm realm = Realm.getInstance(context);
-        final RealmResults<News> results = realm.allObjects(News.class);
+        final RealmResults<News> results = realm.where(News.class).findAllSorted("createdDate", false);
         final int size = results.size();
         realm.beginTransaction();
         realm.executeTransaction(new Realm.Transaction() {
@@ -51,7 +53,7 @@ public class CheckAppReceiver extends BroadcastReceiver {
 
                 if (size >= MAX_DB_COUNT) {
 
-                    for (int i = size; i > MAX_DB_COUNT; i--) {
+                    for (int i = size-1; i > MAX_DB_COUNT; i--) {
                         if (!results.get(i).isBookmarked())
                             results.get(i).removeFromRealm();
                     }

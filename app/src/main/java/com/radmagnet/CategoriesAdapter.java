@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.radmagnet.models.Category;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -28,10 +30,10 @@ public class CategoriesAdapter extends ArrayAdapter<Category> {
 
 
         if (previousSelected != -1)
-            getItem(previousSelected).isSelected = false;
+            getItem(previousSelected).setSelected(false);
 
         previousSelected = position;
-        getItem(position).isSelected = true;
+        getItem(position).setSelected( true);
         notifyDataSetChanged();
 
     }
@@ -49,7 +51,7 @@ public class CategoriesAdapter extends ArrayAdapter<Category> {
         TextView categoryTv = (TextView) convertView.findViewById(com.radmagnet.R.id.category);
 
 
-        if (getItem(position).isSelected) {
+        if (getItem(position).isSelected()) {
             convertView.setActivated(true);
             previousSelected=position;
         }
@@ -57,12 +59,12 @@ public class CategoriesAdapter extends ArrayAdapter<Category> {
             convertView.setActivated(false);
 
 
-        categoryTv.setText(category.name.toUpperCase(Locale.ENGLISH));
+        categoryTv.setText(category.getName().toUpperCase(Locale.ENGLISH));
 
-        Log.v("sidebar", category.color);
+        Log.v("sidebar", category.getColor());
 
         try {
-            thumbnailTv.setBackgroundColor(Color.parseColor(category.color));
+            thumbnailTv.setBackgroundColor(Color.parseColor(category.getColor()));
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }

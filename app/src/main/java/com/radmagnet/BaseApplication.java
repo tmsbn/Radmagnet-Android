@@ -10,7 +10,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 public class BaseApplication extends Application {
 
 
-   public static String DATE_FORMAT="MMM dd,yyyy - hh:mm aa";
+   public static String DATE_FORMAT="MMM dd - hh:mm aa";
 
     public static int NOTIF_REQUEST_CODE=1506;
 

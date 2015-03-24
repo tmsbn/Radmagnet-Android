@@ -1,9 +1,13 @@
 package com.radmagnet;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.util.Patterns;
 import android.view.Gravity;
 import android.view.Menu;
@@ -12,6 +16,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.radmagnet.models.Feedback;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -35,6 +41,7 @@ public class FeedbackActivity extends BaseActivity {
     @InjectView(com.radmagnet.R.id.sendFeedback)
     Button mSendFeedback;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,8 +55,24 @@ public class FeedbackActivity extends BaseActivity {
                 Gravity.TOP | Gravity.RIGHT));
 
         setupActionBar(true, toolbar);
+        setupSavedValues();
+        //copyright.setText(Html.fromHtml(getString(R.string.copyright_txt)));
 
 
+    }
+
+    @OnClick(R.id.copyright)
+    public void takeToCopyRightPage(){
+
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.radmagnet.com/pages/copyright.php"));
+        startActivity(browserIntent);
+
+    }
+
+    private void setupSavedValues() {
+
+        mNameEt.setText(getPreferences(MODE_PRIVATE).getString("userName", ""));
+        mEmailEt.setText(getPreferences(MODE_PRIVATE).getString("userEmail", ""));
     }
 
 
@@ -94,7 +117,7 @@ public class FeedbackActivity extends BaseActivity {
             error = true;
         }
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        if (!email.isEmpty() && !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             mEmailEt.setError(getString(com.radmagnet.R.string.emailRequired_txt));
             error = true;
         }
@@ -118,9 +141,9 @@ public class FeedbackActivity extends BaseActivity {
 
                     if (output.success) {
                         mSendFeedback.setText(getString(com.radmagnet.R.string.sent_txt));
+                        saveFields();
 
-                    }
-                    else {
+                    } else {
                         Toast.makeText(FeedbackActivity.this, getString(com.radmagnet.R.string.yourFeedbackCouldNotBeSend_msg), Toast.LENGTH_SHORT).show();
                     }
 
@@ -137,6 +160,15 @@ public class FeedbackActivity extends BaseActivity {
                 }
             });
         }
+    }
+
+    private void saveFields() {
+
+        SharedPreferences.Editor editor = getPreferences(MODE_PRIVATE).edit();
+        editor.putString("userName", mNameEt.getText().toString());
+        editor.putString("userEmail", mEmailEt.getText().toString());
+        editor.apply();
+
     }
 
     public void enableFeedbackBtn() {

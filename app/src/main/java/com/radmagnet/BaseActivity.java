@@ -2,6 +2,8 @@ package com.radmagnet;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
@@ -15,8 +17,12 @@ import android.text.SpannableString;
 import android.text.style.BackgroundColorSpan;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.radmagnet.models.Category;
+import com.radmagnet.models.ConfigVars;
 
 import org.apache.commons.io.IOUtils;
 
@@ -48,8 +54,6 @@ public abstract class BaseActivity extends ActionBarActivity {
     }
 
 
-
-
     public ConfigVars getConfig() {
 
         if (sConfig == null) {
@@ -74,8 +78,8 @@ public abstract class BaseActivity extends ActionBarActivity {
 
         ArrayList<Category> categories = getConfig().categories;
         for (Category category : categories) {
-            if (category.value.equalsIgnoreCase(postType))
-                return Color.parseColor(category.color);
+            if (category.getValue().equalsIgnoreCase(postType))
+                return Color.parseColor(category.getColor());
         }
 
         return Color.WHITE;
@@ -85,8 +89,8 @@ public abstract class BaseActivity extends ActionBarActivity {
 
         ArrayList<Category> categories = getConfig().categories;
         for (Category category : categories) {
-            if (category.value.equalsIgnoreCase(categoryName))
-                return category.name;
+            if (category.getValue().equalsIgnoreCase(categoryName))
+                return category.getName();
         }
 
         return "";
@@ -106,9 +110,6 @@ public abstract class BaseActivity extends ActionBarActivity {
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
-
-
-
 
 
     public CharSequence highlight(String search, String originalText) {
@@ -140,12 +141,15 @@ public abstract class BaseActivity extends ActionBarActivity {
         }
     }
 
-    protected void setupActionBar(boolean withTitle,Toolbar toolbar) {
+    protected void setupActionBar(boolean withTitle, Toolbar toolbar) {
 
         setSupportActionBar(toolbar);
-        ActionBar actionBar=getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
+
+
+
 
         if (withTitle) {
 
@@ -155,11 +159,23 @@ public abstract class BaseActivity extends ActionBarActivity {
             actionBar.setLogo(getResources().getDrawable(com.radmagnet.R.drawable.ic_branding));
             actionBar.setDisplayShowTitleEnabled(false);
 
+            //Show beta tag if version code is less than 100
+            try {
+                TextView brandingTv = (TextView) toolbar.findViewById(R.id.beta_tag);
+                PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+                int versionCode = pInfo.versionCode;
+                if (versionCode < 100)
+                    brandingTv.setVisibility(View.VISIBLE);
+
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
+            }
+
         }
 
     }
 
-    public SpannableString getStyledActionTitle(CharSequence title){
+    public SpannableString getStyledActionTitle(CharSequence title) {
 
         SpannableString s = new SpannableString(getTitle().toString().toUpperCase());
         CalligraphyTypefaceSpan typefaceSpan = new CalligraphyTypefaceSpan(TypefaceUtils.load(getAssets(), "fonts/AlegreyaSans-BlackItalic.otf"));
@@ -170,21 +186,25 @@ public abstract class BaseActivity extends ActionBarActivity {
 
     }
 
-    public int getValueInDp(int valueInDp){
+    public int getValueInDp(int valueInDp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, valueInDp, getResources().getDisplayMetrics());
 
     }
 
-    public String getDateSuffix( int day) {
+    public String getDateSuffix(int day) {
 
         switch (day) {
-            case 1: case 21: case 31:
+            case 1:
+            case 21:
+            case 31:
                 return ("st");
 
-            case 2: case 22:
+            case 2:
+            case 22:
                 return ("nd");
 
-            case 3: case 23:
+            case 3:
+            case 23:
                 return ("rd");
 
             default:

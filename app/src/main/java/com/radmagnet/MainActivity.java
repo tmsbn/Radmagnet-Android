@@ -17,8 +17,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.radmagnet.models.Category;
+import com.radmagnet.models.News;
+import com.radmagnet.models.NewsResponse;
 
 import java.util.ArrayList;
 
@@ -52,7 +55,6 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     @InjectView(com.radmagnet.R.id.toolbar)
     Toolbar mToolbar;
-
 
 
     @InjectView(com.radmagnet.R.id.swipeNewsLayout)
@@ -110,7 +112,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     private void setupCategoriesList() {
 
         ArrayList<Category> categories = getConfig().categories;
-        categories.add(0, new Category(getString(com.radmagnet.R.string.allTheRad_txt), "#" + Integer.toHexString(getResources().getColor(android.R.color.white)), "", true));
+        categories.add(0, new Category(getString(R.string.allTheRad_txt), "#" + Integer.toHexString(getResources().getColor(android.R.color.white)), "", true));
         mCategoriesAdapter = new CategoriesAdapter(this, categories);
         mCategoriesLv.setAdapter(mCategoriesAdapter);
         mCategoriesLv.setOnItemClickListener(this);
@@ -223,19 +225,19 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         @Override
         public void success(final NewsResponse newsResponse, Response response) {
 
-            final ArrayList<News> newsList = newsResponse.data;
+            final ArrayList<News> newsList = newsResponse.getData();
 
             if (newsList == null || newsList.size() == 0) {
                 Toast.makeText(MainActivity.this, getString(com.radmagnet.R.string.noUpdatesAvaliable_msg), Toast.LENGTH_SHORT).show();
 
             } else {
-                int size= newsList.size();
+                int size = newsList.size();
 
                 for (News news : newsList) {
                     news.setId(news.getCategory() + news.getPostId());
                 }
 
-                Toast.makeText(MainActivity.this,  newsList.size() + " update"+(size>1?"s":"") + " available!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, newsList.size() + " update" + (size > 1 ? "s" : "") + " available!", Toast.LENGTH_SHORT).show();
                 Realm realm = Realm.getInstance(MainActivity.this);
                 realm.executeTransaction(new Realm.Transaction() {
                     @Override
@@ -243,7 +245,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
                         realm.copyToRealmOrUpdate(newsList);
 
-                        mPrefs.edit().putLong(LAST_UPDATED_KEY, newsResponse.date.getTime() / 1000).apply();
+                        mPrefs.edit().putLong(LAST_UPDATED_KEY, newsResponse.getDate().getTime() / 1000).apply();
 
                     }
                 });
@@ -254,8 +256,6 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
 
         }
-
-
 
 
         @Override
@@ -372,7 +372,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
             case com.radmagnet.R.id.categories_list:
 
                 mCategoriesAdapter.setSelectedCategory(position);
-                mSelectedCategory = mCategoriesAdapter.getItem(position).value;
+                mSelectedCategory = mCategoriesAdapter.getItem(position).getValue();
                 mNewsAdapter.updateRealmResults(getRealmData());
                 mDrawerLayout.closeDrawers();
 
@@ -391,9 +391,15 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     @Override
     public boolean onQueryTextChange(String query) {
 
-        mSearchQuery = query;
+        //if query is of length 1 no need to do any filtering
+        if (query.length() <= 1) {
+            mSearchQuery = "";
+        } else {
+            mSearchQuery = query;
+        }
+
         mNewsAdapter.updateRealmResults(getRealmData());
-        mNewsAdapter.setSearchTerm(query);
+        mNewsAdapter.setSearchTerm(mSearchQuery);
 
         return true;
 

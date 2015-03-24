@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.radmagnet.models.Category;
+
 import java.util.ArrayList;
 
 public class OtherOptionsAdapter extends ArrayAdapter<Category> {
@@ -28,8 +30,8 @@ public class OtherOptionsAdapter extends ArrayAdapter<Category> {
         TextView category = (TextView) convertView.findViewById(com.radmagnet.R.id.category);
         ImageView color = (ImageView) convertView.findViewById(com.radmagnet.R.id.thumbnail);
 
-        color.setBackgroundColor(Color.parseColor(options.color));
-        category.setText(options.name);
+        color.setBackgroundColor(Color.parseColor(options.getColor()));
+        category.setText(options.getName());
 
 
         return convertView;
