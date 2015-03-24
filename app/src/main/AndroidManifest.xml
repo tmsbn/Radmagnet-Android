@@ -57,6 +57,14 @@
             </intent-filter>
         </receiver>
 
+        <receiver
+            android:name=".RealmCleaningReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name="com.radmagnet.FeedbackActivity"
             android:label="@string/title_activity_feedback"

@@ -14,6 +14,8 @@ public class BaseApplication extends Application {
 
     public static int NOTIF_REQUEST_CODE=1506;
 
+    public static int DB_REQ_CODE =1507;
+
     public static String NEWS_DETAILS_URL = "http://www.radmagnet.com/GET/details/";
 
     @Override

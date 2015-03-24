@@ -30,6 +30,7 @@ public class SplashActivity extends BaseActivity {
     AlarmManager mAlarmManager;
 
     private static final int REPEAT_NOTIF_AFTER_DAYS = 3;
+    private static final int REPEAT_DB_MAINTAINCE_AFTER_DAYS = 2;
 
     @InjectView(com.radmagnet.R.id.introPager)
     AutoScrollViewPager mIntroPager;
@@ -50,7 +51,9 @@ public class SplashActivity extends BaseActivity {
         ButterKnife.inject(this);
 
         int SPLASH_DISPLAY_LENGTH = 2000;
+        mAlarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         setupReminderNotification();
+        setupRealmCleaningService();
 
 
         new Handler().postDelayed(new Runnable() {
@@ -119,6 +122,34 @@ public class SplashActivity extends BaseActivity {
     }
 
 
+    public void setupRealmCleaningService() {
+
+        ComponentName receiver = new ComponentName(this, RealmCleaningReceiver.class);
+        PackageManager pm = getPackageManager();
+
+        pm.setComponentEnabledSetting(receiver,
+                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                PackageManager.DONT_KILL_APP);
+
+
+        Intent intent = new Intent(this, RealmCleaningReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, BaseApplication.DB_REQ_CODE,
+                intent, PendingIntent.FLAG_NO_CREATE);
+
+        if (pendingIntent != null) {
+
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTimeInMillis(System.currentTimeMillis());
+            calendar.add(Calendar.DATE, REPEAT_DB_MAINTAINCE_AFTER_DAYS);
+
+            mAlarmManager.setInexactRepeating(AlarmManager.RTC, calendar.getTimeInMillis(),
+                    AlarmManager.INTERVAL_DAY * REPEAT_DB_MAINTAINCE_AFTER_DAYS, pendingIntent);
+        }
+
+
+    }
+
+
     public void setupReminderNotification() {
 
         ComponentName receiver = new ComponentName(this, CheckAppReceiver.class);
@@ -128,7 +159,6 @@ public class SplashActivity extends BaseActivity {
                 PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
                 PackageManager.DONT_KILL_APP);
 
-        mAlarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
         Intent intent = new Intent(this, CheckAppReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, BaseApplication.NOTIF_REQUEST_CODE,
