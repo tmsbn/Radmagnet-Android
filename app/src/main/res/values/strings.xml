@@ -47,5 +47,6 @@
     <string name="checkOutThisRadStuff_txt">Check out this Rad Stuff!</string>
     <string name="beta_txt">BETA</string>
     <string name="copyright_txt"><u>copyright @ 2015 RADMAGNET</u></string>
+    <string name="noRadsHere_msg">Oops! No Rads Here! \n Pull to Refresh</string>
 
 </resources>

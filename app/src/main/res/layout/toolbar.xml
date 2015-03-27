@@ -6,16 +6,16 @@
     android:minHeight="?attr/actionBarSize">
 
     <TextView
+        android:id="@+id/beta_tag"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:gravity="bottom"
-        android:textSize="13sp"
-        android:id="@+id/beta_tag"
-        android:visibility="gone"
         android:layout_marginLeft="3dp"
-        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:gravity="bottom"
         android:text="@string/beta_txt"
-        android:textColor="@color/bright_red" />
+        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:textColor="@color/bright_red"
+        android:textSize="13sp"
+        android:visibility="gone" />
 
 
 </android.support.v7.widget.Toolbar>

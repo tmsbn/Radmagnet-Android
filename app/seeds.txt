@@ -9757,6 +9757,7 @@ com.radmagnet.BaseActivity: java.lang.String getDateSuffix(int)
 com.radmagnet.BaseApplication
 com.radmagnet.BaseApplication: java.lang.String DATE_FORMAT
 com.radmagnet.BaseApplication: int NOTIF_REQUEST_CODE
+com.radmagnet.BaseApplication: int DB_REQ_CODE
 com.radmagnet.BaseApplication: java.lang.String NEWS_DETAILS_URL
 com.radmagnet.BaseApplication: BaseApplication()
 com.radmagnet.BaseApplication: void onCreate()
@@ -11313,6 +11314,9 @@ com.radmagnet.R$styleable: int ViewStubCompat_android_id
 com.radmagnet.R$styleable: int ViewStubCompat_android_inflatedId
 com.radmagnet.R$styleable: int ViewStubCompat_android_layout
 com.radmagnet.R$styleable: R$styleable()
+com.radmagnet.RealmCleaningReceiver
+com.radmagnet.RealmCleaningReceiver: RealmCleaningReceiver()
+com.radmagnet.RealmCleaningReceiver: void onReceive(android.content.Context,android.content.Intent)
 com.radmagnet.SplashActivity
 com.radmagnet.SplashActivity: com.radmagnet.AutoScrollViewPager mIntroPager
 com.radmagnet.SplashActivity: android.widget.ImageView mSplashScreenIv
@@ -11322,6 +11326,7 @@ com.radmagnet.SplashActivity: SplashActivity()
 com.radmagnet.SplashActivity: void onCreate(android.os.Bundle)
 com.radmagnet.SplashActivity: void setUpPager()
 com.radmagnet.SplashActivity: void startFeed()
+com.radmagnet.SplashActivity: void setupRealmCleaningService()
 com.radmagnet.SplashActivity: void setupReminderNotification()
 com.radmagnet.SplashActivity: boolean onCreateOptionsMenu(android.view.Menu)
 com.radmagnet.SplashActivity: boolean onOptionsItemSelected(android.view.MenuItem)
@@ -11374,9 +11379,12 @@ com.radmagnet.models.News: java.lang.String imageUrl
 com.radmagnet.models.News: java.lang.String creator
 com.radmagnet.models.News: java.lang.String creatorDp
 com.radmagnet.models.News: java.lang.String location
+com.radmagnet.models.News: long key
 com.radmagnet.models.News: boolean isBookmarked
 com.radmagnet.models.News: java.lang.String source
 com.radmagnet.models.News: News()
+com.radmagnet.models.News: long getKey()
+com.radmagnet.models.News: void setKey(long)
 com.radmagnet.models.News: java.util.Date getStartDate()
 com.radmagnet.models.News: java.lang.String getLocation()
 com.radmagnet.models.News: void setLocation(java.lang.String)
@@ -14709,6 +14717,8 @@ io.realm.NewsRealmProxy: java.lang.String getCreatorDp()
 io.realm.NewsRealmProxy: void setCreatorDp(java.lang.String)
 io.realm.NewsRealmProxy: java.lang.String getLocation()
 io.realm.NewsRealmProxy: void setLocation(java.lang.String)
+io.realm.NewsRealmProxy: long getKey()
+io.realm.NewsRealmProxy: void setKey(long)
 io.realm.NewsRealmProxy: boolean isBookmarked()
 io.realm.NewsRealmProxy: void setBookmarked(boolean)
 io.realm.NewsRealmProxy: io.realm.internal.Table initTable(io.realm.internal.ImplicitTransaction)

@@ -56,7 +56,6 @@ public class FeedbackActivity extends BaseActivity {
 
         setupActionBar(true, toolbar);
         setupSavedValues();
-        //copyright.setText(Html.fromHtml(getString(R.string.copyright_txt)));
 
 
     }

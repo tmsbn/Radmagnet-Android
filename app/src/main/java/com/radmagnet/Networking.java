@@ -83,8 +83,8 @@ public class Networking {
         void getConfig(Callback<ConfigVars> callback);
 
 
-        @GET("/GET/highlights/{date}")
-        void getAnnouncements(@Path("date") String date, Callback<NewsResponse> callback);
+        @GET("/GET/highlights/{date}/v2/{udid}")
+        void getAnnouncements(@Path("date") String date,@Path("udid") String udid, Callback<NewsResponse> callback);
 
         @FormUrlEncoded
         @POST("/POST/beta/feedback")

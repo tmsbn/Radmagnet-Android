@@ -3,6 +3,7 @@ package com.radmagnet;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -17,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.radmagnet.models.Category;
@@ -53,12 +55,18 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     @InjectView(com.radmagnet.R.id.otherOptions_list)
     ListView mOtherOptionsLv;
 
-    @InjectView(com.radmagnet.R.id.toolbar)
+    @InjectView(R.id.toolbarLayout)
     Toolbar mToolbar;
 
 
     @InjectView(com.radmagnet.R.id.swipeNewsLayout)
     SwipeRefreshLayout mSwipeLayout;
+
+    @InjectView(R.id.newRads_text)
+    NotifyRadView newRadsTv;
+
+    @InjectView(R.id.emptyView)
+    TextView emptyViewTv;
 
     ActionBarDrawerToggle mDrawerToggle;
 
@@ -70,6 +78,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     String mSearchQuery = "";
     String mSelectedCategory = "";
 
+    LinearLayoutManager linearLayoutManager;
+    boolean isUILoaded=false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,17 +88,19 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         setContentView(com.radmagnet.R.layout.activity_main);
 
         ButterKnife.inject(this);
-        setupActionBar(false, (Toolbar) findViewById(com.radmagnet.R.id.toolbar));
+        setupActionBar(false, mToolbar);
         setupDrawer();
 
         setupNewsList();
         fetchLatestNews();
 
+        isUILoaded=true;
+
     }
 
     private void setupNewsList() {
 
-        final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mNewsRv.setLayoutManager(linearLayoutManager);
         SlideInUpAnimator slideInUpAnimator = new SlideInUpAnimator();
@@ -105,8 +118,30 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 R.color.green,
                 R.color.purple);
 
+        mToolbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mNewsRv.smoothScrollToPosition(0);
+            }
+        });
+
         mSwipeLayout.setOnRefreshListener(this);
+
+        mNewsRv.setOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
     }
+
+
 
 
     private void setupCategoriesList() {
@@ -116,10 +151,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         mCategoriesAdapter = new CategoriesAdapter(this, categories);
         mCategoriesLv.setAdapter(mCategoriesAdapter);
         mCategoriesLv.setOnItemClickListener(this);
-//        mCategoriesLv.addFooterView(LayoutInflater.from(this).inflate(R.layout.horizontal_line, null));
-
 
     }
+
 
     private void setupOtherSideBarOptions() {
 
@@ -175,7 +209,10 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
         long lastUpdatedDate = mPrefs.getLong(LAST_UPDATED_KEY, -1);
         String date = (lastUpdatedDate != -1) ? String.valueOf(lastUpdatedDate) : "0";
-        Networking.getRestClient().getAnnouncements(date, new GetNewsCallback());
+        String android_id = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+
+
+        Networking.getRestClient().getAnnouncements(date, android_id, new GetNewsCallback());
 
         showLoadingIcon(true);
     }
@@ -228,23 +265,27 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
             final ArrayList<News> newsList = newsResponse.getData();
 
             if (newsList == null || newsList.size() == 0) {
-                Toast.makeText(MainActivity.this, getString(com.radmagnet.R.string.noUpdatesAvaliable_msg), Toast.LENGTH_SHORT).show();
-
+                newRadsTv.showTempMessage(getString(com.radmagnet.R.string.noUpdatesAvaliable_msg));
             } else {
-                int size = newsList.size();
+                long dataSize = newsList.size();
+                long maxKey = getMaxKey();
 
                 for (News news : newsList) {
+
+                    //create a sorting field by
+                    news.setKey(news.getKey() + maxKey);
+
+                    //create a primary key by appending a category with post id
                     news.setId(news.getCategory() + news.getPostId());
                 }
 
-                Toast.makeText(MainActivity.this, newsList.size() + " update" + (size > 1 ? "s" : "") + " available!", Toast.LENGTH_SHORT).show();
+                newRadsTv.showTempMessage(newsList.size() + " Rad" + (dataSize > 1 ? "s" : "") + " available!");
                 Realm realm = Realm.getInstance(MainActivity.this);
                 realm.executeTransaction(new Realm.Transaction() {
                     @Override
                     public void execute(Realm realm) {
 
                         realm.copyToRealmOrUpdate(newsList);
-
                         mPrefs.edit().putLong(LAST_UPDATED_KEY, newsResponse.getDate().getTime() / 1000).apply();
 
                     }
@@ -274,6 +315,11 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         super.onDestroy();
     }
 
+    private long getMaxKey() {
+        RealmQuery<News> realmQuery = Realm.getInstance(this).where(News.class);
+        return realmQuery.maximumInt("key");
+    }
+
     private RealmResults<News> getRealmData() {
 
         RealmQuery<News> realmQuery = Realm.getInstance(this).where(News.class);
@@ -286,7 +332,14 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
             realmQuery = realmQuery.contains("category", mSelectedCategory, false);
         }
 
-        return realmQuery.findAllSorted("createdDate", false);
+        RealmResults<News> news=realmQuery.findAllSorted("key", false);
+
+        if(isUILoaded && news.size()==0)
+            emptyViewTv.setVisibility(View.VISIBLE);
+        else
+            emptyViewTv.setVisibility(View.GONE);
+
+        return news;
 
     }
 

@@ -4,6 +4,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,6 +23,7 @@ import java.util.Calendar;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+import io.realm.Realm;
 
 
 public class SplashActivity extends BaseActivity {
@@ -52,6 +54,8 @@ public class SplashActivity extends BaseActivity {
 
         int SPLASH_DISPLAY_LENGTH = 2000;
         mAlarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+        deleteRealmData();
         setupReminderNotification();
         setupRealmCleaningService();
 
@@ -72,6 +76,18 @@ public class SplashActivity extends BaseActivity {
 
             }
         }, SPLASH_DISPLAY_LENGTH);
+
+    }
+
+    //Since migration API is not ready, the Realm file must be deleted for every upgrade where schema has changed
+    //this can be done by just changing the version name,this function will take care of the rest
+    private void deleteRealmData() {
+        String versionName=BuildConfig.VERSION_NAME;
+        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+        if (!preferences.getBoolean(versionName, false)) {
+            Realm.deleteRealmFile(this);
+            preferences.edit().putBoolean(versionName, true).apply();
+        }
 
     }
 

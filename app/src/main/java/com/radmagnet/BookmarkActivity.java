@@ -86,7 +86,7 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
 
         realmQuery.equalTo("isBookmarked", true);
 
-        return realmQuery.findAllSorted("createdDate", false);
+        return realmQuery.findAllSorted("key", false);
 
     }
 

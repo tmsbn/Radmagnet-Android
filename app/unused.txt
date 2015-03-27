@@ -1278,6 +1278,7 @@ com.radmagnet.NewsFragment:
     private android.support.v7.widget.ShareActionProvider mShareActionProvider
 com.radmagnet.SplashActivity:
     private static final int REPEAT_NOTIF_AFTER_DAYS
+    private static final int REPEAT_DB_MAINTAINCE_AFTER_DAYS
 com.squareup.javawriter.JavaWriter:
     private static final int MAX_SINGLE_LINE_ATTRIBUTES
     private static final java.lang.String INDENT
