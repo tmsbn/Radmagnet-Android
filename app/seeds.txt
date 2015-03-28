@@ -9294,422 +9294,6 @@ com.joanzapata.android.iconify.Iconify$IconValue: com.joanzapata.android.iconify
 com.joanzapata.android.iconify.Iconify$IconValue: com.joanzapata.android.iconify.Iconify$IconValue valueOf(java.lang.String)
 com.joanzapata.android.iconify.Iconify$IconValue: java.lang.String formattedName()
 com.joanzapata.android.iconify.Iconify$IconValue: char character()
-com.melnykov.fab.BuildConfig
-com.melnykov.fab.BuildConfig: boolean DEBUG
-com.melnykov.fab.BuildConfig: java.lang.String APPLICATION_ID
-com.melnykov.fab.BuildConfig: java.lang.String BUILD_TYPE
-com.melnykov.fab.BuildConfig: java.lang.String FLAVOR
-com.melnykov.fab.BuildConfig: int VERSION_CODE
-com.melnykov.fab.BuildConfig: java.lang.String VERSION_NAME
-com.melnykov.fab.BuildConfig: BuildConfig()
-com.melnykov.fab.FloatingActionButton
-com.melnykov.fab.FloatingActionButton: int TYPE_NORMAL
-com.melnykov.fab.FloatingActionButton: int TYPE_MINI
-com.melnykov.fab.FloatingActionButton: FloatingActionButton(android.content.Context)
-com.melnykov.fab.FloatingActionButton: FloatingActionButton(android.content.Context,android.util.AttributeSet)
-com.melnykov.fab.FloatingActionButton: FloatingActionButton(android.content.Context,android.util.AttributeSet,int)
-com.melnykov.fab.FloatingActionButton: void onMeasure(int,int)
-com.melnykov.fab.FloatingActionButton: void setBackgroundCompat(android.graphics.drawable.Drawable)
-com.melnykov.fab.FloatingActionButton: int getMarginBottom()
-com.melnykov.fab.FloatingActionButton: void setColorNormal(int)
-com.melnykov.fab.FloatingActionButton: void setColorNormalResId(int)
-com.melnykov.fab.FloatingActionButton: int getColorNormal()
-com.melnykov.fab.FloatingActionButton: void setColorPressed(int)
-com.melnykov.fab.FloatingActionButton: void setColorPressedResId(int)
-com.melnykov.fab.FloatingActionButton: int getColorPressed()
-com.melnykov.fab.FloatingActionButton: void setColorRipple(int)
-com.melnykov.fab.FloatingActionButton: void setColorRippleResId(int)
-com.melnykov.fab.FloatingActionButton: int getColorRipple()
-com.melnykov.fab.FloatingActionButton: void setShadow(boolean)
-com.melnykov.fab.FloatingActionButton: boolean hasShadow()
-com.melnykov.fab.FloatingActionButton: void setType(int)
-com.melnykov.fab.FloatingActionButton: int getType()
-com.melnykov.fab.FloatingActionButton: boolean isVisible()
-com.melnykov.fab.FloatingActionButton: void show()
-com.melnykov.fab.FloatingActionButton: void hide()
-com.melnykov.fab.FloatingActionButton: void show(boolean)
-com.melnykov.fab.FloatingActionButton: void hide(boolean)
-com.melnykov.fab.FloatingActionButton: void attachToListView(android.widget.AbsListView)
-com.melnykov.fab.FloatingActionButton: void attachToListView(android.widget.AbsListView,com.melnykov.fab.ScrollDirectionListener)
-com.melnykov.fab.FloatingActionButton: void attachToRecyclerView(android.support.v7.widget.RecyclerView)
-com.melnykov.fab.FloatingActionButton: void attachToRecyclerView(android.support.v7.widget.RecyclerView,com.melnykov.fab.ScrollDirectionListener)
-com.melnykov.fab.FloatingActionButton: void attachToScrollView(com.melnykov.fab.ObservableScrollView)
-com.melnykov.fab.FloatingActionButton: void attachToScrollView(com.melnykov.fab.ObservableScrollView,com.melnykov.fab.ScrollDirectionListener)
-com.melnykov.fab.FloatingActionButton: void attachToListView(android.widget.AbsListView,com.melnykov.fab.ScrollDirectionListener,android.widget.AbsListView$OnScrollListener)
-com.melnykov.fab.FloatingActionButton: void attachToRecyclerView(android.support.v7.widget.RecyclerView,com.melnykov.fab.ScrollDirectionListener,android.support.v7.widget.RecyclerView$OnScrollListener)
-com.melnykov.fab.FloatingActionButton: void attachToScrollView(com.melnykov.fab.ObservableScrollView,com.melnykov.fab.ScrollDirectionListener,com.melnykov.fab.ObservableScrollView$OnScrollChangedListener)
-com.melnykov.fab.FloatingActionButton$TYPE
-com.melnykov.fab.ObservableScrollView
-com.melnykov.fab.ObservableScrollView: ObservableScrollView(android.content.Context)
-com.melnykov.fab.ObservableScrollView: ObservableScrollView(android.content.Context,android.util.AttributeSet)
-com.melnykov.fab.ObservableScrollView: ObservableScrollView(android.content.Context,android.util.AttributeSet,int)
-com.melnykov.fab.ObservableScrollView: void onScrollChanged(int,int,int,int)
-com.melnykov.fab.ObservableScrollView: void setOnScrollChangedListener(com.melnykov.fab.ObservableScrollView$OnScrollChangedListener)
-com.melnykov.fab.ObservableScrollView$OnScrollChangedListener
-com.melnykov.fab.ObservableScrollView$OnScrollChangedListener: void onScrollChanged(android.widget.ScrollView,int,int,int,int)
-com.melnykov.fab.R
-com.melnykov.fab.R: R()
-com.melnykov.fab.R$attr
-com.melnykov.fab.R$attr: int fab_colorNormal
-com.melnykov.fab.R$attr: int fab_colorPressed
-com.melnykov.fab.R$attr: int fab_colorRipple
-com.melnykov.fab.R$attr: int fab_shadow
-com.melnykov.fab.R$attr: int fab_type
-com.melnykov.fab.R$attr: R$attr()
-com.melnykov.fab.R$color
-com.melnykov.fab.R$color: int material_blue_500
-com.melnykov.fab.R$color: int material_blue_600
-com.melnykov.fab.R$color: R$color()
-com.melnykov.fab.R$dimen
-com.melnykov.fab.R$dimen: int fab_elevation_lollipop
-com.melnykov.fab.R$dimen: int fab_scroll_threshold
-com.melnykov.fab.R$dimen: int fab_shadow_size
-com.melnykov.fab.R$dimen: int fab_size_mini
-com.melnykov.fab.R$dimen: int fab_size_normal
-com.melnykov.fab.R$dimen: R$dimen()
-com.melnykov.fab.R$drawable
-com.melnykov.fab.R$drawable: int shadow
-com.melnykov.fab.R$drawable: int shadow_mini
-com.melnykov.fab.R$drawable: R$drawable()
-com.melnykov.fab.R$id
-com.melnykov.fab.R$id: int mini
-com.melnykov.fab.R$id: int normal
-com.melnykov.fab.R$id: R$id()
-com.melnykov.fab.R$string
-com.melnykov.fab.R$string: int define_FloatingActionButton
-com.melnykov.fab.R$string: int library_FloatingActionButton_author
-com.melnykov.fab.R$string: int library_FloatingActionButton_authorWebsite
-com.melnykov.fab.R$string: int library_FloatingActionButton_isOpenSource
-com.melnykov.fab.R$string: int library_FloatingActionButton_libraryDescription
-com.melnykov.fab.R$string: int library_FloatingActionButton_libraryName
-com.melnykov.fab.R$string: int library_FloatingActionButton_libraryVersion
-com.melnykov.fab.R$string: int library_FloatingActionButton_libraryWebsite
-com.melnykov.fab.R$string: int library_FloatingActionButton_licenseId
-com.melnykov.fab.R$string: int library_FloatingActionButton_repositoryLink
-com.melnykov.fab.R$string: R$string()
-com.melnykov.fab.R$styleable
-com.melnykov.fab.R$styleable: int[] FloatingActionButton
-com.melnykov.fab.R$styleable: int FloatingActionButton_fab_colorNormal
-com.melnykov.fab.R$styleable: int FloatingActionButton_fab_colorPressed
-com.melnykov.fab.R$styleable: int FloatingActionButton_fab_colorRipple
-com.melnykov.fab.R$styleable: int FloatingActionButton_fab_shadow
-com.melnykov.fab.R$styleable: int FloatingActionButton_fab_type
-com.melnykov.fab.R$styleable: R$styleable()
-com.melnykov.fab.ScrollDirectionListener
-com.melnykov.fab.ScrollDirectionListener: void onScrollDown()
-com.melnykov.fab.ScrollDirectionListener: void onScrollUp()
-com.nineoldandroids.animation.Animator
-com.nineoldandroids.animation.Animator: Animator()
-com.nineoldandroids.animation.Animator: void start()
-com.nineoldandroids.animation.Animator: void cancel()
-com.nineoldandroids.animation.Animator: void end()
-com.nineoldandroids.animation.Animator: long getStartDelay()
-com.nineoldandroids.animation.Animator: void setStartDelay(long)
-com.nineoldandroids.animation.Animator: com.nineoldandroids.animation.Animator setDuration(long)
-com.nineoldandroids.animation.Animator: long getDuration()
-com.nineoldandroids.animation.Animator: void setInterpolator(android.view.animation.Interpolator)
-com.nineoldandroids.animation.Animator: boolean isRunning()
-com.nineoldandroids.animation.Animator: boolean isStarted()
-com.nineoldandroids.animation.Animator: void addListener(com.nineoldandroids.animation.Animator$AnimatorListener)
-com.nineoldandroids.animation.Animator: void removeListener(com.nineoldandroids.animation.Animator$AnimatorListener)
-com.nineoldandroids.animation.Animator: java.util.ArrayList getListeners()
-com.nineoldandroids.animation.Animator: void removeAllListeners()
-com.nineoldandroids.animation.Animator: com.nineoldandroids.animation.Animator clone()
-com.nineoldandroids.animation.Animator: void setupStartValues()
-com.nineoldandroids.animation.Animator: void setupEndValues()
-com.nineoldandroids.animation.Animator: void setTarget(java.lang.Object)
-com.nineoldandroids.animation.Animator: java.lang.Object clone()
-com.nineoldandroids.animation.Animator$AnimatorListener
-com.nineoldandroids.animation.Animator$AnimatorListener: void onAnimationStart(com.nineoldandroids.animation.Animator)
-com.nineoldandroids.animation.Animator$AnimatorListener: void onAnimationEnd(com.nineoldandroids.animation.Animator)
-com.nineoldandroids.animation.Animator$AnimatorListener: void onAnimationCancel(com.nineoldandroids.animation.Animator)
-com.nineoldandroids.animation.Animator$AnimatorListener: void onAnimationRepeat(com.nineoldandroids.animation.Animator)
-com.nineoldandroids.animation.AnimatorInflater
-com.nineoldandroids.animation.AnimatorInflater: AnimatorInflater()
-com.nineoldandroids.animation.AnimatorInflater: com.nineoldandroids.animation.Animator loadAnimator(android.content.Context,int)
-com.nineoldandroids.animation.AnimatorListenerAdapter
-com.nineoldandroids.animation.AnimatorListenerAdapter: AnimatorListenerAdapter()
-com.nineoldandroids.animation.AnimatorListenerAdapter: void onAnimationCancel(com.nineoldandroids.animation.Animator)
-com.nineoldandroids.animation.AnimatorListenerAdapter: void onAnimationEnd(com.nineoldandroids.animation.Animator)
-com.nineoldandroids.animation.AnimatorListenerAdapter: void onAnimationRepeat(com.nineoldandroids.animation.Animator)
-com.nineoldandroids.animation.AnimatorListenerAdapter: void onAnimationStart(com.nineoldandroids.animation.Animator)
-com.nineoldandroids.animation.AnimatorSet
-com.nineoldandroids.animation.AnimatorSet: AnimatorSet()
-com.nineoldandroids.animation.AnimatorSet: void playTogether(com.nineoldandroids.animation.Animator[])
-com.nineoldandroids.animation.AnimatorSet: void playTogether(java.util.Collection)
-com.nineoldandroids.animation.AnimatorSet: void playSequentially(com.nineoldandroids.animation.Animator[])
-com.nineoldandroids.animation.AnimatorSet: void playSequentially(java.util.List)
-com.nineoldandroids.animation.AnimatorSet: java.util.ArrayList getChildAnimations()
-com.nineoldandroids.animation.AnimatorSet: void setTarget(java.lang.Object)
-com.nineoldandroids.animation.AnimatorSet: void setInterpolator(android.view.animation.Interpolator)
-com.nineoldandroids.animation.AnimatorSet: com.nineoldandroids.animation.AnimatorSet$Builder play(com.nineoldandroids.animation.Animator)
-com.nineoldandroids.animation.AnimatorSet: void cancel()
-com.nineoldandroids.animation.AnimatorSet: void end()
-com.nineoldandroids.animation.AnimatorSet: boolean isRunning()
-com.nineoldandroids.animation.AnimatorSet: boolean isStarted()
-com.nineoldandroids.animation.AnimatorSet: long getStartDelay()
-com.nineoldandroids.animation.AnimatorSet: void setStartDelay(long)
-com.nineoldandroids.animation.AnimatorSet: long getDuration()
-com.nineoldandroids.animation.AnimatorSet: com.nineoldandroids.animation.AnimatorSet setDuration(long)
-com.nineoldandroids.animation.AnimatorSet: void setupStartValues()
-com.nineoldandroids.animation.AnimatorSet: void setupEndValues()
-com.nineoldandroids.animation.AnimatorSet: void start()
-com.nineoldandroids.animation.AnimatorSet: com.nineoldandroids.animation.AnimatorSet clone()
-com.nineoldandroids.animation.AnimatorSet: com.nineoldandroids.animation.Animator clone()
-com.nineoldandroids.animation.AnimatorSet: com.nineoldandroids.animation.Animator setDuration(long)
-com.nineoldandroids.animation.AnimatorSet: java.lang.Object clone()
-com.nineoldandroids.animation.AnimatorSet$Builder
-com.nineoldandroids.animation.AnimatorSet$Builder: com.nineoldandroids.animation.AnimatorSet$Builder with(com.nineoldandroids.animation.Animator)
-com.nineoldandroids.animation.AnimatorSet$Builder: com.nineoldandroids.animation.AnimatorSet$Builder before(com.nineoldandroids.animation.Animator)
-com.nineoldandroids.animation.AnimatorSet$Builder: com.nineoldandroids.animation.AnimatorSet$Builder after(com.nineoldandroids.animation.Animator)
-com.nineoldandroids.animation.AnimatorSet$Builder: com.nineoldandroids.animation.AnimatorSet$Builder after(long)
-com.nineoldandroids.animation.ArgbEvaluator
-com.nineoldandroids.animation.ArgbEvaluator: ArgbEvaluator()
-com.nineoldandroids.animation.ArgbEvaluator: java.lang.Object evaluate(float,java.lang.Object,java.lang.Object)
-com.nineoldandroids.animation.FloatEvaluator
-com.nineoldandroids.animation.FloatEvaluator: FloatEvaluator()
-com.nineoldandroids.animation.FloatEvaluator: java.lang.Float evaluate(float,java.lang.Number,java.lang.Number)
-com.nineoldandroids.animation.FloatEvaluator: java.lang.Object evaluate(float,java.lang.Object,java.lang.Object)
-com.nineoldandroids.animation.IntEvaluator
-com.nineoldandroids.animation.IntEvaluator: IntEvaluator()
-com.nineoldandroids.animation.IntEvaluator: java.lang.Integer evaluate(float,java.lang.Integer,java.lang.Integer)
-com.nineoldandroids.animation.IntEvaluator: java.lang.Object evaluate(float,java.lang.Object,java.lang.Object)
-com.nineoldandroids.animation.Keyframe
-com.nineoldandroids.animation.Keyframe: Keyframe()
-com.nineoldandroids.animation.Keyframe: com.nineoldandroids.animation.Keyframe ofInt(float,int)
-com.nineoldandroids.animation.Keyframe: com.nineoldandroids.animation.Keyframe ofInt(float)
-com.nineoldandroids.animation.Keyframe: com.nineoldandroids.animation.Keyframe ofFloat(float,float)
-com.nineoldandroids.animation.Keyframe: com.nineoldandroids.animation.Keyframe ofFloat(float)
-com.nineoldandroids.animation.Keyframe: com.nineoldandroids.animation.Keyframe ofObject(float,java.lang.Object)
-com.nineoldandroids.animation.Keyframe: com.nineoldandroids.animation.Keyframe ofObject(float)
-com.nineoldandroids.animation.Keyframe: boolean hasValue()
-com.nineoldandroids.animation.Keyframe: java.lang.Object getValue()
-com.nineoldandroids.animation.Keyframe: void setValue(java.lang.Object)
-com.nineoldandroids.animation.Keyframe: float getFraction()
-com.nineoldandroids.animation.Keyframe: void setFraction(float)
-com.nineoldandroids.animation.Keyframe: android.view.animation.Interpolator getInterpolator()
-com.nineoldandroids.animation.Keyframe: void setInterpolator(android.view.animation.Interpolator)
-com.nineoldandroids.animation.Keyframe: java.lang.Class getType()
-com.nineoldandroids.animation.Keyframe: com.nineoldandroids.animation.Keyframe clone()
-com.nineoldandroids.animation.Keyframe: java.lang.Object clone()
-com.nineoldandroids.animation.ObjectAnimator
-com.nineoldandroids.animation.ObjectAnimator: void setPropertyName(java.lang.String)
-com.nineoldandroids.animation.ObjectAnimator: void setProperty(com.nineoldandroids.util.Property)
-com.nineoldandroids.animation.ObjectAnimator: java.lang.String getPropertyName()
-com.nineoldandroids.animation.ObjectAnimator: ObjectAnimator()
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.ObjectAnimator ofInt(java.lang.Object,java.lang.String,int[])
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.ObjectAnimator ofInt(java.lang.Object,com.nineoldandroids.util.Property,int[])
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.ObjectAnimator ofFloat(java.lang.Object,java.lang.String,float[])
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.ObjectAnimator ofFloat(java.lang.Object,com.nineoldandroids.util.Property,float[])
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.ObjectAnimator ofObject(java.lang.Object,java.lang.String,com.nineoldandroids.animation.TypeEvaluator,java.lang.Object[])
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.ObjectAnimator ofObject(java.lang.Object,com.nineoldandroids.util.Property,com.nineoldandroids.animation.TypeEvaluator,java.lang.Object[])
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.ObjectAnimator ofPropertyValuesHolder(java.lang.Object,com.nineoldandroids.animation.PropertyValuesHolder[])
-com.nineoldandroids.animation.ObjectAnimator: void setIntValues(int[])
-com.nineoldandroids.animation.ObjectAnimator: void setFloatValues(float[])
-com.nineoldandroids.animation.ObjectAnimator: void setObjectValues(java.lang.Object[])
-com.nineoldandroids.animation.ObjectAnimator: void start()
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.ObjectAnimator setDuration(long)
-com.nineoldandroids.animation.ObjectAnimator: java.lang.Object getTarget()
-com.nineoldandroids.animation.ObjectAnimator: void setTarget(java.lang.Object)
-com.nineoldandroids.animation.ObjectAnimator: void setupStartValues()
-com.nineoldandroids.animation.ObjectAnimator: void setupEndValues()
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.ObjectAnimator clone()
-com.nineoldandroids.animation.ObjectAnimator: java.lang.String toString()
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.ValueAnimator clone()
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.ValueAnimator setDuration(long)
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.Animator clone()
-com.nineoldandroids.animation.ObjectAnimator: com.nineoldandroids.animation.Animator setDuration(long)
-com.nineoldandroids.animation.ObjectAnimator: java.lang.Object clone()
-com.nineoldandroids.animation.PropertyValuesHolder
-com.nineoldandroids.animation.PropertyValuesHolder: com.nineoldandroids.util.Property mProperty
-com.nineoldandroids.animation.PropertyValuesHolder: com.nineoldandroids.animation.PropertyValuesHolder ofInt(java.lang.String,int[])
-com.nineoldandroids.animation.PropertyValuesHolder: com.nineoldandroids.animation.PropertyValuesHolder ofInt(com.nineoldandroids.util.Property,int[])
-com.nineoldandroids.animation.PropertyValuesHolder: com.nineoldandroids.animation.PropertyValuesHolder ofFloat(java.lang.String,float[])
-com.nineoldandroids.animation.PropertyValuesHolder: com.nineoldandroids.animation.PropertyValuesHolder ofFloat(com.nineoldandroids.util.Property,float[])
-com.nineoldandroids.animation.PropertyValuesHolder: com.nineoldandroids.animation.PropertyValuesHolder ofObject(java.lang.String,com.nineoldandroids.animation.TypeEvaluator,java.lang.Object[])
-com.nineoldandroids.animation.PropertyValuesHolder: com.nineoldandroids.animation.PropertyValuesHolder ofObject(com.nineoldandroids.util.Property,com.nineoldandroids.animation.TypeEvaluator,java.lang.Object[])
-com.nineoldandroids.animation.PropertyValuesHolder: com.nineoldandroids.animation.PropertyValuesHolder ofKeyframe(java.lang.String,com.nineoldandroids.animation.Keyframe[])
-com.nineoldandroids.animation.PropertyValuesHolder: com.nineoldandroids.animation.PropertyValuesHolder ofKeyframe(com.nineoldandroids.util.Property,com.nineoldandroids.animation.Keyframe[])
-com.nineoldandroids.animation.PropertyValuesHolder: void setIntValues(int[])
-com.nineoldandroids.animation.PropertyValuesHolder: void setFloatValues(float[])
-com.nineoldandroids.animation.PropertyValuesHolder: void setKeyframes(com.nineoldandroids.animation.Keyframe[])
-com.nineoldandroids.animation.PropertyValuesHolder: void setObjectValues(java.lang.Object[])
-com.nineoldandroids.animation.PropertyValuesHolder: com.nineoldandroids.animation.PropertyValuesHolder clone()
-com.nineoldandroids.animation.PropertyValuesHolder: void setEvaluator(com.nineoldandroids.animation.TypeEvaluator)
-com.nineoldandroids.animation.PropertyValuesHolder: void setPropertyName(java.lang.String)
-com.nineoldandroids.animation.PropertyValuesHolder: void setProperty(com.nineoldandroids.util.Property)
-com.nineoldandroids.animation.PropertyValuesHolder: java.lang.String getPropertyName()
-com.nineoldandroids.animation.PropertyValuesHolder: java.lang.String toString()
-com.nineoldandroids.animation.PropertyValuesHolder: java.lang.Object clone()
-com.nineoldandroids.animation.TimeAnimator
-com.nineoldandroids.animation.TimeAnimator: TimeAnimator()
-com.nineoldandroids.animation.TimeAnimator: void setTimeListener(com.nineoldandroids.animation.TimeAnimator$TimeListener)
-com.nineoldandroids.animation.TimeAnimator$TimeListener
-com.nineoldandroids.animation.TimeAnimator$TimeListener: void onTimeUpdate(com.nineoldandroids.animation.TimeAnimator,long,long)
-com.nineoldandroids.animation.TypeEvaluator
-com.nineoldandroids.animation.TypeEvaluator: java.lang.Object evaluate(float,java.lang.Object,java.lang.Object)
-com.nineoldandroids.animation.ValueAnimator
-com.nineoldandroids.animation.ValueAnimator: int RESTART
-com.nineoldandroids.animation.ValueAnimator: int REVERSE
-com.nineoldandroids.animation.ValueAnimator: int INFINITE
-com.nineoldandroids.animation.ValueAnimator: ValueAnimator()
-com.nineoldandroids.animation.ValueAnimator: com.nineoldandroids.animation.ValueAnimator ofInt(int[])
-com.nineoldandroids.animation.ValueAnimator: com.nineoldandroids.animation.ValueAnimator ofFloat(float[])
-com.nineoldandroids.animation.ValueAnimator: com.nineoldandroids.animation.ValueAnimator ofPropertyValuesHolder(com.nineoldandroids.animation.PropertyValuesHolder[])
-com.nineoldandroids.animation.ValueAnimator: com.nineoldandroids.animation.ValueAnimator ofObject(com.nineoldandroids.animation.TypeEvaluator,java.lang.Object[])
-com.nineoldandroids.animation.ValueAnimator: void setIntValues(int[])
-com.nineoldandroids.animation.ValueAnimator: void setFloatValues(float[])
-com.nineoldandroids.animation.ValueAnimator: void setObjectValues(java.lang.Object[])
-com.nineoldandroids.animation.ValueAnimator: void setValues(com.nineoldandroids.animation.PropertyValuesHolder[])
-com.nineoldandroids.animation.ValueAnimator: com.nineoldandroids.animation.PropertyValuesHolder[] getValues()
-com.nineoldandroids.animation.ValueAnimator: com.nineoldandroids.animation.ValueAnimator setDuration(long)
-com.nineoldandroids.animation.ValueAnimator: long getDuration()
-com.nineoldandroids.animation.ValueAnimator: void setCurrentPlayTime(long)
-com.nineoldandroids.animation.ValueAnimator: long getCurrentPlayTime()
-com.nineoldandroids.animation.ValueAnimator: long getStartDelay()
-com.nineoldandroids.animation.ValueAnimator: void setStartDelay(long)
-com.nineoldandroids.animation.ValueAnimator: long getFrameDelay()
-com.nineoldandroids.animation.ValueAnimator: void setFrameDelay(long)
-com.nineoldandroids.animation.ValueAnimator: java.lang.Object getAnimatedValue()
-com.nineoldandroids.animation.ValueAnimator: java.lang.Object getAnimatedValue(java.lang.String)
-com.nineoldandroids.animation.ValueAnimator: void setRepeatCount(int)
-com.nineoldandroids.animation.ValueAnimator: int getRepeatCount()
-com.nineoldandroids.animation.ValueAnimator: void setRepeatMode(int)
-com.nineoldandroids.animation.ValueAnimator: int getRepeatMode()
-com.nineoldandroids.animation.ValueAnimator: void addUpdateListener(com.nineoldandroids.animation.ValueAnimator$AnimatorUpdateListener)
-com.nineoldandroids.animation.ValueAnimator: void removeAllUpdateListeners()
-com.nineoldandroids.animation.ValueAnimator: void removeUpdateListener(com.nineoldandroids.animation.ValueAnimator$AnimatorUpdateListener)
-com.nineoldandroids.animation.ValueAnimator: void setInterpolator(android.view.animation.Interpolator)
-com.nineoldandroids.animation.ValueAnimator: android.view.animation.Interpolator getInterpolator()
-com.nineoldandroids.animation.ValueAnimator: void setEvaluator(com.nineoldandroids.animation.TypeEvaluator)
-com.nineoldandroids.animation.ValueAnimator: void start()
-com.nineoldandroids.animation.ValueAnimator: void cancel()
-com.nineoldandroids.animation.ValueAnimator: void end()
-com.nineoldandroids.animation.ValueAnimator: boolean isRunning()
-com.nineoldandroids.animation.ValueAnimator: boolean isStarted()
-com.nineoldandroids.animation.ValueAnimator: void reverse()
-com.nineoldandroids.animation.ValueAnimator: float getAnimatedFraction()
-com.nineoldandroids.animation.ValueAnimator: com.nineoldandroids.animation.ValueAnimator clone()
-com.nineoldandroids.animation.ValueAnimator: int getCurrentAnimationsCount()
-com.nineoldandroids.animation.ValueAnimator: void clearAllAnimations()
-com.nineoldandroids.animation.ValueAnimator: java.lang.String toString()
-com.nineoldandroids.animation.ValueAnimator: com.nineoldandroids.animation.Animator clone()
-com.nineoldandroids.animation.ValueAnimator: com.nineoldandroids.animation.Animator setDuration(long)
-com.nineoldandroids.animation.ValueAnimator: java.lang.Object clone()
-com.nineoldandroids.animation.ValueAnimator$AnimatorUpdateListener
-com.nineoldandroids.animation.ValueAnimator$AnimatorUpdateListener: void onAnimationUpdate(com.nineoldandroids.animation.ValueAnimator)
-com.nineoldandroids.util.FloatProperty
-com.nineoldandroids.util.FloatProperty: FloatProperty(java.lang.String)
-com.nineoldandroids.util.FloatProperty: void setValue(java.lang.Object,float)
-com.nineoldandroids.util.FloatProperty: void set(java.lang.Object,java.lang.Float)
-com.nineoldandroids.util.FloatProperty: void set(java.lang.Object,java.lang.Object)
-com.nineoldandroids.util.IntProperty
-com.nineoldandroids.util.IntProperty: IntProperty(java.lang.String)
-com.nineoldandroids.util.IntProperty: void setValue(java.lang.Object,int)
-com.nineoldandroids.util.IntProperty: void set(java.lang.Object,java.lang.Integer)
-com.nineoldandroids.util.IntProperty: void set(java.lang.Object,java.lang.Object)
-com.nineoldandroids.util.NoSuchPropertyException
-com.nineoldandroids.util.NoSuchPropertyException: NoSuchPropertyException(java.lang.String)
-com.nineoldandroids.util.Property
-com.nineoldandroids.util.Property: com.nineoldandroids.util.Property of(java.lang.Class,java.lang.Class,java.lang.String)
-com.nineoldandroids.util.Property: Property(java.lang.Class,java.lang.String)
-com.nineoldandroids.util.Property: boolean isReadOnly()
-com.nineoldandroids.util.Property: void set(java.lang.Object,java.lang.Object)
-com.nineoldandroids.util.Property: java.lang.Object get(java.lang.Object)
-com.nineoldandroids.util.Property: java.lang.String getName()
-com.nineoldandroids.util.Property: java.lang.Class getType()
-com.nineoldandroids.view.ViewHelper
-com.nineoldandroids.view.ViewHelper: float getAlpha(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setAlpha(android.view.View,float)
-com.nineoldandroids.view.ViewHelper: float getPivotX(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setPivotX(android.view.View,float)
-com.nineoldandroids.view.ViewHelper: float getPivotY(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setPivotY(android.view.View,float)
-com.nineoldandroids.view.ViewHelper: float getRotation(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setRotation(android.view.View,float)
-com.nineoldandroids.view.ViewHelper: float getRotationX(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setRotationX(android.view.View,float)
-com.nineoldandroids.view.ViewHelper: float getRotationY(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setRotationY(android.view.View,float)
-com.nineoldandroids.view.ViewHelper: float getScaleX(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setScaleX(android.view.View,float)
-com.nineoldandroids.view.ViewHelper: float getScaleY(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setScaleY(android.view.View,float)
-com.nineoldandroids.view.ViewHelper: float getScrollX(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setScrollX(android.view.View,int)
-com.nineoldandroids.view.ViewHelper: float getScrollY(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setScrollY(android.view.View,int)
-com.nineoldandroids.view.ViewHelper: float getTranslationX(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setTranslationX(android.view.View,float)
-com.nineoldandroids.view.ViewHelper: float getTranslationY(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setTranslationY(android.view.View,float)
-com.nineoldandroids.view.ViewHelper: float getX(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setX(android.view.View,float)
-com.nineoldandroids.view.ViewHelper: float getY(android.view.View)
-com.nineoldandroids.view.ViewHelper: void setY(android.view.View,float)
-com.nineoldandroids.view.ViewPropertyAnimator
-com.nineoldandroids.view.ViewPropertyAnimator: ViewPropertyAnimator()
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator animate(android.view.View)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator setDuration(long)
-com.nineoldandroids.view.ViewPropertyAnimator: long getDuration()
-com.nineoldandroids.view.ViewPropertyAnimator: long getStartDelay()
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator setStartDelay(long)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator setInterpolator(android.view.animation.Interpolator)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator setListener(com.nineoldandroids.animation.Animator$AnimatorListener)
-com.nineoldandroids.view.ViewPropertyAnimator: void start()
-com.nineoldandroids.view.ViewPropertyAnimator: void cancel()
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator x(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator xBy(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator y(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator yBy(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator rotation(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator rotationBy(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator rotationX(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator rotationXBy(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator rotationY(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator rotationYBy(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator translationX(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator translationXBy(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator translationY(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator translationYBy(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator scaleX(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator scaleXBy(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator scaleY(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator scaleYBy(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator alpha(float)
-com.nineoldandroids.view.ViewPropertyAnimator: com.nineoldandroids.view.ViewPropertyAnimator alphaBy(float)
-com.nineoldandroids.view.animation.AnimatorProxy
-com.nineoldandroids.view.animation.AnimatorProxy: boolean NEEDS_PROXY
-com.nineoldandroids.view.animation.AnimatorProxy: com.nineoldandroids.view.animation.AnimatorProxy wrap(android.view.View)
-com.nineoldandroids.view.animation.AnimatorProxy: float getAlpha()
-com.nineoldandroids.view.animation.AnimatorProxy: void setAlpha(float)
-com.nineoldandroids.view.animation.AnimatorProxy: float getPivotX()
-com.nineoldandroids.view.animation.AnimatorProxy: void setPivotX(float)
-com.nineoldandroids.view.animation.AnimatorProxy: float getPivotY()
-com.nineoldandroids.view.animation.AnimatorProxy: void setPivotY(float)
-com.nineoldandroids.view.animation.AnimatorProxy: float getRotation()
-com.nineoldandroids.view.animation.AnimatorProxy: void setRotation(float)
-com.nineoldandroids.view.animation.AnimatorProxy: float getRotationX()
-com.nineoldandroids.view.animation.AnimatorProxy: void setRotationX(float)
-com.nineoldandroids.view.animation.AnimatorProxy: float getRotationY()
-com.nineoldandroids.view.animation.AnimatorProxy: void setRotationY(float)
-com.nineoldandroids.view.animation.AnimatorProxy: float getScaleX()
-com.nineoldandroids.view.animation.AnimatorProxy: void setScaleX(float)
-com.nineoldandroids.view.animation.AnimatorProxy: float getScaleY()
-com.nineoldandroids.view.animation.AnimatorProxy: void setScaleY(float)
-com.nineoldandroids.view.animation.AnimatorProxy: int getScrollX()
-com.nineoldandroids.view.animation.AnimatorProxy: void setScrollX(int)
-com.nineoldandroids.view.animation.AnimatorProxy: int getScrollY()
-com.nineoldandroids.view.animation.AnimatorProxy: void setScrollY(int)
-com.nineoldandroids.view.animation.AnimatorProxy: float getTranslationX()
-com.nineoldandroids.view.animation.AnimatorProxy: void setTranslationX(float)
-com.nineoldandroids.view.animation.AnimatorProxy: float getTranslationY()
-com.nineoldandroids.view.animation.AnimatorProxy: void setTranslationY(float)
-com.nineoldandroids.view.animation.AnimatorProxy: float getX()
-com.nineoldandroids.view.animation.AnimatorProxy: void setX(float)
-com.nineoldandroids.view.animation.AnimatorProxy: float getY()
-com.nineoldandroids.view.animation.AnimatorProxy: void setY(float)
-com.nineoldandroids.view.animation.AnimatorProxy: void applyTransformation(float,android.view.animation.Transformation)
 com.radmagnet.AutoScrollViewPager
 com.radmagnet.AutoScrollViewPager: int DEFAULT_INTERVAL
 com.radmagnet.AutoScrollViewPager: int LEFT
@@ -9906,6 +9490,8 @@ com.radmagnet.MainActivity: android.widget.ListView mCategoriesLv
 com.radmagnet.MainActivity: android.widget.ListView mOtherOptionsLv
 com.radmagnet.MainActivity: android.support.v7.widget.Toolbar mToolbar
 com.radmagnet.MainActivity: android.support.v4.widget.SwipeRefreshLayout mSwipeLayout
+com.radmagnet.MainActivity: com.radmagnet.NotifyRadView newRadsTv
+com.radmagnet.MainActivity: android.widget.TextView emptyViewTv
 com.radmagnet.MainActivity: MainActivity()
 com.radmagnet.MainActivity: void onCreate(android.os.Bundle)
 com.radmagnet.MainActivity: void onRefresh()
@@ -9931,7 +9517,7 @@ com.radmagnet.Networking: Networking()
 com.radmagnet.Networking: com.radmagnet.Networking$RestInterface getRestClient()
 com.radmagnet.Networking$RestInterface
 com.radmagnet.Networking$RestInterface: void getConfig(retrofit.Callback)
-com.radmagnet.Networking$RestInterface: void getAnnouncements(java.lang.String,retrofit.Callback)
+com.radmagnet.Networking$RestInterface: void getAnnouncements(java.lang.String,java.lang.String,retrofit.Callback)
 com.radmagnet.Networking$RestInterface: void getFeedback(java.lang.String,java.lang.String,java.lang.String,java.lang.String,retrofit.Callback)
 com.radmagnet.NewsAdapter
 com.radmagnet.NewsAdapter: NewsAdapter(android.content.Context,io.realm.RealmResults,boolean)
@@ -9985,6 +9571,13 @@ com.radmagnet.NewsFragment$$ViewInjector: void reset(java.lang.Object)
 com.radmagnet.NewsFragment$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
 com.radmagnet.NewsFragment$OnFragmentInteractionListener
 com.radmagnet.NewsFragment$OnFragmentInteractionListener: void onFragmentInteraction(android.net.Uri)
+com.radmagnet.NotifyRadView
+com.radmagnet.NotifyRadView: NotifyRadView(android.content.Context,android.util.AttributeSet)
+com.radmagnet.NotifyRadView: void disableViewsOnAnimation(android.view.View[])
+com.radmagnet.NotifyRadView: void showTempMessage(java.lang.String)
+com.radmagnet.NotifyRadView$CustomInterpolator
+com.radmagnet.NotifyRadView$CustomInterpolator: NotifyRadView$CustomInterpolator(com.radmagnet.NotifyRadView,float)
+com.radmagnet.NotifyRadView$CustomInterpolator: float getInterpolation(float)
 com.radmagnet.OtherOptions
 com.radmagnet.OtherOptions: OtherOptions(java.lang.String,java.lang.String)
 com.radmagnet.OtherOptions: java.lang.String getName()
@@ -10094,11 +9687,6 @@ com.radmagnet.R$attr: int editTextBackground
 com.radmagnet.R$attr: int editTextColor
 com.radmagnet.R$attr: int elevation
 com.radmagnet.R$attr: int expandActivityOverflowButtonDrawable
-com.radmagnet.R$attr: int fab_colorNormal
-com.radmagnet.R$attr: int fab_colorPressed
-com.radmagnet.R$attr: int fab_colorRipple
-com.radmagnet.R$attr: int fab_shadow
-com.radmagnet.R$attr: int fab_type
 com.radmagnet.R$attr: int fadeDelay
 com.radmagnet.R$attr: int fadeLength
 com.radmagnet.R$attr: int fades
@@ -10297,8 +9885,6 @@ com.radmagnet.R$color: int hint_foreground_material_light
 com.radmagnet.R$color: int light_gray
 com.radmagnet.R$color: int link_text_material_dark
 com.radmagnet.R$color: int link_text_material_light
-com.radmagnet.R$color: int material_blue_500
-com.radmagnet.R$color: int material_blue_600
 com.radmagnet.R$color: int material_blue_grey_800
 com.radmagnet.R$color: int material_blue_grey_900
 com.radmagnet.R$color: int material_blue_grey_950
@@ -10399,11 +9985,6 @@ com.radmagnet.R$dimen: int dialog_fixed_width_major
 com.radmagnet.R$dimen: int dialog_fixed_width_minor
 com.radmagnet.R$dimen: int disabled_alpha_material_dark
 com.radmagnet.R$dimen: int disabled_alpha_material_light
-com.radmagnet.R$dimen: int fab_elevation_lollipop
-com.radmagnet.R$dimen: int fab_scroll_threshold
-com.radmagnet.R$dimen: int fab_shadow_size
-com.radmagnet.R$dimen: int fab_size_mini
-com.radmagnet.R$dimen: int fab_size_normal
 com.radmagnet.R$dimen: R$dimen()
 com.radmagnet.R$drawable
 com.radmagnet.R$drawable: int abc_ab_share_pack_holo_dark
@@ -10479,8 +10060,7 @@ com.radmagnet.R$drawable: int ic_fb
 com.radmagnet.R$drawable: int ic_launcher
 com.radmagnet.R$drawable: int ic_share
 com.radmagnet.R$drawable: int rounded_rectangle
-com.radmagnet.R$drawable: int shadow
-com.radmagnet.R$drawable: int shadow_mini
+com.radmagnet.R$drawable: int rounded_rectangle_with_red_border
 com.radmagnet.R$drawable: int transparent_gradiant_selector
 com.radmagnet.R$drawable: int transparent_gradient
 com.radmagnet.R$drawable: int transparent_gray_selector
@@ -10543,6 +10123,7 @@ com.radmagnet.R$id: int drawer_layout
 com.radmagnet.R$id: int dropdown
 com.radmagnet.R$id: int edit_query
 com.radmagnet.R$id: int email
+com.radmagnet.R$id: int emptyView
 com.radmagnet.R$id: int end
 com.radmagnet.R$id: int expand_activities_button
 com.radmagnet.R$id: int expanded_menu
@@ -10558,10 +10139,10 @@ com.radmagnet.R$id: int listMode
 com.radmagnet.R$id: int list_item
 com.radmagnet.R$id: int location
 com.radmagnet.R$id: int middle
-com.radmagnet.R$id: int mini
 com.radmagnet.R$id: int month
 com.radmagnet.R$id: int name
 com.radmagnet.R$id: int never
+com.radmagnet.R$id: int newRads_text
 com.radmagnet.R$id: int newsCategoryTitle
 com.radmagnet.R$id: int newsDetailsLayout
 com.radmagnet.R$id: int newsImage
@@ -10602,6 +10183,7 @@ com.radmagnet.R$id: int tabMode
 com.radmagnet.R$id: int thumbnail
 com.radmagnet.R$id: int title
 com.radmagnet.R$id: int toolbar
+com.radmagnet.R$id: int toolbarLayout
 com.radmagnet.R$id: int top
 com.radmagnet.R$id: int triangle
 com.radmagnet.R$id: int underline
@@ -10693,7 +10275,6 @@ com.radmagnet.R$string: int beta_txt
 com.radmagnet.R$string: int cannotReachServer_msg
 com.radmagnet.R$string: int checkOutThisRadStuff_txt
 com.radmagnet.R$string: int copyright_txt
-com.radmagnet.R$string: int define_FloatingActionButton
 com.radmagnet.R$string: int details_txt
 com.radmagnet.R$string: int discount_txt
 com.radmagnet.R$string: int dubai_txt
@@ -10703,16 +10284,8 @@ com.radmagnet.R$string: int feedAndComments_txt
 com.radmagnet.R$string: int feedback_txt
 com.radmagnet.R$string: int hello_blank_fragment
 com.radmagnet.R$string: int hello_world
-com.radmagnet.R$string: int library_FloatingActionButton_author
-com.radmagnet.R$string: int library_FloatingActionButton_authorWebsite
-com.radmagnet.R$string: int library_FloatingActionButton_isOpenSource
-com.radmagnet.R$string: int library_FloatingActionButton_libraryDescription
-com.radmagnet.R$string: int library_FloatingActionButton_libraryName
-com.radmagnet.R$string: int library_FloatingActionButton_libraryVersion
-com.radmagnet.R$string: int library_FloatingActionButton_libraryWebsite
-com.radmagnet.R$string: int library_FloatingActionButton_licenseId
-com.radmagnet.R$string: int library_FloatingActionButton_repositoryLink
 com.radmagnet.R$string: int missingHeadline_txt
+com.radmagnet.R$string: int noRadsHere_msg
 com.radmagnet.R$string: int noUpdatesAvaliable_msg
 com.radmagnet.R$string: int notif_content
 com.radmagnet.R$string: int notif_title
@@ -11059,12 +10632,6 @@ com.radmagnet.R$styleable: int DrawerArrowToggle_middleBarArrowSize
 com.radmagnet.R$styleable: int DrawerArrowToggle_spinBars
 com.radmagnet.R$styleable: int DrawerArrowToggle_thickness
 com.radmagnet.R$styleable: int DrawerArrowToggle_topBottomBarArrowSize
-com.radmagnet.R$styleable: int[] FloatingActionButton
-com.radmagnet.R$styleable: int FloatingActionButton_fab_colorNormal
-com.radmagnet.R$styleable: int FloatingActionButton_fab_colorPressed
-com.radmagnet.R$styleable: int FloatingActionButton_fab_colorRipple
-com.radmagnet.R$styleable: int FloatingActionButton_fab_shadow
-com.radmagnet.R$styleable: int FloatingActionButton_fab_type
 com.radmagnet.R$styleable: int[] LinePageIndicator
 com.radmagnet.R$styleable: int LinePageIndicator_android_background
 com.radmagnet.R$styleable: int LinePageIndicator_centered
@@ -14685,6 +14252,7 @@ de.keyboardsurfer.mobile.app.android.widget.crouton.BuildConfig: java.lang.Strin
 de.keyboardsurfer.mobile.app.android.widget.crouton.BuildConfig: int VERSION_CODE
 de.keyboardsurfer.mobile.app.android.widget.crouton.BuildConfig: java.lang.String VERSION_NAME
 de.keyboardsurfer.mobile.app.android.widget.crouton.BuildConfig: BuildConfig()
+hugo.weaving.DebugLog
 io.realm.BuildConfig
 io.realm.BuildConfig: boolean DEBUG
 io.realm.BuildConfig: java.lang.String APPLICATION_ID

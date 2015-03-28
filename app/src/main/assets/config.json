@@ -19,12 +19,6 @@
       "name": "City Hotspots",
       "color": "#ED1E79",
       "value": "hotspots"
-    },
-    {
-      "name": "Deals",
-      "color": "#009245",
-      "value": "deals"
-
     }
   ]
 }

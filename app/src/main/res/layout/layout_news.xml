@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/noRadsHere_msg"
+        android:textAppearance="@style/TextAppearance.BoldItalics"
+        android:textColor="@color/gray" />
 
 
     <android.support.v4.widget.SwipeRefreshLayout
@@ -22,19 +31,6 @@
 
 
     </android.support.v4.widget.SwipeRefreshLayout>
-
-    <TextView
-        android:id="@+id/emptyView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbarLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:textAppearance="@style/TextAppearance.BoldItalics"
-        android:textColor="@color/gray"
-        android:text="@string/noRadsHere_msg" />
-
 
 
     <com.radmagnet.NotifyRadView
@@ -55,9 +51,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true" />
-
-
-    />
 
 
 </RelativeLayout>

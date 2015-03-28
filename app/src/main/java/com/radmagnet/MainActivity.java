@@ -12,6 +12,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -79,7 +80,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     String mSelectedCategory = "";
 
     LinearLayoutManager linearLayoutManager;
-    boolean isUILoaded=false;
+    boolean isUILoaded = false;
 
 
     @Override
@@ -94,7 +95,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         setupNewsList();
         fetchLatestNews();
 
-        isUILoaded=true;
+        isUILoaded = true;
 
     }
 
@@ -127,6 +128,10 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
         mSwipeLayout.setOnRefreshListener(this);
 
+        final float THRESHOLD = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5, getResources().getDisplayMetrics());
+
+        newRadsTv.disableViewsOnAnimation(mSwipeLayout);
+
         mNewsRv.setOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -136,12 +141,16 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
 
+                if (THRESHOLD < Math.abs(dy)) {
+                    if (dy < 0) {
+
+                    }
+                }
+
                 super.onScrolled(recyclerView, dx, dy);
             }
         });
     }
-
-
 
 
     private void setupCategoriesList() {
@@ -317,7 +326,11 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     private long getMaxKey() {
         RealmQuery<News> realmQuery = Realm.getInstance(this).where(News.class);
-        return realmQuery.maximumInt("key");
+        long maxKey = realmQuery.maximumInt("key");
+        if (maxKey < 0)
+            return 0;
+        else
+            return maxKey;
     }
 
     private RealmResults<News> getRealmData() {
@@ -332,9 +345,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
             realmQuery = realmQuery.contains("category", mSelectedCategory, false);
         }
 
-        RealmResults<News> news=realmQuery.findAllSorted("key", false);
+        RealmResults<News> news = realmQuery.findAllSorted("key", false);
 
-        if(isUILoaded && news.size()==0)
+        if (isUILoaded && news.size() == 0)
             emptyViewTv.setVisibility(View.VISIBLE);
         else
             emptyViewTv.setVisibility(View.GONE);

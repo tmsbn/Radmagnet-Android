@@ -21,7 +21,7 @@ public class RealmCleaningReceiver extends BroadcastReceiver {
          * Database manintainance
          */
         Realm realm = Realm.getInstance(context);
-        final RealmResults<News> results = realm.where(News.class).findAllSorted("createdDate", false);
+        final RealmResults<News> results = realm.where(News.class).findAllSorted("key", false);
         final int size = results.size();
         realm.beginTransaction();
         realm.executeTransaction(new Realm.Transaction() {
