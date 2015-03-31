@@ -1,4 +1,4 @@
 <menu xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.radmagnet.FeedbackActivity">
+    tools:context="com.radmagnet.activities.FeedbackActivity">
 
 </menu>

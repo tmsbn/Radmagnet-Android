@@ -18180,7 +18180,7 @@ com.radmagnet.AutoScrollViewPager$1 -> aew:
 com.radmagnet.AutoScrollViewPager$MyHandler -> aex:
     com.radmagnet.AutoScrollViewPager this$0 -> a
     230:241:void handleMessage(android.os.Message) -> handleMessage
-com.radmagnet.BaseActivity -> com.radmagnet.BaseActivity:
+com.radmagnet.activities.BaseActivity -> com.radmagnet.activities.BaseActivity:
     com.radmagnet.models.ConfigVars sConfig -> sConfig
     android.content.SharedPreferences mPrefs -> n
     java.lang.String LAST_UPDATED_KEY -> LAST_UPDATED_KEY
@@ -18211,11 +18211,11 @@ com.radmagnet.BaseApplication$Categories -> com.radmagnet.BaseApplication$Catego
     33:33:com.radmagnet.BaseApplication$Categories valueOf(java.lang.String) -> valueOf
     45:45:java.lang.String toString() -> toString
 com.radmagnet.BaseFragment -> com.radmagnet.BaseFragment:
-    14:14:com.radmagnet.BaseActivity getBaseActivity() -> getBaseActivity
-com.radmagnet.BookmarkActivity -> com.radmagnet.BookmarkActivity:
+    14:14:com.radmagnet.activities.BaseActivity getBaseActivity() -> getBaseActivity
+com.radmagnet.activities.BookmarkActivity -> com.radmagnet.activities.BookmarkActivity:
     android.support.v7.widget.RecyclerView mBookmarksRv -> mBookmarksRv
     android.support.v7.widget.Toolbar mToolbar -> mToolbar
-    com.radmagnet.BookmarksAdapter mBookmarkAdapter -> o
+    com.radmagnet.adapters.BookmarksAdapter mBookmarkAdapter -> o
     java.lang.String mSearchQuery -> p
     android.support.v7.widget.SearchView mSearchView -> q
     com.h6ah4i.android.widget.advrecyclerview.swipeable.RecyclerViewSwipeManager mRecyclerViewSwipeManager -> r
@@ -18231,26 +18231,26 @@ com.radmagnet.BookmarkActivity -> com.radmagnet.BookmarkActivity:
     162:163:boolean onClose() -> onClose
     169:178:void onItemClick(com.radmagnet.models.News,int) -> onItemClick
     184:191:void onBackPressed() -> onBackPressed
-com.radmagnet.BookmarkActivity$$ViewInjector -> com.radmagnet.BookmarkActivity$$ViewInjector:
-    11:15:void inject(butterknife.ButterKnife$Finder,com.radmagnet.BookmarkActivity,java.lang.Object) -> inject
-    18:20:void reset(com.radmagnet.BookmarkActivity) -> reset
+com.radmagnet.activities.BookmarkActivity$$ViewInjector -> com.radmagnet.activities.BookmarkActivity$$ViewInjector:
+    11:15:void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.BookmarkActivity,java.lang.Object) -> inject
+    18:20:void reset(com.radmagnet.activities.BookmarkActivity) -> reset
     8:8:void reset(java.lang.Object) -> reset
     8:8:void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> inject
-com.radmagnet.BookmarksAdapter -> com.radmagnet.BookmarksAdapter:
+com.radmagnet.adapters.BookmarksAdapter -> com.radmagnet.adapters.BookmarksAdapter:
     io.realm.RealmResults mRealmResults -> d
     android.content.Context mContext -> a
-    com.radmagnet.BookmarksAdapter$BookmarkListener bookmarkListener -> b
+    com.radmagnet.adapters.BookmarksAdapter$BookmarkListener bookmarkListener -> b
     java.lang.String mSearchTerm -> c
-    64:65:void setOnItemClickedListener(com.radmagnet.BookmarksAdapter$BookmarkListener) -> setOnItemClickedListener
-    70:72:com.radmagnet.BookmarksAdapter$BookmarksViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
+    64:65:void setOnItemClickedListener(com.radmagnet.adapters.BookmarksAdapter$BookmarkListener) -> setOnItemClickedListener
+    70:72:com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
     77:77:long getItemId(int) -> getItemId
-    84:110:void onBindViewHolder(com.radmagnet.BookmarksAdapter$BookmarksViewHolder,int) -> onBindViewHolder
+    84:110:void onBindViewHolder(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int) -> onBindViewHolder
     117:117:int getItemCount() -> getItemCount
     122:122:io.realm.RealmResults getRealmResults() -> getRealmResults
-    127:127:int onGetSwipeReactionType(com.radmagnet.BookmarksAdapter$BookmarksViewHolder,int,int) -> onGetSwipeReactionType
-    134:134:void onSetSwipeBackground(com.radmagnet.BookmarksAdapter$BookmarksViewHolder,int) -> onSetSwipeBackground
-    138:141:int onSwipeItem(com.radmagnet.BookmarksAdapter$BookmarksViewHolder,int) -> onSwipeItem
-    148:157:void onPerformAfterSwipeReaction(com.radmagnet.BookmarksAdapter$BookmarksViewHolder,int,int) -> onPerformAfterSwipeReaction
+    127:127:int onGetSwipeReactionType(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int,int) -> onGetSwipeReactionType
+    134:134:void onSetSwipeBackground(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int) -> onSetSwipeBackground
+    138:141:int onSwipeItem(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int) -> onSwipeItem
+    148:157:void onPerformAfterSwipeReaction(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int,int) -> onPerformAfterSwipeReaction
     191:193:void updateRealmResults(io.realm.RealmResults) -> updateRealmResults
     196:198:void setSearchTerm(java.lang.String) -> setSearchTerm
     28:28:void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onBindViewHolder
@@ -18259,21 +18259,21 @@ com.radmagnet.BookmarksAdapter -> com.radmagnet.BookmarksAdapter:
     28:28:int onSwipeItem(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onSwipeItem
     28:28:void onSetSwipeBackground(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onSetSwipeBackground
     28:28:int onGetSwipeReactionType(android.support.v7.widget.RecyclerView$ViewHolder,int,int) -> onGetSwipeReactionType
-    28:28:io.realm.RealmResults access$000(com.radmagnet.BookmarksAdapter) -> a
-com.radmagnet.BookmarksAdapter$1 -> aey:
-    com.radmagnet.BookmarksAdapter this$0 -> a
+    28:28:io.realm.RealmResults access$000(com.radmagnet.adapters.BookmarksAdapter) -> a
+com.radmagnet.adapters.BookmarksAdapter$1 -> aey:
+    com.radmagnet.adapters.BookmarksAdapter this$0 -> a
     54:55:void onChange() -> onChange
-com.radmagnet.BookmarksAdapter$2 -> aez:
+com.radmagnet.adapters.BookmarksAdapter$2 -> aez:
     int val$position -> a
-    com.radmagnet.BookmarksAdapter this$0 -> b
+    com.radmagnet.adapters.BookmarksAdapter this$0 -> b
     96:98:void onClick(android.view.View) -> onClick
-com.radmagnet.BookmarksAdapter$3 -> afa:
-    com.radmagnet.BookmarksAdapter$BookmarksViewHolder val$bookmarksViewHolder -> a
-    com.radmagnet.BookmarksAdapter this$0 -> b
+com.radmagnet.adapters.BookmarksAdapter$3 -> afa:
+    com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder val$bookmarksViewHolder -> a
+    com.radmagnet.adapters.BookmarksAdapter this$0 -> b
     152:153:void execute(io.realm.Realm) -> execute
-com.radmagnet.BookmarksAdapter$BookmarkListener -> com.radmagnet.BookmarksAdapter$BookmarkListener:
+com.radmagnet.adapters.BookmarksAdapter$BookmarkListener -> com.radmagnet.adapters.BookmarksAdapter$BookmarkListener:
     void onItemClick(com.radmagnet.models.News,int) -> onItemClick
-com.radmagnet.BookmarksAdapter$BookmarksViewHolder -> com.radmagnet.BookmarksAdapter$BookmarksViewHolder:
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder -> com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder:
     android.widget.TextView headlineTv -> headlineTv
     android.widget.TextView dateTv -> dateTv
     android.view.ViewGroup container -> container
@@ -18287,7 +18287,7 @@ com.radmagnet.BuildConfig -> com.radmagnet.BuildConfig:
     java.lang.String FLAVOR -> FLAVOR
     int VERSION_CODE -> VERSION_CODE
     java.lang.String VERSION_NAME -> VERSION_NAME
-com.radmagnet.CategoriesAdapter -> com.radmagnet.CategoriesAdapter:
+com.radmagnet.adapters.CategoriesAdapter -> com.radmagnet.adapters.CategoriesAdapter:
     int previousSelected -> a
     32:39:void setSelectedCategory(int) -> setSelectedCategory
     44:72:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
@@ -18306,29 +18306,29 @@ com.radmagnet.CustomDurationScroller -> com.radmagnet.CustomDurationScroller:
     double scrollFactor -> a
     40:41:void setScrollDurationFactor(double) -> setScrollDurationFactor
     45:46:void startScroll(int,int,int,int,int) -> startScroll
-com.radmagnet.DetailsActivity -> com.radmagnet.DetailsActivity:
+com.radmagnet.activities.DetailsActivity -> com.radmagnet.activities.DetailsActivity:
     java.util.ArrayList mRealmIds -> mRealmIds
     android.support.v4.view.ViewPager mViewPager -> mViewPager
     int position -> o
-    32:75:void onCreate(android.os.Bundle) -> onCreate
-    80:89:void setupData() -> setupData
-    93:95:void onDestroy() -> onDestroy
-    100:101:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
-    107:117:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    123:123:void onPageScrolled(int,float,int) -> onPageScrolled
-    128:128:void onPageSelected(int) -> onPageSelected
-    133:133:void onPageScrollStateChanged(int) -> onPageScrollStateChanged
-    138:138:void onFragmentInteraction(android.net.Uri) -> onFragmentInteraction
-com.radmagnet.DetailsActivity$$ViewInjector -> com.radmagnet.DetailsActivity$$ViewInjector:
-    11:13:void inject(butterknife.ButterKnife$Finder,com.radmagnet.DetailsActivity,java.lang.Object) -> inject
-    16:17:void reset(com.radmagnet.DetailsActivity) -> reset
+    32:79:void onCreate(android.os.Bundle) -> onCreate
+    84:93:void setupData() -> setupData
+    97:99:void onDestroy() -> onDestroy
+    104:105:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    111:121:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    127:127:void onPageScrolled(int,float,int) -> onPageScrolled
+    132:132:void onPageSelected(int) -> onPageSelected
+    137:137:void onPageScrollStateChanged(int) -> onPageScrollStateChanged
+    142:142:void onFragmentInteraction(android.net.Uri) -> onFragmentInteraction
+com.radmagnet.activities.DetailsActivity$$ViewInjector -> com.radmagnet.activities.DetailsActivity$$ViewInjector:
+    11:13:void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.DetailsActivity,java.lang.Object) -> inject
+    16:17:void reset(com.radmagnet.activities.DetailsActivity) -> reset
     8:8:void reset(java.lang.Object) -> reset
     8:8:void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> inject
-com.radmagnet.DetailsActivity$NewsDetailPagerAdapter -> afc:
+com.radmagnet.activities.DetailsActivity$NewsDetailPagerAdapter -> afc:
     java.util.ArrayList mRealmIds -> a
-    com.radmagnet.DetailsActivity this$0 -> b
-    154:154:android.support.v4.app.Fragment getItem(int) -> getItem
-    159:162:int getCount() -> getCount
+    com.radmagnet.activities.DetailsActivity this$0 -> b
+    158:158:android.support.v4.app.Fragment getItem(int) -> getItem
+    163:166:int getCount() -> getCount
 com.radmagnet.EventsView -> com.radmagnet.EventsView:
     android.widget.TextView mDayTv -> a
     android.widget.TextView mMonthTv -> b
@@ -18337,7 +18337,7 @@ com.radmagnet.EventsView -> com.radmagnet.EventsView:
     48:63:void setDate(java.util.Date) -> setDate
     67:72:void onFinishInflate() -> onFinishInflate
     76:87:java.lang.String getDayNumberSuffix(int) -> a
-com.radmagnet.FeedbackActivity -> com.radmagnet.FeedbackActivity:
+com.radmagnet.activities.FeedbackActivity -> com.radmagnet.activities.FeedbackActivity:
     android.widget.EditText mNameEt -> mNameEt
     android.widget.EditText mEmailEt -> mEmailEt
     android.widget.EditText mCommentsEt -> mCommentsEt
@@ -18350,29 +18350,29 @@ com.radmagnet.FeedbackActivity -> com.radmagnet.FeedbackActivity:
     96:162:void sendFeedback() -> sendFeedback
     166:171:void saveFields() -> c
     175:183:void enableFeedbackBtn() -> enableFeedbackBtn
-    30:30:void access$000(com.radmagnet.FeedbackActivity) -> a
-com.radmagnet.FeedbackActivity$$ViewInjector -> com.radmagnet.FeedbackActivity$$ViewInjector:
-    11:36:void inject(butterknife.ButterKnife$Finder,com.radmagnet.FeedbackActivity,java.lang.Object) -> inject
-    39:43:void reset(com.radmagnet.FeedbackActivity) -> reset
+    30:30:void access$000(com.radmagnet.activities.FeedbackActivity) -> a
+com.radmagnet.activities.FeedbackActivity$$ViewInjector -> com.radmagnet.activities.FeedbackActivity$$ViewInjector:
+    11:36:void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.FeedbackActivity,java.lang.Object) -> inject
+    39:43:void reset(com.radmagnet.activities.FeedbackActivity) -> reset
     8:8:void reset(java.lang.Object) -> reset
     8:8:void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> inject
-com.radmagnet.FeedbackActivity$$ViewInjector$1 -> afd:
-    com.radmagnet.FeedbackActivity val$target -> a
-    com.radmagnet.FeedbackActivity$$ViewInjector this$0 -> b
+com.radmagnet.activities.FeedbackActivity$$ViewInjector$1 -> afd:
+    com.radmagnet.activities.FeedbackActivity val$target -> a
+    com.radmagnet.activities.FeedbackActivity$$ViewInjector this$0 -> b
     24:25:void doClick(android.view.View) -> doClick
-com.radmagnet.FeedbackActivity$$ViewInjector$2 -> afe:
-    com.radmagnet.FeedbackActivity val$target -> a
-    com.radmagnet.FeedbackActivity$$ViewInjector this$0 -> b
+com.radmagnet.activities.FeedbackActivity$$ViewInjector$2 -> afe:
+    com.radmagnet.activities.FeedbackActivity val$target -> a
+    com.radmagnet.activities.FeedbackActivity$$ViewInjector this$0 -> b
     33:34:void doClick(android.view.View) -> doClick
-com.radmagnet.FeedbackActivity$1 -> aff:
-    com.radmagnet.FeedbackActivity this$0 -> a
+com.radmagnet.activities.FeedbackActivity$1 -> aff:
+    com.radmagnet.activities.FeedbackActivity this$0 -> a
     141:151:void success(com.radmagnet.models.Feedback$Output,retrofit.client.Response) -> a
     156:159:void failure(retrofit.RetrofitError) -> failure
     137:137:void success(java.lang.Object,retrofit.client.Response) -> success
-com.radmagnet.FeedbackActivity$2 -> afg:
-    com.radmagnet.FeedbackActivity this$0 -> a
+com.radmagnet.activities.FeedbackActivity$2 -> afg:
+    com.radmagnet.activities.FeedbackActivity this$0 -> a
     179:181:void run() -> run
-com.radmagnet.ImagePagerAdapter -> com.radmagnet.ImagePagerAdapter:
+com.radmagnet.adapters.ImagePagerAdapter -> com.radmagnet.adapters.ImagePagerAdapter:
     android.content.Context context -> a
     java.util.List imageIdList -> b
     30:30:int getCount() -> getCount
@@ -18386,7 +18386,7 @@ com.radmagnet.ImageServicePagerAdapter -> com.radmagnet.ImageServicePagerAdapter
     33:33:boolean isViewFromObject(android.view.View,java.lang.Object) -> isViewFromObject
     38:42:java.lang.Object instantiateItem(android.view.ViewGroup,int) -> instantiateItem
     47:48:void destroyItem(android.view.ViewGroup,int,java.lang.Object) -> destroyItem
-com.radmagnet.MainActivity -> com.radmagnet.MainActivity:
+com.radmagnet.activities.MainActivity -> com.radmagnet.activities.MainActivity:
     int SPLASH_DISPLAY_LENGTH -> w
     android.support.v7.widget.RecyclerView mNewsRv -> mNewsRv
     android.support.v4.widget.DrawerLayout mDrawerLayout -> mDrawerLayout
@@ -18398,8 +18398,8 @@ com.radmagnet.MainActivity -> com.radmagnet.MainActivity:
     android.widget.TextView emptyViewTv -> emptyViewTv
     android.support.v7.app.ActionBarDrawerToggle mDrawerToggle -> o
     android.support.v7.widget.SearchView mSearchView -> p
-    com.radmagnet.NewsAdapter mNewsAdapter -> q
-    com.radmagnet.CategoriesAdapter mCategoriesAdapter -> r
+    com.radmagnet.adapters.NewsAdapter mNewsAdapter -> q
+    com.radmagnet.adapters.CategoriesAdapter mCategoriesAdapter -> r
     java.lang.String mSearchQuery -> s
     java.lang.String mSelectedCategory -> t
     android.support.v7.widget.LinearLayoutManager linearLayoutManager -> u
@@ -18425,41 +18425,41 @@ com.radmagnet.MainActivity -> com.radmagnet.MainActivity:
     431:448:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
     452:454:boolean onQueryTextSubmit(java.lang.String) -> onQueryTextSubmit
     461:470:boolean onQueryTextChange(java.lang.String) -> onQueryTextChange
-    42:42:long access$100(com.radmagnet.MainActivity) -> a
-    42:42:void access$200(com.radmagnet.MainActivity,boolean) -> a
-com.radmagnet.MainActivity$$ViewInjector -> com.radmagnet.MainActivity$$ViewInjector:
-    11:27:void inject(butterknife.ButterKnife$Finder,com.radmagnet.MainActivity,java.lang.Object) -> inject
-    30:38:void reset(com.radmagnet.MainActivity) -> reset
+    42:42:long access$100(com.radmagnet.activities.MainActivity) -> a
+    42:42:void access$200(com.radmagnet.activities.MainActivity,boolean) -> a
+com.radmagnet.activities.MainActivity$$ViewInjector -> com.radmagnet.activities.MainActivity$$ViewInjector:
+    11:27:void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.MainActivity,java.lang.Object) -> inject
+    30:38:void reset(com.radmagnet.activities.MainActivity) -> reset
     8:8:void reset(java.lang.Object) -> reset
     8:8:void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> inject
-com.radmagnet.MainActivity$1 -> afh:
-    com.radmagnet.MainActivity this$0 -> a
+com.radmagnet.activities.MainActivity$1 -> afh:
+    com.radmagnet.activities.MainActivity this$0 -> a
     125:126:void onClick(android.view.View) -> onClick
-com.radmagnet.MainActivity$2 -> afi:
+com.radmagnet.activities.MainActivity$2 -> afi:
     float val$THRESHOLD -> a
-    com.radmagnet.MainActivity this$0 -> b
+    com.radmagnet.activities.MainActivity this$0 -> b
     138:139:void onScrollStateChanged(android.support.v7.widget.RecyclerView,int) -> onScrollStateChanged
     144:151:void onScrolled(android.support.v7.widget.RecyclerView,int,int) -> onScrolled
-com.radmagnet.MainActivity$3 -> afj:
-    com.radmagnet.MainActivity this$0 -> a
+com.radmagnet.activities.MainActivity$3 -> afj:
+    com.radmagnet.activities.MainActivity this$0 -> a
     181:198:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.radmagnet.MainActivity$4 -> afk:
+com.radmagnet.activities.MainActivity$4 -> afk:
     boolean val$visibility -> a
-    com.radmagnet.MainActivity this$0 -> b
+    com.radmagnet.activities.MainActivity this$0 -> b
     234:235:void run() -> run
-com.radmagnet.MainActivity$5 -> afl:
-    com.radmagnet.MainActivity this$0 -> a
+com.radmagnet.activities.MainActivity$5 -> afl:
+    com.radmagnet.activities.MainActivity this$0 -> a
     399:400:boolean onMenuItemActionExpand(android.view.MenuItem) -> onMenuItemActionExpand
     405:406:boolean onMenuItemActionCollapse(android.view.MenuItem) -> onMenuItemActionCollapse
-com.radmagnet.MainActivity$GetNewsCallback -> afm:
-    com.radmagnet.MainActivity this$0 -> a
+com.radmagnet.activities.MainActivity$GetNewsCallback -> afm:
+    com.radmagnet.activities.MainActivity this$0 -> a
     274:308:void success(com.radmagnet.models.NewsResponse,retrofit.client.Response) -> a
     314:317:void failure(retrofit.RetrofitError) -> failure
     268:268:void success(java.lang.Object,retrofit.client.Response) -> success
-com.radmagnet.MainActivity$GetNewsCallback$1 -> afn:
+com.radmagnet.activities.MainActivity$GetNewsCallback$1 -> afn:
     java.util.ArrayList val$newsList -> a
     com.radmagnet.models.NewsResponse val$newsResponse -> b
-    com.radmagnet.MainActivity$GetNewsCallback this$1 -> c
+    com.radmagnet.activities.MainActivity$GetNewsCallback this$1 -> c
     297:300:void execute(io.realm.Realm) -> execute
 com.radmagnet.Networking -> com.radmagnet.Networking:
     com.radmagnet.Networking$RestInterface sRestService -> a
@@ -18474,31 +18474,31 @@ com.radmagnet.Networking$RestInterface -> com.radmagnet.Networking$RestInterface
     void getConfig(retrofit.Callback) -> getConfig
     void getAnnouncements(java.lang.String,java.lang.String,retrofit.Callback) -> getAnnouncements
     void getFeedback(java.lang.String,java.lang.String,java.lang.String,java.lang.String,retrofit.Callback) -> getFeedback
-com.radmagnet.NewsAdapter -> com.radmagnet.NewsAdapter:
+com.radmagnet.adapters.NewsAdapter -> com.radmagnet.adapters.NewsAdapter:
     io.realm.RealmResults mRealmResults -> d
     android.content.Context mContext -> a
-    com.radmagnet.NewsAdapter$NewsItemClickListener mListener -> b
+    com.radmagnet.adapters.NewsAdapter$NewsItemClickListener mListener -> b
     int lastPosition -> e
     java.lang.String mSearchTerm -> c
-    68:69:void setOnItemClickedListener(com.radmagnet.NewsAdapter$NewsItemClickListener) -> setOnItemClickedListener
-    74:76:com.radmagnet.NewsAdapter$NewsHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
+    68:69:void setOnItemClickedListener(com.radmagnet.adapters.NewsAdapter$NewsItemClickListener) -> setOnItemClickedListener
+    74:76:com.radmagnet.adapters.NewsAdapter$NewsHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
     82:82:long getItemId(int) -> getItemId
-    88:161:void onBindViewHolder(com.radmagnet.NewsAdapter$NewsHolder,int) -> onBindViewHolder
+    88:161:void onBindViewHolder(com.radmagnet.adapters.NewsAdapter$NewsHolder,int) -> onBindViewHolder
     167:167:int getItemCount() -> getItemCount
     172:172:io.realm.RealmResults getRealmResults() -> getRealmResults
     211:213:void setSearchTerm(java.lang.String) -> setSearchTerm
     216:220:void updateRealmResults(io.realm.RealmResults) -> updateRealmResults
     29:29:void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onBindViewHolder
     29:29:android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
-com.radmagnet.NewsAdapter$1 -> afq:
-    com.radmagnet.NewsAdapter this$0 -> a
+com.radmagnet.adapters.NewsAdapter$1 -> afq:
+    com.radmagnet.adapters.NewsAdapter this$0 -> a
     58:59:void onChange() -> onChange
-com.radmagnet.NewsAdapter$2 -> afr:
+com.radmagnet.adapters.NewsAdapter$2 -> afr:
     com.radmagnet.models.News val$news -> a
     int val$position -> b
-    com.radmagnet.NewsAdapter this$0 -> c
+    com.radmagnet.adapters.NewsAdapter this$0 -> c
     153:155:void onClick(android.view.View) -> onClick
-com.radmagnet.NewsAdapter$NewsHolder -> com.radmagnet.NewsAdapter$NewsHolder:
+com.radmagnet.adapters.NewsAdapter$NewsHolder -> com.radmagnet.adapters.NewsAdapter$NewsHolder:
     android.widget.TextView dateTv -> h
     android.widget.TextView headlineTv -> i
     android.widget.TextView creatorTv -> j
@@ -18509,12 +18509,12 @@ com.radmagnet.NewsAdapter$NewsHolder -> com.radmagnet.NewsAdapter$NewsHolder:
     android.widget.ImageView newsImageIv -> o
     android.widget.LinearLayout linearLayout -> p
     android.widget.TextView location -> q
-com.radmagnet.NewsAdapter$NewsItemClickListener -> com.radmagnet.NewsAdapter$NewsItemClickListener:
+com.radmagnet.adapters.NewsAdapter$NewsItemClickListener -> com.radmagnet.adapters.NewsAdapter$NewsItemClickListener:
     void onItemClick(com.radmagnet.models.News,int) -> onItemClick
-com.radmagnet.NewsFragment -> com.radmagnet.NewsFragment:
+com.radmagnet.fragment.NewsFragment -> com.radmagnet.fragment.NewsFragment:
     java.lang.String ARG_PARAM1 -> ARG_PARAM1
     java.lang.String mId -> g
-    com.radmagnet.NewsFragment$OnFragmentInteractionListener mListener -> h
+    com.radmagnet.fragment.NewsFragment$OnFragmentInteractionListener mListener -> h
     android.widget.TextView mHeadlineTv -> mHeadlineTv
     android.widget.TextView mDateTv -> mDateTv
     android.widget.TextView mCreatorTv -> mCreatorTv
@@ -18531,10 +18531,10 @@ com.radmagnet.NewsFragment -> com.radmagnet.NewsFragment:
     android.support.v7.widget.Toolbar toolbar -> a
     com.radmagnet.models.News mNews -> b
     int color -> c
-    java.lang.String url -> d
+    java.lang.String detailsUrl -> d
     android.view.MenuItem shareMenuItem -> e
     android.view.MenuItem bookmarkMenuItem -> f
-    105:109:com.radmagnet.NewsFragment newInstance(java.lang.String) -> newInstance
+    105:109:com.radmagnet.fragment.NewsFragment newInstance(java.lang.String) -> newInstance
     115:119:void onCreate(android.os.Bundle) -> onCreate
     124:137:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
     142:145:void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> onCreateOptionsMenu
@@ -18550,29 +18550,29 @@ com.radmagnet.NewsFragment -> com.radmagnet.NewsFragment:
     345:360:void updateShareIcon() -> n
     365:371:void onAttach(android.app.Activity) -> onAttach
     375:377:void onDetach() -> onDetach
-com.radmagnet.NewsFragment$$ViewInjector -> com.radmagnet.NewsFragment$$ViewInjector:
-    11:37:void inject(butterknife.ButterKnife$Finder,com.radmagnet.NewsFragment,java.lang.Object) -> inject
-    40:53:void reset(com.radmagnet.NewsFragment) -> reset
+com.radmagnet.fragment.NewsFragment$$ViewInjector -> com.radmagnet.fragment.NewsFragment$$ViewInjector:
+    11:37:void inject(butterknife.ButterKnife$Finder,com.radmagnet.fragment.NewsFragment,java.lang.Object) -> inject
+    40:53:void reset(com.radmagnet.fragment.NewsFragment) -> reset
     8:8:void reset(java.lang.Object) -> reset
     8:8:void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> inject
-com.radmagnet.NewsFragment$1 -> afs:
-    com.radmagnet.NewsFragment this$0 -> a
+com.radmagnet.fragment.NewsFragment$1 -> afs:
+    com.radmagnet.fragment.NewsFragment this$0 -> a
     170:172:void onClick(android.view.View) -> onClick
-com.radmagnet.NewsFragment$2 -> aft:
-    com.radmagnet.NewsFragment this$0 -> a
+com.radmagnet.fragment.NewsFragment$2 -> aft:
+    com.radmagnet.fragment.NewsFragment this$0 -> a
     269:271:void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
     275:277:void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
     281:294:boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
-com.radmagnet.NewsFragment$3 -> afu:
-    com.radmagnet.NewsFragment this$0 -> a
+com.radmagnet.fragment.NewsFragment$3 -> afu:
+    com.radmagnet.fragment.NewsFragment this$0 -> a
     307:308:void execute(io.realm.Realm) -> execute
-com.radmagnet.NewsFragment$4 -> afv:
-    com.radmagnet.NewsFragment this$0 -> a
+com.radmagnet.fragment.NewsFragment$4 -> afv:
+    com.radmagnet.fragment.NewsFragment this$0 -> a
     336:338:boolean onMenuItemClick(android.view.MenuItem) -> onMenuItemClick
-com.radmagnet.NewsFragment$5 -> afw:
-    com.radmagnet.NewsFragment this$0 -> a
+com.radmagnet.fragment.NewsFragment$5 -> afw:
+    com.radmagnet.fragment.NewsFragment this$0 -> a
     350:356:boolean onMenuItemClick(android.view.MenuItem) -> onMenuItemClick
-com.radmagnet.NewsFragment$OnFragmentInteractionListener -> com.radmagnet.NewsFragment$OnFragmentInteractionListener:
+com.radmagnet.fragment.NewsFragment$OnFragmentInteractionListener -> com.radmagnet.fragment.NewsFragment$OnFragmentInteractionListener:
     void onFragmentInteraction(android.net.Uri) -> onFragmentInteraction
 com.radmagnet.NotifyRadView -> com.radmagnet.NotifyRadView:
     int ANIMATION_DURATION -> a
@@ -18580,12 +18580,12 @@ com.radmagnet.NotifyRadView -> com.radmagnet.NotifyRadView:
     android.view.View[] mViews -> c
     29:30:void disableViewsOnAnimation(android.view.View[]) -> disableViewsOnAnimation
     33:36:void toggleEnableViews(boolean) -> a
-    41:89:void showTempMessage(java.lang.String) -> showTempMessage
+    41:91:void showTempMessage(java.lang.String) -> showTempMessage
     15:15:void access$000(com.radmagnet.NotifyRadView,boolean) -> a
 com.radmagnet.NotifyRadView$1 -> afx:
     int val$height -> a
     com.radmagnet.NotifyRadView this$0 -> b
-    51:84:void run() -> run
+    51:86:void run() -> run
 com.radmagnet.NotifyRadView$1$1 -> afy:
     com.radmagnet.NotifyRadView$1 this$1 -> a
     61:63:void onAnimationStart(android.animation.Animator) -> onAnimationStart
@@ -18595,13 +18595,13 @@ com.radmagnet.NotifyRadView$1$1 -> afy:
 com.radmagnet.NotifyRadView$CustomInterpolator -> com.radmagnet.NotifyRadView$CustomInterpolator:
     float mFactor -> a
     com.radmagnet.NotifyRadView this$0 -> b
-    105:114:float getInterpolation(float) -> getInterpolation
+    107:116:float getInterpolation(float) -> getInterpolation
 com.radmagnet.OtherOptions -> com.radmagnet.OtherOptions:
     java.lang.String name -> a
     java.lang.String color -> b
     17:17:java.lang.String getName() -> getName
     21:21:java.lang.String getColor() -> getColor
-com.radmagnet.OtherOptionsAdapter -> com.radmagnet.OtherOptionsAdapter:
+com.radmagnet.adapters.OtherOptionsAdapter -> com.radmagnet.adapters.OtherOptionsAdapter:
     24:37:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
 com.radmagnet.R -> com.radmagnet.R:
 com.radmagnet.R$anim -> com.radmagnet.R$anim:
@@ -19892,7 +19892,7 @@ com.radmagnet.RealmCleaningReceiver$1 -> afz:
     io.realm.RealmResults val$results -> b
     com.radmagnet.RealmCleaningReceiver this$0 -> c
     31:41:void execute(io.realm.Realm) -> execute
-com.radmagnet.SplashActivity -> com.radmagnet.SplashActivity:
+com.radmagnet.activities.SplashActivity -> com.radmagnet.activities.SplashActivity:
     android.app.AlarmManager mAlarmManager -> o
     com.radmagnet.AutoScrollViewPager mIntroPager -> mIntroPager
     android.widget.ImageView mSplashScreenIv -> mSplashScreenIv
@@ -19906,20 +19906,20 @@ com.radmagnet.SplashActivity -> com.radmagnet.SplashActivity:
     171:198:void setupReminderNotification() -> setupReminderNotification
     203:204:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     211:214:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-com.radmagnet.SplashActivity$$ViewInjector -> com.radmagnet.SplashActivity$$ViewInjector:
-    11:27:void inject(butterknife.ButterKnife$Finder,com.radmagnet.SplashActivity,java.lang.Object) -> inject
-    30:34:void reset(com.radmagnet.SplashActivity) -> reset
+com.radmagnet.activities.SplashActivity$$ViewInjector -> com.radmagnet.activities.SplashActivity$$ViewInjector:
+    11:27:void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.SplashActivity,java.lang.Object) -> inject
+    30:34:void reset(com.radmagnet.activities.SplashActivity) -> reset
     8:8:void reset(java.lang.Object) -> reset
     8:8:void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> inject
-com.radmagnet.SplashActivity$$ViewInjector$1 -> aga:
-    com.radmagnet.SplashActivity val$target -> a
-    com.radmagnet.SplashActivity$$ViewInjector this$0 -> b
+com.radmagnet.activities.SplashActivity$$ViewInjector$1 -> aga:
+    com.radmagnet.activities.SplashActivity val$target -> a
+    com.radmagnet.activities.SplashActivity$$ViewInjector this$0 -> b
     24:25:void doClick(android.view.View) -> doClick
-com.radmagnet.SplashActivity$1 -> agb:
-    com.radmagnet.SplashActivity this$0 -> a
+com.radmagnet.activities.SplashActivity$1 -> agb:
+    com.radmagnet.activities.SplashActivity this$0 -> a
     67:77:void run() -> run
-com.radmagnet.SplashActivity$2 -> agc:
-    com.radmagnet.SplashActivity this$0 -> a
+com.radmagnet.activities.SplashActivity$2 -> agc:
+    com.radmagnet.activities.SplashActivity this$0 -> a
     112:112:void onPageScrolled(int,float,int) -> onPageScrolled
     116:119:void onPageSelected(int) -> onPageSelected
     124:124:void onPageScrollStateChanged(int) -> onPageScrollStateChanged
@@ -19961,37 +19961,40 @@ com.radmagnet.models.News -> com.radmagnet.models.News:
     java.lang.String creator -> creator
     java.lang.String creatorDp -> creatorDp
     java.lang.String location -> location
+    java.lang.String shareUrl -> shareUrl
     long key -> key
     boolean isBookmarked -> isBookmarked
     java.lang.String source -> source
-    37:37:long getKey() -> getKey
-    41:42:void setKey(long) -> setKey
-    49:49:java.util.Date getStartDate() -> getStartDate
-    53:53:java.lang.String getLocation() -> getLocation
-    57:58:void setLocation(java.lang.String) -> setLocation
-    61:62:void setStartDate(java.util.Date) -> setStartDate
-    65:65:java.lang.String getId() -> getId
-    69:70:void setId(java.lang.String) -> setId
-    73:73:boolean isBookmarked() -> isBookmarked
-    77:78:void setBookmarked(boolean) -> setBookmarked
-    85:85:java.lang.String getPostId() -> getPostId
-    89:89:java.util.Date getCreatedDate() -> getCreatedDate
-    93:93:boolean isActive() -> isActive
-    97:97:java.lang.String getHeadline() -> getHeadline
-    101:101:java.lang.String getImageUrl() -> getImageUrl
-    105:105:java.lang.String getCreator() -> getCreator
-    109:109:java.lang.String getCreatorDp() -> getCreatorDp
-    113:113:java.lang.String getSource() -> getSource
-    117:117:java.lang.String getCategory() -> getCategory
-    121:122:void setCategory(java.lang.String) -> setCategory
-    125:126:void setPostId(java.lang.String) -> setPostId
-    129:130:void setCreatedDate(java.util.Date) -> setCreatedDate
-    133:134:void setActive(boolean) -> setActive
-    137:138:void setHeadline(java.lang.String) -> setHeadline
-    141:142:void setImageUrl(java.lang.String) -> setImageUrl
-    145:146:void setCreator(java.lang.String) -> setCreator
-    149:150:void setCreatorDp(java.lang.String) -> setCreatorDp
-    153:154:void setSource(java.lang.String) -> setSource
+    38:38:java.lang.String getShareUrl() -> getShareUrl
+    42:43:void setShareUrl(java.lang.String) -> setShareUrl
+    46:46:long getKey() -> getKey
+    50:51:void setKey(long) -> setKey
+    58:58:java.util.Date getStartDate() -> getStartDate
+    62:62:java.lang.String getLocation() -> getLocation
+    66:67:void setLocation(java.lang.String) -> setLocation
+    70:71:void setStartDate(java.util.Date) -> setStartDate
+    74:74:java.lang.String getId() -> getId
+    78:79:void setId(java.lang.String) -> setId
+    82:82:boolean isBookmarked() -> isBookmarked
+    86:87:void setBookmarked(boolean) -> setBookmarked
+    94:94:java.lang.String getPostId() -> getPostId
+    98:98:java.util.Date getCreatedDate() -> getCreatedDate
+    102:102:boolean isActive() -> isActive
+    106:106:java.lang.String getHeadline() -> getHeadline
+    110:110:java.lang.String getImageUrl() -> getImageUrl
+    114:114:java.lang.String getCreator() -> getCreator
+    118:118:java.lang.String getCreatorDp() -> getCreatorDp
+    122:122:java.lang.String getSource() -> getSource
+    126:126:java.lang.String getCategory() -> getCategory
+    130:131:void setCategory(java.lang.String) -> setCategory
+    134:135:void setPostId(java.lang.String) -> setPostId
+    138:139:void setCreatedDate(java.util.Date) -> setCreatedDate
+    142:143:void setActive(boolean) -> setActive
+    146:147:void setHeadline(java.lang.String) -> setHeadline
+    150:151:void setImageUrl(java.lang.String) -> setImageUrl
+    154:155:void setCreator(java.lang.String) -> setCreator
+    158:159:void setCreatorDp(java.lang.String) -> setCreatorDp
+    162:163:void setSource(java.lang.String) -> setSource
 com.radmagnet.models.NewsResponse -> com.radmagnet.models.NewsResponse:
     java.util.Date date -> date
     java.util.ArrayList data -> data
@@ -23912,21 +23915,23 @@ io.realm.NewsRealmProxy -> io.realm.NewsRealmProxy:
     143:145:void setCreatorDp(java.lang.String) -> setCreatorDp
     149:150:java.lang.String getLocation() -> getLocation
     155:157:void setLocation(java.lang.String) -> setLocation
-    161:162:long getKey() -> getKey
-    167:169:void setKey(long) -> setKey
-    173:174:boolean isBookmarked() -> isBookmarked
-    179:181:void setBookmarked(boolean) -> setBookmarked
-    184:203:io.realm.internal.Table initTable(io.realm.internal.ImplicitTransaction) -> initTable
-    207:295:void validateTable(io.realm.internal.ImplicitTransaction) -> validateTable
-    298:298:java.util.List getFieldNames() -> getFieldNames
-    303:357:void populateUsingJsonObject(com.radmagnet.models.News,org.json.JSONObject) -> populateUsingJsonObject
-    361:410:void populateUsingJsonStream(com.radmagnet.models.News,android.util.JsonReader) -> populateUsingJsonStream
-    413:432:com.radmagnet.models.News copyOrUpdate(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map) -> copyOrUpdate
-    437:452:com.radmagnet.models.News copy(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map) -> copy
-    456:468:com.radmagnet.models.News update(io.realm.Realm,com.radmagnet.models.News,com.radmagnet.models.News,java.util.Map) -> update
-    473:529:java.lang.String toString() -> toString
-    534:542:int hashCode() -> hashCode
-    547:561:boolean equals(java.lang.Object) -> equals
+    161:162:java.lang.String getShareUrl() -> getShareUrl
+    167:169:void setShareUrl(java.lang.String) -> setShareUrl
+    173:174:long getKey() -> getKey
+    179:181:void setKey(long) -> setKey
+    185:186:boolean isBookmarked() -> isBookmarked
+    191:193:void setBookmarked(boolean) -> setBookmarked
+    196:216:io.realm.internal.Table initTable(io.realm.internal.ImplicitTransaction) -> initTable
+    220:314:void validateTable(io.realm.internal.ImplicitTransaction) -> validateTable
+    317:317:java.util.List getFieldNames() -> getFieldNames
+    322:379:void populateUsingJsonObject(com.radmagnet.models.News,org.json.JSONObject) -> populateUsingJsonObject
+    383:434:void populateUsingJsonStream(com.radmagnet.models.News,android.util.JsonReader) -> populateUsingJsonStream
+    437:456:com.radmagnet.models.News copyOrUpdate(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map) -> copyOrUpdate
+    461:477:com.radmagnet.models.News copy(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map) -> copy
+    481:494:com.radmagnet.models.News update(io.realm.Realm,com.radmagnet.models.News,com.radmagnet.models.News,java.util.Map) -> update
+    499:559:java.lang.String toString() -> toString
+    564:572:int hashCode() -> hashCode
+    577:591:boolean equals(java.lang.Object) -> equals
 io.realm.Realm -> io.realm.Realm:
     java.lang.String DEFAULT_REALM_NAME -> DEFAULT_REALM_NAME
     java.lang.String TAG -> TAG

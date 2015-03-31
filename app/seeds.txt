@@ -9323,21 +9323,21 @@ com.radmagnet.AutoScrollViewPager: int getSlideBorderMode()
 com.radmagnet.AutoScrollViewPager: void setSlideBorderMode(int)
 com.radmagnet.AutoScrollViewPager: boolean isBorderAnimation()
 com.radmagnet.AutoScrollViewPager: void setBorderAnimation(boolean)
-com.radmagnet.BaseActivity
-com.radmagnet.BaseActivity: com.radmagnet.models.ConfigVars sConfig
-com.radmagnet.BaseActivity: java.lang.String LAST_UPDATED_KEY
-com.radmagnet.BaseActivity: BaseActivity()
-com.radmagnet.BaseActivity: void onCreate(android.os.Bundle)
-com.radmagnet.BaseActivity: com.radmagnet.models.ConfigVars getConfig()
-com.radmagnet.BaseActivity: int getColorFromCategory(java.lang.String)
-com.radmagnet.BaseActivity: java.lang.String getTitleFromConfig(java.lang.String)
-com.radmagnet.BaseActivity: android.graphics.drawable.Drawable applyColorToDrawable(int,int)
-com.radmagnet.BaseActivity: void attachBaseContext(android.content.Context)
-com.radmagnet.BaseActivity: java.lang.CharSequence highlight(java.lang.String,java.lang.String)
-com.radmagnet.BaseActivity: void setupActionBar(boolean,android.support.v7.widget.Toolbar)
-com.radmagnet.BaseActivity: android.text.SpannableString getStyledActionTitle(java.lang.CharSequence)
-com.radmagnet.BaseActivity: int getValueInDp(int)
-com.radmagnet.BaseActivity: java.lang.String getDateSuffix(int)
+com.radmagnet.activities.BaseActivity
+com.radmagnet.activities.BaseActivity: com.radmagnet.models.ConfigVars sConfig
+com.radmagnet.activities.BaseActivity: java.lang.String LAST_UPDATED_KEY
+com.radmagnet.activities.BaseActivity: BaseActivity()
+com.radmagnet.activities.BaseActivity: void onCreate(android.os.Bundle)
+com.radmagnet.activities.BaseActivity: com.radmagnet.models.ConfigVars getConfig()
+com.radmagnet.activities.BaseActivity: int getColorFromCategory(java.lang.String)
+com.radmagnet.activities.BaseActivity: java.lang.String getTitleFromConfig(java.lang.String)
+com.radmagnet.activities.BaseActivity: android.graphics.drawable.Drawable applyColorToDrawable(int,int)
+com.radmagnet.activities.BaseActivity: void attachBaseContext(android.content.Context)
+com.radmagnet.activities.BaseActivity: java.lang.CharSequence highlight(java.lang.String,java.lang.String)
+com.radmagnet.activities.BaseActivity: void setupActionBar(boolean,android.support.v7.widget.Toolbar)
+com.radmagnet.activities.BaseActivity: android.text.SpannableString getStyledActionTitle(java.lang.CharSequence)
+com.radmagnet.activities.BaseActivity: int getValueInDp(int)
+com.radmagnet.activities.BaseActivity: java.lang.String getDateSuffix(int)
 com.radmagnet.BaseApplication
 com.radmagnet.BaseApplication: java.lang.String DATE_FORMAT
 com.radmagnet.BaseApplication: int NOTIF_REQUEST_CODE
@@ -9354,56 +9354,56 @@ com.radmagnet.BaseApplication$Categories: com.radmagnet.BaseApplication$Categori
 com.radmagnet.BaseApplication$Categories: java.lang.String toString()
 com.radmagnet.BaseFragment
 com.radmagnet.BaseFragment: BaseFragment()
-com.radmagnet.BaseFragment: com.radmagnet.BaseActivity getBaseActivity()
-com.radmagnet.BookmarkActivity
-com.radmagnet.BookmarkActivity: android.support.v7.widget.RecyclerView mBookmarksRv
-com.radmagnet.BookmarkActivity: android.support.v7.widget.Toolbar mToolbar
-com.radmagnet.BookmarkActivity: BookmarkActivity()
-com.radmagnet.BookmarkActivity: void onCreate(android.os.Bundle)
-com.radmagnet.BookmarkActivity: boolean onCreateOptionsMenu(android.view.Menu)
-com.radmagnet.BookmarkActivity: void onDestroy()
-com.radmagnet.BookmarkActivity: boolean onOptionsItemSelected(android.view.MenuItem)
-com.radmagnet.BookmarkActivity: boolean onQueryTextSubmit(java.lang.String)
-com.radmagnet.BookmarkActivity: boolean onQueryTextChange(java.lang.String)
-com.radmagnet.BookmarkActivity: boolean onClose()
-com.radmagnet.BookmarkActivity: void onItemClick(com.radmagnet.models.News,int)
-com.radmagnet.BookmarkActivity: void onBackPressed()
-com.radmagnet.BookmarkActivity$$ViewInjector
-com.radmagnet.BookmarkActivity$$ViewInjector: BookmarkActivity$$ViewInjector()
-com.radmagnet.BookmarkActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.BookmarkActivity,java.lang.Object)
-com.radmagnet.BookmarkActivity$$ViewInjector: void reset(com.radmagnet.BookmarkActivity)
-com.radmagnet.BookmarkActivity$$ViewInjector: void reset(java.lang.Object)
-com.radmagnet.BookmarkActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
-com.radmagnet.BookmarksAdapter
-com.radmagnet.BookmarksAdapter: BookmarksAdapter(android.content.Context,io.realm.RealmResults,boolean)
-com.radmagnet.BookmarksAdapter: void setOnItemClickedListener(com.radmagnet.BookmarksAdapter$BookmarkListener)
-com.radmagnet.BookmarksAdapter: com.radmagnet.BookmarksAdapter$BookmarksViewHolder onCreateViewHolder(android.view.ViewGroup,int)
-com.radmagnet.BookmarksAdapter: long getItemId(int)
-com.radmagnet.BookmarksAdapter: void onBindViewHolder(com.radmagnet.BookmarksAdapter$BookmarksViewHolder,int)
-com.radmagnet.BookmarksAdapter: int getItemCount()
-com.radmagnet.BookmarksAdapter: io.realm.RealmResults getRealmResults()
-com.radmagnet.BookmarksAdapter: int onGetSwipeReactionType(com.radmagnet.BookmarksAdapter$BookmarksViewHolder,int,int)
-com.radmagnet.BookmarksAdapter: void onSetSwipeBackground(com.radmagnet.BookmarksAdapter$BookmarksViewHolder,int)
-com.radmagnet.BookmarksAdapter: int onSwipeItem(com.radmagnet.BookmarksAdapter$BookmarksViewHolder,int)
-com.radmagnet.BookmarksAdapter: void onPerformAfterSwipeReaction(com.radmagnet.BookmarksAdapter$BookmarksViewHolder,int,int)
-com.radmagnet.BookmarksAdapter: void updateRealmResults(io.realm.RealmResults)
-com.radmagnet.BookmarksAdapter: void setSearchTerm(java.lang.String)
-com.radmagnet.BookmarksAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
-com.radmagnet.BookmarksAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
-com.radmagnet.BookmarksAdapter: void onPerformAfterSwipeReaction(android.support.v7.widget.RecyclerView$ViewHolder,int,int)
-com.radmagnet.BookmarksAdapter: int onSwipeItem(android.support.v7.widget.RecyclerView$ViewHolder,int)
-com.radmagnet.BookmarksAdapter: void onSetSwipeBackground(android.support.v7.widget.RecyclerView$ViewHolder,int)
-com.radmagnet.BookmarksAdapter: int onGetSwipeReactionType(android.support.v7.widget.RecyclerView$ViewHolder,int,int)
-com.radmagnet.BookmarksAdapter$BookmarkListener
-com.radmagnet.BookmarksAdapter$BookmarkListener: void onItemClick(com.radmagnet.models.News,int)
-com.radmagnet.BookmarksAdapter$BookmarksViewHolder
-com.radmagnet.BookmarksAdapter$BookmarksViewHolder: android.widget.TextView headlineTv
-com.radmagnet.BookmarksAdapter$BookmarksViewHolder: android.widget.TextView dateTv
-com.radmagnet.BookmarksAdapter$BookmarksViewHolder: android.view.ViewGroup container
-com.radmagnet.BookmarksAdapter$BookmarksViewHolder: android.widget.ImageView icon
-com.radmagnet.BookmarksAdapter$BookmarksViewHolder: android.widget.TextView categoryTv
-com.radmagnet.BookmarksAdapter$BookmarksViewHolder: BookmarksAdapter$BookmarksViewHolder(android.view.View)
-com.radmagnet.BookmarksAdapter$BookmarksViewHolder: android.view.View getSwipeableContainerView()
+com.radmagnet.BaseFragment: com.radmagnet.activities.BaseActivity getBaseActivity()
+com.radmagnet.activities.BookmarkActivity
+com.radmagnet.activities.BookmarkActivity: android.support.v7.widget.RecyclerView mBookmarksRv
+com.radmagnet.activities.BookmarkActivity: android.support.v7.widget.Toolbar mToolbar
+com.radmagnet.activities.BookmarkActivity: BookmarkActivity()
+com.radmagnet.activities.BookmarkActivity: void onCreate(android.os.Bundle)
+com.radmagnet.activities.BookmarkActivity: boolean onCreateOptionsMenu(android.view.Menu)
+com.radmagnet.activities.BookmarkActivity: void onDestroy()
+com.radmagnet.activities.BookmarkActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+com.radmagnet.activities.BookmarkActivity: boolean onQueryTextSubmit(java.lang.String)
+com.radmagnet.activities.BookmarkActivity: boolean onQueryTextChange(java.lang.String)
+com.radmagnet.activities.BookmarkActivity: boolean onClose()
+com.radmagnet.activities.BookmarkActivity: void onItemClick(com.radmagnet.models.News,int)
+com.radmagnet.activities.BookmarkActivity: void onBackPressed()
+com.radmagnet.activities.BookmarkActivity$$ViewInjector
+com.radmagnet.activities.BookmarkActivity$$ViewInjector: BookmarkActivity$$ViewInjector()
+com.radmagnet.activities.BookmarkActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.BookmarkActivity,java.lang.Object)
+com.radmagnet.activities.BookmarkActivity$$ViewInjector: void reset(com.radmagnet.activities.BookmarkActivity)
+com.radmagnet.activities.BookmarkActivity$$ViewInjector: void reset(java.lang.Object)
+com.radmagnet.activities.BookmarkActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.radmagnet.adapters.BookmarksAdapter
+com.radmagnet.adapters.BookmarksAdapter: BookmarksAdapter(android.content.Context,io.realm.RealmResults,boolean)
+com.radmagnet.adapters.BookmarksAdapter: void setOnItemClickedListener(com.radmagnet.adapters.BookmarksAdapter$BookmarkListener)
+com.radmagnet.adapters.BookmarksAdapter: com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder onCreateViewHolder(android.view.ViewGroup,int)
+com.radmagnet.adapters.BookmarksAdapter: long getItemId(int)
+com.radmagnet.adapters.BookmarksAdapter: void onBindViewHolder(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int)
+com.radmagnet.adapters.BookmarksAdapter: int getItemCount()
+com.radmagnet.adapters.BookmarksAdapter: io.realm.RealmResults getRealmResults()
+com.radmagnet.adapters.BookmarksAdapter: int onGetSwipeReactionType(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int,int)
+com.radmagnet.adapters.BookmarksAdapter: void onSetSwipeBackground(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int)
+com.radmagnet.adapters.BookmarksAdapter: int onSwipeItem(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int)
+com.radmagnet.adapters.BookmarksAdapter: void onPerformAfterSwipeReaction(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int,int)
+com.radmagnet.adapters.BookmarksAdapter: void updateRealmResults(io.realm.RealmResults)
+com.radmagnet.adapters.BookmarksAdapter: void setSearchTerm(java.lang.String)
+com.radmagnet.adapters.BookmarksAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
+com.radmagnet.adapters.BookmarksAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
+com.radmagnet.adapters.BookmarksAdapter: void onPerformAfterSwipeReaction(android.support.v7.widget.RecyclerView$ViewHolder,int,int)
+com.radmagnet.adapters.BookmarksAdapter: int onSwipeItem(android.support.v7.widget.RecyclerView$ViewHolder,int)
+com.radmagnet.adapters.BookmarksAdapter: void onSetSwipeBackground(android.support.v7.widget.RecyclerView$ViewHolder,int)
+com.radmagnet.adapters.BookmarksAdapter: int onGetSwipeReactionType(android.support.v7.widget.RecyclerView$ViewHolder,int,int)
+com.radmagnet.adapters.BookmarksAdapter$BookmarkListener
+com.radmagnet.adapters.BookmarksAdapter$BookmarkListener: void onItemClick(com.radmagnet.models.News,int)
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.widget.TextView headlineTv
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.widget.TextView dateTv
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.view.ViewGroup container
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.widget.ImageView icon
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.widget.TextView categoryTv
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: BookmarksAdapter$BookmarksViewHolder(android.view.View)
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.view.View getSwipeableContainerView()
 com.radmagnet.BuildConfig
 com.radmagnet.BuildConfig: boolean DEBUG
 com.radmagnet.BuildConfig: java.lang.String APPLICATION_ID
@@ -9412,10 +9412,10 @@ com.radmagnet.BuildConfig: java.lang.String FLAVOR
 com.radmagnet.BuildConfig: int VERSION_CODE
 com.radmagnet.BuildConfig: java.lang.String VERSION_NAME
 com.radmagnet.BuildConfig: BuildConfig()
-com.radmagnet.CategoriesAdapter
-com.radmagnet.CategoriesAdapter: CategoriesAdapter(android.content.Context,java.util.ArrayList)
-com.radmagnet.CategoriesAdapter: void setSelectedCategory(int)
-com.radmagnet.CategoriesAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+com.radmagnet.adapters.CategoriesAdapter
+com.radmagnet.adapters.CategoriesAdapter: CategoriesAdapter(android.content.Context,java.util.ArrayList)
+com.radmagnet.adapters.CategoriesAdapter: void setSelectedCategory(int)
+com.radmagnet.adapters.CategoriesAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 com.radmagnet.CheckAppReceiver
 com.radmagnet.CheckAppReceiver: CheckAppReceiver()
 com.radmagnet.CheckAppReceiver: void onReceive(android.content.Context,android.content.Intent)
@@ -9428,90 +9428,90 @@ com.radmagnet.CustomDurationScroller: CustomDurationScroller(android.content.Con
 com.radmagnet.CustomDurationScroller: CustomDurationScroller(android.content.Context,android.view.animation.Interpolator)
 com.radmagnet.CustomDurationScroller: void setScrollDurationFactor(double)
 com.radmagnet.CustomDurationScroller: void startScroll(int,int,int,int,int)
-com.radmagnet.DetailsActivity
-com.radmagnet.DetailsActivity: java.util.ArrayList mRealmIds
-com.radmagnet.DetailsActivity: android.support.v4.view.ViewPager mViewPager
-com.radmagnet.DetailsActivity: DetailsActivity()
-com.radmagnet.DetailsActivity: void onCreate(android.os.Bundle)
-com.radmagnet.DetailsActivity: void setupData()
-com.radmagnet.DetailsActivity: void onDestroy()
-com.radmagnet.DetailsActivity: boolean onCreateOptionsMenu(android.view.Menu)
-com.radmagnet.DetailsActivity: boolean onOptionsItemSelected(android.view.MenuItem)
-com.radmagnet.DetailsActivity: void onPageScrolled(int,float,int)
-com.radmagnet.DetailsActivity: void onPageSelected(int)
-com.radmagnet.DetailsActivity: void onPageScrollStateChanged(int)
-com.radmagnet.DetailsActivity: void onFragmentInteraction(android.net.Uri)
-com.radmagnet.DetailsActivity$$ViewInjector
-com.radmagnet.DetailsActivity$$ViewInjector: DetailsActivity$$ViewInjector()
-com.radmagnet.DetailsActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.DetailsActivity,java.lang.Object)
-com.radmagnet.DetailsActivity$$ViewInjector: void reset(com.radmagnet.DetailsActivity)
-com.radmagnet.DetailsActivity$$ViewInjector: void reset(java.lang.Object)
-com.radmagnet.DetailsActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.radmagnet.activities.DetailsActivity
+com.radmagnet.activities.DetailsActivity: java.util.ArrayList mRealmIds
+com.radmagnet.activities.DetailsActivity: android.support.v4.view.ViewPager mViewPager
+com.radmagnet.activities.DetailsActivity: DetailsActivity()
+com.radmagnet.activities.DetailsActivity: void onCreate(android.os.Bundle)
+com.radmagnet.activities.DetailsActivity: void setupData()
+com.radmagnet.activities.DetailsActivity: void onDestroy()
+com.radmagnet.activities.DetailsActivity: boolean onCreateOptionsMenu(android.view.Menu)
+com.radmagnet.activities.DetailsActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+com.radmagnet.activities.DetailsActivity: void onPageScrolled(int,float,int)
+com.radmagnet.activities.DetailsActivity: void onPageSelected(int)
+com.radmagnet.activities.DetailsActivity: void onPageScrollStateChanged(int)
+com.radmagnet.activities.DetailsActivity: void onFragmentInteraction(android.net.Uri)
+com.radmagnet.activities.DetailsActivity$$ViewInjector
+com.radmagnet.activities.DetailsActivity$$ViewInjector: DetailsActivity$$ViewInjector()
+com.radmagnet.activities.DetailsActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.DetailsActivity,java.lang.Object)
+com.radmagnet.activities.DetailsActivity$$ViewInjector: void reset(com.radmagnet.activities.DetailsActivity)
+com.radmagnet.activities.DetailsActivity$$ViewInjector: void reset(java.lang.Object)
+com.radmagnet.activities.DetailsActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
 com.radmagnet.EventsView
 com.radmagnet.EventsView: EventsView(android.content.Context,android.util.AttributeSet)
 com.radmagnet.EventsView: EventsView(android.content.Context,android.util.AttributeSet,int)
 com.radmagnet.EventsView: EventsView(android.content.Context)
 com.radmagnet.EventsView: void setDate(java.util.Date)
 com.radmagnet.EventsView: void onFinishInflate()
-com.radmagnet.FeedbackActivity
-com.radmagnet.FeedbackActivity: android.widget.EditText mNameEt
-com.radmagnet.FeedbackActivity: android.widget.EditText mEmailEt
-com.radmagnet.FeedbackActivity: android.widget.EditText mCommentsEt
-com.radmagnet.FeedbackActivity: android.widget.Button mSendFeedback
-com.radmagnet.FeedbackActivity: FeedbackActivity()
-com.radmagnet.FeedbackActivity: void onCreate(android.os.Bundle)
-com.radmagnet.FeedbackActivity: void takeToCopyRightPage()
-com.radmagnet.FeedbackActivity: boolean onCreateOptionsMenu(android.view.Menu)
-com.radmagnet.FeedbackActivity: boolean onOptionsItemSelected(android.view.MenuItem)
-com.radmagnet.FeedbackActivity: void sendFeedback()
-com.radmagnet.FeedbackActivity: void enableFeedbackBtn()
-com.radmagnet.FeedbackActivity$$ViewInjector
-com.radmagnet.FeedbackActivity$$ViewInjector: FeedbackActivity$$ViewInjector()
-com.radmagnet.FeedbackActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.FeedbackActivity,java.lang.Object)
-com.radmagnet.FeedbackActivity$$ViewInjector: void reset(com.radmagnet.FeedbackActivity)
-com.radmagnet.FeedbackActivity$$ViewInjector: void reset(java.lang.Object)
-com.radmagnet.FeedbackActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
-com.radmagnet.ImagePagerAdapter
-com.radmagnet.ImagePagerAdapter: ImagePagerAdapter(android.content.Context,java.util.List)
-com.radmagnet.ImagePagerAdapter: int getCount()
-com.radmagnet.ImagePagerAdapter: boolean isViewFromObject(android.view.View,java.lang.Object)
-com.radmagnet.ImagePagerAdapter: java.lang.Object instantiateItem(android.view.ViewGroup,int)
-com.radmagnet.ImagePagerAdapter: void destroyItem(android.view.ViewGroup,int,java.lang.Object)
+com.radmagnet.activities.FeedbackActivity
+com.radmagnet.activities.FeedbackActivity: android.widget.EditText mNameEt
+com.radmagnet.activities.FeedbackActivity: android.widget.EditText mEmailEt
+com.radmagnet.activities.FeedbackActivity: android.widget.EditText mCommentsEt
+com.radmagnet.activities.FeedbackActivity: android.widget.Button mSendFeedback
+com.radmagnet.activities.FeedbackActivity: FeedbackActivity()
+com.radmagnet.activities.FeedbackActivity: void onCreate(android.os.Bundle)
+com.radmagnet.activities.FeedbackActivity: void takeToCopyRightPage()
+com.radmagnet.activities.FeedbackActivity: boolean onCreateOptionsMenu(android.view.Menu)
+com.radmagnet.activities.FeedbackActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+com.radmagnet.activities.FeedbackActivity: void sendFeedback()
+com.radmagnet.activities.FeedbackActivity: void enableFeedbackBtn()
+com.radmagnet.activities.FeedbackActivity$$ViewInjector
+com.radmagnet.activities.FeedbackActivity$$ViewInjector: FeedbackActivity$$ViewInjector()
+com.radmagnet.activities.FeedbackActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.FeedbackActivity,java.lang.Object)
+com.radmagnet.activities.FeedbackActivity$$ViewInjector: void reset(com.radmagnet.activities.FeedbackActivity)
+com.radmagnet.activities.FeedbackActivity$$ViewInjector: void reset(java.lang.Object)
+com.radmagnet.activities.FeedbackActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.radmagnet.adapters.ImagePagerAdapter
+com.radmagnet.adapters.ImagePagerAdapter: ImagePagerAdapter(android.content.Context,java.util.List)
+com.radmagnet.adapters.ImagePagerAdapter: int getCount()
+com.radmagnet.adapters.ImagePagerAdapter: boolean isViewFromObject(android.view.View,java.lang.Object)
+com.radmagnet.adapters.ImagePagerAdapter: java.lang.Object instantiateItem(android.view.ViewGroup,int)
+com.radmagnet.adapters.ImagePagerAdapter: void destroyItem(android.view.ViewGroup,int,java.lang.Object)
 com.radmagnet.ImageServicePagerAdapter
 com.radmagnet.ImageServicePagerAdapter: ImageServicePagerAdapter(android.content.Context,java.util.List)
 com.radmagnet.ImageServicePagerAdapter: int getCount()
 com.radmagnet.ImageServicePagerAdapter: boolean isViewFromObject(android.view.View,java.lang.Object)
 com.radmagnet.ImageServicePagerAdapter: java.lang.Object instantiateItem(android.view.ViewGroup,int)
 com.radmagnet.ImageServicePagerAdapter: void destroyItem(android.view.ViewGroup,int,java.lang.Object)
-com.radmagnet.MainActivity
-com.radmagnet.MainActivity: android.support.v7.widget.RecyclerView mNewsRv
-com.radmagnet.MainActivity: android.support.v4.widget.DrawerLayout mDrawerLayout
-com.radmagnet.MainActivity: android.widget.ListView mCategoriesLv
-com.radmagnet.MainActivity: android.widget.ListView mOtherOptionsLv
-com.radmagnet.MainActivity: android.support.v7.widget.Toolbar mToolbar
-com.radmagnet.MainActivity: android.support.v4.widget.SwipeRefreshLayout mSwipeLayout
-com.radmagnet.MainActivity: com.radmagnet.NotifyRadView newRadsTv
-com.radmagnet.MainActivity: android.widget.TextView emptyViewTv
-com.radmagnet.MainActivity: MainActivity()
-com.radmagnet.MainActivity: void onCreate(android.os.Bundle)
-com.radmagnet.MainActivity: void onRefresh()
-com.radmagnet.MainActivity: boolean onClose()
-com.radmagnet.MainActivity: void onItemClick(com.radmagnet.models.News,int)
-com.radmagnet.MainActivity: void onDestroy()
-com.radmagnet.MainActivity: void onPostCreate(android.os.Bundle)
-com.radmagnet.MainActivity: void onConfigurationChanged(android.content.res.Configuration)
-com.radmagnet.MainActivity: void onBackPressed()
-com.radmagnet.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)
-com.radmagnet.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)
-com.radmagnet.MainActivity: void onItemClick(android.widget.AdapterView,android.view.View,int,long)
-com.radmagnet.MainActivity: boolean onQueryTextSubmit(java.lang.String)
-com.radmagnet.MainActivity: boolean onQueryTextChange(java.lang.String)
-com.radmagnet.MainActivity$$ViewInjector
-com.radmagnet.MainActivity$$ViewInjector: MainActivity$$ViewInjector()
-com.radmagnet.MainActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.MainActivity,java.lang.Object)
-com.radmagnet.MainActivity$$ViewInjector: void reset(com.radmagnet.MainActivity)
-com.radmagnet.MainActivity$$ViewInjector: void reset(java.lang.Object)
-com.radmagnet.MainActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.radmagnet.activities.MainActivity
+com.radmagnet.activities.MainActivity: android.support.v7.widget.RecyclerView mNewsRv
+com.radmagnet.activities.MainActivity: android.support.v4.widget.DrawerLayout mDrawerLayout
+com.radmagnet.activities.MainActivity: android.widget.ListView mCategoriesLv
+com.radmagnet.activities.MainActivity: android.widget.ListView mOtherOptionsLv
+com.radmagnet.activities.MainActivity: android.support.v7.widget.Toolbar mToolbar
+com.radmagnet.activities.MainActivity: android.support.v4.widget.SwipeRefreshLayout mSwipeLayout
+com.radmagnet.activities.MainActivity: com.radmagnet.NotifyRadView newRadsTv
+com.radmagnet.activities.MainActivity: android.widget.TextView emptyViewTv
+com.radmagnet.activities.MainActivity: MainActivity()
+com.radmagnet.activities.MainActivity: void onCreate(android.os.Bundle)
+com.radmagnet.activities.MainActivity: void onRefresh()
+com.radmagnet.activities.MainActivity: boolean onClose()
+com.radmagnet.activities.MainActivity: void onItemClick(com.radmagnet.models.News,int)
+com.radmagnet.activities.MainActivity: void onDestroy()
+com.radmagnet.activities.MainActivity: void onPostCreate(android.os.Bundle)
+com.radmagnet.activities.MainActivity: void onConfigurationChanged(android.content.res.Configuration)
+com.radmagnet.activities.MainActivity: void onBackPressed()
+com.radmagnet.activities.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)
+com.radmagnet.activities.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+com.radmagnet.activities.MainActivity: void onItemClick(android.widget.AdapterView,android.view.View,int,long)
+com.radmagnet.activities.MainActivity: boolean onQueryTextSubmit(java.lang.String)
+com.radmagnet.activities.MainActivity: boolean onQueryTextChange(java.lang.String)
+com.radmagnet.activities.MainActivity$$ViewInjector
+com.radmagnet.activities.MainActivity$$ViewInjector: MainActivity$$ViewInjector()
+com.radmagnet.activities.MainActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.MainActivity,java.lang.Object)
+com.radmagnet.activities.MainActivity$$ViewInjector: void reset(com.radmagnet.activities.MainActivity)
+com.radmagnet.activities.MainActivity$$ViewInjector: void reset(java.lang.Object)
+com.radmagnet.activities.MainActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
 com.radmagnet.Networking
 com.radmagnet.Networking: Networking()
 com.radmagnet.Networking: com.radmagnet.Networking$RestInterface getRestClient()
@@ -9519,58 +9519,58 @@ com.radmagnet.Networking$RestInterface
 com.radmagnet.Networking$RestInterface: void getConfig(retrofit.Callback)
 com.radmagnet.Networking$RestInterface: void getAnnouncements(java.lang.String,java.lang.String,retrofit.Callback)
 com.radmagnet.Networking$RestInterface: void getFeedback(java.lang.String,java.lang.String,java.lang.String,java.lang.String,retrofit.Callback)
-com.radmagnet.NewsAdapter
-com.radmagnet.NewsAdapter: NewsAdapter(android.content.Context,io.realm.RealmResults,boolean)
-com.radmagnet.NewsAdapter: void setOnItemClickedListener(com.radmagnet.NewsAdapter$NewsItemClickListener)
-com.radmagnet.NewsAdapter: com.radmagnet.NewsAdapter$NewsHolder onCreateViewHolder(android.view.ViewGroup,int)
-com.radmagnet.NewsAdapter: long getItemId(int)
-com.radmagnet.NewsAdapter: void onBindViewHolder(com.radmagnet.NewsAdapter$NewsHolder,int)
-com.radmagnet.NewsAdapter: int getItemCount()
-com.radmagnet.NewsAdapter: io.realm.RealmResults getRealmResults()
-com.radmagnet.NewsAdapter: void setSearchTerm(java.lang.String)
-com.radmagnet.NewsAdapter: void updateRealmResults(io.realm.RealmResults)
-com.radmagnet.NewsAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
-com.radmagnet.NewsAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
-com.radmagnet.NewsAdapter$NewsHolder
-com.radmagnet.NewsAdapter$NewsHolder: NewsAdapter$NewsHolder(android.view.View)
-com.radmagnet.NewsAdapter$NewsItemClickListener
-com.radmagnet.NewsAdapter$NewsItemClickListener: void onItemClick(com.radmagnet.models.News,int)
-com.radmagnet.NewsFragment
-com.radmagnet.NewsFragment: java.lang.String ARG_PARAM1
-com.radmagnet.NewsFragment: android.widget.TextView mHeadlineTv
-com.radmagnet.NewsFragment: android.widget.TextView mDateTv
-com.radmagnet.NewsFragment: android.widget.TextView mCreatorTv
-com.radmagnet.NewsFragment: android.widget.ImageView mCreatorDpIv
-com.radmagnet.NewsFragment: android.widget.ImageView mNewsIv
-com.radmagnet.NewsFragment: android.widget.TextView mCategoryTv
-com.radmagnet.NewsFragment: android.widget.LinearLayout mSpecificDetailsContainer
-com.radmagnet.NewsFragment: android.view.View mCategoryColor
-com.radmagnet.NewsFragment: android.webkit.WebView mWebView
-com.radmagnet.NewsFragment: android.widget.TextView mLocation
-com.radmagnet.NewsFragment: android.widget.ProgressBar mProgressBar
-com.radmagnet.NewsFragment: android.widget.TextView newsCategoryTitle
-com.radmagnet.NewsFragment: android.widget.ScrollView mScrollView
-com.radmagnet.NewsFragment: NewsFragment()
-com.radmagnet.NewsFragment: com.radmagnet.NewsFragment newInstance(java.lang.String)
-com.radmagnet.NewsFragment: void onCreate(android.os.Bundle)
-com.radmagnet.NewsFragment: boolean onOptionsItemSelected(android.view.MenuItem)
-com.radmagnet.NewsFragment: void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater)
-com.radmagnet.NewsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
-com.radmagnet.NewsFragment: void onResume()
-com.radmagnet.NewsFragment: void setupWebView()
-com.radmagnet.NewsFragment: void bookMarkItem()
-com.radmagnet.NewsFragment: void updateBackIcon()
-com.radmagnet.NewsFragment: void updateBookmarkButton()
-com.radmagnet.NewsFragment: void onAttach(android.app.Activity)
-com.radmagnet.NewsFragment: void onDetach()
-com.radmagnet.NewsFragment$$ViewInjector
-com.radmagnet.NewsFragment$$ViewInjector: NewsFragment$$ViewInjector()
-com.radmagnet.NewsFragment$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.NewsFragment,java.lang.Object)
-com.radmagnet.NewsFragment$$ViewInjector: void reset(com.radmagnet.NewsFragment)
-com.radmagnet.NewsFragment$$ViewInjector: void reset(java.lang.Object)
-com.radmagnet.NewsFragment$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
-com.radmagnet.NewsFragment$OnFragmentInteractionListener
-com.radmagnet.NewsFragment$OnFragmentInteractionListener: void onFragmentInteraction(android.net.Uri)
+com.radmagnet.adapters.NewsAdapter
+com.radmagnet.adapters.NewsAdapter: NewsAdapter(android.content.Context,io.realm.RealmResults,boolean)
+com.radmagnet.adapters.NewsAdapter: void setOnItemClickedListener(com.radmagnet.adapters.NewsAdapter$NewsItemClickListener)
+com.radmagnet.adapters.NewsAdapter: com.radmagnet.adapters.NewsAdapter$NewsHolder onCreateViewHolder(android.view.ViewGroup,int)
+com.radmagnet.adapters.NewsAdapter: long getItemId(int)
+com.radmagnet.adapters.NewsAdapter: void onBindViewHolder(com.radmagnet.adapters.NewsAdapter$NewsHolder,int)
+com.radmagnet.adapters.NewsAdapter: int getItemCount()
+com.radmagnet.adapters.NewsAdapter: io.realm.RealmResults getRealmResults()
+com.radmagnet.adapters.NewsAdapter: void setSearchTerm(java.lang.String)
+com.radmagnet.adapters.NewsAdapter: void updateRealmResults(io.realm.RealmResults)
+com.radmagnet.adapters.NewsAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
+com.radmagnet.adapters.NewsAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
+com.radmagnet.adapters.NewsAdapter$NewsHolder
+com.radmagnet.adapters.NewsAdapter$NewsHolder: NewsAdapter$NewsHolder(android.view.View)
+com.radmagnet.adapters.NewsAdapter$NewsItemClickListener
+com.radmagnet.adapters.NewsAdapter$NewsItemClickListener: void onItemClick(com.radmagnet.models.News,int)
+com.radmagnet.fragment.NewsFragment
+com.radmagnet.fragment.NewsFragment: java.lang.String ARG_PARAM1
+com.radmagnet.fragment.NewsFragment: android.widget.TextView mHeadlineTv
+com.radmagnet.fragment.NewsFragment: android.widget.TextView mDateTv
+com.radmagnet.fragment.NewsFragment: android.widget.TextView mCreatorTv
+com.radmagnet.fragment.NewsFragment: android.widget.ImageView mCreatorDpIv
+com.radmagnet.fragment.NewsFragment: android.widget.ImageView mNewsIv
+com.radmagnet.fragment.NewsFragment: android.widget.TextView mCategoryTv
+com.radmagnet.fragment.NewsFragment: android.widget.LinearLayout mSpecificDetailsContainer
+com.radmagnet.fragment.NewsFragment: android.view.View mCategoryColor
+com.radmagnet.fragment.NewsFragment: android.webkit.WebView mWebView
+com.radmagnet.fragment.NewsFragment: android.widget.TextView mLocation
+com.radmagnet.fragment.NewsFragment: android.widget.ProgressBar mProgressBar
+com.radmagnet.fragment.NewsFragment: android.widget.TextView newsCategoryTitle
+com.radmagnet.fragment.NewsFragment: android.widget.ScrollView mScrollView
+com.radmagnet.fragment.NewsFragment: NewsFragment()
+com.radmagnet.fragment.NewsFragment: com.radmagnet.fragment.NewsFragment newInstance(java.lang.String)
+com.radmagnet.fragment.NewsFragment: void onCreate(android.os.Bundle)
+com.radmagnet.fragment.NewsFragment: boolean onOptionsItemSelected(android.view.MenuItem)
+com.radmagnet.fragment.NewsFragment: void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater)
+com.radmagnet.fragment.NewsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
+com.radmagnet.fragment.NewsFragment: void onResume()
+com.radmagnet.fragment.NewsFragment: void setupWebView()
+com.radmagnet.fragment.NewsFragment: void bookMarkItem()
+com.radmagnet.fragment.NewsFragment: void updateBackIcon()
+com.radmagnet.fragment.NewsFragment: void updateBookmarkButton()
+com.radmagnet.fragment.NewsFragment: void onAttach(android.app.Activity)
+com.radmagnet.fragment.NewsFragment: void onDetach()
+com.radmagnet.fragment.NewsFragment$$ViewInjector
+com.radmagnet.fragment.NewsFragment$$ViewInjector: NewsFragment$$ViewInjector()
+com.radmagnet.fragment.NewsFragment$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.fragment.NewsFragment,java.lang.Object)
+com.radmagnet.fragment.NewsFragment$$ViewInjector: void reset(com.radmagnet.fragment.NewsFragment)
+com.radmagnet.fragment.NewsFragment$$ViewInjector: void reset(java.lang.Object)
+com.radmagnet.fragment.NewsFragment$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.radmagnet.fragment.NewsFragment$OnFragmentInteractionListener
+com.radmagnet.fragment.NewsFragment$OnFragmentInteractionListener: void onFragmentInteraction(android.net.Uri)
 com.radmagnet.NotifyRadView
 com.radmagnet.NotifyRadView: NotifyRadView(android.content.Context,android.util.AttributeSet)
 com.radmagnet.NotifyRadView: void disableViewsOnAnimation(android.view.View[])
@@ -9582,9 +9582,9 @@ com.radmagnet.OtherOptions
 com.radmagnet.OtherOptions: OtherOptions(java.lang.String,java.lang.String)
 com.radmagnet.OtherOptions: java.lang.String getName()
 com.radmagnet.OtherOptions: java.lang.String getColor()
-com.radmagnet.OtherOptionsAdapter
-com.radmagnet.OtherOptionsAdapter: OtherOptionsAdapter(android.content.Context,java.util.ArrayList)
-com.radmagnet.OtherOptionsAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+com.radmagnet.adapters.OtherOptionsAdapter
+com.radmagnet.adapters.OtherOptionsAdapter: OtherOptionsAdapter(android.content.Context,java.util.ArrayList)
+com.radmagnet.adapters.OtherOptionsAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 com.radmagnet.R
 com.radmagnet.R: R()
 com.radmagnet.R$anim
@@ -10884,25 +10884,25 @@ com.radmagnet.R$styleable: R$styleable()
 com.radmagnet.RealmCleaningReceiver
 com.radmagnet.RealmCleaningReceiver: RealmCleaningReceiver()
 com.radmagnet.RealmCleaningReceiver: void onReceive(android.content.Context,android.content.Intent)
-com.radmagnet.SplashActivity
-com.radmagnet.SplashActivity: com.radmagnet.AutoScrollViewPager mIntroPager
-com.radmagnet.SplashActivity: android.widget.ImageView mSplashScreenIv
-com.radmagnet.SplashActivity: com.viewpagerindicator.CirclePageIndicator mCirclePageIndicator
-com.radmagnet.SplashActivity: android.widget.Button mStartButton
-com.radmagnet.SplashActivity: SplashActivity()
-com.radmagnet.SplashActivity: void onCreate(android.os.Bundle)
-com.radmagnet.SplashActivity: void setUpPager()
-com.radmagnet.SplashActivity: void startFeed()
-com.radmagnet.SplashActivity: void setupRealmCleaningService()
-com.radmagnet.SplashActivity: void setupReminderNotification()
-com.radmagnet.SplashActivity: boolean onCreateOptionsMenu(android.view.Menu)
-com.radmagnet.SplashActivity: boolean onOptionsItemSelected(android.view.MenuItem)
-com.radmagnet.SplashActivity$$ViewInjector
-com.radmagnet.SplashActivity$$ViewInjector: SplashActivity$$ViewInjector()
-com.radmagnet.SplashActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.SplashActivity,java.lang.Object)
-com.radmagnet.SplashActivity$$ViewInjector: void reset(com.radmagnet.SplashActivity)
-com.radmagnet.SplashActivity$$ViewInjector: void reset(java.lang.Object)
-com.radmagnet.SplashActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.radmagnet.activities.SplashActivity
+com.radmagnet.activities.SplashActivity: com.radmagnet.AutoScrollViewPager mIntroPager
+com.radmagnet.activities.SplashActivity: android.widget.ImageView mSplashScreenIv
+com.radmagnet.activities.SplashActivity: com.viewpagerindicator.CirclePageIndicator mCirclePageIndicator
+com.radmagnet.activities.SplashActivity: android.widget.Button mStartButton
+com.radmagnet.activities.SplashActivity: SplashActivity()
+com.radmagnet.activities.SplashActivity: void onCreate(android.os.Bundle)
+com.radmagnet.activities.SplashActivity: void setUpPager()
+com.radmagnet.activities.SplashActivity: void startFeed()
+com.radmagnet.activities.SplashActivity: void setupRealmCleaningService()
+com.radmagnet.activities.SplashActivity: void setupReminderNotification()
+com.radmagnet.activities.SplashActivity: boolean onCreateOptionsMenu(android.view.Menu)
+com.radmagnet.activities.SplashActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+com.radmagnet.activities.SplashActivity$$ViewInjector
+com.radmagnet.activities.SplashActivity$$ViewInjector: SplashActivity$$ViewInjector()
+com.radmagnet.activities.SplashActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.SplashActivity,java.lang.Object)
+com.radmagnet.activities.SplashActivity$$ViewInjector: void reset(com.radmagnet.activities.SplashActivity)
+com.radmagnet.activities.SplashActivity$$ViewInjector: void reset(java.lang.Object)
+com.radmagnet.activities.SplashActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
 com.radmagnet.models.Category
 com.radmagnet.models.Category: java.lang.String name
 com.radmagnet.models.Category: java.lang.String color
@@ -10946,10 +10946,13 @@ com.radmagnet.models.News: java.lang.String imageUrl
 com.radmagnet.models.News: java.lang.String creator
 com.radmagnet.models.News: java.lang.String creatorDp
 com.radmagnet.models.News: java.lang.String location
+com.radmagnet.models.News: java.lang.String shareUrl
 com.radmagnet.models.News: long key
 com.radmagnet.models.News: boolean isBookmarked
 com.radmagnet.models.News: java.lang.String source
 com.radmagnet.models.News: News()
+com.radmagnet.models.News: java.lang.String getShareUrl()
+com.radmagnet.models.News: void setShareUrl(java.lang.String)
 com.radmagnet.models.News: long getKey()
 com.radmagnet.models.News: void setKey(long)
 com.radmagnet.models.News: java.util.Date getStartDate()
@@ -14285,6 +14288,8 @@ io.realm.NewsRealmProxy: java.lang.String getCreatorDp()
 io.realm.NewsRealmProxy: void setCreatorDp(java.lang.String)
 io.realm.NewsRealmProxy: java.lang.String getLocation()
 io.realm.NewsRealmProxy: void setLocation(java.lang.String)
+io.realm.NewsRealmProxy: java.lang.String getShareUrl()
+io.realm.NewsRealmProxy: void setShareUrl(java.lang.String)
 io.realm.NewsRealmProxy: long getKey()
 io.realm.NewsRealmProxy: void setKey(long)
 io.realm.NewsRealmProxy: boolean isBookmarked()

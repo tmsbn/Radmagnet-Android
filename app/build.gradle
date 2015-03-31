@@ -11,8 +11,8 @@ android {
         applicationId "com.radmagnet"
         minSdkVersion 16
         targetSdkVersion 21
-        versionCode 5
-        versionName "BETA-2"
+        versionCode 6
+        versionName "BETA-3"
 
     }
     buildTypes {

@@ -1208,12 +1208,12 @@ com.joanzapata.android.iconify.Utils:
     41:43:private Utils()
 com.radmagnet.Networking:
     private static final java.lang.String URL
-com.radmagnet.NewsAdapter:
+com.radmagnet.adapters.NewsAdapter:
     int height
     230:235:private void setAnimation(android.view.View,int)
-com.radmagnet.NewsFragment:
+com.radmagnet.fragment.NewsFragment:
     private android.support.v7.widget.ShareActionProvider mShareActionProvider
-com.radmagnet.SplashActivity:
+com.radmagnet.activities.SplashActivity:
     private static final int REPEAT_NOTIF_AFTER_DAYS
     private static final int REPEAT_DB_MAINTAINCE_AFTER_DAYS
 com.squareup.javawriter.JavaWriter:

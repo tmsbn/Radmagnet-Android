@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:orientation="vertical"
-    tools:context="com.radmagnet.NewsFragment">
+    tools:context="com.radmagnet.fragment.NewsFragment">
 
     <include
         android:id="@+id/toolbar"

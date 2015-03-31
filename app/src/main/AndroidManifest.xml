@@ -11,12 +11,12 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.radmagnet.MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.radmagnet.SplashActivity"
+            android:name=".activities.SplashActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -26,31 +26,31 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.radmagnet.DetailsActivity"
+            android:name=".activities.DetailsActivity"
             android:label="@string/app_name"
-            android:parentActivityName="com.radmagnet.MainActivity"
+            android:parentActivityName=".activities.MainActivity"
             android:screenOrientation="portrait" >
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.radmagnet.MainActivity" />
+                android:value=".activities.MainActivity" />
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="http" android:host="www.radmagnet.com" android:path="GET/details" />
+                <data android:scheme="http" android:host="www.radmagnet.com" android:pathPrefix="/GET/share/" />
             </intent-filter>
 
             </activity>
         <activity
-            android:name="com.radmagnet.BookmarkActivity"
+            android:name=".activities.BookmarkActivity"
             android:label="@string/radsILove_txt"
-            android:parentActivityName="com.radmagnet.MainActivity"
+            android:parentActivityName=".activities.MainActivity"
             android:screenOrientation="portrait" />
 
         <receiver
-            android:name="com.radmagnet.CheckAppReceiver"
+            android:name=".receivers.CheckAppReceiver"
             android:enabled="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -58,7 +58,7 @@
         </receiver>
 
         <receiver
-            android:name=".RealmCleaningReceiver"
+            android:name=".receivers.RealmCleaningReceiver"
             android:enabled="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -66,9 +66,9 @@
         </receiver>
 
         <activity
-            android:name="com.radmagnet.FeedbackActivity"
+            android:name=".activities.FeedbackActivity"
             android:label="@string/title_activity_feedback"
-            android:parentActivityName="com.radmagnet.MainActivity"
+            android:parentActivityName=".activities.MainActivity"
             android:screenOrientation="portrait"/>
     </application>
 

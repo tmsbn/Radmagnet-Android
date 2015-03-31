@@ -31,7 +31,16 @@ public class News extends RealmObject {
     private String creator = "";
     private String creatorDp = "";
     private String location = "";
+    private String shareUrl="";
     private long key = 0;
+
+    public String getShareUrl() {
+        return shareUrl;
+    }
+
+    public void setShareUrl(String shareUrl) {
+        this.shareUrl = shareUrl;
+    }
 
     public long getKey() {
         return key;
