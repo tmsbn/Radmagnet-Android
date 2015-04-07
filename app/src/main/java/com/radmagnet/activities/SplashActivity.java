@@ -4,7 +4,6 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,11 +14,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.radmagnet.customviews.AutoScrollViewPager;
 import com.radmagnet.BaseApplication;
 import com.radmagnet.BuildConfig;
-import com.radmagnet.receivers.CheckAppReceiver;
 import com.radmagnet.adapters.ImagePagerAdapter;
+import com.radmagnet.customviews.AutoScrollViewPager;
+import com.radmagnet.receivers.CheckAppReceiver;
 import com.radmagnet.receivers.RealmCleaningReceiver;
 import com.viewpagerindicator.CirclePageIndicator;
 
@@ -72,7 +71,7 @@ public class SplashActivity extends BaseActivity {
 
                 mSplashScreenIv.setVisibility(View.GONE);
 
-                if (getPreferences(MODE_PRIVATE).getBoolean("showSplash", true)) {
+                if (mPrefs.getBoolean("showSplash", true)) {
                     setUpPager();
 
                 } else {
@@ -88,11 +87,12 @@ public class SplashActivity extends BaseActivity {
     //Since migration API is not ready, the Realm file must be deleted for every upgrade where schema has changed
     //this can be done by just changing the version name,this function will take care of the rest
     private void deleteRealmData() {
-        String versionName= BuildConfig.VERSION_NAME;
-        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
-        if (!preferences.getBoolean(versionName, false)) {
+        String versionName = BuildConfig.VERSION_NAME;
+        if (!mPrefs.getBoolean(versionName, false)) {
             Realm.deleteRealmFile(this);
-            preferences.edit().putBoolean(versionName, true).apply();
+            mPrefs.edit().putBoolean(versionName, true).apply();
+            mPrefs.edit().putString(LAST_UPDATED_KEY, "").apply();
+
         }
 
     }
@@ -136,7 +136,7 @@ public class SplashActivity extends BaseActivity {
     @OnClick(com.radmagnet.R.id.startButton)
     public void startFeed() {
 
-        getPreferences(MODE_PRIVATE).edit().putBoolean("showSplash", false).apply();
+        mPrefs.edit().putBoolean("showSplash", false).apply();
         Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
         SplashActivity.this.startActivity(mainIntent);
         SplashActivity.this.finish();

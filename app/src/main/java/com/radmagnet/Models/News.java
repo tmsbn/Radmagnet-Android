@@ -4,7 +4,6 @@ package com.radmagnet.models;
 import java.util.Date;
 
 import io.realm.RealmObject;
-import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 
 /**
@@ -18,11 +17,12 @@ public class News extends RealmObject {
     @PrimaryKey
     private String id;
 
-
+    //unique id given by server
     private String postId = "";
 
-
     private Date createdDate;
+
+    //for events
     private Date startDate;
 
     private boolean active;
@@ -30,8 +30,10 @@ public class News extends RealmObject {
     private String imageUrl = "";
     private String creator = "";
     private String creatorDp = "";
+
+    //of hotspots
     private String location = "";
-    private String shareUrl="";
+    private String shareUrl = "";
     private long key = 0;
 
     public String getShareUrl() {
@@ -49,7 +51,6 @@ public class News extends RealmObject {
     public void setKey(long key) {
         this.key = key;
     }
-
 
 
     private boolean isBookmarked = false;
@@ -86,9 +87,6 @@ public class News extends RealmObject {
         this.isBookmarked = isBookmarked;
     }
 
-    @Ignore
-    private String source;
-
 
     public String getPostId() {
         return postId;
@@ -118,9 +116,6 @@ public class News extends RealmObject {
         return creatorDp;
     }
 
-    public String getSource() {
-        return source;
-    }
 
     public String getCategory() {
         return category;
@@ -158,7 +153,5 @@ public class News extends RealmObject {
         this.creatorDp = creatorDp;
     }
 
-    public void setSource(String source) {
-        this.source = source;
-    }
+
 }

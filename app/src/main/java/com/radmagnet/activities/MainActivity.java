@@ -22,12 +22,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.radmagnet.adapters.CategoriesAdapter;
-import com.radmagnet.api.RadmagnetApi;
-import com.radmagnet.adapters.NewsAdapter;
-import com.radmagnet.customviews.NotifyRadView;
-import com.radmagnet.adapters.OtherOptionsAdapter;
 import com.radmagnet.R;
+import com.radmagnet.adapters.CategoriesAdapter;
+import com.radmagnet.adapters.NewsAdapter;
+import com.radmagnet.adapters.OtherOptionsAdapter;
+import com.radmagnet.api.RadmagnetApi;
+import com.radmagnet.customviews.NotifyRadView;
 import com.radmagnet.models.Category;
 import com.radmagnet.models.News;
 import com.radmagnet.models.NewsResponse;
@@ -222,11 +222,9 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
     private void fetchLatestNews() {
 
-        long lastUpdatedDate = mPrefs.getLong(LAST_UPDATED_KEY, -1);
-        String date = (lastUpdatedDate != -1) ? String.valueOf(lastUpdatedDate) : "0";
+        String lastUpdatedDate = mPrefs.getString(LAST_UPDATED_KEY, "");
+        String date = (!lastUpdatedDate.equals("")) ? lastUpdatedDate : "0";
         String android_id = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
-
-
         RadmagnetApi.getRestClient().getAnnouncements(date, android_id, new GetNewsCallback());
 
         showLoadingIcon(true);
@@ -301,7 +299,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                     public void execute(Realm realm) {
 
                         realm.copyToRealmOrUpdate(newsList);
-                        mPrefs.edit().putLong(LAST_UPDATED_KEY, newsResponse.getDate().getTime() / 1000).apply();
+                        mPrefs.edit().putString(LAST_UPDATED_KEY, newsResponse.getDate()).apply();
 
                     }
                 });

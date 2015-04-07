@@ -83,7 +83,7 @@ public class RadmagnetApi {
         void getConfig(Callback<ConfigVars> callback);
 
 
-        @GET("/GET/highlights/{date}/v2/{udid}")
+        @GET("/GET/highlights/{date}/v3/{udid}")
         void getAnnouncements(@Path("date") String date,@Path("udid") String udid, Callback<NewsResponse> callback);
 
         @FormUrlEncoded

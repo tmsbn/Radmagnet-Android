@@ -6,10 +6,10 @@ import java.util.Date;
 
 public class NewsResponse {
 
-    private Date date;
+    private String date;
     private ArrayList<News> data;
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 

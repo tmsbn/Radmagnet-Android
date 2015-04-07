@@ -9294,50 +9294,6 @@ com.joanzapata.android.iconify.Iconify$IconValue: com.joanzapata.android.iconify
 com.joanzapata.android.iconify.Iconify$IconValue: com.joanzapata.android.iconify.Iconify$IconValue valueOf(java.lang.String)
 com.joanzapata.android.iconify.Iconify$IconValue: java.lang.String formattedName()
 com.joanzapata.android.iconify.Iconify$IconValue: char character()
-com.radmagnet.AutoScrollViewPager
-com.radmagnet.AutoScrollViewPager: int DEFAULT_INTERVAL
-com.radmagnet.AutoScrollViewPager: int LEFT
-com.radmagnet.AutoScrollViewPager: int RIGHT
-com.radmagnet.AutoScrollViewPager: int SLIDE_BORDER_MODE_NONE
-com.radmagnet.AutoScrollViewPager: int SLIDE_BORDER_MODE_CYCLE
-com.radmagnet.AutoScrollViewPager: int SLIDE_BORDER_MODE_TO_PARENT
-com.radmagnet.AutoScrollViewPager: int SCROLL_WHAT
-com.radmagnet.AutoScrollViewPager: AutoScrollViewPager(android.content.Context)
-com.radmagnet.AutoScrollViewPager: AutoScrollViewPager(android.content.Context,android.util.AttributeSet)
-com.radmagnet.AutoScrollViewPager: void startAutoScroll()
-com.radmagnet.AutoScrollViewPager: void startAutoScroll(int)
-com.radmagnet.AutoScrollViewPager: void stopAutoScroll()
-com.radmagnet.AutoScrollViewPager: void setSwipeScrollDurationFactor(double)
-com.radmagnet.AutoScrollViewPager: void setAutoScrollDurationFactor(double)
-com.radmagnet.AutoScrollViewPager: void scrollOnce()
-com.radmagnet.AutoScrollViewPager: boolean dispatchTouchEvent(android.view.MotionEvent)
-com.radmagnet.AutoScrollViewPager: long getInterval()
-com.radmagnet.AutoScrollViewPager: void setInterval(long)
-com.radmagnet.AutoScrollViewPager: int getDirection()
-com.radmagnet.AutoScrollViewPager: void setDirection(int)
-com.radmagnet.AutoScrollViewPager: boolean isCycle()
-com.radmagnet.AutoScrollViewPager: void setCycle(boolean)
-com.radmagnet.AutoScrollViewPager: boolean isStopScrollWhenTouch()
-com.radmagnet.AutoScrollViewPager: void setStopScrollWhenTouch(boolean)
-com.radmagnet.AutoScrollViewPager: int getSlideBorderMode()
-com.radmagnet.AutoScrollViewPager: void setSlideBorderMode(int)
-com.radmagnet.AutoScrollViewPager: boolean isBorderAnimation()
-com.radmagnet.AutoScrollViewPager: void setBorderAnimation(boolean)
-com.radmagnet.activities.BaseActivity
-com.radmagnet.activities.BaseActivity: com.radmagnet.models.ConfigVars sConfig
-com.radmagnet.activities.BaseActivity: java.lang.String LAST_UPDATED_KEY
-com.radmagnet.activities.BaseActivity: BaseActivity()
-com.radmagnet.activities.BaseActivity: void onCreate(android.os.Bundle)
-com.radmagnet.activities.BaseActivity: com.radmagnet.models.ConfigVars getConfig()
-com.radmagnet.activities.BaseActivity: int getColorFromCategory(java.lang.String)
-com.radmagnet.activities.BaseActivity: java.lang.String getTitleFromConfig(java.lang.String)
-com.radmagnet.activities.BaseActivity: android.graphics.drawable.Drawable applyColorToDrawable(int,int)
-com.radmagnet.activities.BaseActivity: void attachBaseContext(android.content.Context)
-com.radmagnet.activities.BaseActivity: java.lang.CharSequence highlight(java.lang.String,java.lang.String)
-com.radmagnet.activities.BaseActivity: void setupActionBar(boolean,android.support.v7.widget.Toolbar)
-com.radmagnet.activities.BaseActivity: android.text.SpannableString getStyledActionTitle(java.lang.CharSequence)
-com.radmagnet.activities.BaseActivity: int getValueInDp(int)
-com.radmagnet.activities.BaseActivity: java.lang.String getDateSuffix(int)
 com.radmagnet.BaseApplication
 com.radmagnet.BaseApplication: java.lang.String DATE_FORMAT
 com.radmagnet.BaseApplication: int NOTIF_REQUEST_CODE
@@ -9352,58 +9308,6 @@ com.radmagnet.BaseApplication$Categories: com.radmagnet.BaseApplication$Categori
 com.radmagnet.BaseApplication$Categories: com.radmagnet.BaseApplication$Categories[] values()
 com.radmagnet.BaseApplication$Categories: com.radmagnet.BaseApplication$Categories valueOf(java.lang.String)
 com.radmagnet.BaseApplication$Categories: java.lang.String toString()
-com.radmagnet.BaseFragment
-com.radmagnet.BaseFragment: BaseFragment()
-com.radmagnet.BaseFragment: com.radmagnet.activities.BaseActivity getBaseActivity()
-com.radmagnet.activities.BookmarkActivity
-com.radmagnet.activities.BookmarkActivity: android.support.v7.widget.RecyclerView mBookmarksRv
-com.radmagnet.activities.BookmarkActivity: android.support.v7.widget.Toolbar mToolbar
-com.radmagnet.activities.BookmarkActivity: BookmarkActivity()
-com.radmagnet.activities.BookmarkActivity: void onCreate(android.os.Bundle)
-com.radmagnet.activities.BookmarkActivity: boolean onCreateOptionsMenu(android.view.Menu)
-com.radmagnet.activities.BookmarkActivity: void onDestroy()
-com.radmagnet.activities.BookmarkActivity: boolean onOptionsItemSelected(android.view.MenuItem)
-com.radmagnet.activities.BookmarkActivity: boolean onQueryTextSubmit(java.lang.String)
-com.radmagnet.activities.BookmarkActivity: boolean onQueryTextChange(java.lang.String)
-com.radmagnet.activities.BookmarkActivity: boolean onClose()
-com.radmagnet.activities.BookmarkActivity: void onItemClick(com.radmagnet.models.News,int)
-com.radmagnet.activities.BookmarkActivity: void onBackPressed()
-com.radmagnet.activities.BookmarkActivity$$ViewInjector
-com.radmagnet.activities.BookmarkActivity$$ViewInjector: BookmarkActivity$$ViewInjector()
-com.radmagnet.activities.BookmarkActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.BookmarkActivity,java.lang.Object)
-com.radmagnet.activities.BookmarkActivity$$ViewInjector: void reset(com.radmagnet.activities.BookmarkActivity)
-com.radmagnet.activities.BookmarkActivity$$ViewInjector: void reset(java.lang.Object)
-com.radmagnet.activities.BookmarkActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
-com.radmagnet.adapters.BookmarksAdapter
-com.radmagnet.adapters.BookmarksAdapter: BookmarksAdapter(android.content.Context,io.realm.RealmResults,boolean)
-com.radmagnet.adapters.BookmarksAdapter: void setOnItemClickedListener(com.radmagnet.adapters.BookmarksAdapter$BookmarkListener)
-com.radmagnet.adapters.BookmarksAdapter: com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder onCreateViewHolder(android.view.ViewGroup,int)
-com.radmagnet.adapters.BookmarksAdapter: long getItemId(int)
-com.radmagnet.adapters.BookmarksAdapter: void onBindViewHolder(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int)
-com.radmagnet.adapters.BookmarksAdapter: int getItemCount()
-com.radmagnet.adapters.BookmarksAdapter: io.realm.RealmResults getRealmResults()
-com.radmagnet.adapters.BookmarksAdapter: int onGetSwipeReactionType(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int,int)
-com.radmagnet.adapters.BookmarksAdapter: void onSetSwipeBackground(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int)
-com.radmagnet.adapters.BookmarksAdapter: int onSwipeItem(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int)
-com.radmagnet.adapters.BookmarksAdapter: void onPerformAfterSwipeReaction(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int,int)
-com.radmagnet.adapters.BookmarksAdapter: void updateRealmResults(io.realm.RealmResults)
-com.radmagnet.adapters.BookmarksAdapter: void setSearchTerm(java.lang.String)
-com.radmagnet.adapters.BookmarksAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
-com.radmagnet.adapters.BookmarksAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
-com.radmagnet.adapters.BookmarksAdapter: void onPerformAfterSwipeReaction(android.support.v7.widget.RecyclerView$ViewHolder,int,int)
-com.radmagnet.adapters.BookmarksAdapter: int onSwipeItem(android.support.v7.widget.RecyclerView$ViewHolder,int)
-com.radmagnet.adapters.BookmarksAdapter: void onSetSwipeBackground(android.support.v7.widget.RecyclerView$ViewHolder,int)
-com.radmagnet.adapters.BookmarksAdapter: int onGetSwipeReactionType(android.support.v7.widget.RecyclerView$ViewHolder,int,int)
-com.radmagnet.adapters.BookmarksAdapter$BookmarkListener
-com.radmagnet.adapters.BookmarksAdapter$BookmarkListener: void onItemClick(com.radmagnet.models.News,int)
-com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder
-com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.widget.TextView headlineTv
-com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.widget.TextView dateTv
-com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.view.ViewGroup container
-com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.widget.ImageView icon
-com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.widget.TextView categoryTv
-com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: BookmarksAdapter$BookmarksViewHolder(android.view.View)
-com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.view.View getSwipeableContainerView()
 com.radmagnet.BuildConfig
 com.radmagnet.BuildConfig: boolean DEBUG
 com.radmagnet.BuildConfig: java.lang.String APPLICATION_ID
@@ -9412,179 +9316,6 @@ com.radmagnet.BuildConfig: java.lang.String FLAVOR
 com.radmagnet.BuildConfig: int VERSION_CODE
 com.radmagnet.BuildConfig: java.lang.String VERSION_NAME
 com.radmagnet.BuildConfig: BuildConfig()
-com.radmagnet.adapters.CategoriesAdapter
-com.radmagnet.adapters.CategoriesAdapter: CategoriesAdapter(android.content.Context,java.util.ArrayList)
-com.radmagnet.adapters.CategoriesAdapter: void setSelectedCategory(int)
-com.radmagnet.adapters.CategoriesAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
-com.radmagnet.CheckAppReceiver
-com.radmagnet.CheckAppReceiver: CheckAppReceiver()
-com.radmagnet.CheckAppReceiver: void onReceive(android.content.Context,android.content.Intent)
-com.radmagnet.CircleTransform
-com.radmagnet.CircleTransform: CircleTransform()
-com.radmagnet.CircleTransform: android.graphics.Bitmap transform(android.graphics.Bitmap)
-com.radmagnet.CircleTransform: java.lang.String key()
-com.radmagnet.CustomDurationScroller
-com.radmagnet.CustomDurationScroller: CustomDurationScroller(android.content.Context)
-com.radmagnet.CustomDurationScroller: CustomDurationScroller(android.content.Context,android.view.animation.Interpolator)
-com.radmagnet.CustomDurationScroller: void setScrollDurationFactor(double)
-com.radmagnet.CustomDurationScroller: void startScroll(int,int,int,int,int)
-com.radmagnet.activities.DetailsActivity
-com.radmagnet.activities.DetailsActivity: java.util.ArrayList mRealmIds
-com.radmagnet.activities.DetailsActivity: android.support.v4.view.ViewPager mViewPager
-com.radmagnet.activities.DetailsActivity: DetailsActivity()
-com.radmagnet.activities.DetailsActivity: void onCreate(android.os.Bundle)
-com.radmagnet.activities.DetailsActivity: void setupData()
-com.radmagnet.activities.DetailsActivity: void onDestroy()
-com.radmagnet.activities.DetailsActivity: boolean onCreateOptionsMenu(android.view.Menu)
-com.radmagnet.activities.DetailsActivity: boolean onOptionsItemSelected(android.view.MenuItem)
-com.radmagnet.activities.DetailsActivity: void onPageScrolled(int,float,int)
-com.radmagnet.activities.DetailsActivity: void onPageSelected(int)
-com.radmagnet.activities.DetailsActivity: void onPageScrollStateChanged(int)
-com.radmagnet.activities.DetailsActivity: void onFragmentInteraction(android.net.Uri)
-com.radmagnet.activities.DetailsActivity$$ViewInjector
-com.radmagnet.activities.DetailsActivity$$ViewInjector: DetailsActivity$$ViewInjector()
-com.radmagnet.activities.DetailsActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.DetailsActivity,java.lang.Object)
-com.radmagnet.activities.DetailsActivity$$ViewInjector: void reset(com.radmagnet.activities.DetailsActivity)
-com.radmagnet.activities.DetailsActivity$$ViewInjector: void reset(java.lang.Object)
-com.radmagnet.activities.DetailsActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
-com.radmagnet.EventsView
-com.radmagnet.EventsView: EventsView(android.content.Context,android.util.AttributeSet)
-com.radmagnet.EventsView: EventsView(android.content.Context,android.util.AttributeSet,int)
-com.radmagnet.EventsView: EventsView(android.content.Context)
-com.radmagnet.EventsView: void setDate(java.util.Date)
-com.radmagnet.EventsView: void onFinishInflate()
-com.radmagnet.activities.FeedbackActivity
-com.radmagnet.activities.FeedbackActivity: android.widget.EditText mNameEt
-com.radmagnet.activities.FeedbackActivity: android.widget.EditText mEmailEt
-com.radmagnet.activities.FeedbackActivity: android.widget.EditText mCommentsEt
-com.radmagnet.activities.FeedbackActivity: android.widget.Button mSendFeedback
-com.radmagnet.activities.FeedbackActivity: FeedbackActivity()
-com.radmagnet.activities.FeedbackActivity: void onCreate(android.os.Bundle)
-com.radmagnet.activities.FeedbackActivity: void takeToCopyRightPage()
-com.radmagnet.activities.FeedbackActivity: boolean onCreateOptionsMenu(android.view.Menu)
-com.radmagnet.activities.FeedbackActivity: boolean onOptionsItemSelected(android.view.MenuItem)
-com.radmagnet.activities.FeedbackActivity: void sendFeedback()
-com.radmagnet.activities.FeedbackActivity: void enableFeedbackBtn()
-com.radmagnet.activities.FeedbackActivity$$ViewInjector
-com.radmagnet.activities.FeedbackActivity$$ViewInjector: FeedbackActivity$$ViewInjector()
-com.radmagnet.activities.FeedbackActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.FeedbackActivity,java.lang.Object)
-com.radmagnet.activities.FeedbackActivity$$ViewInjector: void reset(com.radmagnet.activities.FeedbackActivity)
-com.radmagnet.activities.FeedbackActivity$$ViewInjector: void reset(java.lang.Object)
-com.radmagnet.activities.FeedbackActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
-com.radmagnet.adapters.ImagePagerAdapter
-com.radmagnet.adapters.ImagePagerAdapter: ImagePagerAdapter(android.content.Context,java.util.List)
-com.radmagnet.adapters.ImagePagerAdapter: int getCount()
-com.radmagnet.adapters.ImagePagerAdapter: boolean isViewFromObject(android.view.View,java.lang.Object)
-com.radmagnet.adapters.ImagePagerAdapter: java.lang.Object instantiateItem(android.view.ViewGroup,int)
-com.radmagnet.adapters.ImagePagerAdapter: void destroyItem(android.view.ViewGroup,int,java.lang.Object)
-com.radmagnet.ImageServicePagerAdapter
-com.radmagnet.ImageServicePagerAdapter: ImageServicePagerAdapter(android.content.Context,java.util.List)
-com.radmagnet.ImageServicePagerAdapter: int getCount()
-com.radmagnet.ImageServicePagerAdapter: boolean isViewFromObject(android.view.View,java.lang.Object)
-com.radmagnet.ImageServicePagerAdapter: java.lang.Object instantiateItem(android.view.ViewGroup,int)
-com.radmagnet.ImageServicePagerAdapter: void destroyItem(android.view.ViewGroup,int,java.lang.Object)
-com.radmagnet.activities.MainActivity
-com.radmagnet.activities.MainActivity: android.support.v7.widget.RecyclerView mNewsRv
-com.radmagnet.activities.MainActivity: android.support.v4.widget.DrawerLayout mDrawerLayout
-com.radmagnet.activities.MainActivity: android.widget.ListView mCategoriesLv
-com.radmagnet.activities.MainActivity: android.widget.ListView mOtherOptionsLv
-com.radmagnet.activities.MainActivity: android.support.v7.widget.Toolbar mToolbar
-com.radmagnet.activities.MainActivity: android.support.v4.widget.SwipeRefreshLayout mSwipeLayout
-com.radmagnet.activities.MainActivity: com.radmagnet.NotifyRadView newRadsTv
-com.radmagnet.activities.MainActivity: android.widget.TextView emptyViewTv
-com.radmagnet.activities.MainActivity: MainActivity()
-com.radmagnet.activities.MainActivity: void onCreate(android.os.Bundle)
-com.radmagnet.activities.MainActivity: void onRefresh()
-com.radmagnet.activities.MainActivity: boolean onClose()
-com.radmagnet.activities.MainActivity: void onItemClick(com.radmagnet.models.News,int)
-com.radmagnet.activities.MainActivity: void onDestroy()
-com.radmagnet.activities.MainActivity: void onPostCreate(android.os.Bundle)
-com.radmagnet.activities.MainActivity: void onConfigurationChanged(android.content.res.Configuration)
-com.radmagnet.activities.MainActivity: void onBackPressed()
-com.radmagnet.activities.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)
-com.radmagnet.activities.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)
-com.radmagnet.activities.MainActivity: void onItemClick(android.widget.AdapterView,android.view.View,int,long)
-com.radmagnet.activities.MainActivity: boolean onQueryTextSubmit(java.lang.String)
-com.radmagnet.activities.MainActivity: boolean onQueryTextChange(java.lang.String)
-com.radmagnet.activities.MainActivity$$ViewInjector
-com.radmagnet.activities.MainActivity$$ViewInjector: MainActivity$$ViewInjector()
-com.radmagnet.activities.MainActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.MainActivity,java.lang.Object)
-com.radmagnet.activities.MainActivity$$ViewInjector: void reset(com.radmagnet.activities.MainActivity)
-com.radmagnet.activities.MainActivity$$ViewInjector: void reset(java.lang.Object)
-com.radmagnet.activities.MainActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
-com.radmagnet.Networking
-com.radmagnet.Networking: Networking()
-com.radmagnet.Networking: com.radmagnet.Networking$RestInterface getRestClient()
-com.radmagnet.Networking$RestInterface
-com.radmagnet.Networking$RestInterface: void getConfig(retrofit.Callback)
-com.radmagnet.Networking$RestInterface: void getAnnouncements(java.lang.String,java.lang.String,retrofit.Callback)
-com.radmagnet.Networking$RestInterface: void getFeedback(java.lang.String,java.lang.String,java.lang.String,java.lang.String,retrofit.Callback)
-com.radmagnet.adapters.NewsAdapter
-com.radmagnet.adapters.NewsAdapter: NewsAdapter(android.content.Context,io.realm.RealmResults,boolean)
-com.radmagnet.adapters.NewsAdapter: void setOnItemClickedListener(com.radmagnet.adapters.NewsAdapter$NewsItemClickListener)
-com.radmagnet.adapters.NewsAdapter: com.radmagnet.adapters.NewsAdapter$NewsHolder onCreateViewHolder(android.view.ViewGroup,int)
-com.radmagnet.adapters.NewsAdapter: long getItemId(int)
-com.radmagnet.adapters.NewsAdapter: void onBindViewHolder(com.radmagnet.adapters.NewsAdapter$NewsHolder,int)
-com.radmagnet.adapters.NewsAdapter: int getItemCount()
-com.radmagnet.adapters.NewsAdapter: io.realm.RealmResults getRealmResults()
-com.radmagnet.adapters.NewsAdapter: void setSearchTerm(java.lang.String)
-com.radmagnet.adapters.NewsAdapter: void updateRealmResults(io.realm.RealmResults)
-com.radmagnet.adapters.NewsAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
-com.radmagnet.adapters.NewsAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
-com.radmagnet.adapters.NewsAdapter$NewsHolder
-com.radmagnet.adapters.NewsAdapter$NewsHolder: NewsAdapter$NewsHolder(android.view.View)
-com.radmagnet.adapters.NewsAdapter$NewsItemClickListener
-com.radmagnet.adapters.NewsAdapter$NewsItemClickListener: void onItemClick(com.radmagnet.models.News,int)
-com.radmagnet.fragment.NewsFragment
-com.radmagnet.fragment.NewsFragment: java.lang.String ARG_PARAM1
-com.radmagnet.fragment.NewsFragment: android.widget.TextView mHeadlineTv
-com.radmagnet.fragment.NewsFragment: android.widget.TextView mDateTv
-com.radmagnet.fragment.NewsFragment: android.widget.TextView mCreatorTv
-com.radmagnet.fragment.NewsFragment: android.widget.ImageView mCreatorDpIv
-com.radmagnet.fragment.NewsFragment: android.widget.ImageView mNewsIv
-com.radmagnet.fragment.NewsFragment: android.widget.TextView mCategoryTv
-com.radmagnet.fragment.NewsFragment: android.widget.LinearLayout mSpecificDetailsContainer
-com.radmagnet.fragment.NewsFragment: android.view.View mCategoryColor
-com.radmagnet.fragment.NewsFragment: android.webkit.WebView mWebView
-com.radmagnet.fragment.NewsFragment: android.widget.TextView mLocation
-com.radmagnet.fragment.NewsFragment: android.widget.ProgressBar mProgressBar
-com.radmagnet.fragment.NewsFragment: android.widget.TextView newsCategoryTitle
-com.radmagnet.fragment.NewsFragment: android.widget.ScrollView mScrollView
-com.radmagnet.fragment.NewsFragment: NewsFragment()
-com.radmagnet.fragment.NewsFragment: com.radmagnet.fragment.NewsFragment newInstance(java.lang.String)
-com.radmagnet.fragment.NewsFragment: void onCreate(android.os.Bundle)
-com.radmagnet.fragment.NewsFragment: boolean onOptionsItemSelected(android.view.MenuItem)
-com.radmagnet.fragment.NewsFragment: void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater)
-com.radmagnet.fragment.NewsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
-com.radmagnet.fragment.NewsFragment: void onResume()
-com.radmagnet.fragment.NewsFragment: void setupWebView()
-com.radmagnet.fragment.NewsFragment: void bookMarkItem()
-com.radmagnet.fragment.NewsFragment: void updateBackIcon()
-com.radmagnet.fragment.NewsFragment: void updateBookmarkButton()
-com.radmagnet.fragment.NewsFragment: void onAttach(android.app.Activity)
-com.radmagnet.fragment.NewsFragment: void onDetach()
-com.radmagnet.fragment.NewsFragment$$ViewInjector
-com.radmagnet.fragment.NewsFragment$$ViewInjector: NewsFragment$$ViewInjector()
-com.radmagnet.fragment.NewsFragment$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.fragment.NewsFragment,java.lang.Object)
-com.radmagnet.fragment.NewsFragment$$ViewInjector: void reset(com.radmagnet.fragment.NewsFragment)
-com.radmagnet.fragment.NewsFragment$$ViewInjector: void reset(java.lang.Object)
-com.radmagnet.fragment.NewsFragment$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
-com.radmagnet.fragment.NewsFragment$OnFragmentInteractionListener
-com.radmagnet.fragment.NewsFragment$OnFragmentInteractionListener: void onFragmentInteraction(android.net.Uri)
-com.radmagnet.NotifyRadView
-com.radmagnet.NotifyRadView: NotifyRadView(android.content.Context,android.util.AttributeSet)
-com.radmagnet.NotifyRadView: void disableViewsOnAnimation(android.view.View[])
-com.radmagnet.NotifyRadView: void showTempMessage(java.lang.String)
-com.radmagnet.NotifyRadView$CustomInterpolator
-com.radmagnet.NotifyRadView$CustomInterpolator: NotifyRadView$CustomInterpolator(com.radmagnet.NotifyRadView,float)
-com.radmagnet.NotifyRadView$CustomInterpolator: float getInterpolation(float)
-com.radmagnet.OtherOptions
-com.radmagnet.OtherOptions: OtherOptions(java.lang.String,java.lang.String)
-com.radmagnet.OtherOptions: java.lang.String getName()
-com.radmagnet.OtherOptions: java.lang.String getColor()
-com.radmagnet.adapters.OtherOptionsAdapter
-com.radmagnet.adapters.OtherOptionsAdapter: OtherOptionsAdapter(android.content.Context,java.util.ArrayList)
-com.radmagnet.adapters.OtherOptionsAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
 com.radmagnet.R
 com.radmagnet.R: R()
 com.radmagnet.R$anim
@@ -10881,11 +10612,108 @@ com.radmagnet.R$styleable: int ViewStubCompat_android_id
 com.radmagnet.R$styleable: int ViewStubCompat_android_inflatedId
 com.radmagnet.R$styleable: int ViewStubCompat_android_layout
 com.radmagnet.R$styleable: R$styleable()
-com.radmagnet.RealmCleaningReceiver
-com.radmagnet.RealmCleaningReceiver: RealmCleaningReceiver()
-com.radmagnet.RealmCleaningReceiver: void onReceive(android.content.Context,android.content.Intent)
+com.radmagnet.activities.BaseActivity
+com.radmagnet.activities.BaseActivity: com.radmagnet.models.ConfigVars sConfig
+com.radmagnet.activities.BaseActivity: java.lang.String LAST_UPDATED_KEY
+com.radmagnet.activities.BaseActivity: BaseActivity()
+com.radmagnet.activities.BaseActivity: void onCreate(android.os.Bundle)
+com.radmagnet.activities.BaseActivity: com.radmagnet.models.ConfigVars getConfig()
+com.radmagnet.activities.BaseActivity: int getColorFromCategory(java.lang.String)
+com.radmagnet.activities.BaseActivity: java.lang.String getTitleFromConfig(java.lang.String)
+com.radmagnet.activities.BaseActivity: android.graphics.drawable.Drawable applyColorToDrawable(int,int)
+com.radmagnet.activities.BaseActivity: void attachBaseContext(android.content.Context)
+com.radmagnet.activities.BaseActivity: java.lang.CharSequence highlight(java.lang.String,java.lang.String)
+com.radmagnet.activities.BaseActivity: void setupActionBar(boolean,android.support.v7.widget.Toolbar)
+com.radmagnet.activities.BaseActivity: android.text.SpannableString getStyledActionTitle(java.lang.CharSequence)
+com.radmagnet.activities.BaseActivity: int getValueInDp(int)
+com.radmagnet.activities.BaseActivity: java.lang.String getDateSuffix(int)
+com.radmagnet.activities.BookmarkActivity
+com.radmagnet.activities.BookmarkActivity: android.support.v7.widget.RecyclerView mBookmarksRv
+com.radmagnet.activities.BookmarkActivity: android.support.v7.widget.Toolbar mToolbar
+com.radmagnet.activities.BookmarkActivity: BookmarkActivity()
+com.radmagnet.activities.BookmarkActivity: void onCreate(android.os.Bundle)
+com.radmagnet.activities.BookmarkActivity: boolean onCreateOptionsMenu(android.view.Menu)
+com.radmagnet.activities.BookmarkActivity: void onDestroy()
+com.radmagnet.activities.BookmarkActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+com.radmagnet.activities.BookmarkActivity: boolean onQueryTextSubmit(java.lang.String)
+com.radmagnet.activities.BookmarkActivity: boolean onQueryTextChange(java.lang.String)
+com.radmagnet.activities.BookmarkActivity: boolean onClose()
+com.radmagnet.activities.BookmarkActivity: void onItemClick(com.radmagnet.models.News,int)
+com.radmagnet.activities.BookmarkActivity: void onBackPressed()
+com.radmagnet.activities.BookmarkActivity$$ViewInjector
+com.radmagnet.activities.BookmarkActivity$$ViewInjector: BookmarkActivity$$ViewInjector()
+com.radmagnet.activities.BookmarkActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.BookmarkActivity,java.lang.Object)
+com.radmagnet.activities.BookmarkActivity$$ViewInjector: void reset(com.radmagnet.activities.BookmarkActivity)
+com.radmagnet.activities.BookmarkActivity$$ViewInjector: void reset(java.lang.Object)
+com.radmagnet.activities.BookmarkActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.radmagnet.activities.DetailsActivity
+com.radmagnet.activities.DetailsActivity: java.util.ArrayList mRealmIds
+com.radmagnet.activities.DetailsActivity: android.support.v4.view.ViewPager mViewPager
+com.radmagnet.activities.DetailsActivity: DetailsActivity()
+com.radmagnet.activities.DetailsActivity: void onCreate(android.os.Bundle)
+com.radmagnet.activities.DetailsActivity: void setupData()
+com.radmagnet.activities.DetailsActivity: void onDestroy()
+com.radmagnet.activities.DetailsActivity: boolean onCreateOptionsMenu(android.view.Menu)
+com.radmagnet.activities.DetailsActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+com.radmagnet.activities.DetailsActivity: void onPageScrolled(int,float,int)
+com.radmagnet.activities.DetailsActivity: void onPageSelected(int)
+com.radmagnet.activities.DetailsActivity: void onPageScrollStateChanged(int)
+com.radmagnet.activities.DetailsActivity: void onFragmentInteraction(android.net.Uri)
+com.radmagnet.activities.DetailsActivity$$ViewInjector
+com.radmagnet.activities.DetailsActivity$$ViewInjector: DetailsActivity$$ViewInjector()
+com.radmagnet.activities.DetailsActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.DetailsActivity,java.lang.Object)
+com.radmagnet.activities.DetailsActivity$$ViewInjector: void reset(com.radmagnet.activities.DetailsActivity)
+com.radmagnet.activities.DetailsActivity$$ViewInjector: void reset(java.lang.Object)
+com.radmagnet.activities.DetailsActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.radmagnet.activities.FeedbackActivity
+com.radmagnet.activities.FeedbackActivity: android.widget.EditText mNameEt
+com.radmagnet.activities.FeedbackActivity: android.widget.EditText mEmailEt
+com.radmagnet.activities.FeedbackActivity: android.widget.EditText mCommentsEt
+com.radmagnet.activities.FeedbackActivity: android.widget.Button mSendFeedback
+com.radmagnet.activities.FeedbackActivity: FeedbackActivity()
+com.radmagnet.activities.FeedbackActivity: void onCreate(android.os.Bundle)
+com.radmagnet.activities.FeedbackActivity: void takeToCopyRightPage()
+com.radmagnet.activities.FeedbackActivity: boolean onCreateOptionsMenu(android.view.Menu)
+com.radmagnet.activities.FeedbackActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+com.radmagnet.activities.FeedbackActivity: void sendFeedback()
+com.radmagnet.activities.FeedbackActivity: void enableFeedbackBtn()
+com.radmagnet.activities.FeedbackActivity$$ViewInjector
+com.radmagnet.activities.FeedbackActivity$$ViewInjector: FeedbackActivity$$ViewInjector()
+com.radmagnet.activities.FeedbackActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.FeedbackActivity,java.lang.Object)
+com.radmagnet.activities.FeedbackActivity$$ViewInjector: void reset(com.radmagnet.activities.FeedbackActivity)
+com.radmagnet.activities.FeedbackActivity$$ViewInjector: void reset(java.lang.Object)
+com.radmagnet.activities.FeedbackActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.radmagnet.activities.MainActivity
+com.radmagnet.activities.MainActivity: android.support.v7.widget.RecyclerView mNewsRv
+com.radmagnet.activities.MainActivity: android.support.v4.widget.DrawerLayout mDrawerLayout
+com.radmagnet.activities.MainActivity: android.widget.ListView mCategoriesLv
+com.radmagnet.activities.MainActivity: android.widget.ListView mOtherOptionsLv
+com.radmagnet.activities.MainActivity: android.support.v7.widget.Toolbar mToolbar
+com.radmagnet.activities.MainActivity: android.support.v4.widget.SwipeRefreshLayout mSwipeLayout
+com.radmagnet.activities.MainActivity: com.radmagnet.customviews.NotifyRadView newRadsTv
+com.radmagnet.activities.MainActivity: android.widget.TextView emptyViewTv
+com.radmagnet.activities.MainActivity: MainActivity()
+com.radmagnet.activities.MainActivity: void onCreate(android.os.Bundle)
+com.radmagnet.activities.MainActivity: void onRefresh()
+com.radmagnet.activities.MainActivity: boolean onClose()
+com.radmagnet.activities.MainActivity: void onItemClick(com.radmagnet.models.News,int)
+com.radmagnet.activities.MainActivity: void onDestroy()
+com.radmagnet.activities.MainActivity: void onPostCreate(android.os.Bundle)
+com.radmagnet.activities.MainActivity: void onConfigurationChanged(android.content.res.Configuration)
+com.radmagnet.activities.MainActivity: void onBackPressed()
+com.radmagnet.activities.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)
+com.radmagnet.activities.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+com.radmagnet.activities.MainActivity: void onItemClick(android.widget.AdapterView,android.view.View,int,long)
+com.radmagnet.activities.MainActivity: boolean onQueryTextSubmit(java.lang.String)
+com.radmagnet.activities.MainActivity: boolean onQueryTextChange(java.lang.String)
+com.radmagnet.activities.MainActivity$$ViewInjector
+com.radmagnet.activities.MainActivity$$ViewInjector: MainActivity$$ViewInjector()
+com.radmagnet.activities.MainActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.MainActivity,java.lang.Object)
+com.radmagnet.activities.MainActivity$$ViewInjector: void reset(com.radmagnet.activities.MainActivity)
+com.radmagnet.activities.MainActivity$$ViewInjector: void reset(java.lang.Object)
+com.radmagnet.activities.MainActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
 com.radmagnet.activities.SplashActivity
-com.radmagnet.activities.SplashActivity: com.radmagnet.AutoScrollViewPager mIntroPager
+com.radmagnet.activities.SplashActivity: com.radmagnet.customviews.AutoScrollViewPager mIntroPager
 com.radmagnet.activities.SplashActivity: android.widget.ImageView mSplashScreenIv
 com.radmagnet.activities.SplashActivity: com.viewpagerindicator.CirclePageIndicator mCirclePageIndicator
 com.radmagnet.activities.SplashActivity: android.widget.Button mStartButton
@@ -10903,6 +10731,159 @@ com.radmagnet.activities.SplashActivity$$ViewInjector: void inject(butterknife.B
 com.radmagnet.activities.SplashActivity$$ViewInjector: void reset(com.radmagnet.activities.SplashActivity)
 com.radmagnet.activities.SplashActivity$$ViewInjector: void reset(java.lang.Object)
 com.radmagnet.activities.SplashActivity$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.radmagnet.adapters.BookmarksAdapter
+com.radmagnet.adapters.BookmarksAdapter: BookmarksAdapter(android.content.Context,io.realm.RealmResults,boolean)
+com.radmagnet.adapters.BookmarksAdapter: void setOnItemClickedListener(com.radmagnet.adapters.BookmarksAdapter$BookmarkListener)
+com.radmagnet.adapters.BookmarksAdapter: com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder onCreateViewHolder(android.view.ViewGroup,int)
+com.radmagnet.adapters.BookmarksAdapter: long getItemId(int)
+com.radmagnet.adapters.BookmarksAdapter: void onBindViewHolder(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int)
+com.radmagnet.adapters.BookmarksAdapter: int getItemCount()
+com.radmagnet.adapters.BookmarksAdapter: io.realm.RealmResults getRealmResults()
+com.radmagnet.adapters.BookmarksAdapter: int onGetSwipeReactionType(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int,int)
+com.radmagnet.adapters.BookmarksAdapter: void onSetSwipeBackground(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int)
+com.radmagnet.adapters.BookmarksAdapter: int onSwipeItem(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int)
+com.radmagnet.adapters.BookmarksAdapter: void onPerformAfterSwipeReaction(com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder,int,int)
+com.radmagnet.adapters.BookmarksAdapter: void updateRealmResults(io.realm.RealmResults)
+com.radmagnet.adapters.BookmarksAdapter: void setSearchTerm(java.lang.String)
+com.radmagnet.adapters.BookmarksAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
+com.radmagnet.adapters.BookmarksAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
+com.radmagnet.adapters.BookmarksAdapter: void onPerformAfterSwipeReaction(android.support.v7.widget.RecyclerView$ViewHolder,int,int)
+com.radmagnet.adapters.BookmarksAdapter: int onSwipeItem(android.support.v7.widget.RecyclerView$ViewHolder,int)
+com.radmagnet.adapters.BookmarksAdapter: void onSetSwipeBackground(android.support.v7.widget.RecyclerView$ViewHolder,int)
+com.radmagnet.adapters.BookmarksAdapter: int onGetSwipeReactionType(android.support.v7.widget.RecyclerView$ViewHolder,int,int)
+com.radmagnet.adapters.BookmarksAdapter$BookmarkListener
+com.radmagnet.adapters.BookmarksAdapter$BookmarkListener: void onItemClick(com.radmagnet.models.News,int)
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.widget.TextView headlineTv
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.widget.TextView dateTv
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.view.ViewGroup container
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.widget.ImageView icon
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.widget.TextView categoryTv
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: BookmarksAdapter$BookmarksViewHolder(android.view.View)
+com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder: android.view.View getSwipeableContainerView()
+com.radmagnet.adapters.CategoriesAdapter
+com.radmagnet.adapters.CategoriesAdapter: CategoriesAdapter(android.content.Context,java.util.ArrayList)
+com.radmagnet.adapters.CategoriesAdapter: void setSelectedCategory(int)
+com.radmagnet.adapters.CategoriesAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+com.radmagnet.adapters.ImagePagerAdapter
+com.radmagnet.adapters.ImagePagerAdapter: ImagePagerAdapter(android.content.Context,java.util.List)
+com.radmagnet.adapters.ImagePagerAdapter: int getCount()
+com.radmagnet.adapters.ImagePagerAdapter: boolean isViewFromObject(android.view.View,java.lang.Object)
+com.radmagnet.adapters.ImagePagerAdapter: java.lang.Object instantiateItem(android.view.ViewGroup,int)
+com.radmagnet.adapters.ImagePagerAdapter: void destroyItem(android.view.ViewGroup,int,java.lang.Object)
+com.radmagnet.adapters.ImageServicePagerAdapter
+com.radmagnet.adapters.ImageServicePagerAdapter: ImageServicePagerAdapter(android.content.Context,java.util.List)
+com.radmagnet.adapters.ImageServicePagerAdapter: int getCount()
+com.radmagnet.adapters.ImageServicePagerAdapter: boolean isViewFromObject(android.view.View,java.lang.Object)
+com.radmagnet.adapters.ImageServicePagerAdapter: java.lang.Object instantiateItem(android.view.ViewGroup,int)
+com.radmagnet.adapters.ImageServicePagerAdapter: void destroyItem(android.view.ViewGroup,int,java.lang.Object)
+com.radmagnet.adapters.NewsAdapter
+com.radmagnet.adapters.NewsAdapter: NewsAdapter(android.content.Context,io.realm.RealmResults,boolean)
+com.radmagnet.adapters.NewsAdapter: void setOnItemClickedListener(com.radmagnet.adapters.NewsAdapter$NewsItemClickListener)
+com.radmagnet.adapters.NewsAdapter: com.radmagnet.adapters.NewsAdapter$NewsHolder onCreateViewHolder(android.view.ViewGroup,int)
+com.radmagnet.adapters.NewsAdapter: long getItemId(int)
+com.radmagnet.adapters.NewsAdapter: void onBindViewHolder(com.radmagnet.adapters.NewsAdapter$NewsHolder,int)
+com.radmagnet.adapters.NewsAdapter: int getItemCount()
+com.radmagnet.adapters.NewsAdapter: io.realm.RealmResults getRealmResults()
+com.radmagnet.adapters.NewsAdapter: void setSearchTerm(java.lang.String)
+com.radmagnet.adapters.NewsAdapter: void updateRealmResults(io.realm.RealmResults)
+com.radmagnet.adapters.NewsAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
+com.radmagnet.adapters.NewsAdapter: android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int)
+com.radmagnet.adapters.NewsAdapter$NewsHolder
+com.radmagnet.adapters.NewsAdapter$NewsHolder: NewsAdapter$NewsHolder(android.view.View)
+com.radmagnet.adapters.NewsAdapter$NewsItemClickListener
+com.radmagnet.adapters.NewsAdapter$NewsItemClickListener: void onItemClick(com.radmagnet.models.News,int)
+com.radmagnet.adapters.OtherOptionsAdapter
+com.radmagnet.adapters.OtherOptionsAdapter: OtherOptionsAdapter(android.content.Context,java.util.ArrayList)
+com.radmagnet.adapters.OtherOptionsAdapter: android.view.View getView(int,android.view.View,android.view.ViewGroup)
+com.radmagnet.api.RadmagnetApi
+com.radmagnet.api.RadmagnetApi: RadmagnetApi()
+com.radmagnet.api.RadmagnetApi: com.radmagnet.api.RadmagnetApi$RestInterface getRestClient()
+com.radmagnet.api.RadmagnetApi$RestInterface
+com.radmagnet.api.RadmagnetApi$RestInterface: void getConfig(retrofit.Callback)
+com.radmagnet.api.RadmagnetApi$RestInterface: void getAnnouncements(java.lang.String,java.lang.String,retrofit.Callback)
+com.radmagnet.api.RadmagnetApi$RestInterface: void getFeedback(java.lang.String,java.lang.String,java.lang.String,java.lang.String,retrofit.Callback)
+com.radmagnet.customviews.AutoScrollViewPager
+com.radmagnet.customviews.AutoScrollViewPager: int DEFAULT_INTERVAL
+com.radmagnet.customviews.AutoScrollViewPager: int LEFT
+com.radmagnet.customviews.AutoScrollViewPager: int RIGHT
+com.radmagnet.customviews.AutoScrollViewPager: int SLIDE_BORDER_MODE_NONE
+com.radmagnet.customviews.AutoScrollViewPager: int SLIDE_BORDER_MODE_CYCLE
+com.radmagnet.customviews.AutoScrollViewPager: int SLIDE_BORDER_MODE_TO_PARENT
+com.radmagnet.customviews.AutoScrollViewPager: int SCROLL_WHAT
+com.radmagnet.customviews.AutoScrollViewPager: AutoScrollViewPager(android.content.Context)
+com.radmagnet.customviews.AutoScrollViewPager: AutoScrollViewPager(android.content.Context,android.util.AttributeSet)
+com.radmagnet.customviews.AutoScrollViewPager: void startAutoScroll()
+com.radmagnet.customviews.AutoScrollViewPager: void startAutoScroll(int)
+com.radmagnet.customviews.AutoScrollViewPager: void stopAutoScroll()
+com.radmagnet.customviews.AutoScrollViewPager: void setSwipeScrollDurationFactor(double)
+com.radmagnet.customviews.AutoScrollViewPager: void setAutoScrollDurationFactor(double)
+com.radmagnet.customviews.AutoScrollViewPager: void scrollOnce()
+com.radmagnet.customviews.AutoScrollViewPager: boolean dispatchTouchEvent(android.view.MotionEvent)
+com.radmagnet.customviews.AutoScrollViewPager: long getInterval()
+com.radmagnet.customviews.AutoScrollViewPager: void setInterval(long)
+com.radmagnet.customviews.AutoScrollViewPager: int getDirection()
+com.radmagnet.customviews.AutoScrollViewPager: void setDirection(int)
+com.radmagnet.customviews.AutoScrollViewPager: boolean isCycle()
+com.radmagnet.customviews.AutoScrollViewPager: void setCycle(boolean)
+com.radmagnet.customviews.AutoScrollViewPager: boolean isStopScrollWhenTouch()
+com.radmagnet.customviews.AutoScrollViewPager: void setStopScrollWhenTouch(boolean)
+com.radmagnet.customviews.AutoScrollViewPager: int getSlideBorderMode()
+com.radmagnet.customviews.AutoScrollViewPager: void setSlideBorderMode(int)
+com.radmagnet.customviews.AutoScrollViewPager: boolean isBorderAnimation()
+com.radmagnet.customviews.AutoScrollViewPager: void setBorderAnimation(boolean)
+com.radmagnet.customviews.EventsView
+com.radmagnet.customviews.EventsView: EventsView(android.content.Context,android.util.AttributeSet)
+com.radmagnet.customviews.EventsView: EventsView(android.content.Context,android.util.AttributeSet,int)
+com.radmagnet.customviews.EventsView: EventsView(android.content.Context)
+com.radmagnet.customviews.EventsView: void setDate(java.util.Date)
+com.radmagnet.customviews.EventsView: void onFinishInflate()
+com.radmagnet.customviews.NotifyRadView
+com.radmagnet.customviews.NotifyRadView: NotifyRadView(android.content.Context,android.util.AttributeSet)
+com.radmagnet.customviews.NotifyRadView: void disableViewsOnAnimation(android.view.View[])
+com.radmagnet.customviews.NotifyRadView: void showTempMessage(java.lang.String)
+com.radmagnet.customviews.NotifyRadView$CustomInterpolator
+com.radmagnet.customviews.NotifyRadView$CustomInterpolator: NotifyRadView$CustomInterpolator(com.radmagnet.customviews.NotifyRadView,float)
+com.radmagnet.customviews.NotifyRadView$CustomInterpolator: float getInterpolation(float)
+com.radmagnet.fragment.BaseFragment
+com.radmagnet.fragment.BaseFragment: BaseFragment()
+com.radmagnet.fragment.BaseFragment: com.radmagnet.activities.BaseActivity getBaseActivity()
+com.radmagnet.fragment.NewsFragment
+com.radmagnet.fragment.NewsFragment: java.lang.String ARG_PARAM1
+com.radmagnet.fragment.NewsFragment: android.widget.TextView mHeadlineTv
+com.radmagnet.fragment.NewsFragment: android.widget.TextView mDateTv
+com.radmagnet.fragment.NewsFragment: android.widget.TextView mCreatorTv
+com.radmagnet.fragment.NewsFragment: android.widget.ImageView mCreatorDpIv
+com.radmagnet.fragment.NewsFragment: android.widget.ImageView mNewsIv
+com.radmagnet.fragment.NewsFragment: android.widget.TextView mCategoryTv
+com.radmagnet.fragment.NewsFragment: android.widget.LinearLayout mSpecificDetailsContainer
+com.radmagnet.fragment.NewsFragment: android.view.View mCategoryColor
+com.radmagnet.fragment.NewsFragment: android.webkit.WebView mWebView
+com.radmagnet.fragment.NewsFragment: android.widget.TextView mLocation
+com.radmagnet.fragment.NewsFragment: android.widget.ProgressBar mProgressBar
+com.radmagnet.fragment.NewsFragment: android.widget.TextView newsCategoryTitle
+com.radmagnet.fragment.NewsFragment: android.widget.ScrollView mScrollView
+com.radmagnet.fragment.NewsFragment: NewsFragment()
+com.radmagnet.fragment.NewsFragment: com.radmagnet.fragment.NewsFragment newInstance(java.lang.String)
+com.radmagnet.fragment.NewsFragment: void onCreate(android.os.Bundle)
+com.radmagnet.fragment.NewsFragment: boolean onOptionsItemSelected(android.view.MenuItem)
+com.radmagnet.fragment.NewsFragment: void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater)
+com.radmagnet.fragment.NewsFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
+com.radmagnet.fragment.NewsFragment: void onResume()
+com.radmagnet.fragment.NewsFragment: void setupWebView()
+com.radmagnet.fragment.NewsFragment: void bookMarkItem()
+com.radmagnet.fragment.NewsFragment: void updateBackIcon()
+com.radmagnet.fragment.NewsFragment: void updateBookmarkButton()
+com.radmagnet.fragment.NewsFragment: void onAttach(android.app.Activity)
+com.radmagnet.fragment.NewsFragment: void onDetach()
+com.radmagnet.fragment.NewsFragment$$ViewInjector
+com.radmagnet.fragment.NewsFragment$$ViewInjector: NewsFragment$$ViewInjector()
+com.radmagnet.fragment.NewsFragment$$ViewInjector: void inject(butterknife.ButterKnife$Finder,com.radmagnet.fragment.NewsFragment,java.lang.Object)
+com.radmagnet.fragment.NewsFragment$$ViewInjector: void reset(com.radmagnet.fragment.NewsFragment)
+com.radmagnet.fragment.NewsFragment$$ViewInjector: void reset(java.lang.Object)
+com.radmagnet.fragment.NewsFragment$$ViewInjector: void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object)
+com.radmagnet.fragment.NewsFragment$OnFragmentInteractionListener
+com.radmagnet.fragment.NewsFragment$OnFragmentInteractionListener: void onFragmentInteraction(android.net.Uri)
 com.radmagnet.models.Category
 com.radmagnet.models.Category: java.lang.String name
 com.radmagnet.models.Category: java.lang.String color
@@ -10949,7 +10930,6 @@ com.radmagnet.models.News: java.lang.String location
 com.radmagnet.models.News: java.lang.String shareUrl
 com.radmagnet.models.News: long key
 com.radmagnet.models.News: boolean isBookmarked
-com.radmagnet.models.News: java.lang.String source
 com.radmagnet.models.News: News()
 com.radmagnet.models.News: java.lang.String getShareUrl()
 com.radmagnet.models.News: void setShareUrl(java.lang.String)
@@ -10970,7 +10950,6 @@ com.radmagnet.models.News: java.lang.String getHeadline()
 com.radmagnet.models.News: java.lang.String getImageUrl()
 com.radmagnet.models.News: java.lang.String getCreator()
 com.radmagnet.models.News: java.lang.String getCreatorDp()
-com.radmagnet.models.News: java.lang.String getSource()
 com.radmagnet.models.News: java.lang.String getCategory()
 com.radmagnet.models.News: void setCategory(java.lang.String)
 com.radmagnet.models.News: void setPostId(java.lang.String)
@@ -10980,13 +10959,33 @@ com.radmagnet.models.News: void setHeadline(java.lang.String)
 com.radmagnet.models.News: void setImageUrl(java.lang.String)
 com.radmagnet.models.News: void setCreator(java.lang.String)
 com.radmagnet.models.News: void setCreatorDp(java.lang.String)
-com.radmagnet.models.News: void setSource(java.lang.String)
 com.radmagnet.models.NewsResponse
-com.radmagnet.models.NewsResponse: java.util.Date date
+com.radmagnet.models.NewsResponse: java.lang.String date
 com.radmagnet.models.NewsResponse: java.util.ArrayList data
 com.radmagnet.models.NewsResponse: NewsResponse()
-com.radmagnet.models.NewsResponse: java.util.Date getDate()
+com.radmagnet.models.NewsResponse: java.lang.String getDate()
 com.radmagnet.models.NewsResponse: java.util.ArrayList getData()
+com.radmagnet.models.OtherOptions
+com.radmagnet.models.OtherOptions: java.lang.String name
+com.radmagnet.models.OtherOptions: java.lang.String color
+com.radmagnet.models.OtherOptions: OtherOptions(java.lang.String,java.lang.String)
+com.radmagnet.models.OtherOptions: java.lang.String getName()
+com.radmagnet.models.OtherOptions: java.lang.String getColor()
+com.radmagnet.receivers.CheckAppReceiver
+com.radmagnet.receivers.CheckAppReceiver: CheckAppReceiver()
+com.radmagnet.receivers.CheckAppReceiver: void onReceive(android.content.Context,android.content.Intent)
+com.radmagnet.receivers.RealmCleaningReceiver
+com.radmagnet.receivers.RealmCleaningReceiver: RealmCleaningReceiver()
+com.radmagnet.receivers.RealmCleaningReceiver: void onReceive(android.content.Context,android.content.Intent)
+com.radmagnet.utils.CircleTransform
+com.radmagnet.utils.CircleTransform: CircleTransform()
+com.radmagnet.utils.CircleTransform: android.graphics.Bitmap transform(android.graphics.Bitmap)
+com.radmagnet.utils.CircleTransform: java.lang.String key()
+com.radmagnet.utils.CustomDurationScroller
+com.radmagnet.utils.CustomDurationScroller: CustomDurationScroller(android.content.Context)
+com.radmagnet.utils.CustomDurationScroller: CustomDurationScroller(android.content.Context,android.view.animation.Interpolator)
+com.radmagnet.utils.CustomDurationScroller: void setScrollDurationFactor(double)
+com.radmagnet.utils.CustomDurationScroller: void startScroll(int,int,int,int,int)
 com.squareup.javawriter.JavaWriter
 com.squareup.javawriter.JavaWriter: JavaWriter(java.io.Writer)
 com.squareup.javawriter.JavaWriter: void setCompressingTypes(boolean)
@@ -14255,7 +14254,28 @@ de.keyboardsurfer.mobile.app.android.widget.crouton.BuildConfig: java.lang.Strin
 de.keyboardsurfer.mobile.app.android.widget.crouton.BuildConfig: int VERSION_CODE
 de.keyboardsurfer.mobile.app.android.widget.crouton.BuildConfig: java.lang.String VERSION_NAME
 de.keyboardsurfer.mobile.app.android.widget.crouton.BuildConfig: BuildConfig()
+hugo.weaving.BuildConfig
+hugo.weaving.BuildConfig: boolean DEBUG
+hugo.weaving.BuildConfig: java.lang.String APPLICATION_ID
+hugo.weaving.BuildConfig: java.lang.String BUILD_TYPE
+hugo.weaving.BuildConfig: java.lang.String FLAVOR
+hugo.weaving.BuildConfig: int VERSION_CODE
+hugo.weaving.BuildConfig: java.lang.String VERSION_NAME
+hugo.weaving.BuildConfig: BuildConfig()
 hugo.weaving.DebugLog
+hugo.weaving.internal.Hugo
+hugo.weaving.internal.Hugo: hugo.weaving.internal.Hugo ajc$perSingletonInstance
+hugo.weaving.internal.Hugo: Hugo()
+hugo.weaving.internal.Hugo: void withinAnnotatedClass()
+hugo.weaving.internal.Hugo: void methodInsideAnnotatedType()
+hugo.weaving.internal.Hugo: void constructorInsideAnnotatedType()
+hugo.weaving.internal.Hugo: void method()
+hugo.weaving.internal.Hugo: void constructor()
+hugo.weaving.internal.Hugo: java.lang.Object logAndExecute(org.aspectj.lang.ProceedingJoinPoint)
+hugo.weaving.internal.Hugo: hugo.weaving.internal.Hugo aspectOf()
+hugo.weaving.internal.Hugo: boolean hasAspect()
+hugo.weaving.internal.Hugo: void ajc$inlineAccessMethod$hugo_weaving_internal_Hugo$hugo_weaving_internal_Hugo$enterMethod(org.aspectj.lang.JoinPoint)
+hugo.weaving.internal.Hugo: void ajc$inlineAccessMethod$hugo_weaving_internal_Hugo$hugo_weaving_internal_Hugo$exitMethod(org.aspectj.lang.JoinPoint,java.lang.Object,long)
 io.realm.BuildConfig
 io.realm.BuildConfig: boolean DEBUG
 io.realm.BuildConfig: java.lang.String APPLICATION_ID
@@ -18169,6 +18189,677 @@ org.apache.commons.io.output.ThresholdingOutputStream: boolean isThresholdExceed
 org.apache.commons.io.output.ThresholdingOutputStream: void checkThreshold(int)
 org.apache.commons.io.output.ThresholdingOutputStream: java.io.OutputStream getStream()
 org.apache.commons.io.output.ThresholdingOutputStream: void thresholdReached()
+org.aspectj.internal.lang.annotation.ajcDeclareAnnotation
+org.aspectj.internal.lang.annotation.ajcDeclareAnnotation: java.lang.String pattern()
+org.aspectj.internal.lang.annotation.ajcDeclareAnnotation: java.lang.String annotation()
+org.aspectj.internal.lang.annotation.ajcDeclareAnnotation: java.lang.String kind()
+org.aspectj.internal.lang.annotation.ajcDeclareEoW
+org.aspectj.internal.lang.annotation.ajcDeclareEoW: java.lang.String message()
+org.aspectj.internal.lang.annotation.ajcDeclareEoW: java.lang.String pointcut()
+org.aspectj.internal.lang.annotation.ajcDeclareEoW: boolean isError()
+org.aspectj.internal.lang.annotation.ajcDeclareParents
+org.aspectj.internal.lang.annotation.ajcDeclareParents: java.lang.String targetTypePattern()
+org.aspectj.internal.lang.annotation.ajcDeclareParents: java.lang.String parentTypes()
+org.aspectj.internal.lang.annotation.ajcDeclareParents: boolean isExtends()
+org.aspectj.internal.lang.annotation.ajcDeclarePrecedence
+org.aspectj.internal.lang.annotation.ajcDeclarePrecedence: java.lang.String value()
+org.aspectj.internal.lang.annotation.ajcDeclareSoft
+org.aspectj.internal.lang.annotation.ajcDeclareSoft: java.lang.String exceptionType()
+org.aspectj.internal.lang.annotation.ajcDeclareSoft: java.lang.String pointcut()
+org.aspectj.internal.lang.annotation.ajcITD
+org.aspectj.internal.lang.annotation.ajcITD: int modifiers()
+org.aspectj.internal.lang.annotation.ajcITD: java.lang.String targetType()
+org.aspectj.internal.lang.annotation.ajcITD: java.lang.String name()
+org.aspectj.internal.lang.annotation.ajcPrivileged
+org.aspectj.internal.lang.reflect.AdviceImpl
+org.aspectj.internal.lang.reflect.AdviceImpl: AdviceImpl(java.lang.reflect.Method,java.lang.String,org.aspectj.lang.reflect.AdviceKind)
+org.aspectj.internal.lang.reflect.AdviceImpl: AdviceImpl(java.lang.reflect.Method,java.lang.String,org.aspectj.lang.reflect.AdviceKind,java.lang.String)
+org.aspectj.internal.lang.reflect.AdviceImpl: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.internal.lang.reflect.AdviceImpl: java.lang.reflect.Type[] getGenericParameterTypes()
+org.aspectj.internal.lang.reflect.AdviceImpl: org.aspectj.lang.reflect.AjType[] getParameterTypes()
+org.aspectj.internal.lang.reflect.AdviceImpl: org.aspectj.lang.reflect.AjType[] getExceptionTypes()
+org.aspectj.internal.lang.reflect.AdviceImpl: org.aspectj.lang.reflect.AdviceKind getKind()
+org.aspectj.internal.lang.reflect.AdviceImpl: java.lang.String getName()
+org.aspectj.internal.lang.reflect.AdviceImpl: org.aspectj.lang.reflect.PointcutExpression getPointcutExpression()
+org.aspectj.internal.lang.reflect.AdviceImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.AjTypeImpl
+org.aspectj.internal.lang.reflect.AjTypeImpl: AjTypeImpl(java.lang.Class)
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.String getName()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.Package getPackage()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.AjType[] getInterfaces()
+org.aspectj.internal.lang.reflect.AjTypeImpl: int getModifiers()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.Class getJavaClass()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.AjType getSupertype()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Type getGenericSupertype()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Method getEnclosingMethod()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Constructor getEnclosingConstructor()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.AjType getEnclosingType()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.PerClause getPerClause()
+org.aspectj.internal.lang.reflect.AjTypeImpl: boolean isAnnotationPresent(java.lang.Class)
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.annotation.Annotation getAnnotation(java.lang.Class)
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.annotation.Annotation[] getAnnotations()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.annotation.Annotation[] getDeclaredAnnotations()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.AjType[] getAjTypes()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.AjType[] getDeclaredAjTypes()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Constructor getConstructor(org.aspectj.lang.reflect.AjType[])
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Constructor[] getConstructors()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Constructor getDeclaredConstructor(org.aspectj.lang.reflect.AjType[])
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Constructor[] getDeclaredConstructors()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Field getDeclaredField(java.lang.String)
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Field[] getDeclaredFields()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Field getField(java.lang.String)
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Field[] getFields()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Method getDeclaredMethod(java.lang.String,org.aspectj.lang.reflect.AjType[])
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Method getMethod(java.lang.String,org.aspectj.lang.reflect.AjType[])
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Method[] getDeclaredMethods()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.Method[] getMethods()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.Pointcut getDeclaredPointcut(java.lang.String)
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.Pointcut getPointcut(java.lang.String)
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.Pointcut[] getDeclaredPointcuts()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.Pointcut[] getPointcuts()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.Advice[] getDeclaredAdvice(org.aspectj.lang.reflect.AdviceKind[])
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.Advice[] getAdvice(org.aspectj.lang.reflect.AdviceKind[])
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.Advice getAdvice(java.lang.String)
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.Advice getDeclaredAdvice(java.lang.String)
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.InterTypeMethodDeclaration getDeclaredITDMethod(java.lang.String,org.aspectj.lang.reflect.AjType,org.aspectj.lang.reflect.AjType[])
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.InterTypeMethodDeclaration[] getDeclaredITDMethods()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.InterTypeMethodDeclaration getITDMethod(java.lang.String,org.aspectj.lang.reflect.AjType,org.aspectj.lang.reflect.AjType[])
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.InterTypeMethodDeclaration[] getITDMethods()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.InterTypeConstructorDeclaration getDeclaredITDConstructor(org.aspectj.lang.reflect.AjType,org.aspectj.lang.reflect.AjType[])
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.InterTypeConstructorDeclaration[] getDeclaredITDConstructors()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.InterTypeConstructorDeclaration getITDConstructor(org.aspectj.lang.reflect.AjType,org.aspectj.lang.reflect.AjType[])
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.InterTypeConstructorDeclaration[] getITDConstructors()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.InterTypeFieldDeclaration getDeclaredITDField(java.lang.String,org.aspectj.lang.reflect.AjType)
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.InterTypeFieldDeclaration[] getDeclaredITDFields()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.InterTypeFieldDeclaration getITDField(java.lang.String,org.aspectj.lang.reflect.AjType)
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.InterTypeFieldDeclaration[] getITDFields()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.DeclareErrorOrWarning[] getDeclareErrorOrWarnings()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.DeclareParents[] getDeclareParents()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.DeclareSoft[] getDeclareSofts()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.DeclareAnnotation[] getDeclareAnnotations()
+org.aspectj.internal.lang.reflect.AjTypeImpl: org.aspectj.lang.reflect.DeclarePrecedence[] getDeclarePrecedence()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.Object[] getEnumConstants()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.reflect.TypeVariable[] getTypeParameters()
+org.aspectj.internal.lang.reflect.AjTypeImpl: boolean isEnum()
+org.aspectj.internal.lang.reflect.AjTypeImpl: boolean isInstance(java.lang.Object)
+org.aspectj.internal.lang.reflect.AjTypeImpl: boolean isInterface()
+org.aspectj.internal.lang.reflect.AjTypeImpl: boolean isLocalClass()
+org.aspectj.internal.lang.reflect.AjTypeImpl: boolean isMemberClass()
+org.aspectj.internal.lang.reflect.AjTypeImpl: boolean isArray()
+org.aspectj.internal.lang.reflect.AjTypeImpl: boolean isPrimitive()
+org.aspectj.internal.lang.reflect.AjTypeImpl: boolean isAspect()
+org.aspectj.internal.lang.reflect.AjTypeImpl: boolean isMemberAspect()
+org.aspectj.internal.lang.reflect.AjTypeImpl: boolean isPrivileged()
+org.aspectj.internal.lang.reflect.AjTypeImpl: boolean equals(java.lang.Object)
+org.aspectj.internal.lang.reflect.AjTypeImpl: int hashCode()
+org.aspectj.internal.lang.reflect.AjTypeImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.DeclareAnnotationImpl
+org.aspectj.internal.lang.reflect.DeclareAnnotationImpl: DeclareAnnotationImpl(org.aspectj.lang.reflect.AjType,java.lang.String,java.lang.String,java.lang.annotation.Annotation,java.lang.String)
+org.aspectj.internal.lang.reflect.DeclareAnnotationImpl: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.internal.lang.reflect.DeclareAnnotationImpl: org.aspectj.lang.reflect.DeclareAnnotation$Kind getKind()
+org.aspectj.internal.lang.reflect.DeclareAnnotationImpl: org.aspectj.lang.reflect.SignaturePattern getSignaturePattern()
+org.aspectj.internal.lang.reflect.DeclareAnnotationImpl: org.aspectj.lang.reflect.TypePattern getTypePattern()
+org.aspectj.internal.lang.reflect.DeclareAnnotationImpl: java.lang.annotation.Annotation getAnnotation()
+org.aspectj.internal.lang.reflect.DeclareAnnotationImpl: java.lang.String getAnnotationAsText()
+org.aspectj.internal.lang.reflect.DeclareAnnotationImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.DeclareErrorOrWarningImpl
+org.aspectj.internal.lang.reflect.DeclareErrorOrWarningImpl: DeclareErrorOrWarningImpl(java.lang.String,java.lang.String,boolean,org.aspectj.lang.reflect.AjType)
+org.aspectj.internal.lang.reflect.DeclareErrorOrWarningImpl: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.internal.lang.reflect.DeclareErrorOrWarningImpl: org.aspectj.lang.reflect.PointcutExpression getPointcutExpression()
+org.aspectj.internal.lang.reflect.DeclareErrorOrWarningImpl: java.lang.String getMessage()
+org.aspectj.internal.lang.reflect.DeclareErrorOrWarningImpl: boolean isError()
+org.aspectj.internal.lang.reflect.DeclareErrorOrWarningImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.DeclareParentsImpl
+org.aspectj.internal.lang.reflect.DeclareParentsImpl: DeclareParentsImpl(java.lang.String,java.lang.String,boolean,org.aspectj.lang.reflect.AjType)
+org.aspectj.internal.lang.reflect.DeclareParentsImpl: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.internal.lang.reflect.DeclareParentsImpl: org.aspectj.lang.reflect.TypePattern getTargetTypesPattern()
+org.aspectj.internal.lang.reflect.DeclareParentsImpl: boolean isExtends()
+org.aspectj.internal.lang.reflect.DeclareParentsImpl: boolean isImplements()
+org.aspectj.internal.lang.reflect.DeclareParentsImpl: java.lang.reflect.Type[] getParentTypes()
+org.aspectj.internal.lang.reflect.DeclareParentsImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.DeclarePrecedenceImpl
+org.aspectj.internal.lang.reflect.DeclarePrecedenceImpl: DeclarePrecedenceImpl(java.lang.String,org.aspectj.lang.reflect.AjType)
+org.aspectj.internal.lang.reflect.DeclarePrecedenceImpl: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.internal.lang.reflect.DeclarePrecedenceImpl: org.aspectj.lang.reflect.TypePattern[] getPrecedenceOrder()
+org.aspectj.internal.lang.reflect.DeclarePrecedenceImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.DeclareSoftImpl
+org.aspectj.internal.lang.reflect.DeclareSoftImpl: DeclareSoftImpl(org.aspectj.lang.reflect.AjType,java.lang.String,java.lang.String)
+org.aspectj.internal.lang.reflect.DeclareSoftImpl: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.internal.lang.reflect.DeclareSoftImpl: org.aspectj.lang.reflect.AjType getSoftenedExceptionType()
+org.aspectj.internal.lang.reflect.DeclareSoftImpl: org.aspectj.lang.reflect.PointcutExpression getPointcutExpression()
+org.aspectj.internal.lang.reflect.DeclareSoftImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.InterTypeConstructorDeclarationImpl
+org.aspectj.internal.lang.reflect.InterTypeConstructorDeclarationImpl: InterTypeConstructorDeclarationImpl(org.aspectj.lang.reflect.AjType,java.lang.String,int,java.lang.reflect.Method)
+org.aspectj.internal.lang.reflect.InterTypeConstructorDeclarationImpl: org.aspectj.lang.reflect.AjType[] getParameterTypes()
+org.aspectj.internal.lang.reflect.InterTypeConstructorDeclarationImpl: java.lang.reflect.Type[] getGenericParameterTypes()
+org.aspectj.internal.lang.reflect.InterTypeConstructorDeclarationImpl: org.aspectj.lang.reflect.AjType[] getExceptionTypes()
+org.aspectj.internal.lang.reflect.InterTypeConstructorDeclarationImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.InterTypeDeclarationImpl
+org.aspectj.internal.lang.reflect.InterTypeDeclarationImpl: java.lang.String targetTypeName
+org.aspectj.internal.lang.reflect.InterTypeDeclarationImpl: InterTypeDeclarationImpl(org.aspectj.lang.reflect.AjType,java.lang.String,int)
+org.aspectj.internal.lang.reflect.InterTypeDeclarationImpl: InterTypeDeclarationImpl(org.aspectj.lang.reflect.AjType,org.aspectj.lang.reflect.AjType,int)
+org.aspectj.internal.lang.reflect.InterTypeDeclarationImpl: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.internal.lang.reflect.InterTypeDeclarationImpl: org.aspectj.lang.reflect.AjType getTargetType()
+org.aspectj.internal.lang.reflect.InterTypeDeclarationImpl: int getModifiers()
+org.aspectj.internal.lang.reflect.InterTypeFieldDeclarationImpl
+org.aspectj.internal.lang.reflect.InterTypeFieldDeclarationImpl: InterTypeFieldDeclarationImpl(org.aspectj.lang.reflect.AjType,java.lang.String,int,java.lang.String,org.aspectj.lang.reflect.AjType,java.lang.reflect.Type)
+org.aspectj.internal.lang.reflect.InterTypeFieldDeclarationImpl: InterTypeFieldDeclarationImpl(org.aspectj.lang.reflect.AjType,org.aspectj.lang.reflect.AjType,java.lang.reflect.Field)
+org.aspectj.internal.lang.reflect.InterTypeFieldDeclarationImpl: java.lang.String getName()
+org.aspectj.internal.lang.reflect.InterTypeFieldDeclarationImpl: org.aspectj.lang.reflect.AjType getType()
+org.aspectj.internal.lang.reflect.InterTypeFieldDeclarationImpl: java.lang.reflect.Type getGenericType()
+org.aspectj.internal.lang.reflect.InterTypeFieldDeclarationImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.InterTypeMethodDeclarationImpl
+org.aspectj.internal.lang.reflect.InterTypeMethodDeclarationImpl: InterTypeMethodDeclarationImpl(org.aspectj.lang.reflect.AjType,java.lang.String,int,java.lang.String,java.lang.reflect.Method)
+org.aspectj.internal.lang.reflect.InterTypeMethodDeclarationImpl: InterTypeMethodDeclarationImpl(org.aspectj.lang.reflect.AjType,org.aspectj.lang.reflect.AjType,java.lang.reflect.Method,int)
+org.aspectj.internal.lang.reflect.InterTypeMethodDeclarationImpl: java.lang.String getName()
+org.aspectj.internal.lang.reflect.InterTypeMethodDeclarationImpl: org.aspectj.lang.reflect.AjType getReturnType()
+org.aspectj.internal.lang.reflect.InterTypeMethodDeclarationImpl: java.lang.reflect.Type getGenericReturnType()
+org.aspectj.internal.lang.reflect.InterTypeMethodDeclarationImpl: org.aspectj.lang.reflect.AjType[] getParameterTypes()
+org.aspectj.internal.lang.reflect.InterTypeMethodDeclarationImpl: java.lang.reflect.Type[] getGenericParameterTypes()
+org.aspectj.internal.lang.reflect.InterTypeMethodDeclarationImpl: java.lang.reflect.TypeVariable[] getTypeParameters()
+org.aspectj.internal.lang.reflect.InterTypeMethodDeclarationImpl: org.aspectj.lang.reflect.AjType[] getExceptionTypes()
+org.aspectj.internal.lang.reflect.InterTypeMethodDeclarationImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.PerClauseImpl
+org.aspectj.internal.lang.reflect.PerClauseImpl: PerClauseImpl(org.aspectj.lang.reflect.PerClauseKind)
+org.aspectj.internal.lang.reflect.PerClauseImpl: org.aspectj.lang.reflect.PerClauseKind getKind()
+org.aspectj.internal.lang.reflect.PerClauseImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.PointcutBasedPerClauseImpl
+org.aspectj.internal.lang.reflect.PointcutBasedPerClauseImpl: PointcutBasedPerClauseImpl(org.aspectj.lang.reflect.PerClauseKind,java.lang.String)
+org.aspectj.internal.lang.reflect.PointcutBasedPerClauseImpl: org.aspectj.lang.reflect.PointcutExpression getPointcutExpression()
+org.aspectj.internal.lang.reflect.PointcutBasedPerClauseImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.PointcutExpressionImpl
+org.aspectj.internal.lang.reflect.PointcutExpressionImpl: PointcutExpressionImpl(java.lang.String)
+org.aspectj.internal.lang.reflect.PointcutExpressionImpl: java.lang.String asString()
+org.aspectj.internal.lang.reflect.PointcutExpressionImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.PointcutImpl
+org.aspectj.internal.lang.reflect.PointcutImpl: PointcutImpl(java.lang.String,java.lang.String,java.lang.reflect.Method,org.aspectj.lang.reflect.AjType,java.lang.String)
+org.aspectj.internal.lang.reflect.PointcutImpl: org.aspectj.lang.reflect.PointcutExpression getPointcutExpression()
+org.aspectj.internal.lang.reflect.PointcutImpl: java.lang.String getName()
+org.aspectj.internal.lang.reflect.PointcutImpl: int getModifiers()
+org.aspectj.internal.lang.reflect.PointcutImpl: org.aspectj.lang.reflect.AjType[] getParameterTypes()
+org.aspectj.internal.lang.reflect.PointcutImpl: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.internal.lang.reflect.PointcutImpl: java.lang.String[] getParameterNames()
+org.aspectj.internal.lang.reflect.PointcutImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.SignaturePatternImpl
+org.aspectj.internal.lang.reflect.SignaturePatternImpl: SignaturePatternImpl(java.lang.String)
+org.aspectj.internal.lang.reflect.SignaturePatternImpl: java.lang.String asString()
+org.aspectj.internal.lang.reflect.SignaturePatternImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.StringToType
+org.aspectj.internal.lang.reflect.StringToType: StringToType()
+org.aspectj.internal.lang.reflect.StringToType: java.lang.reflect.Type[] commaSeparatedListToTypeArray(java.lang.String,java.lang.Class)
+org.aspectj.internal.lang.reflect.StringToType: java.lang.reflect.Type stringToType(java.lang.String,java.lang.Class)
+org.aspectj.internal.lang.reflect.TypePatternBasedPerClauseImpl
+org.aspectj.internal.lang.reflect.TypePatternBasedPerClauseImpl: TypePatternBasedPerClauseImpl(org.aspectj.lang.reflect.PerClauseKind,java.lang.String)
+org.aspectj.internal.lang.reflect.TypePatternBasedPerClauseImpl: org.aspectj.lang.reflect.TypePattern getTypePattern()
+org.aspectj.internal.lang.reflect.TypePatternBasedPerClauseImpl: java.lang.String toString()
+org.aspectj.internal.lang.reflect.TypePatternImpl
+org.aspectj.internal.lang.reflect.TypePatternImpl: TypePatternImpl(java.lang.String)
+org.aspectj.internal.lang.reflect.TypePatternImpl: java.lang.String asString()
+org.aspectj.internal.lang.reflect.TypePatternImpl: java.lang.String toString()
+org.aspectj.lang.Aspects
+org.aspectj.lang.Aspects: Aspects()
+org.aspectj.lang.Aspects: java.lang.Object aspectOf(java.lang.Class)
+org.aspectj.lang.Aspects: java.lang.Object aspectOf(java.lang.Class,java.lang.Object)
+org.aspectj.lang.Aspects: java.lang.Object aspectOf(java.lang.Class,java.lang.Class)
+org.aspectj.lang.Aspects: boolean hasAspect(java.lang.Class)
+org.aspectj.lang.Aspects: boolean hasAspect(java.lang.Class,java.lang.Object)
+org.aspectj.lang.Aspects: boolean hasAspect(java.lang.Class,java.lang.Class)
+org.aspectj.lang.Aspects14
+org.aspectj.lang.Aspects14: Aspects14()
+org.aspectj.lang.Aspects14: java.lang.Object aspectOf(java.lang.Class)
+org.aspectj.lang.Aspects14: java.lang.Object aspectOf(java.lang.Class,java.lang.Object)
+org.aspectj.lang.Aspects14: java.lang.Object aspectOf(java.lang.Class,java.lang.Class)
+org.aspectj.lang.Aspects14: boolean hasAspect(java.lang.Class)
+org.aspectj.lang.Aspects14: boolean hasAspect(java.lang.Class,java.lang.Object)
+org.aspectj.lang.Aspects14: boolean hasAspect(java.lang.Class,java.lang.Class)
+org.aspectj.lang.JoinPoint
+org.aspectj.lang.JoinPoint: java.lang.String METHOD_EXECUTION
+org.aspectj.lang.JoinPoint: java.lang.String METHOD_CALL
+org.aspectj.lang.JoinPoint: java.lang.String CONSTRUCTOR_EXECUTION
+org.aspectj.lang.JoinPoint: java.lang.String CONSTRUCTOR_CALL
+org.aspectj.lang.JoinPoint: java.lang.String FIELD_GET
+org.aspectj.lang.JoinPoint: java.lang.String FIELD_SET
+org.aspectj.lang.JoinPoint: java.lang.String STATICINITIALIZATION
+org.aspectj.lang.JoinPoint: java.lang.String PREINITIALIZATION
+org.aspectj.lang.JoinPoint: java.lang.String INITIALIZATION
+org.aspectj.lang.JoinPoint: java.lang.String EXCEPTION_HANDLER
+org.aspectj.lang.JoinPoint: java.lang.String SYNCHRONIZATION_LOCK
+org.aspectj.lang.JoinPoint: java.lang.String SYNCHRONIZATION_UNLOCK
+org.aspectj.lang.JoinPoint: java.lang.String ADVICE_EXECUTION
+org.aspectj.lang.JoinPoint: java.lang.String toString()
+org.aspectj.lang.JoinPoint: java.lang.String toShortString()
+org.aspectj.lang.JoinPoint: java.lang.String toLongString()
+org.aspectj.lang.JoinPoint: java.lang.Object getThis()
+org.aspectj.lang.JoinPoint: java.lang.Object getTarget()
+org.aspectj.lang.JoinPoint: java.lang.Object[] getArgs()
+org.aspectj.lang.JoinPoint: org.aspectj.lang.Signature getSignature()
+org.aspectj.lang.JoinPoint: org.aspectj.lang.reflect.SourceLocation getSourceLocation()
+org.aspectj.lang.JoinPoint: java.lang.String getKind()
+org.aspectj.lang.JoinPoint: org.aspectj.lang.JoinPoint$StaticPart getStaticPart()
+org.aspectj.lang.JoinPoint$EnclosingStaticPart
+org.aspectj.lang.JoinPoint$StaticPart
+org.aspectj.lang.JoinPoint$StaticPart: org.aspectj.lang.Signature getSignature()
+org.aspectj.lang.JoinPoint$StaticPart: org.aspectj.lang.reflect.SourceLocation getSourceLocation()
+org.aspectj.lang.JoinPoint$StaticPart: java.lang.String getKind()
+org.aspectj.lang.JoinPoint$StaticPart: int getId()
+org.aspectj.lang.JoinPoint$StaticPart: java.lang.String toString()
+org.aspectj.lang.JoinPoint$StaticPart: java.lang.String toShortString()
+org.aspectj.lang.JoinPoint$StaticPart: java.lang.String toLongString()
+org.aspectj.lang.NoAspectBoundException
+org.aspectj.lang.NoAspectBoundException: NoAspectBoundException(java.lang.String,java.lang.Throwable)
+org.aspectj.lang.NoAspectBoundException: NoAspectBoundException()
+org.aspectj.lang.NoAspectBoundException: java.lang.Throwable getCause()
+org.aspectj.lang.ProceedingJoinPoint
+org.aspectj.lang.ProceedingJoinPoint: void set$AroundClosure(org.aspectj.runtime.internal.AroundClosure)
+org.aspectj.lang.ProceedingJoinPoint: java.lang.Object proceed()
+org.aspectj.lang.ProceedingJoinPoint: java.lang.Object proceed(java.lang.Object[])
+org.aspectj.lang.Signature
+org.aspectj.lang.Signature: java.lang.String toString()
+org.aspectj.lang.Signature: java.lang.String toShortString()
+org.aspectj.lang.Signature: java.lang.String toLongString()
+org.aspectj.lang.Signature: java.lang.String getName()
+org.aspectj.lang.Signature: int getModifiers()
+org.aspectj.lang.Signature: java.lang.Class getDeclaringType()
+org.aspectj.lang.Signature: java.lang.String getDeclaringTypeName()
+org.aspectj.lang.SoftException
+org.aspectj.lang.SoftException: SoftException(java.lang.Throwable)
+org.aspectj.lang.SoftException: java.lang.Throwable getWrappedThrowable()
+org.aspectj.lang.SoftException: java.lang.Throwable getCause()
+org.aspectj.lang.SoftException: void printStackTrace()
+org.aspectj.lang.SoftException: void printStackTrace(java.io.PrintStream)
+org.aspectj.lang.SoftException: void printStackTrace(java.io.PrintWriter)
+org.aspectj.lang.annotation.AdviceName
+org.aspectj.lang.annotation.AdviceName: java.lang.String value()
+org.aspectj.lang.annotation.After
+org.aspectj.lang.annotation.After: java.lang.String value()
+org.aspectj.lang.annotation.After: java.lang.String argNames()
+org.aspectj.lang.annotation.AfterReturning
+org.aspectj.lang.annotation.AfterReturning: java.lang.String value()
+org.aspectj.lang.annotation.AfterReturning: java.lang.String pointcut()
+org.aspectj.lang.annotation.AfterReturning: java.lang.String returning()
+org.aspectj.lang.annotation.AfterReturning: java.lang.String argNames()
+org.aspectj.lang.annotation.AfterThrowing
+org.aspectj.lang.annotation.AfterThrowing: java.lang.String value()
+org.aspectj.lang.annotation.AfterThrowing: java.lang.String pointcut()
+org.aspectj.lang.annotation.AfterThrowing: java.lang.String throwing()
+org.aspectj.lang.annotation.AfterThrowing: java.lang.String argNames()
+org.aspectj.lang.annotation.Around
+org.aspectj.lang.annotation.Around: java.lang.String value()
+org.aspectj.lang.annotation.Around: java.lang.String argNames()
+org.aspectj.lang.annotation.Aspect
+org.aspectj.lang.annotation.Aspect: java.lang.String value()
+org.aspectj.lang.annotation.Before
+org.aspectj.lang.annotation.Before: java.lang.String value()
+org.aspectj.lang.annotation.Before: java.lang.String argNames()
+org.aspectj.lang.annotation.DeclareAnnotation
+org.aspectj.lang.annotation.DeclareAnnotation: java.lang.String value()
+org.aspectj.lang.annotation.DeclareError
+org.aspectj.lang.annotation.DeclareError: java.lang.String value()
+org.aspectj.lang.annotation.DeclareMixin
+org.aspectj.lang.annotation.DeclareMixin: java.lang.String value()
+org.aspectj.lang.annotation.DeclareMixin: java.lang.Class[] interfaces()
+org.aspectj.lang.annotation.DeclareParents
+org.aspectj.lang.annotation.DeclareParents: java.lang.String value()
+org.aspectj.lang.annotation.DeclareParents: java.lang.Class defaultImpl()
+org.aspectj.lang.annotation.DeclarePrecedence
+org.aspectj.lang.annotation.DeclarePrecedence: java.lang.String value()
+org.aspectj.lang.annotation.DeclareWarning
+org.aspectj.lang.annotation.DeclareWarning: java.lang.String value()
+org.aspectj.lang.annotation.Pointcut
+org.aspectj.lang.annotation.Pointcut: java.lang.String value()
+org.aspectj.lang.annotation.Pointcut: java.lang.String argNames()
+org.aspectj.lang.annotation.RequiredTypes
+org.aspectj.lang.annotation.RequiredTypes: java.lang.String[] value()
+org.aspectj.lang.annotation.SuppressAjWarnings
+org.aspectj.lang.annotation.SuppressAjWarnings: java.lang.String[] value()
+org.aspectj.lang.annotation.control.CodeGenerationHint
+org.aspectj.lang.annotation.control.CodeGenerationHint: java.lang.String ifNameSuffix()
+org.aspectj.lang.reflect.Advice
+org.aspectj.lang.reflect.Advice: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.lang.reflect.Advice: org.aspectj.lang.reflect.AdviceKind getKind()
+org.aspectj.lang.reflect.Advice: java.lang.String getName()
+org.aspectj.lang.reflect.Advice: org.aspectj.lang.reflect.AjType[] getParameterTypes()
+org.aspectj.lang.reflect.Advice: java.lang.reflect.Type[] getGenericParameterTypes()
+org.aspectj.lang.reflect.Advice: org.aspectj.lang.reflect.AjType[] getExceptionTypes()
+org.aspectj.lang.reflect.Advice: org.aspectj.lang.reflect.PointcutExpression getPointcutExpression()
+org.aspectj.lang.reflect.AdviceKind
+org.aspectj.lang.reflect.AdviceKind: org.aspectj.lang.reflect.AdviceKind BEFORE
+org.aspectj.lang.reflect.AdviceKind: org.aspectj.lang.reflect.AdviceKind AFTER
+org.aspectj.lang.reflect.AdviceKind: org.aspectj.lang.reflect.AdviceKind AFTER_RETURNING
+org.aspectj.lang.reflect.AdviceKind: org.aspectj.lang.reflect.AdviceKind AFTER_THROWING
+org.aspectj.lang.reflect.AdviceKind: org.aspectj.lang.reflect.AdviceKind AROUND
+org.aspectj.lang.reflect.AdviceKind: org.aspectj.lang.reflect.AdviceKind[] values()
+org.aspectj.lang.reflect.AdviceKind: org.aspectj.lang.reflect.AdviceKind valueOf(java.lang.String)
+org.aspectj.lang.reflect.AdviceSignature
+org.aspectj.lang.reflect.AdviceSignature: java.lang.Class getReturnType()
+org.aspectj.lang.reflect.AdviceSignature: java.lang.reflect.Method getAdvice()
+org.aspectj.lang.reflect.AjType
+org.aspectj.lang.reflect.AjType: java.lang.String getName()
+org.aspectj.lang.reflect.AjType: java.lang.Package getPackage()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.AjType[] getInterfaces()
+org.aspectj.lang.reflect.AjType: int getModifiers()
+org.aspectj.lang.reflect.AjType: java.lang.Class getJavaClass()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.AjType getSupertype()
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Type getGenericSupertype()
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Method getEnclosingMethod()
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Constructor getEnclosingConstructor()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.AjType getEnclosingType()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.PerClause getPerClause()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.AjType[] getAjTypes()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.AjType[] getDeclaredAjTypes()
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Constructor getConstructor(org.aspectj.lang.reflect.AjType[])
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Constructor[] getConstructors()
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Constructor getDeclaredConstructor(org.aspectj.lang.reflect.AjType[])
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Constructor[] getDeclaredConstructors()
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Field getDeclaredField(java.lang.String)
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Field[] getDeclaredFields()
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Field getField(java.lang.String)
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Field[] getFields()
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Method getDeclaredMethod(java.lang.String,org.aspectj.lang.reflect.AjType[])
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Method getMethod(java.lang.String,org.aspectj.lang.reflect.AjType[])
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Method[] getDeclaredMethods()
+org.aspectj.lang.reflect.AjType: java.lang.reflect.Method[] getMethods()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.Pointcut getDeclaredPointcut(java.lang.String)
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.Pointcut getPointcut(java.lang.String)
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.Pointcut[] getDeclaredPointcuts()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.Pointcut[] getPointcuts()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.Advice[] getDeclaredAdvice(org.aspectj.lang.reflect.AdviceKind[])
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.Advice[] getAdvice(org.aspectj.lang.reflect.AdviceKind[])
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.Advice getAdvice(java.lang.String)
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.Advice getDeclaredAdvice(java.lang.String)
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.InterTypeMethodDeclaration getDeclaredITDMethod(java.lang.String,org.aspectj.lang.reflect.AjType,org.aspectj.lang.reflect.AjType[])
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.InterTypeMethodDeclaration[] getDeclaredITDMethods()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.InterTypeMethodDeclaration getITDMethod(java.lang.String,org.aspectj.lang.reflect.AjType,org.aspectj.lang.reflect.AjType[])
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.InterTypeMethodDeclaration[] getITDMethods()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.InterTypeConstructorDeclaration getDeclaredITDConstructor(org.aspectj.lang.reflect.AjType,org.aspectj.lang.reflect.AjType[])
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.InterTypeConstructorDeclaration[] getDeclaredITDConstructors()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.InterTypeConstructorDeclaration getITDConstructor(org.aspectj.lang.reflect.AjType,org.aspectj.lang.reflect.AjType[])
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.InterTypeConstructorDeclaration[] getITDConstructors()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.InterTypeFieldDeclaration getDeclaredITDField(java.lang.String,org.aspectj.lang.reflect.AjType)
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.InterTypeFieldDeclaration[] getDeclaredITDFields()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.InterTypeFieldDeclaration getITDField(java.lang.String,org.aspectj.lang.reflect.AjType)
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.InterTypeFieldDeclaration[] getITDFields()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.DeclareErrorOrWarning[] getDeclareErrorOrWarnings()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.DeclareParents[] getDeclareParents()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.DeclareSoft[] getDeclareSofts()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.DeclareAnnotation[] getDeclareAnnotations()
+org.aspectj.lang.reflect.AjType: org.aspectj.lang.reflect.DeclarePrecedence[] getDeclarePrecedence()
+org.aspectj.lang.reflect.AjType: java.lang.Object[] getEnumConstants()
+org.aspectj.lang.reflect.AjType: java.lang.reflect.TypeVariable[] getTypeParameters()
+org.aspectj.lang.reflect.AjType: boolean isEnum()
+org.aspectj.lang.reflect.AjType: boolean isInstance(java.lang.Object)
+org.aspectj.lang.reflect.AjType: boolean isInterface()
+org.aspectj.lang.reflect.AjType: boolean isLocalClass()
+org.aspectj.lang.reflect.AjType: boolean isMemberClass()
+org.aspectj.lang.reflect.AjType: boolean isArray()
+org.aspectj.lang.reflect.AjType: boolean isPrimitive()
+org.aspectj.lang.reflect.AjType: boolean isAspect()
+org.aspectj.lang.reflect.AjType: boolean isMemberAspect()
+org.aspectj.lang.reflect.AjType: boolean isPrivileged()
+org.aspectj.lang.reflect.AjTypeSystem
+org.aspectj.lang.reflect.AjTypeSystem: AjTypeSystem()
+org.aspectj.lang.reflect.AjTypeSystem: org.aspectj.lang.reflect.AjType getAjType(java.lang.Class)
+org.aspectj.lang.reflect.CatchClauseSignature
+org.aspectj.lang.reflect.CatchClauseSignature: java.lang.Class getParameterType()
+org.aspectj.lang.reflect.CatchClauseSignature: java.lang.String getParameterName()
+org.aspectj.lang.reflect.CodeSignature
+org.aspectj.lang.reflect.CodeSignature: java.lang.Class[] getParameterTypes()
+org.aspectj.lang.reflect.CodeSignature: java.lang.String[] getParameterNames()
+org.aspectj.lang.reflect.CodeSignature: java.lang.Class[] getExceptionTypes()
+org.aspectj.lang.reflect.ConstructorSignature
+org.aspectj.lang.reflect.ConstructorSignature: java.lang.reflect.Constructor getConstructor()
+org.aspectj.lang.reflect.DeclareAnnotation
+org.aspectj.lang.reflect.DeclareAnnotation: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.lang.reflect.DeclareAnnotation: org.aspectj.lang.reflect.DeclareAnnotation$Kind getKind()
+org.aspectj.lang.reflect.DeclareAnnotation: org.aspectj.lang.reflect.SignaturePattern getSignaturePattern()
+org.aspectj.lang.reflect.DeclareAnnotation: org.aspectj.lang.reflect.TypePattern getTypePattern()
+org.aspectj.lang.reflect.DeclareAnnotation: java.lang.annotation.Annotation getAnnotation()
+org.aspectj.lang.reflect.DeclareAnnotation: java.lang.String getAnnotationAsText()
+org.aspectj.lang.reflect.DeclareAnnotation$Kind
+org.aspectj.lang.reflect.DeclareAnnotation$Kind: org.aspectj.lang.reflect.DeclareAnnotation$Kind Field
+org.aspectj.lang.reflect.DeclareAnnotation$Kind: org.aspectj.lang.reflect.DeclareAnnotation$Kind Method
+org.aspectj.lang.reflect.DeclareAnnotation$Kind: org.aspectj.lang.reflect.DeclareAnnotation$Kind Constructor
+org.aspectj.lang.reflect.DeclareAnnotation$Kind: org.aspectj.lang.reflect.DeclareAnnotation$Kind Type
+org.aspectj.lang.reflect.DeclareAnnotation$Kind: org.aspectj.lang.reflect.DeclareAnnotation$Kind[] values()
+org.aspectj.lang.reflect.DeclareAnnotation$Kind: org.aspectj.lang.reflect.DeclareAnnotation$Kind valueOf(java.lang.String)
+org.aspectj.lang.reflect.DeclareErrorOrWarning
+org.aspectj.lang.reflect.DeclareErrorOrWarning: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.lang.reflect.DeclareErrorOrWarning: org.aspectj.lang.reflect.PointcutExpression getPointcutExpression()
+org.aspectj.lang.reflect.DeclareErrorOrWarning: java.lang.String getMessage()
+org.aspectj.lang.reflect.DeclareErrorOrWarning: boolean isError()
+org.aspectj.lang.reflect.DeclareParents
+org.aspectj.lang.reflect.DeclareParents: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.lang.reflect.DeclareParents: org.aspectj.lang.reflect.TypePattern getTargetTypesPattern()
+org.aspectj.lang.reflect.DeclareParents: boolean isExtends()
+org.aspectj.lang.reflect.DeclareParents: boolean isImplements()
+org.aspectj.lang.reflect.DeclareParents: java.lang.reflect.Type[] getParentTypes()
+org.aspectj.lang.reflect.DeclarePrecedence
+org.aspectj.lang.reflect.DeclarePrecedence: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.lang.reflect.DeclarePrecedence: org.aspectj.lang.reflect.TypePattern[] getPrecedenceOrder()
+org.aspectj.lang.reflect.DeclareSoft
+org.aspectj.lang.reflect.DeclareSoft: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.lang.reflect.DeclareSoft: org.aspectj.lang.reflect.AjType getSoftenedExceptionType()
+org.aspectj.lang.reflect.DeclareSoft: org.aspectj.lang.reflect.PointcutExpression getPointcutExpression()
+org.aspectj.lang.reflect.FieldSignature
+org.aspectj.lang.reflect.FieldSignature: java.lang.Class getFieldType()
+org.aspectj.lang.reflect.FieldSignature: java.lang.reflect.Field getField()
+org.aspectj.lang.reflect.InitializerSignature
+org.aspectj.lang.reflect.InitializerSignature: java.lang.reflect.Constructor getInitializer()
+org.aspectj.lang.reflect.InterTypeConstructorDeclaration
+org.aspectj.lang.reflect.InterTypeConstructorDeclaration: org.aspectj.lang.reflect.AjType[] getParameterTypes()
+org.aspectj.lang.reflect.InterTypeConstructorDeclaration: java.lang.reflect.Type[] getGenericParameterTypes()
+org.aspectj.lang.reflect.InterTypeConstructorDeclaration: org.aspectj.lang.reflect.AjType[] getExceptionTypes()
+org.aspectj.lang.reflect.InterTypeDeclaration
+org.aspectj.lang.reflect.InterTypeDeclaration: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.lang.reflect.InterTypeDeclaration: org.aspectj.lang.reflect.AjType getTargetType()
+org.aspectj.lang.reflect.InterTypeDeclaration: int getModifiers()
+org.aspectj.lang.reflect.InterTypeFieldDeclaration
+org.aspectj.lang.reflect.InterTypeFieldDeclaration: java.lang.String getName()
+org.aspectj.lang.reflect.InterTypeFieldDeclaration: org.aspectj.lang.reflect.AjType getType()
+org.aspectj.lang.reflect.InterTypeFieldDeclaration: java.lang.reflect.Type getGenericType()
+org.aspectj.lang.reflect.InterTypeMethodDeclaration
+org.aspectj.lang.reflect.InterTypeMethodDeclaration: java.lang.String getName()
+org.aspectj.lang.reflect.InterTypeMethodDeclaration: org.aspectj.lang.reflect.AjType getReturnType()
+org.aspectj.lang.reflect.InterTypeMethodDeclaration: java.lang.reflect.Type getGenericReturnType()
+org.aspectj.lang.reflect.InterTypeMethodDeclaration: org.aspectj.lang.reflect.AjType[] getParameterTypes()
+org.aspectj.lang.reflect.InterTypeMethodDeclaration: java.lang.reflect.Type[] getGenericParameterTypes()
+org.aspectj.lang.reflect.InterTypeMethodDeclaration: java.lang.reflect.TypeVariable[] getTypeParameters()
+org.aspectj.lang.reflect.InterTypeMethodDeclaration: org.aspectj.lang.reflect.AjType[] getExceptionTypes()
+org.aspectj.lang.reflect.LockSignature
+org.aspectj.lang.reflect.MemberSignature
+org.aspectj.lang.reflect.MethodSignature
+org.aspectj.lang.reflect.MethodSignature: java.lang.Class getReturnType()
+org.aspectj.lang.reflect.MethodSignature: java.lang.reflect.Method getMethod()
+org.aspectj.lang.reflect.NoSuchAdviceException
+org.aspectj.lang.reflect.NoSuchAdviceException: long serialVersionUID
+org.aspectj.lang.reflect.NoSuchAdviceException: NoSuchAdviceException(java.lang.String)
+org.aspectj.lang.reflect.NoSuchAdviceException: java.lang.String getName()
+org.aspectj.lang.reflect.NoSuchPointcutException
+org.aspectj.lang.reflect.NoSuchPointcutException: long serialVersionUID
+org.aspectj.lang.reflect.NoSuchPointcutException: NoSuchPointcutException(java.lang.String)
+org.aspectj.lang.reflect.NoSuchPointcutException: java.lang.String getName()
+org.aspectj.lang.reflect.PerClause
+org.aspectj.lang.reflect.PerClause: org.aspectj.lang.reflect.PerClauseKind getKind()
+org.aspectj.lang.reflect.PerClauseKind
+org.aspectj.lang.reflect.PerClauseKind: org.aspectj.lang.reflect.PerClauseKind SINGLETON
+org.aspectj.lang.reflect.PerClauseKind: org.aspectj.lang.reflect.PerClauseKind PERTHIS
+org.aspectj.lang.reflect.PerClauseKind: org.aspectj.lang.reflect.PerClauseKind PERTARGET
+org.aspectj.lang.reflect.PerClauseKind: org.aspectj.lang.reflect.PerClauseKind PERCFLOW
+org.aspectj.lang.reflect.PerClauseKind: org.aspectj.lang.reflect.PerClauseKind PERCFLOWBELOW
+org.aspectj.lang.reflect.PerClauseKind: org.aspectj.lang.reflect.PerClauseKind PERTYPEWITHIN
+org.aspectj.lang.reflect.PerClauseKind: org.aspectj.lang.reflect.PerClauseKind[] values()
+org.aspectj.lang.reflect.PerClauseKind: org.aspectj.lang.reflect.PerClauseKind valueOf(java.lang.String)
+org.aspectj.lang.reflect.Pointcut
+org.aspectj.lang.reflect.Pointcut: java.lang.String getName()
+org.aspectj.lang.reflect.Pointcut: int getModifiers()
+org.aspectj.lang.reflect.Pointcut: org.aspectj.lang.reflect.AjType[] getParameterTypes()
+org.aspectj.lang.reflect.Pointcut: java.lang.String[] getParameterNames()
+org.aspectj.lang.reflect.Pointcut: org.aspectj.lang.reflect.AjType getDeclaringType()
+org.aspectj.lang.reflect.Pointcut: org.aspectj.lang.reflect.PointcutExpression getPointcutExpression()
+org.aspectj.lang.reflect.PointcutBasedPerClause
+org.aspectj.lang.reflect.PointcutBasedPerClause: org.aspectj.lang.reflect.PointcutExpression getPointcutExpression()
+org.aspectj.lang.reflect.PointcutExpression
+org.aspectj.lang.reflect.PointcutExpression: java.lang.String asString()
+org.aspectj.lang.reflect.SignaturePattern
+org.aspectj.lang.reflect.SignaturePattern: java.lang.String asString()
+org.aspectj.lang.reflect.SourceLocation
+org.aspectj.lang.reflect.SourceLocation: java.lang.Class getWithinType()
+org.aspectj.lang.reflect.SourceLocation: java.lang.String getFileName()
+org.aspectj.lang.reflect.SourceLocation: int getLine()
+org.aspectj.lang.reflect.SourceLocation: int getColumn()
+org.aspectj.lang.reflect.TypePattern
+org.aspectj.lang.reflect.TypePattern: java.lang.String asString()
+org.aspectj.lang.reflect.TypePatternBasedPerClause
+org.aspectj.lang.reflect.TypePatternBasedPerClause: org.aspectj.lang.reflect.TypePattern getTypePattern()
+org.aspectj.lang.reflect.UnlockSignature
+org.aspectj.runtime.CFlow
+org.aspectj.runtime.CFlow: CFlow()
+org.aspectj.runtime.CFlow: CFlow(java.lang.Object)
+org.aspectj.runtime.CFlow: java.lang.Object getAspect()
+org.aspectj.runtime.CFlow: void setAspect(java.lang.Object)
+org.aspectj.runtime.CFlow: java.lang.Object get(int)
+org.aspectj.runtime.internal.AroundClosure
+org.aspectj.runtime.internal.AroundClosure: java.lang.Object[] state
+org.aspectj.runtime.internal.AroundClosure: int bitflags
+org.aspectj.runtime.internal.AroundClosure: java.lang.Object[] preInitializationState
+org.aspectj.runtime.internal.AroundClosure: AroundClosure()
+org.aspectj.runtime.internal.AroundClosure: AroundClosure(java.lang.Object[])
+org.aspectj.runtime.internal.AroundClosure: int getFlags()
+org.aspectj.runtime.internal.AroundClosure: java.lang.Object[] getState()
+org.aspectj.runtime.internal.AroundClosure: java.lang.Object[] getPreInitializationState()
+org.aspectj.runtime.internal.AroundClosure: java.lang.Object run(java.lang.Object[])
+org.aspectj.runtime.internal.AroundClosure: org.aspectj.lang.ProceedingJoinPoint linkClosureAndJoinPoint()
+org.aspectj.runtime.internal.AroundClosure: org.aspectj.lang.ProceedingJoinPoint linkClosureAndJoinPoint(int)
+org.aspectj.runtime.internal.CFlowCounter
+org.aspectj.runtime.internal.CFlowCounter: CFlowCounter()
+org.aspectj.runtime.internal.CFlowCounter: void inc()
+org.aspectj.runtime.internal.CFlowCounter: void dec()
+org.aspectj.runtime.internal.CFlowCounter: boolean isValid()
+org.aspectj.runtime.internal.CFlowCounter: java.lang.String getThreadStackFactoryClassName()
+org.aspectj.runtime.internal.CFlowPlusState
+org.aspectj.runtime.internal.CFlowPlusState: CFlowPlusState(java.lang.Object[])
+org.aspectj.runtime.internal.CFlowPlusState: CFlowPlusState(java.lang.Object[],java.lang.Object)
+org.aspectj.runtime.internal.CFlowPlusState: java.lang.Object get(int)
+org.aspectj.runtime.internal.CFlowStack
+org.aspectj.runtime.internal.CFlowStack: CFlowStack()
+org.aspectj.runtime.internal.CFlowStack: void push(java.lang.Object)
+org.aspectj.runtime.internal.CFlowStack: void pushInstance(java.lang.Object)
+org.aspectj.runtime.internal.CFlowStack: void push(java.lang.Object[])
+org.aspectj.runtime.internal.CFlowStack: void pop()
+org.aspectj.runtime.internal.CFlowStack: java.lang.Object peek()
+org.aspectj.runtime.internal.CFlowStack: java.lang.Object get(int)
+org.aspectj.runtime.internal.CFlowStack: java.lang.Object peekInstance()
+org.aspectj.runtime.internal.CFlowStack: org.aspectj.runtime.CFlow peekCFlow()
+org.aspectj.runtime.internal.CFlowStack: org.aspectj.runtime.CFlow peekTopCFlow()
+org.aspectj.runtime.internal.CFlowStack: boolean isValid()
+org.aspectj.runtime.internal.CFlowStack: java.lang.String getThreadStackFactoryClassName()
+org.aspectj.runtime.internal.Conversions
+org.aspectj.runtime.internal.Conversions: java.lang.Object intObject(int)
+org.aspectj.runtime.internal.Conversions: java.lang.Object shortObject(short)
+org.aspectj.runtime.internal.Conversions: java.lang.Object byteObject(byte)
+org.aspectj.runtime.internal.Conversions: java.lang.Object charObject(char)
+org.aspectj.runtime.internal.Conversions: java.lang.Object longObject(long)
+org.aspectj.runtime.internal.Conversions: java.lang.Object floatObject(float)
+org.aspectj.runtime.internal.Conversions: java.lang.Object doubleObject(double)
+org.aspectj.runtime.internal.Conversions: java.lang.Object booleanObject(boolean)
+org.aspectj.runtime.internal.Conversions: java.lang.Object voidObject()
+org.aspectj.runtime.internal.Conversions: int intValue(java.lang.Object)
+org.aspectj.runtime.internal.Conversions: long longValue(java.lang.Object)
+org.aspectj.runtime.internal.Conversions: float floatValue(java.lang.Object)
+org.aspectj.runtime.internal.Conversions: double doubleValue(java.lang.Object)
+org.aspectj.runtime.internal.Conversions: byte byteValue(java.lang.Object)
+org.aspectj.runtime.internal.Conversions: short shortValue(java.lang.Object)
+org.aspectj.runtime.internal.Conversions: char charValue(java.lang.Object)
+org.aspectj.runtime.internal.Conversions: boolean booleanValue(java.lang.Object)
+org.aspectj.runtime.internal.Conversions: java.lang.Object voidValue(java.lang.Object)
+org.aspectj.runtime.internal.PerObjectMap
+org.aspectj.runtime.internal.PerObjectMap: PerObjectMap()
+org.aspectj.runtime.internal.cflowstack.ThreadCounter
+org.aspectj.runtime.internal.cflowstack.ThreadCounter: void inc()
+org.aspectj.runtime.internal.cflowstack.ThreadCounter: void dec()
+org.aspectj.runtime.internal.cflowstack.ThreadCounter: boolean isNotZero()
+org.aspectj.runtime.internal.cflowstack.ThreadCounter: void removeThreadCounter()
+org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11
+org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11: ThreadCounterImpl11()
+org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11: void inc()
+org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11: void dec()
+org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11: boolean isNotZero()
+org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11: void removeThreadCounter()
+org.aspectj.runtime.internal.cflowstack.ThreadStack
+org.aspectj.runtime.internal.cflowstack.ThreadStack: java.util.Stack getThreadStack()
+org.aspectj.runtime.internal.cflowstack.ThreadStack: void removeThreadStack()
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactory
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactory: org.aspectj.runtime.internal.cflowstack.ThreadStack getNewThreadStack()
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactory: org.aspectj.runtime.internal.cflowstack.ThreadCounter getNewThreadCounter()
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl: ThreadStackFactoryImpl()
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl: org.aspectj.runtime.internal.cflowstack.ThreadStack getNewThreadStack()
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl: org.aspectj.runtime.internal.cflowstack.ThreadCounter getNewThreadCounter()
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl11
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl11: ThreadStackFactoryImpl11()
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl11: org.aspectj.runtime.internal.cflowstack.ThreadStack getNewThreadStack()
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl11: org.aspectj.runtime.internal.cflowstack.ThreadCounter getNewThreadCounter()
+org.aspectj.runtime.internal.cflowstack.ThreadStackImpl11
+org.aspectj.runtime.internal.cflowstack.ThreadStackImpl11: ThreadStackImpl11()
+org.aspectj.runtime.internal.cflowstack.ThreadStackImpl11: java.util.Stack getThreadStack()
+org.aspectj.runtime.internal.cflowstack.ThreadStackImpl11: void removeThreadStack()
+org.aspectj.runtime.reflect.Factory
+org.aspectj.runtime.reflect.Factory: Factory(java.lang.String,java.lang.Class)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint$StaticPart makeSJP(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint$StaticPart makeSJP(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint$StaticPart makeSJP(java.lang.String,org.aspectj.lang.Signature,org.aspectj.lang.reflect.SourceLocation)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint$StaticPart makeSJP(java.lang.String,org.aspectj.lang.Signature,int,int)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint$StaticPart makeSJP(java.lang.String,org.aspectj.lang.Signature,int)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint$EnclosingStaticPart makeESJP(java.lang.String,org.aspectj.lang.Signature,org.aspectj.lang.reflect.SourceLocation)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint$EnclosingStaticPart makeESJP(java.lang.String,org.aspectj.lang.Signature,int,int)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint$EnclosingStaticPart makeESJP(java.lang.String,org.aspectj.lang.Signature,int)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint$StaticPart makeEncSJP(java.lang.reflect.Member)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint makeJP(org.aspectj.lang.JoinPoint$StaticPart,java.lang.Object,java.lang.Object)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint makeJP(org.aspectj.lang.JoinPoint$StaticPart,java.lang.Object,java.lang.Object,java.lang.Object)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint makeJP(org.aspectj.lang.JoinPoint$StaticPart,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.JoinPoint makeJP(org.aspectj.lang.JoinPoint$StaticPart,java.lang.Object,java.lang.Object,java.lang.Object[])
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.MethodSignature makeMethodSig(java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.MethodSignature makeMethodSig(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.MethodSignature makeMethodSig(int,java.lang.String,java.lang.Class,java.lang.Class[],java.lang.String[],java.lang.Class[],java.lang.Class)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.ConstructorSignature makeConstructorSig(java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.ConstructorSignature makeConstructorSig(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.ConstructorSignature makeConstructorSig(int,java.lang.Class,java.lang.Class[],java.lang.String[],java.lang.Class[])
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.FieldSignature makeFieldSig(java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.FieldSignature makeFieldSig(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.FieldSignature makeFieldSig(int,java.lang.String,java.lang.Class,java.lang.Class)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.AdviceSignature makeAdviceSig(java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.AdviceSignature makeAdviceSig(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.AdviceSignature makeAdviceSig(int,java.lang.String,java.lang.Class,java.lang.Class[],java.lang.String[],java.lang.Class[],java.lang.Class)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.InitializerSignature makeInitializerSig(java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.InitializerSignature makeInitializerSig(java.lang.String,java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.InitializerSignature makeInitializerSig(int,java.lang.Class)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.CatchClauseSignature makeCatchClauseSig(java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.CatchClauseSignature makeCatchClauseSig(java.lang.String,java.lang.String,java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.CatchClauseSignature makeCatchClauseSig(java.lang.Class,java.lang.Class,java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.LockSignature makeLockSig(java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.LockSignature makeLockSig()
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.LockSignature makeLockSig(java.lang.Class)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.UnlockSignature makeUnlockSig(java.lang.String)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.UnlockSignature makeUnlockSig()
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.UnlockSignature makeUnlockSig(java.lang.Class)
+org.aspectj.runtime.reflect.Factory: org.aspectj.lang.reflect.SourceLocation makeSourceLoc(int,int)
+org.aspectj.runtime.reflect.FieldSignatureImpl
+org.aspectj.runtime.reflect.FieldSignatureImpl: java.lang.Class getFieldType()
+org.aspectj.runtime.reflect.FieldSignatureImpl: java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker)
+org.aspectj.runtime.reflect.FieldSignatureImpl: java.lang.reflect.Field getField()
+org.aspectj.runtime.reflect.MemberSignatureImpl: MemberSignatureImpl(java.lang.String)
+org.aspectj.runtime.reflect.SignatureImpl: java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker)
+org.aspectj.runtime.reflect.SignatureImpl: java.lang.String toString()
+org.aspectj.runtime.reflect.SignatureImpl: java.lang.String toShortString()
+org.aspectj.runtime.reflect.SignatureImpl: java.lang.String toLongString()
+org.aspectj.runtime.reflect.SignatureImpl: int getModifiers()
+org.aspectj.runtime.reflect.SignatureImpl: java.lang.String getName()
+org.aspectj.runtime.reflect.SignatureImpl: java.lang.Class getDeclaringType()
+org.aspectj.runtime.reflect.SignatureImpl: java.lang.String getDeclaringTypeName()
+org.aspectj.runtime.reflect.SignatureImpl: void setLookupClassLoader(java.lang.ClassLoader)
+org.aspectj.runtime.reflect.SignatureImpl: SignatureImpl(java.lang.String)
 retrofit.Callback
 retrofit.Callback: void success(java.lang.Object,retrofit.client.Response)
 retrofit.Callback: void failure(retrofit.RetrofitError)
