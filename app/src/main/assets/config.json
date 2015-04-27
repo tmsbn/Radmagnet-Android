@@ -3,22 +3,26 @@
     {
       "name": "University News",
       "color": "#F7931E",
-      "value": "news"
+      "value": "news",
+      "icon": "ic_uninews"
     },
     {
       "name": "Life Hacks",
       "color": "#662D91",
-      "value": "life_hacks"
+      "value": "life_hacks",
+      "icon": "ic_lifehacks"
     },
     {
       "name": "Events",
       "color": "#C1272D",
-      "value": "events"
+      "value": "events",
+      "icon": "ic_events"
     },
     {
       "name": "City Hotspots",
       "color": "#ED1E79",
-      "value": "hotspots"
+      "value": "hotspots",
+      "icon": "ic_cityhotspots"
     }
   ]
 }

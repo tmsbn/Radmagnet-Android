@@ -33,8 +33,19 @@ public class News extends RealmObject {
 
     //of hotspots
     private String location = "";
+
     private String shareUrl = "";
     private long key = 0;
+
+    private boolean isRead;
+
+    public boolean isRead() {
+        return isRead;
+    }
+
+    public void setRead(boolean isRead) {
+        this.isRead = isRead;
+    }
 
     public String getShareUrl() {
         return shareUrl;

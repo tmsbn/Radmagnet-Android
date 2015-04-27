@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/categoryColor"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/white" />
+
+
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/categoryColor"
+            android:background="@color/gray"
+            android:focusable="false"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_shade" />
+
+        <TextView
+            android:id="@+id/newItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_rectangle"
+            android:text="@string/new_txt"
+            android:textAppearance="@style/TextAppearance.BlackItalics"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+
+        <FrameLayout
+            android:id="@+id/specific_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_rectangle"
+            android:gravity="center_horizontal">
+
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_rectangle" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+
+            <TextView
+                android:id="@+id/headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:shadowColor="@color/translucent"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:textAppearance="@style/TextAppearance.Black"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                tools:ignore="MissingPrefix"
+                tools:text="This is some long typical headline" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="7dp"
+                android:shadowColor="@color/translucent"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:visibility="gone"
+                tools:ignore="MissingPrefix"
+                tools:text="This is some long typical headline" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="7dp"
+                android:background="#5FFF" />
+
+            <LinearLayout
+                android:id="@+id/bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="7dp">
+
+                <ImageView
+                    android:id="@+id/creatorDp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/creator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    tools:ignore="MissingPrefix"
+                    tools:text="Birla Institute of Technology" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="right"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    tools:ignore="MissingPrefix"
+                    tools:text="12 February @ 3:14" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/transparent_selector"
+        android:visibility="visible" />
+</FrameLayout>

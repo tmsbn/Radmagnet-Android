@@ -18608,14 +18608,22 @@ com.radmagnet.R$drawable -> com.radmagnet.R$drawable:
     int btn_start_p -> btn_start_p
     int btn_yellow_n -> btn_yellow_n
     int btn_yellow_p -> btn_yellow_p
+    int ic_alltherad -> ic_alltherad
     int ic_back -> ic_back
     int ic_bookmark -> ic_bookmark
     int ic_bookmark_a -> ic_bookmark_a
     int ic_bookmark_n -> ic_bookmark_n
     int ic_branding -> ic_branding
+    int ic_cityhotspots -> ic_cityhotspots
+    int ic_deals -> ic_deals
+    int ic_events -> ic_events
     int ic_fb -> ic_fb
+    int ic_feedback -> ic_feedback
     int ic_launcher -> ic_launcher
+    int ic_lifehacks -> ic_lifehacks
+    int ic_radilove -> ic_radilove
     int ic_share -> ic_share
+    int ic_uninews -> ic_uninews
     int rounded_rectangle -> rounded_rectangle
     int rounded_rectangle_with_red_border -> rounded_rectangle_with_red_border
     int transparent_gradiant_selector -> transparent_gradiant_selector
@@ -18661,6 +18669,7 @@ com.radmagnet.R$id -> com.radmagnet.R$id:
     int categories_list -> categories_list
     int category -> category
     int categoryColor -> categoryColor
+    int categoryIcon -> categoryIcon
     int checkbox -> checkbox
     int circlePagerIndicator -> circlePagerIndicator
     int collapseActionView -> collapseActionView
@@ -18698,6 +18707,7 @@ com.radmagnet.R$id -> com.radmagnet.R$id:
     int month -> month
     int name -> name
     int never -> never
+    int newItem -> newItem
     int newRads_text -> newRads_text
     int newsCategoryTitle -> newsCategoryTitle
     int newsDetailsLayout -> newsDetailsLayout
@@ -18790,9 +18800,9 @@ com.radmagnet.R$layout -> com.radmagnet.R$layout:
     int layout_news -> layout_news
     int layout_splash_1 -> layout_splash_1
     int layout_splash_2 -> layout_splash_2
-    int lv_rw_bookmark -> lv_rw_bookmark
-    int lv_rw_category -> lv_rw_category
-    int lv_rw_news -> lv_rw_news
+    int row_bookmark -> row_bookmark
+    int row_category -> row_category
+    int row_news -> row_news
     int sidebar_news -> sidebar_news
     int support_simple_spinner_dropdown_item -> support_simple_spinner_dropdown_item
     int toolbar -> toolbar
@@ -18837,6 +18847,7 @@ com.radmagnet.R$string -> com.radmagnet.R$string:
     int hello_blank_fragment -> hello_blank_fragment
     int hello_world -> hello_world
     int missingHeadline_txt -> missingHeadline_txt
+    int new_txt -> new_txt
     int noRadsHere_msg -> noRadsHere_msg
     int noUpdatesAvaliable_msg -> noUpdatesAvaliable_msg
     int notif_content -> notif_content
@@ -19437,14 +19448,15 @@ com.radmagnet.activities.BaseActivity -> com.radmagnet.activities.BaseActivity:
     51:55:void onCreate(android.os.Bundle) -> onCreate
     60:75:com.radmagnet.models.ConfigVars getConfig() -> getConfig
     80:86:int getColorFromCategory(java.lang.String) -> getColorFromCategory
-    91:97:java.lang.String getTitleFromConfig(java.lang.String) -> getTitleFromConfig
-    103:107:android.graphics.drawable.Drawable applyColorToDrawable(int,int) -> applyColorToDrawable
-    112:113:void attachBaseContext(android.content.Context) -> attachBaseContext
-    119:141:java.lang.CharSequence highlight(java.lang.String,java.lang.String) -> highlight
-    147:177:void setupActionBar(boolean,android.support.v7.widget.Toolbar) -> setupActionBar
-    181:186:android.text.SpannableString getStyledActionTitle(java.lang.CharSequence) -> getStyledActionTitle
-    191:191:int getValueInDp(int) -> getValueInDp
-    197:212:java.lang.String getDateSuffix(int) -> getDateSuffix
+    92:99:android.graphics.drawable.Drawable getIconFromCategory(java.lang.String) -> getIconFromCategory
+    106:112:java.lang.String getTitleFromConfig(java.lang.String) -> getTitleFromConfig
+    118:122:android.graphics.drawable.Drawable applyColorToDrawable(int,int) -> applyColorToDrawable
+    127:128:void attachBaseContext(android.content.Context) -> attachBaseContext
+    134:156:java.lang.CharSequence highlight(java.lang.String,java.lang.String) -> highlight
+    162:190:void setupActionBar(boolean,android.support.v7.widget.Toolbar) -> setupActionBar
+    194:199:android.text.SpannableString getStyledActionTitle(java.lang.CharSequence) -> getStyledActionTitle
+    204:204:int getValueInDp(int) -> getValueInDp
+    210:225:java.lang.String getDateSuffix(int) -> getDateSuffix
 com.radmagnet.activities.BookmarkActivity -> com.radmagnet.activities.BookmarkActivity:
     android.support.v7.widget.RecyclerView mBookmarksRv -> mBookmarksRv
     android.support.v7.widget.Toolbar mToolbar -> mToolbar
@@ -19546,26 +19558,26 @@ com.radmagnet.activities.MainActivity -> com.radmagnet.activities.MainActivity:
     android.support.v7.widget.LinearLayoutManager linearLayoutManager -> u
     boolean isUILoaded -> v
     94:106:void onCreate(android.os.Bundle) -> onCreate
-    110:159:void setupNewsList() -> b
-    164:170:void setupCategoriesList() -> c
-    176:206:void setupOtherSideBarOptions() -> d
-    210:220:void setupDrawer() -> e
-    225:231:void fetchLatestNews() -> f
-    235:242:void showLoadingIcon(boolean) -> b
-    246:247:void onRefresh() -> onRefresh
-    252:254:boolean onClose() -> onClose
-    260:270:void onItemClick(com.radmagnet.models.News,int) -> onItemClick
-    327:329:void onDestroy() -> onDestroy
-    332:337:long getMaxKey() -> g
-    342:359:io.realm.RealmResults getRealmData() -> h
-    366:368:void onPostCreate(android.os.Bundle) -> onPostCreate
-    372:374:void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
-    379:391:void onBackPressed() -> onBackPressed
-    397:418:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
-    424:429:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    435:452:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-    456:458:boolean onQueryTextSubmit(java.lang.String) -> onQueryTextSubmit
-    465:474:boolean onQueryTextChange(java.lang.String) -> onQueryTextChange
+    110:138:void setupNewsList() -> b
+    143:149:void setupCategoriesList() -> c
+    155:185:void setupOtherSideBarOptions() -> d
+    189:199:void setupDrawer() -> e
+    204:210:void fetchLatestNews() -> f
+    214:221:void showLoadingIcon(boolean) -> b
+    225:226:void onRefresh() -> onRefresh
+    231:233:boolean onClose() -> onClose
+    239:257:void onItemClick(com.radmagnet.models.News,int) -> onItemClick
+    314:316:void onDestroy() -> onDestroy
+    319:324:long getMaxKey() -> g
+    329:346:io.realm.RealmResults getRealmData() -> h
+    353:355:void onPostCreate(android.os.Bundle) -> onPostCreate
+    359:361:void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    366:378:void onBackPressed() -> onBackPressed
+    384:405:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    411:416:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    422:439:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+    443:445:boolean onQueryTextSubmit(java.lang.String) -> onQueryTextSubmit
+    452:461:boolean onQueryTextChange(java.lang.String) -> onQueryTextChange
     48:48:long access$100(com.radmagnet.activities.MainActivity) -> a
     48:48:void access$200(com.radmagnet.activities.MainActivity,boolean) -> a
 com.radmagnet.activities.MainActivity$$ViewInjector -> com.radmagnet.activities.MainActivity$$ViewInjector:
@@ -19577,31 +19589,30 @@ com.radmagnet.activities.MainActivity$1 -> afb:
     com.radmagnet.activities.MainActivity this$0 -> a
     131:132:void onClick(android.view.View) -> onClick
 com.radmagnet.activities.MainActivity$2 -> afc:
-    float val$THRESHOLD -> a
-    com.radmagnet.activities.MainActivity this$0 -> b
-    144:145:void onScrollStateChanged(android.support.v7.widget.RecyclerView,int) -> onScrollStateChanged
-    150:157:void onScrolled(android.support.v7.widget.RecyclerView,int,int) -> onScrolled
-com.radmagnet.activities.MainActivity$3 -> afd:
     com.radmagnet.activities.MainActivity this$0 -> a
-    187:204:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.radmagnet.activities.MainActivity$4 -> afe:
+    166:183:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.radmagnet.activities.MainActivity$3 -> afd:
     boolean val$visibility -> a
     com.radmagnet.activities.MainActivity this$0 -> b
-    238:239:void run() -> run
+    217:218:void run() -> run
+com.radmagnet.activities.MainActivity$4 -> afe:
+    com.radmagnet.models.News val$newsItem -> a
+    com.radmagnet.activities.MainActivity this$0 -> b
+    249:250:void execute(io.realm.Realm) -> execute
 com.radmagnet.activities.MainActivity$5 -> aff:
     com.radmagnet.activities.MainActivity this$0 -> a
-    403:404:boolean onMenuItemActionExpand(android.view.MenuItem) -> onMenuItemActionExpand
-    409:410:boolean onMenuItemActionCollapse(android.view.MenuItem) -> onMenuItemActionCollapse
+    390:391:boolean onMenuItemActionExpand(android.view.MenuItem) -> onMenuItemActionExpand
+    396:397:boolean onMenuItemActionCollapse(android.view.MenuItem) -> onMenuItemActionCollapse
 com.radmagnet.activities.MainActivity$GetNewsCallback -> afg:
     com.radmagnet.activities.MainActivity this$0 -> a
-    278:312:void success(com.radmagnet.models.NewsResponse,retrofit.client.Response) -> a
-    318:321:void failure(retrofit.RetrofitError) -> failure
-    272:272:void success(java.lang.Object,retrofit.client.Response) -> success
+    265:299:void success(com.radmagnet.models.NewsResponse,retrofit.client.Response) -> a
+    305:308:void failure(retrofit.RetrofitError) -> failure
+    259:259:void success(java.lang.Object,retrofit.client.Response) -> success
 com.radmagnet.activities.MainActivity$GetNewsCallback$1 -> afh:
     java.util.ArrayList val$newsList -> a
     com.radmagnet.models.NewsResponse val$newsResponse -> b
     com.radmagnet.activities.MainActivity$GetNewsCallback this$1 -> c
-    301:304:void execute(io.realm.Realm) -> execute
+    288:291:void execute(io.realm.Realm) -> execute
 com.radmagnet.activities.SplashActivity -> com.radmagnet.activities.SplashActivity:
     android.app.AlarmManager mAlarmManager -> o
     com.radmagnet.customviews.AutoScrollViewPager mIntroPager -> mIntroPager
@@ -19612,10 +19623,10 @@ com.radmagnet.activities.SplashActivity -> com.radmagnet.activities.SplashActivi
     90:98:void deleteRealmData() -> b
     102:134:void setUpPager() -> setUpPager
     139:144:void startFeed() -> startFeed
-    149:172:void setupRealmCleaningService() -> setupRealmCleaningService
-    177:204:void setupReminderNotification() -> setupReminderNotification
-    209:210:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
-    217:220:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    149:174:void setupRealmCleaningService() -> setupRealmCleaningService
+    179:206:void setupReminderNotification() -> setupReminderNotification
+    211:212:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    219:222:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
 com.radmagnet.activities.SplashActivity$$ViewInjector -> com.radmagnet.activities.SplashActivity$$ViewInjector:
     11:27:void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.SplashActivity,java.lang.Object) -> inject
     30:34:void reset(com.radmagnet.activities.SplashActivity) -> reset
@@ -19679,8 +19690,8 @@ com.radmagnet.adapters.BookmarksAdapter$BookmarksViewHolder -> com.radmagnet.ada
     186:186:android.view.View getSwipeableContainerView() -> getSwipeableContainerView
 com.radmagnet.adapters.CategoriesAdapter -> com.radmagnet.adapters.CategoriesAdapter:
     int previousSelected -> a
-    32:39:void setSelectedCategory(int) -> setSelectedCategory
-    44:72:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    35:42:void setSelectedCategory(int) -> setSelectedCategory
+    47:85:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
 com.radmagnet.adapters.ImagePagerAdapter -> com.radmagnet.adapters.ImagePagerAdapter:
     android.content.Context context -> a
     java.util.List imageIdList -> b
@@ -19704,11 +19715,11 @@ com.radmagnet.adapters.NewsAdapter -> com.radmagnet.adapters.NewsAdapter:
     73:74:void setOnItemClickedListener(com.radmagnet.adapters.NewsAdapter$NewsItemClickListener) -> setOnItemClickedListener
     79:81:com.radmagnet.adapters.NewsAdapter$NewsHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
     87:87:long getItemId(int) -> getItemId
-    93:166:void onBindViewHolder(com.radmagnet.adapters.NewsAdapter$NewsHolder,int) -> onBindViewHolder
-    172:172:int getItemCount() -> getItemCount
-    177:177:io.realm.RealmResults getRealmResults() -> getRealmResults
-    216:218:void setSearchTerm(java.lang.String) -> setSearchTerm
-    221:225:void updateRealmResults(io.realm.RealmResults) -> updateRealmResults
+    93:182:void onBindViewHolder(com.radmagnet.adapters.NewsAdapter$NewsHolder,int) -> onBindViewHolder
+    188:188:int getItemCount() -> getItemCount
+    193:193:io.realm.RealmResults getRealmResults() -> getRealmResults
+    234:236:void setSearchTerm(java.lang.String) -> setSearchTerm
+    239:243:void updateRealmResults(io.realm.RealmResults) -> updateRealmResults
     34:34:void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onBindViewHolder
     34:34:android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
 com.radmagnet.adapters.NewsAdapter$1 -> afo:
@@ -19718,7 +19729,7 @@ com.radmagnet.adapters.NewsAdapter$2 -> afp:
     com.radmagnet.models.News val$news -> a
     int val$position -> b
     com.radmagnet.adapters.NewsAdapter this$0 -> c
-    158:160:void onClick(android.view.View) -> onClick
+    174:176:void onClick(android.view.View) -> onClick
 com.radmagnet.adapters.NewsAdapter$NewsHolder -> com.radmagnet.adapters.NewsAdapter$NewsHolder:
     android.widget.TextView dateTv -> h
     android.widget.TextView headlineTv -> i
@@ -19726,14 +19737,15 @@ com.radmagnet.adapters.NewsAdapter$NewsHolder -> com.radmagnet.adapters.NewsAdap
     android.widget.ImageView creatorDp -> k
     android.widget.ImageButton bookmarkIbtn -> l
     android.view.View categoryLine -> m
-    android.widget.TextView categoryTv -> n
+    android.widget.ImageView categoryIv -> n
     android.widget.ImageView newsImageIv -> o
-    android.widget.LinearLayout linearLayout -> p
+    android.widget.FrameLayout frameLayout -> p
     android.widget.TextView location -> q
+    android.widget.TextView isNewTv -> r
 com.radmagnet.adapters.NewsAdapter$NewsItemClickListener -> com.radmagnet.adapters.NewsAdapter$NewsItemClickListener:
     void onItemClick(com.radmagnet.models.News,int) -> onItemClick
 com.radmagnet.adapters.OtherOptionsAdapter -> com.radmagnet.adapters.OtherOptionsAdapter:
-    24:37:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    27:50:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
 com.radmagnet.api.RadmagnetApi -> com.radmagnet.api.RadmagnetApi:
     com.radmagnet.api.RadmagnetApi$RestInterface sRestService -> a
     39:77:com.radmagnet.api.RadmagnetApi$RestInterface getRestClient() -> getRestClient
@@ -19841,76 +19853,80 @@ com.radmagnet.fragment.NewsFragment -> com.radmagnet.fragment.NewsFragment:
     android.widget.TextView mCreatorTv -> mCreatorTv
     android.widget.ImageView mCreatorDpIv -> mCreatorDpIv
     android.widget.ImageView mNewsIv -> mNewsIv
-    android.widget.TextView mCategoryTv -> mCategoryTv
-    android.widget.LinearLayout mSpecificDetailsContainer -> mSpecificDetailsContainer
+    android.widget.ImageView mCategoryIv -> mCategoryIv
+    android.widget.FrameLayout mSpecificDetailsContainer -> mSpecificDetailsContainer
     android.view.View mCategoryColor -> mCategoryColor
     android.webkit.WebView mWebView -> mWebView
     android.widget.TextView mLocation -> mLocation
     android.widget.ProgressBar mProgressBar -> mProgressBar
     android.widget.TextView newsCategoryTitle -> newsCategoryTitle
     android.widget.ScrollView mScrollView -> mScrollView
+    android.widget.TextView mNewItemTv -> mNewItemTv
     android.support.v7.widget.Toolbar toolbar -> a
     com.radmagnet.models.News mNews -> b
     int color -> c
     java.lang.String detailsUrl -> d
     android.view.MenuItem shareMenuItem -> e
     android.view.MenuItem bookmarkMenuItem -> f
-    110:114:com.radmagnet.fragment.NewsFragment newInstance(java.lang.String) -> newInstance
-    120:124:void onCreate(android.os.Bundle) -> onCreate
-    129:142:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    147:150:void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> onCreateOptionsMenu
-    156:163:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
-    168:181:void setupToolbar(android.view.View) -> a
-    186:189:void onResume() -> onResume
-    193:212:void setupAllViews() -> l
-    217:264:void setupTopDetails() -> m
-    269:305:void setupWebView() -> setupWebView
-    309:318:void bookMarkItem() -> bookMarkItem
-    322:326:void updateBackIcon() -> updateBackIcon
-    330:346:void updateBookmarkButton() -> updateBookmarkButton
-    350:365:void updateShareIcon() -> n
-    370:376:void onAttach(android.app.Activity) -> onAttach
-    380:382:void onDetach() -> onDetach
+    111:115:com.radmagnet.fragment.NewsFragment newInstance(java.lang.String) -> newInstance
+    121:125:void onCreate(android.os.Bundle) -> onCreate
+    130:143:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    148:151:void onCreateOptionsMenu(android.view.Menu,android.view.MenuInflater) -> onCreateOptionsMenu
+    157:164:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    169:182:void setupToolbar(android.view.View) -> a
+    187:190:void onResume() -> onResume
+    194:213:void setupAllViews() -> l
+    218:276:void setupTopDetails() -> m
+    281:317:void setupWebView() -> setupWebView
+    321:330:void bookMarkItem() -> bookMarkItem
+    334:338:void updateBackIcon() -> updateBackIcon
+    342:358:void updateBookmarkButton() -> updateBookmarkButton
+    362:377:void updateShareIcon() -> n
+    382:388:void onAttach(android.app.Activity) -> onAttach
+    392:394:void onDetach() -> onDetach
 com.radmagnet.fragment.NewsFragment$$ViewInjector -> com.radmagnet.fragment.NewsFragment$$ViewInjector:
-    11:37:void inject(butterknife.ButterKnife$Finder,com.radmagnet.fragment.NewsFragment,java.lang.Object) -> inject
-    40:53:void reset(com.radmagnet.fragment.NewsFragment) -> reset
+    11:39:void inject(butterknife.ButterKnife$Finder,com.radmagnet.fragment.NewsFragment,java.lang.Object) -> inject
+    42:56:void reset(com.radmagnet.fragment.NewsFragment) -> reset
     8:8:void reset(java.lang.Object) -> reset
     8:8:void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> inject
 com.radmagnet.fragment.NewsFragment$1 -> afw:
     com.radmagnet.fragment.NewsFragment this$0 -> a
-    175:177:void onClick(android.view.View) -> onClick
+    176:178:void onClick(android.view.View) -> onClick
 com.radmagnet.fragment.NewsFragment$2 -> afx:
     com.radmagnet.fragment.NewsFragment this$0 -> a
-    274:276:void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
-    280:282:void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
-    286:299:boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    286:288:void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
+    292:294:void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+    298:311:boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
 com.radmagnet.fragment.NewsFragment$3 -> afy:
     com.radmagnet.fragment.NewsFragment this$0 -> a
-    312:313:void execute(io.realm.Realm) -> execute
+    324:325:void execute(io.realm.Realm) -> execute
 com.radmagnet.fragment.NewsFragment$4 -> afz:
     com.radmagnet.fragment.NewsFragment this$0 -> a
-    341:343:boolean onMenuItemClick(android.view.MenuItem) -> onMenuItemClick
+    353:355:boolean onMenuItemClick(android.view.MenuItem) -> onMenuItemClick
 com.radmagnet.fragment.NewsFragment$5 -> aga:
     com.radmagnet.fragment.NewsFragment this$0 -> a
-    355:361:boolean onMenuItemClick(android.view.MenuItem) -> onMenuItemClick
+    367:373:boolean onMenuItemClick(android.view.MenuItem) -> onMenuItemClick
 com.radmagnet.fragment.NewsFragment$OnFragmentInteractionListener -> com.radmagnet.fragment.NewsFragment$OnFragmentInteractionListener:
     void onFragmentInteraction(android.net.Uri) -> onFragmentInteraction
 com.radmagnet.models.Category -> com.radmagnet.models.Category:
     java.lang.String name -> name
     java.lang.String color -> color
     java.lang.String value -> value
+    java.lang.String icon -> icon
     boolean isSelected -> isSelected
     boolean isSection -> isSection
-    33:33:java.lang.String getName() -> getName
-    37:37:java.lang.String getColor() -> getColor
-    41:41:java.lang.String getValue() -> getValue
-    45:45:boolean isSelected() -> isSelected
-    49:49:boolean isSection() -> isSection
-    53:54:void setName(java.lang.String) -> setName
-    57:58:void setColor(java.lang.String) -> setColor
-    61:62:void setValue(java.lang.String) -> setValue
-    65:66:void setSelected(boolean) -> setSelected
-    69:70:void setSection(boolean) -> setSection
+    39:39:java.lang.String getIcon() -> getIcon
+    43:44:void setIcon(java.lang.String) -> setIcon
+    47:47:java.lang.String getName() -> getName
+    51:51:java.lang.String getColor() -> getColor
+    55:55:java.lang.String getValue() -> getValue
+    59:59:boolean isSelected() -> isSelected
+    63:63:boolean isSection() -> isSection
+    67:68:void setName(java.lang.String) -> setName
+    71:72:void setColor(java.lang.String) -> setColor
+    75:76:void setValue(java.lang.String) -> setValue
+    79:80:void setSelected(boolean) -> setSelected
+    83:84:void setSection(boolean) -> setSection
 com.radmagnet.models.ConfigVars -> com.radmagnet.models.ConfigVars:
     java.util.ArrayList categories -> categories
 com.radmagnet.models.Feedback -> com.radmagnet.models.Feedback:
@@ -19935,35 +19951,38 @@ com.radmagnet.models.News -> com.radmagnet.models.News:
     java.lang.String location -> location
     java.lang.String shareUrl -> shareUrl
     long key -> key
+    boolean isRead -> isRead
     boolean isBookmarked -> isBookmarked
-    40:40:java.lang.String getShareUrl() -> getShareUrl
-    44:45:void setShareUrl(java.lang.String) -> setShareUrl
-    48:48:long getKey() -> getKey
-    52:53:void setKey(long) -> setKey
-    59:59:java.util.Date getStartDate() -> getStartDate
-    63:63:java.lang.String getLocation() -> getLocation
-    67:68:void setLocation(java.lang.String) -> setLocation
-    71:72:void setStartDate(java.util.Date) -> setStartDate
-    75:75:java.lang.String getId() -> getId
-    79:80:void setId(java.lang.String) -> setId
-    83:83:boolean isBookmarked() -> isBookmarked
-    87:88:void setBookmarked(boolean) -> setBookmarked
-    92:92:java.lang.String getPostId() -> getPostId
-    96:96:java.util.Date getCreatedDate() -> getCreatedDate
-    100:100:boolean isActive() -> isActive
-    104:104:java.lang.String getHeadline() -> getHeadline
-    108:108:java.lang.String getImageUrl() -> getImageUrl
-    112:112:java.lang.String getCreator() -> getCreator
-    116:116:java.lang.String getCreatorDp() -> getCreatorDp
-    121:121:java.lang.String getCategory() -> getCategory
-    125:126:void setCategory(java.lang.String) -> setCategory
-    129:130:void setPostId(java.lang.String) -> setPostId
-    133:134:void setCreatedDate(java.util.Date) -> setCreatedDate
-    137:138:void setActive(boolean) -> setActive
-    141:142:void setHeadline(java.lang.String) -> setHeadline
-    145:146:void setImageUrl(java.lang.String) -> setImageUrl
-    149:150:void setCreator(java.lang.String) -> setCreator
-    153:154:void setCreatorDp(java.lang.String) -> setCreatorDp
+    43:43:boolean isRead() -> isRead
+    47:48:void setRead(boolean) -> setRead
+    51:51:java.lang.String getShareUrl() -> getShareUrl
+    55:56:void setShareUrl(java.lang.String) -> setShareUrl
+    59:59:long getKey() -> getKey
+    63:64:void setKey(long) -> setKey
+    70:70:java.util.Date getStartDate() -> getStartDate
+    74:74:java.lang.String getLocation() -> getLocation
+    78:79:void setLocation(java.lang.String) -> setLocation
+    82:83:void setStartDate(java.util.Date) -> setStartDate
+    86:86:java.lang.String getId() -> getId
+    90:91:void setId(java.lang.String) -> setId
+    94:94:boolean isBookmarked() -> isBookmarked
+    98:99:void setBookmarked(boolean) -> setBookmarked
+    103:103:java.lang.String getPostId() -> getPostId
+    107:107:java.util.Date getCreatedDate() -> getCreatedDate
+    111:111:boolean isActive() -> isActive
+    115:115:java.lang.String getHeadline() -> getHeadline
+    119:119:java.lang.String getImageUrl() -> getImageUrl
+    123:123:java.lang.String getCreator() -> getCreator
+    127:127:java.lang.String getCreatorDp() -> getCreatorDp
+    132:132:java.lang.String getCategory() -> getCategory
+    136:137:void setCategory(java.lang.String) -> setCategory
+    140:141:void setPostId(java.lang.String) -> setPostId
+    144:145:void setCreatedDate(java.util.Date) -> setCreatedDate
+    148:149:void setActive(boolean) -> setActive
+    152:153:void setHeadline(java.lang.String) -> setHeadline
+    156:157:void setImageUrl(java.lang.String) -> setImageUrl
+    160:161:void setCreator(java.lang.String) -> setCreator
+    164:165:void setCreatorDp(java.lang.String) -> setCreatorDp
 com.radmagnet.models.NewsResponse -> com.radmagnet.models.NewsResponse:
     java.lang.String date -> date
     java.util.ArrayList data -> data
@@ -19976,16 +19995,11 @@ com.radmagnet.models.OtherOptions -> com.radmagnet.models.OtherOptions:
     21:21:java.lang.String getColor() -> getColor
 com.radmagnet.receivers.CheckAppReceiver -> com.radmagnet.receivers.CheckAppReceiver:
     int MAX_DB_COUNT -> a
-    28:73:void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.radmagnet.receivers.CheckAppReceiver$1 -> agb:
-    int val$size -> a
-    io.realm.RealmResults val$results -> b
-    com.radmagnet.receivers.CheckAppReceiver this$0 -> c
-    57:67:void execute(io.realm.Realm) -> execute
+    28:49:void onReceive(android.content.Context,android.content.Intent) -> onReceive
 com.radmagnet.receivers.RealmCleaningReceiver -> com.radmagnet.receivers.RealmCleaningReceiver:
     int MAX_DB_COUNT -> a
     23:47:void onReceive(android.content.Context,android.content.Intent) -> onReceive
-com.radmagnet.receivers.RealmCleaningReceiver$1 -> agc:
+com.radmagnet.receivers.RealmCleaningReceiver$1 -> agb:
     int val$size -> a
     io.realm.RealmResults val$results -> b
     com.radmagnet.receivers.RealmCleaningReceiver this$0 -> c
@@ -20065,7 +20079,7 @@ com.squareup.javawriter.JavaWriter -> com.squareup.javawriter.JavaWriter:
     832:835:void hangingIndent() -> b
     841:844:void checkInMethod() -> c
     847:850:void popScope(com.squareup.javawriter.JavaWriter$Scope[]) -> a
-com.squareup.javawriter.JavaWriter$Scope -> agd:
+com.squareup.javawriter.JavaWriter$Scope -> agc:
     com.squareup.javawriter.JavaWriter$Scope TYPE_DECLARATION -> a
     com.squareup.javawriter.JavaWriter$Scope INTERFACE_DECLARATION -> b
     com.squareup.javawriter.JavaWriter$Scope ABSTRACT_METHOD -> c
@@ -22384,7 +22398,7 @@ com.squareup.okhttp.internal.ws.WebSocketWriter$FrameSink -> com.squareup.okhttp
     283:299:void close() -> close
     262:262:com.squareup.okhttp.internal.ws.WebSocket$PayloadType access$102(com.squareup.okhttp.internal.ws.WebSocketWriter$FrameSink,com.squareup.okhttp.internal.ws.WebSocket$PayloadType) -> access$102
     262:262:boolean access$202(com.squareup.okhttp.internal.ws.WebSocketWriter$FrameSink,boolean) -> access$202
-com.squareup.picasso.Action -> age:
+com.squareup.picasso.Action -> agd:
     com.squareup.picasso.Picasso picasso -> a
     com.squareup.picasso.Request request -> b
     java.lang.ref.WeakReference target -> c
@@ -22410,15 +22424,15 @@ com.squareup.picasso.Action -> age:
     101:101:com.squareup.picasso.Picasso getPicasso() -> j
     105:105:com.squareup.picasso.Picasso$Priority getPriority() -> k
     109:109:java.lang.Object getTag() -> l
-com.squareup.picasso.Action$RequestWeakReference -> agf:
+com.squareup.picasso.Action$RequestWeakReference -> age:
     com.squareup.picasso.Action action -> a
-com.squareup.picasso.AssetRequestHandler -> agg:
+com.squareup.picasso.AssetRequestHandler -> agf:
     int ASSET_PREFIX_LENGTH -> a
     android.content.res.AssetManager assetManager -> b
     39:41:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     45:46:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
     50:50:java.lang.String getFilePath(com.squareup.picasso.Request) -> a
-com.squareup.picasso.BitmapHunter -> agh:
+com.squareup.picasso.BitmapHunter -> agg:
     java.lang.Object DECODE_LOCK -> t
     java.lang.ThreadLocal NAME_BUILDER -> u
     java.util.concurrent.atomic.AtomicInteger SEQUENCE_GENERATOR -> v
@@ -22467,23 +22481,23 @@ com.squareup.picasso.BitmapHunter -> agh:
     425:483:android.graphics.Bitmap applyCustomTransformations(java.util.List,android.graphics.Bitmap) -> a
     487:564:android.graphics.Bitmap transformResult(com.squareup.picasso.Request,android.graphics.Bitmap,int) -> a
     569:569:boolean shouldResize(boolean,int,int,int,int) -> a
-com.squareup.picasso.BitmapHunter$1 -> agi:
+com.squareup.picasso.BitmapHunter$1 -> agh:
     54:54:java.lang.StringBuilder initialValue() -> a
     52:52:java.lang.Object initialValue() -> initialValue
-com.squareup.picasso.BitmapHunter$2 -> agj:
+com.squareup.picasso.BitmapHunter$2 -> agi:
     62:62:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     66:66:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
-com.squareup.picasso.BitmapHunter$3 -> agk:
+com.squareup.picasso.BitmapHunter$3 -> agj:
     com.squareup.picasso.Transformation val$transformation -> a
     java.lang.RuntimeException val$e -> b
     433:434:void run() -> run
-com.squareup.picasso.BitmapHunter$4 -> agl:
+com.squareup.picasso.BitmapHunter$4 -> agk:
     java.lang.StringBuilder val$builder -> a
     452:452:void run() -> run
-com.squareup.picasso.BitmapHunter$5 -> agm:
+com.squareup.picasso.BitmapHunter$5 -> agl:
     com.squareup.picasso.Transformation val$transformation -> a
     461:462:void run() -> run
-com.squareup.picasso.BitmapHunter$6 -> agn:
+com.squareup.picasso.BitmapHunter$6 -> agm:
     com.squareup.picasso.Transformation val$transformation -> a
     473:474:void run() -> run
 com.squareup.picasso.Cache -> com.squareup.picasso.Cache:
@@ -22494,7 +22508,7 @@ com.squareup.picasso.Cache -> com.squareup.picasso.Cache:
     int maxSize() -> maxSize
     void clear() -> clear
     void clearKeyUri(java.lang.String) -> clearKeyUri
-com.squareup.picasso.Cache$1 -> ago:
+com.squareup.picasso.Cache$1 -> agn:
     49:49:android.graphics.Bitmap get(java.lang.String) -> get
     54:54:void set(java.lang.String,android.graphics.Bitmap) -> set
     57:57:int size() -> size
@@ -22507,26 +22521,26 @@ com.squareup.picasso.Callback -> com.squareup.picasso.Callback:
 com.squareup.picasso.Callback$EmptyCallback -> com.squareup.picasso.Callback$EmptyCallback:
     26:26:void onSuccess() -> onSuccess
     29:29:void onError() -> onError
-com.squareup.picasso.ContactsPhotoRequestHandler -> agp:
+com.squareup.picasso.ContactsPhotoRequestHandler -> ago:
     android.content.UriMatcher matcher -> b
     android.content.Context context -> a
     64:67:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     71:71:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
     75:94:java.io.InputStream getInputStream(com.squareup.picasso.Request) -> a
-com.squareup.picasso.ContactsPhotoRequestHandler$ContactPhotoStreamIcs -> agq:
+com.squareup.picasso.ContactsPhotoRequestHandler$ContactPhotoStreamIcs -> agp:
     101:101:java.io.InputStream get(android.content.ContentResolver,android.net.Uri) -> a
-com.squareup.picasso.ContentStreamRequestHandler -> agr:
+com.squareup.picasso.ContentStreamRequestHandler -> agq:
     android.content.Context context -> a
     35:35:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     39:39:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
     43:44:java.io.InputStream getInputStream(com.squareup.picasso.Request) -> a
-com.squareup.picasso.DeferredRequestCreator -> ags:
+com.squareup.picasso.DeferredRequestCreator -> agr:
     com.squareup.picasso.RequestCreator creator -> a
     java.lang.ref.WeakReference target -> b
     com.squareup.picasso.Callback callback -> c
     41:60:boolean onPreDraw() -> onPreDraw
     64:74:void cancel() -> a
-com.squareup.picasso.Dispatcher -> agt:
+com.squareup.picasso.Dispatcher -> ags:
     com.squareup.picasso.Dispatcher$DispatcherThread dispatcherThread -> a
     android.content.Context context -> b
     java.util.concurrent.ExecutorService service -> c
@@ -22569,18 +22583,18 @@ com.squareup.picasso.Dispatcher -> agt:
     438:443:void markForReplay(com.squareup.picasso.Action) -> e
     446:453:void batch(com.squareup.picasso.BitmapHunter) -> g
     456:467:void logBatch(java.util.List) -> a
-com.squareup.picasso.Dispatcher$1 -> agu:
+com.squareup.picasso.Dispatcher$1 -> agt:
     com.squareup.picasso.Dispatcher this$0 -> a
     131:132:void run() -> run
-com.squareup.picasso.Dispatcher$DispatcherHandler -> agv:
+com.squareup.picasso.Dispatcher$DispatcherHandler -> agu:
     com.squareup.picasso.Dispatcher dispatcher -> a
     478:534:void handleMessage(android.os.Message) -> handleMessage
-com.squareup.picasso.Dispatcher$DispatcherHandler$1 -> agw:
+com.squareup.picasso.Dispatcher$DispatcherHandler$1 -> agv:
     android.os.Message val$msg -> a
     com.squareup.picasso.Dispatcher$DispatcherHandler this$0 -> b
     530:530:void run() -> run
-com.squareup.picasso.Dispatcher$DispatcherThread -> agx:
-com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver -> agy:
+com.squareup.picasso.Dispatcher$DispatcherThread -> agw:
+com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver -> agx:
     com.squareup.picasso.Dispatcher dispatcher -> a
     553:559:void register() -> a
     562:563:void unregister() -> b
@@ -22599,21 +22613,21 @@ com.squareup.picasso.Downloader$Response -> com.squareup.picasso.Downloader$Resp
 com.squareup.picasso.Downloader$ResponseException -> com.squareup.picasso.Downloader$ResponseException:
     boolean localCacheOnly -> a
     int responseCode -> b
-com.squareup.picasso.FetchAction -> agz:
+com.squareup.picasso.FetchAction -> agy:
     java.lang.Object target -> m
     com.squareup.picasso.Callback callback -> n
     33:36:void complete(android.graphics.Bitmap,com.squareup.picasso.Picasso$LoadedFrom) -> a
     39:42:void error() -> a
     45:47:void cancel() -> b
     50:50:java.lang.Object getTarget() -> d
-com.squareup.picasso.FileRequestHandler -> aha:
+com.squareup.picasso.FileRequestHandler -> agz:
     38:38:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     42:42:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
     46:56:int getFileExifRotation(android.net.Uri) -> a
-com.squareup.picasso.GetAction -> ahb:
+com.squareup.picasso.GetAction -> aha:
     27:27:void complete(android.graphics.Bitmap,com.squareup.picasso.Picasso$LoadedFrom) -> a
     30:30:void error() -> a
-com.squareup.picasso.ImageViewAction -> ahc:
+com.squareup.picasso.ImageViewAction -> ahb:
     com.squareup.picasso.Callback callback -> m
     36:53:void complete(android.graphics.Bitmap,com.squareup.picasso.Picasso$LoadedFrom) -> a
     56:69:void error() -> a
@@ -22638,7 +22652,7 @@ com.squareup.picasso.LruCache -> com.squareup.picasso.LruCache:
     154:154:int missCount() -> missCount
     159:159:int putCount() -> putCount
     164:164:int evictionCount() -> evictionCount
-com.squareup.picasso.MarkableInputStream -> ahd:
+com.squareup.picasso.MarkableInputStream -> ahc:
     java.io.InputStream in -> a
     long offset -> b
     long reset -> c
@@ -22657,13 +22671,13 @@ com.squareup.picasso.MarkableInputStream -> ahd:
     152:152:int available() -> available
     156:157:void close() -> close
     160:160:boolean markSupported() -> markSupported
-com.squareup.picasso.MediaStoreRequestHandler -> ahe:
+com.squareup.picasso.MediaStoreRequestHandler -> ahd:
     java.lang.String[] CONTENT_ORIENTATION -> b
     49:51:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     55:92:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
     96:101:com.squareup.picasso.MediaStoreRequestHandler$PicassoKind getPicassoKind(int,int) -> a
     105:117:int getExifOrientation(android.content.ContentResolver,android.net.Uri) -> a
-com.squareup.picasso.MediaStoreRequestHandler$PicassoKind -> ahf:
+com.squareup.picasso.MediaStoreRequestHandler$PicassoKind -> ahe:
     com.squareup.picasso.MediaStoreRequestHandler$PicassoKind MICRO -> a
     com.squareup.picasso.MediaStoreRequestHandler$PicassoKind MINI -> b
     com.squareup.picasso.MediaStoreRequestHandler$PicassoKind FULL -> c
@@ -22693,7 +22707,7 @@ com.squareup.picasso.NetworkPolicy -> com.squareup.picasso.NetworkPolicy:
     36:36:boolean shouldReadFromDiskCache(int) -> shouldReadFromDiskCache
     40:40:boolean shouldWriteToDiskCache(int) -> shouldWriteToDiskCache
     44:44:boolean isOfflineOnly(int) -> isOfflineOnly
-com.squareup.picasso.NetworkRequestHandler -> ahg:
+com.squareup.picasso.NetworkRequestHandler -> ahf:
     com.squareup.picasso.Downloader downloader -> a
     com.squareup.picasso.Stats stats -> b
     42:43:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
@@ -22701,7 +22715,7 @@ com.squareup.picasso.NetworkRequestHandler -> ahg:
     76:76:int getRetryCount() -> a
     80:80:boolean shouldRetry(boolean,android.net.NetworkInfo) -> a
     84:84:boolean supportsReplay() -> b
-com.squareup.picasso.NetworkRequestHandler$ContentLengthException -> ahh:
+com.squareup.picasso.NetworkRequestHandler$ContentLengthException -> ahg:
 com.squareup.picasso.OkHttpDownloader -> com.squareup.picasso.OkHttpDownloader:
     com.squareup.okhttp.OkHttpClient client -> a
     31:35:com.squareup.okhttp.OkHttpClient defaultOkHttpClient() -> a
@@ -22760,7 +22774,7 @@ com.squareup.picasso.Picasso -> com.squareup.picasso.Picasso:
     640:647:com.squareup.picasso.Picasso with(android.content.Context) -> with
     656:662:void setSingletonInstance(com.squareup.picasso.Picasso) -> setSingletonInstance
     59:59:void access$000(com.squareup.picasso.Picasso,java.lang.Object) -> a
-com.squareup.picasso.Picasso$1 -> ahi:
+com.squareup.picasso.Picasso$1 -> ahh:
     110:139:void handleMessage(android.os.Message) -> handleMessage
 com.squareup.picasso.Picasso$Builder -> com.squareup.picasso.Picasso$Builder:
     android.content.Context context -> a
@@ -22784,12 +22798,12 @@ com.squareup.picasso.Picasso$Builder -> com.squareup.picasso.Picasso$Builder:
     793:794:com.squareup.picasso.Picasso$Builder indicatorsEnabled(boolean) -> indicatorsEnabled
     804:805:com.squareup.picasso.Picasso$Builder loggingEnabled(boolean) -> loggingEnabled
     810:829:com.squareup.picasso.Picasso build() -> build
-com.squareup.picasso.Picasso$CleanupThread -> ahj:
+com.squareup.picasso.Picasso$CleanupThread -> ahi:
     java.lang.ref.ReferenceQueue referenceQueue -> a
     android.os.Handler handler -> b
     598:614:void run() -> run
     617:618:void shutdown() -> a
-com.squareup.picasso.Picasso$CleanupThread$1 -> ahk:
+com.squareup.picasso.Picasso$CleanupThread$1 -> ahj:
     java.lang.Exception val$e -> a
     com.squareup.picasso.Picasso$CleanupThread this$0 -> b
     608:608:void run() -> run
@@ -22813,9 +22827,9 @@ com.squareup.picasso.Picasso$Priority -> com.squareup.picasso.Picasso$Priority:
 com.squareup.picasso.Picasso$RequestTransformer -> com.squareup.picasso.Picasso$RequestTransformer:
     com.squareup.picasso.Picasso$RequestTransformer IDENTITY -> IDENTITY
     com.squareup.picasso.Request transformRequest(com.squareup.picasso.Request) -> transformRequest
-com.squareup.picasso.Picasso$RequestTransformer$1 -> ahl:
+com.squareup.picasso.Picasso$RequestTransformer$1 -> ahk:
     91:91:com.squareup.picasso.Request transformRequest(com.squareup.picasso.Request) -> transformRequest
-com.squareup.picasso.PicassoDrawable -> ahm:
+com.squareup.picasso.PicassoDrawable -> ahl:
     android.graphics.Paint DEBUG_PAINT -> e
     boolean debugging -> f
     float density -> g
@@ -22832,15 +22846,15 @@ com.squareup.picasso.PicassoDrawable -> ahm:
     139:143:void onBoundsChange(android.graphics.Rect) -> onBoundsChange
     146:153:void drawDebugIndicator(android.graphics.Canvas) -> a
     156:164:android.graphics.Path getTrianglePath(android.graphics.Point,int) -> a
-com.squareup.picasso.PicassoExecutorService -> ahn:
+com.squareup.picasso.PicassoExecutorService -> ahm:
     43:78:void adjustThreadCount(android.net.NetworkInfo) -> a
     81:83:void setThreadCount(int) -> a
     87:89:java.util.concurrent.Future submit(java.lang.Runnable) -> submit
-com.squareup.picasso.PicassoExecutorService$PicassoFutureTask -> aho:
+com.squareup.picasso.PicassoExecutorService$PicassoFutureTask -> ahn:
     com.squareup.picasso.BitmapHunter hunter -> a
     103:108:int compareTo(com.squareup.picasso.PicassoExecutorService$PicassoFutureTask) -> a
     92:92:int compareTo(java.lang.Object) -> compareTo
-com.squareup.picasso.RemoteViewsAction -> ahp:
+com.squareup.picasso.RemoteViewsAction -> aho:
     android.widget.RemoteViews remoteViews -> m
     int viewId -> n
     com.squareup.picasso.RemoteViewsAction$RemoteViewsTarget target -> o
@@ -22850,16 +22864,16 @@ com.squareup.picasso.RemoteViewsAction -> ahp:
     59:61:void setImageResource(int) -> a
     void update() -> n
     27:27:java.lang.Object getTarget() -> d
-com.squareup.picasso.RemoteViewsAction$AppWidgetAction -> ahq:
+com.squareup.picasso.RemoteViewsAction$AppWidgetAction -> ahp:
     int[] appWidgetIds -> o
     98:100:void update() -> n
     87:87:java.lang.Object getTarget() -> d
-com.squareup.picasso.RemoteViewsAction$NotificationAction -> ahr:
+com.squareup.picasso.RemoteViewsAction$NotificationAction -> ahq:
     int notificationId -> o
     android.app.Notification notification -> p
     116:118:void update() -> n
     103:103:java.lang.Object getTarget() -> d
-com.squareup.picasso.RemoteViewsAction$RemoteViewsTarget -> ahs:
+com.squareup.picasso.RemoteViewsAction$RemoteViewsTarget -> ahr:
     android.widget.RemoteViews remoteViews -> a
     int viewId -> b
     75:78:boolean equals(java.lang.Object) -> equals
@@ -22893,7 +22907,7 @@ com.squareup.picasso.Request -> com.squareup.picasso.Request:
     179:179:boolean needsMatrixTransform() -> e
     183:183:boolean hasCustomTransformations() -> f
     187:187:com.squareup.picasso.Request$Builder buildUpon() -> buildUpon
-com.squareup.picasso.Request$1 -> aht:
+com.squareup.picasso.Request$1 -> ahs:
 com.squareup.picasso.Request$Builder -> com.squareup.picasso.Request$Builder:
     android.net.Uri uri -> a
     int resourceId -> b
@@ -22998,12 +23012,12 @@ com.squareup.picasso.RequestHandler$Result -> com.squareup.picasso.RequestHandle
     82:82:java.io.InputStream getStream() -> getStream
     90:90:com.squareup.picasso.Picasso$LoadedFrom getLoadedFrom() -> getLoadedFrom
     98:98:int getExifOrientation() -> a
-com.squareup.picasso.ResourceRequestHandler -> ahu:
+com.squareup.picasso.ResourceRequestHandler -> aht:
     android.content.Context context -> a
     35:39:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     43:45:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
     49:54:android.graphics.Bitmap decodeResource(android.content.res.Resources,int,com.squareup.picasso.Request) -> a
-com.squareup.picasso.Stats -> ahv:
+com.squareup.picasso.Stats -> ahu:
     android.os.HandlerThread statsThread -> a
     com.squareup.picasso.Cache cache -> b
     android.os.Handler handler -> c
@@ -23032,10 +23046,10 @@ com.squareup.picasso.Stats -> ahv:
     109:112:com.squareup.picasso.StatsSnapshot createSnapshot() -> f
     117:119:void processBitmap(android.graphics.Bitmap,int) -> a
     122:122:long getAverage(int,long) -> a
-com.squareup.picasso.Stats$StatsHandler -> ahw:
+com.squareup.picasso.Stats$StatsHandler -> ahv:
     com.squareup.picasso.Stats stats -> a
     135:158:void handleMessage(android.os.Message) -> handleMessage
-com.squareup.picasso.Stats$StatsHandler$1 -> ahx:
+com.squareup.picasso.Stats$StatsHandler$1 -> ahw:
     android.os.Message val$msg -> a
     com.squareup.picasso.Stats$StatsHandler this$0 -> b
     154:154:void run() -> run
@@ -23061,7 +23075,7 @@ com.squareup.picasso.Target -> com.squareup.picasso.Target:
     void onBitmapLoaded(android.graphics.Bitmap,com.squareup.picasso.Picasso$LoadedFrom) -> onBitmapLoaded
     void onBitmapFailed(android.graphics.drawable.Drawable) -> onBitmapFailed
     void onPrepareLoad(android.graphics.drawable.Drawable) -> onPrepareLoad
-com.squareup.picasso.TargetAction -> ahy:
+com.squareup.picasso.TargetAction -> ahx:
     30:41:void complete(android.graphics.Bitmap,com.squareup.picasso.Picasso$LoadedFrom) -> a
     44:52:void error() -> a
 com.squareup.picasso.Transformation -> com.squareup.picasso.Transformation:
@@ -23076,13 +23090,13 @@ com.squareup.picasso.UrlConnectionDownloader -> com.squareup.picasso.UrlConnecti
     61:103:com.squareup.picasso.Downloader$Response load(android.net.Uri,int) -> load
     107:110:void shutdown() -> shutdown
     114:124:void installCacheIfNeeded(android.content.Context) -> a
-com.squareup.picasso.UrlConnectionDownloader$1 -> ahz:
+com.squareup.picasso.UrlConnectionDownloader$1 -> ahy:
     43:43:java.lang.StringBuilder initialValue() -> a
     41:41:java.lang.Object initialValue() -> initialValue
-com.squareup.picasso.UrlConnectionDownloader$ResponseCacheIcs -> aia:
+com.squareup.picasso.UrlConnectionDownloader$ResponseCacheIcs -> ahz:
     128:134:java.lang.Object install(android.content.Context) -> a
     139:142:void close(java.lang.Object) -> a
-com.squareup.picasso.Utils -> aib:
+com.squareup.picasso.Utils -> aia:
     java.lang.StringBuilder MAIN_THREAD_KEY_BUILDER -> a
     107:115:int getBitmapBytes(android.graphics.Bitmap) -> a
     119:122:java.lang.Object checkNotNull(java.lang.Object,java.lang.String) -> a
@@ -23108,15 +23122,15 @@ com.squareup.picasso.Utils -> aib:
     319:326:boolean isWebPFile(java.io.InputStream) -> c
     330:355:int getResourceId(android.content.res.Resources,com.squareup.picasso.Request) -> a
     359:369:android.content.res.Resources getResources(android.content.Context,com.squareup.picasso.Request) -> a
-com.squareup.picasso.Utils$ActivityManagerHoneycomb -> aic:
+com.squareup.picasso.Utils$ActivityManagerHoneycomb -> aib:
     376:376:int getLargeMemoryClass(android.app.ActivityManager) -> a
-com.squareup.picasso.Utils$BitmapHoneycombMR1 -> aid:
+com.squareup.picasso.Utils$BitmapHoneycombMR1 -> aic:
     401:401:int getByteCount(android.graphics.Bitmap) -> a
-com.squareup.picasso.Utils$OkHttpLoaderCreator -> aie:
+com.squareup.picasso.Utils$OkHttpLoaderCreator -> aid:
     407:407:com.squareup.picasso.Downloader create(android.content.Context) -> a
-com.squareup.picasso.Utils$PicassoThread -> aif:
+com.squareup.picasso.Utils$PicassoThread -> aie:
     393:395:void run() -> run
-com.squareup.picasso.Utils$PicassoThreadFactory -> aig:
+com.squareup.picasso.Utils$PicassoThreadFactory -> aif:
     383:383:java.lang.Thread newThread(java.lang.Runnable) -> newThread
 com.viewpagerindicator.BuildConfig -> com.viewpagerindicator.BuildConfig:
     boolean DEBUG -> DEBUG
@@ -23169,12 +23183,12 @@ com.viewpagerindicator.CirclePageIndicator -> com.viewpagerindicator.CirclePageI
     490:504:int measureShort(int) -> b
     509:514:void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     518:521:android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
-com.viewpagerindicator.CirclePageIndicator$1 -> aih:
+com.viewpagerindicator.CirclePageIndicator$1 -> aig:
 com.viewpagerindicator.CirclePageIndicator$SavedState -> com.viewpagerindicator.CirclePageIndicator$SavedState:
     int currentPage -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     538:540:void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.viewpagerindicator.CirclePageIndicator$SavedState$1 -> aii:
+com.viewpagerindicator.CirclePageIndicator$SavedState$1 -> aih:
     546:546:com.viewpagerindicator.CirclePageIndicator$SavedState createFromParcel(android.os.Parcel) -> a
     551:551:com.viewpagerindicator.CirclePageIndicator$SavedState[] newArray(int) -> a
     543:543:java.lang.Object[] newArray(int) -> newArray
@@ -23197,14 +23211,14 @@ com.viewpagerindicator.IconPageIndicator -> com.viewpagerindicator.IconPageIndic
     151:166:void setCurrentItem(int) -> setCurrentItem
     170:171:void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> setOnPageChangeListener
     36:36:java.lang.Runnable access$002(com.viewpagerindicator.IconPageIndicator,java.lang.Runnable) -> a
-com.viewpagerindicator.IconPageIndicator$1 -> aij:
+com.viewpagerindicator.IconPageIndicator$1 -> aii:
     android.view.View val$iconView -> a
     com.viewpagerindicator.IconPageIndicator this$0 -> b
     63:66:void run() -> run
 com.viewpagerindicator.IconPagerAdapter -> com.viewpagerindicator.IconPagerAdapter:
     int getIconResId(int) -> getIconResId
     int getCount() -> getCount
-com.viewpagerindicator.IcsLinearLayout -> aik:
+com.viewpagerindicator.IcsLinearLayout -> aij:
     int[] LL -> a
     android.graphics.drawable.Drawable mDivider -> b
     int mDividerWidth -> c
@@ -23259,12 +23273,12 @@ com.viewpagerindicator.LinePageIndicator -> com.viewpagerindicator.LinePageIndic
     384:398:int measureHeight(int) -> b
     403:407:void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     411:414:android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
-com.viewpagerindicator.LinePageIndicator$1 -> ail:
+com.viewpagerindicator.LinePageIndicator$1 -> aik:
 com.viewpagerindicator.LinePageIndicator$SavedState -> com.viewpagerindicator.LinePageIndicator$SavedState:
     int currentPage -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     431:433:void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.viewpagerindicator.LinePageIndicator$SavedState$1 -> aim:
+com.viewpagerindicator.LinePageIndicator$SavedState$1 -> ail:
     439:439:com.viewpagerindicator.LinePageIndicator$SavedState createFromParcel(android.os.Parcel) -> a
     444:444:com.viewpagerindicator.LinePageIndicator$SavedState[] newArray(int) -> a
     436:436:java.lang.Object[] newArray(int) -> newArray
@@ -23450,16 +23464,16 @@ com.viewpagerindicator.TabPageIndicator -> com.viewpagerindicator.TabPageIndicat
     37:37:com.viewpagerindicator.TabPageIndicator$OnTabReselectedListener access$100(com.viewpagerindicator.TabPageIndicator) -> b
     37:37:java.lang.Runnable access$202(com.viewpagerindicator.TabPageIndicator,java.lang.Runnable) -> a
     37:37:int access$400(com.viewpagerindicator.TabPageIndicator) -> c
-com.viewpagerindicator.TabPageIndicator$1 -> ain:
+com.viewpagerindicator.TabPageIndicator$1 -> aim:
     com.viewpagerindicator.TabPageIndicator this$0 -> a
     57:64:void onClick(android.view.View) -> onClick
-com.viewpagerindicator.TabPageIndicator$2 -> aio:
+com.viewpagerindicator.TabPageIndicator$2 -> ain:
     android.view.View val$tabView -> a
     com.viewpagerindicator.TabPageIndicator this$0 -> b
     127:130:void run() -> run
 com.viewpagerindicator.TabPageIndicator$OnTabReselectedListener -> com.viewpagerindicator.TabPageIndicator$OnTabReselectedListener:
     void onTabReselected(int) -> onTabReselected
-com.viewpagerindicator.TabPageIndicator$TabView -> aip:
+com.viewpagerindicator.TabPageIndicator$TabView -> aio:
     int mIndex -> b
     com.viewpagerindicator.TabPageIndicator this$0 -> a
     270:277:void onMeasure(int,int) -> onMeasure
@@ -23540,7 +23554,7 @@ com.viewpagerindicator.TitlePageIndicator -> com.viewpagerindicator.TitlePageInd
     817:821:void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     825:828:android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
     864:868:java.lang.CharSequence getTitle(int) -> a
-com.viewpagerindicator.TitlePageIndicator$1 -> aiq:
+com.viewpagerindicator.TitlePageIndicator$1 -> aip:
     int[] $SwitchMap$com$viewpagerindicator$TitlePageIndicator$IndicatorStyle -> a
 com.viewpagerindicator.TitlePageIndicator$IndicatorStyle -> com.viewpagerindicator.TitlePageIndicator$IndicatorStyle:
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle None -> None
@@ -23565,7 +23579,7 @@ com.viewpagerindicator.TitlePageIndicator$SavedState -> com.viewpagerindicator.T
     int currentPage -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     845:847:void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.viewpagerindicator.TitlePageIndicator$SavedState$1 -> air:
+com.viewpagerindicator.TitlePageIndicator$SavedState$1 -> aiq:
     853:853:com.viewpagerindicator.TitlePageIndicator$SavedState createFromParcel(android.os.Parcel) -> a
     858:858:com.viewpagerindicator.TitlePageIndicator$SavedState[] newArray(int) -> a
     850:850:java.lang.Object[] newArray(int) -> newArray
@@ -23610,17 +23624,17 @@ com.viewpagerindicator.UnderlinePageIndicator -> com.viewpagerindicator.Underlin
     38:38:android.graphics.Paint access$100(com.viewpagerindicator.UnderlinePageIndicator) -> b
     38:38:int access$200(com.viewpagerindicator.UnderlinePageIndicator) -> c
     38:38:java.lang.Runnable access$300(com.viewpagerindicator.UnderlinePageIndicator) -> d
-com.viewpagerindicator.UnderlinePageIndicator$1 -> ais:
+com.viewpagerindicator.UnderlinePageIndicator$1 -> air:
     com.viewpagerindicator.UnderlinePageIndicator this$0 -> a
     62:70:void run() -> run
-com.viewpagerindicator.UnderlinePageIndicator$2 -> ait:
+com.viewpagerindicator.UnderlinePageIndicator$2 -> ais:
     com.viewpagerindicator.UnderlinePageIndicator this$0 -> a
     281:284:void run() -> run
 com.viewpagerindicator.UnderlinePageIndicator$SavedState -> com.viewpagerindicator.UnderlinePageIndicator$SavedState:
     int currentPage -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     385:387:void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.viewpagerindicator.UnderlinePageIndicator$SavedState$1 -> aiu:
+com.viewpagerindicator.UnderlinePageIndicator$SavedState$1 -> ait:
     393:393:com.viewpagerindicator.UnderlinePageIndicator$SavedState createFromParcel(android.os.Parcel) -> a
     398:398:com.viewpagerindicator.UnderlinePageIndicator$SavedState[] newArray(int) -> a
     390:390:java.lang.Object[] newArray(int) -> newArray
@@ -23634,7 +23648,7 @@ de.keyboardsurfer.android.widget.crouton.Configuration -> de.keyboardsurfer.andr
     int inAnimationResId -> b
     int outAnimationResId -> c
     124:124:java.lang.String toString() -> toString
-de.keyboardsurfer.android.widget.crouton.Configuration$1 -> aiv:
+de.keyboardsurfer.android.widget.crouton.Configuration$1 -> aiu:
 de.keyboardsurfer.android.widget.crouton.Configuration$Builder -> de.keyboardsurfer.android.widget.crouton.Configuration$Builder:
     int durationInMilliseconds -> a
     int inAnimationResId -> b
@@ -23712,7 +23726,7 @@ de.keyboardsurfer.android.widget.crouton.Crouton -> de.keyboardsurfer.android.wi
     936:942:void setTextWithCustomFont(android.widget.TextView,java.lang.String) -> a
     945:950:void initializeTextViewShadow(android.content.res.Resources,android.widget.TextView) -> a
     954:978:android.widget.ImageView initializeImageView() -> p
-de.keyboardsurfer.android.widget.crouton.DefaultAnimationsBuilder -> aiw:
+de.keyboardsurfer.android.widget.crouton.DefaultAnimationsBuilder -> aiv:
     android.view.animation.Animation slideInDownAnimation -> a
     android.view.animation.Animation slideOutUpAnimation -> b
     int lastInAnimationHeight -> c
@@ -23727,7 +23741,7 @@ de.keyboardsurfer.android.widget.crouton.DefaultAnimationsBuilder -> aiw:
 de.keyboardsurfer.android.widget.crouton.LifecycleCallback -> de.keyboardsurfer.android.widget.crouton.LifecycleCallback:
     void onDisplayed() -> onDisplayed
     void onRemoved() -> onRemoved
-de.keyboardsurfer.android.widget.crouton.Manager -> aix:
+de.keyboardsurfer.android.widget.crouton.Manager -> aiw:
     de.keyboardsurfer.android.widget.crouton.Manager INSTANCE -> a
     java.util.Queue croutonQueue -> b
     66:70:de.keyboardsurfer.android.widget.crouton.Manager getInstance() -> a
@@ -23752,7 +23766,7 @@ de.keyboardsurfer.android.widget.crouton.Manager -> aix:
     436:467:void announceForAccessibilityCompat(android.content.Context,java.lang.CharSequence) -> a
     471:471:java.lang.String toString() -> toString
     45:45:void access$000(de.keyboardsurfer.android.widget.crouton.Manager,de.keyboardsurfer.android.widget.crouton.Crouton,int,long) -> a
-de.keyboardsurfer.android.widget.crouton.Manager$1 -> aiy:
+de.keyboardsurfer.android.widget.crouton.Manager$1 -> aix:
     android.view.View val$croutonView -> a
     de.keyboardsurfer.android.widget.crouton.Crouton val$crouton -> b
     de.keyboardsurfer.android.widget.crouton.Manager this$0 -> c
@@ -23791,7 +23805,7 @@ de.keyboardsurfer.android.widget.crouton.Style -> de.keyboardsurfer.android.widg
     java.lang.String fontName -> x
     int fontNameResId -> y
     536:536:java.lang.String toString() -> toString
-de.keyboardsurfer.android.widget.crouton.Style$1 -> aiz:
+de.keyboardsurfer.android.widget.crouton.Style$1 -> aiy:
 de.keyboardsurfer.android.widget.crouton.Style$Builder -> de.keyboardsurfer.android.widget.crouton.Style$Builder:
     de.keyboardsurfer.android.widget.crouton.Configuration configuration -> a
     int backgroundColorValue -> b
@@ -23906,7 +23920,7 @@ hugo.weaving.internal.Hugo -> hugo.weaving.internal.Hugo:
     1:1:void ajc$postClinit() -> a
     1:1:void ajc$inlineAccessMethod$hugo_weaving_internal_Hugo$hugo_weaving_internal_Hugo$enterMethod(org.aspectj.lang.JoinPoint) -> ajc$inlineAccessMethod$hugo_weaving_internal_Hugo$hugo_weaving_internal_Hugo$enterMethod
     1:1:void ajc$inlineAccessMethod$hugo_weaving_internal_Hugo$hugo_weaving_internal_Hugo$exitMethod(org.aspectj.lang.JoinPoint,java.lang.Object,long) -> ajc$inlineAccessMethod$hugo_weaving_internal_Hugo$hugo_weaving_internal_Hugo$exitMethod
-hugo.weaving.internal.Strings -> aja:
+hugo.weaving.internal.Strings -> aiz:
     10:25:java.lang.String toString(java.lang.Object) -> a
     29:66:java.lang.String printableToString(java.lang.String) -> a
     70:94:java.lang.String arrayToString(java.lang.Class,java.lang.Object) -> a
@@ -23948,19 +23962,21 @@ io.realm.NewsRealmProxy -> io.realm.NewsRealmProxy:
     167:169:void setShareUrl(java.lang.String) -> setShareUrl
     173:174:long getKey() -> getKey
     179:181:void setKey(long) -> setKey
-    185:186:boolean isBookmarked() -> isBookmarked
-    191:193:void setBookmarked(boolean) -> setBookmarked
-    196:216:io.realm.internal.Table initTable(io.realm.internal.ImplicitTransaction) -> initTable
-    220:314:void validateTable(io.realm.internal.ImplicitTransaction) -> validateTable
-    317:317:java.util.List getFieldNames() -> getFieldNames
-    322:379:void populateUsingJsonObject(com.radmagnet.models.News,org.json.JSONObject) -> populateUsingJsonObject
-    383:434:void populateUsingJsonStream(com.radmagnet.models.News,android.util.JsonReader) -> populateUsingJsonStream
-    437:456:com.radmagnet.models.News copyOrUpdate(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map) -> copyOrUpdate
-    461:477:com.radmagnet.models.News copy(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map) -> copy
-    481:494:com.radmagnet.models.News update(io.realm.Realm,com.radmagnet.models.News,com.radmagnet.models.News,java.util.Map) -> update
-    499:559:java.lang.String toString() -> toString
-    564:572:int hashCode() -> hashCode
-    577:591:boolean equals(java.lang.Object) -> equals
+    185:186:boolean isRead() -> isRead
+    191:193:void setRead(boolean) -> setRead
+    197:198:boolean isBookmarked() -> isBookmarked
+    203:205:void setBookmarked(boolean) -> setBookmarked
+    208:229:io.realm.internal.Table initTable(io.realm.internal.ImplicitTransaction) -> initTable
+    233:333:void validateTable(io.realm.internal.ImplicitTransaction) -> validateTable
+    336:336:java.util.List getFieldNames() -> getFieldNames
+    341:401:void populateUsingJsonObject(com.radmagnet.models.News,org.json.JSONObject) -> populateUsingJsonObject
+    405:458:void populateUsingJsonStream(com.radmagnet.models.News,android.util.JsonReader) -> populateUsingJsonStream
+    461:480:com.radmagnet.models.News copyOrUpdate(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map) -> copyOrUpdate
+    485:502:com.radmagnet.models.News copy(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map) -> copy
+    506:520:com.radmagnet.models.News update(io.realm.Realm,com.radmagnet.models.News,com.radmagnet.models.News,java.util.Map) -> update
+    525:589:java.lang.String toString() -> toString
+    594:602:int hashCode() -> hashCode
+    607:621:boolean equals(java.lang.Object) -> equals
 io.realm.Realm -> io.realm.Realm:
     java.lang.String DEFAULT_REALM_NAME -> DEFAULT_REALM_NAME
     java.lang.String TAG -> TAG
@@ -26533,19 +26549,19 @@ jp.wasabeef.recyclerview.animators.BaseItemAnimator -> jp.wasabeef.recyclerview.
     30:30:java.util.ArrayList access$700(jp.wasabeef.recyclerview.animators.BaseItemAnimator) -> d
     30:30:void access$800(jp.wasabeef.recyclerview.animators.BaseItemAnimator) -> e
     30:30:java.util.ArrayList access$1000(jp.wasabeef.recyclerview.animators.BaseItemAnimator) -> f
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$1 -> ajb:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$1 -> aja:
     java.util.ArrayList val$moves -> a
     jp.wasabeef.recyclerview.animators.BaseItemAnimator this$0 -> b
     119:125:void run() -> run
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$2 -> ajc:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$2 -> ajb:
     java.util.ArrayList val$changes -> a
     jp.wasabeef.recyclerview.animators.BaseItemAnimator this$0 -> b
     143:148:void run() -> run
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$3 -> ajd:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$3 -> ajc:
     java.util.ArrayList val$additions -> a
     jp.wasabeef.recyclerview.animators.BaseItemAnimator this$0 -> b
     165:170:void run() -> run
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$4 -> aje:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$4 -> ajd:
     android.support.v7.widget.RecyclerView$ViewHolder val$holder -> a
     int val$deltaX -> b
     int val$deltaY -> c
@@ -26554,20 +26570,20 @@ jp.wasabeef.recyclerview.animators.BaseItemAnimator$4 -> aje:
     252:253:void onAnimationStart(android.view.View) -> onAnimationStart
     257:263:void onAnimationCancel(android.view.View) -> onAnimationCancel
     267:271:void onAnimationEnd(android.view.View) -> onAnimationEnd
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$5 -> ajf:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$5 -> aje:
     jp.wasabeef.recyclerview.animators.BaseItemAnimator$ChangeInfo val$changeInfo -> a
     android.support.v4.view.ViewPropertyAnimatorCompat val$oldViewAnim -> b
     jp.wasabeef.recyclerview.animators.BaseItemAnimator this$0 -> c
     313:314:void onAnimationStart(android.view.View) -> onAnimationStart
     318:325:void onAnimationEnd(android.view.View) -> onAnimationEnd
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$6 -> ajg:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$6 -> ajf:
     jp.wasabeef.recyclerview.animators.BaseItemAnimator$ChangeInfo val$changeInfo -> a
     android.support.v4.view.ViewPropertyAnimatorCompat val$newViewAnimation -> b
     android.view.View val$newView -> c
     jp.wasabeef.recyclerview.animators.BaseItemAnimator this$0 -> d
     335:336:void onAnimationStart(android.view.View) -> onAnimationStart
     340:347:void onAnimationEnd(android.view.View) -> onAnimationEnd
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$ChangeInfo -> ajh:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$ChangeInfo -> ajg:
     android.support.v7.widget.RecyclerView$ViewHolder oldHolder -> a
     android.support.v7.widget.RecyclerView$ViewHolder newHolder -> b
     int fromX -> c
@@ -26587,13 +26603,13 @@ jp.wasabeef.recyclerview.animators.BaseItemAnimator$DefaultRemoveVpaListener -> 
     655:656:void onAnimationStart(android.view.View) -> onAnimationStart
     660:661:void onAnimationCancel(android.view.View) -> onAnimationCancel
     665:669:void onAnimationEnd(android.view.View) -> onAnimationEnd
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$MoveInfo -> aji:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$MoveInfo -> ajh:
     android.support.v7.widget.RecyclerView$ViewHolder holder -> a
     int fromX -> b
     int fromY -> c
     int toX -> d
     int toY -> e
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$VpaListenerAdapter -> ajj:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$VpaListenerAdapter -> aji:
     607:607:void onAnimationStart(android.view.View) -> onAnimationStart
     611:611:void onAnimationEnd(android.view.View) -> onAnimationEnd
     615:615:void onAnimationCancel(android.view.View) -> onAnimationCancel
@@ -26730,7 +26746,7 @@ okio.AsyncTimeout -> okio.AsyncTimeout:
     257:260:java.io.IOException exit(java.io.IOException) -> exit
     293:316:okio.AsyncTimeout awaitTimeout() -> awaitTimeout
     40:40:okio.AsyncTimeout access$000() -> access$000
-okio.AsyncTimeout$1 -> ajk:
+okio.AsyncTimeout$1 -> ajj:
     okio.Sink val$sink -> a
     okio.AsyncTimeout this$0 -> b
     152:162:void write(okio.Buffer,long) -> write
@@ -26738,16 +26754,16 @@ okio.AsyncTimeout$1 -> ajk:
     178:188:void close() -> close
     191:191:okio.Timeout timeout() -> timeout
     195:195:java.lang.String toString() -> toString
-okio.AsyncTimeout$2 -> ajl:
+okio.AsyncTimeout$2 -> ajk:
     okio.Source val$source -> a
     okio.AsyncTimeout this$0 -> b
     208:217:long read(okio.Buffer,long) -> read
     222:231:void close() -> close
     234:234:okio.Timeout timeout() -> timeout
     238:238:java.lang.String toString() -> toString
-okio.AsyncTimeout$Watchdog -> ajm:
+okio.AsyncTimeout$Watchdog -> ajl:
     272:280:void run() -> run
-okio.Base64 -> ajn:
+okio.Base64 -> ajm:
     byte[] MAP -> a
     31:107:byte[] decode(java.lang.String) -> a
     118:144:java.lang.String encode(byte[]) -> a
@@ -26840,14 +26856,14 @@ okio.Buffer -> okio.Buffer:
     47:47:okio.BufferedSink write(byte[],int,int) -> write
     47:47:okio.BufferedSink write(byte[]) -> write
     47:47:okio.BufferedSink write(okio.ByteString) -> write
-okio.Buffer$1 -> ajo:
+okio.Buffer$1 -> ajn:
     okio.Buffer this$0 -> a
     66:67:void write(int) -> write
     70:71:void write(byte[],int,int) -> write
     74:74:void flush() -> flush
     77:77:void close() -> close
     80:80:java.lang.String toString() -> toString
-okio.Buffer$2 -> ajp:
+okio.Buffer$2 -> ajo:
     okio.Buffer this$0 -> a
     108:109:int read() -> read
     113:113:int read(byte[],int,int) -> read
@@ -27013,7 +27029,7 @@ okio.Okio -> okio.Okio:
     195:198:okio.Source source(java.net.Socket) -> source
     202:202:okio.AsyncTimeout timeout(java.net.Socket) -> a
     36:36:java.util.logging.Logger access$000() -> a
-okio.Okio$1 -> ajq:
+okio.Okio$1 -> ajp:
     okio.Timeout val$timeout -> a
     java.io.OutputStream val$out -> b
     73:89:void write(okio.Buffer,long) -> write
@@ -27021,17 +27037,17 @@ okio.Okio$1 -> ajq:
     96:97:void close() -> close
     100:100:okio.Timeout timeout() -> timeout
     104:104:java.lang.String toString() -> toString
-okio.Okio$2 -> ajr:
+okio.Okio$2 -> ajq:
     okio.Timeout val$timeout -> a
     java.io.InputStream val$in -> b
     132:140:long read(okio.Buffer,long) -> read
     144:145:void close() -> close
     148:148:okio.Timeout timeout() -> timeout
     152:152:java.lang.String toString() -> toString
-okio.Okio$3 -> ajs:
+okio.Okio$3 -> ajr:
     java.net.Socket val$socket -> a
     205:209:void timedOut() -> timedOut
-okio.RealBufferedSink -> ajt:
+okio.RealBufferedSink -> ajs:
     okio.Buffer buffer -> a
     okio.Sink sink -> b
     boolean closed -> c
@@ -27059,14 +27075,14 @@ okio.RealBufferedSink -> ajt:
     215:215:okio.Timeout timeout() -> timeout
     219:219:java.lang.String toString() -> toString
     22:22:boolean access$000(okio.RealBufferedSink) -> a
-okio.RealBufferedSink$1 -> aju:
+okio.RealBufferedSink$1 -> ajt:
     okio.RealBufferedSink this$0 -> a
     154:157:void write(int) -> write
     160:163:void write(byte[],int,int) -> write
     167:170:void flush() -> flush
     173:174:void close() -> close
     177:177:java.lang.String toString() -> toString
-okio.RealBufferedSource -> ajv:
+okio.RealBufferedSource -> aju:
     okio.Buffer buffer -> a
     okio.Source source -> b
     boolean closed -> c
@@ -27107,14 +27123,14 @@ okio.RealBufferedSource -> ajv:
     328:328:okio.Timeout timeout() -> timeout
     332:332:java.lang.String toString() -> toString
     25:25:boolean access$000(okio.RealBufferedSource) -> a
-okio.RealBufferedSource$1 -> ajw:
+okio.RealBufferedSource$1 -> ajv:
     okio.RealBufferedSource this$0 -> a
     285:290:int read() -> read
     294:302:int read(byte[],int,int) -> read
     306:307:int available() -> available
     311:312:void close() -> close
     315:315:java.lang.String toString() -> toString
-okio.Segment -> ajx:
+okio.Segment -> ajw:
     byte[] data -> a
     int pos -> b
     int limit -> c
@@ -27125,7 +27141,7 @@ okio.Segment -> ajx:
     82:102:okio.Segment split(int) -> a
     111:116:void compact() -> b
     122:134:void writeTo(okio.Segment,int) -> a
-okio.SegmentPool -> ajy:
+okio.SegmentPool -> ajx:
     okio.SegmentPool INSTANCE -> a
     okio.Segment next -> c
     long byteCount -> b
@@ -27154,11 +27170,11 @@ okio.Timeout -> okio.Timeout:
     128:129:okio.Timeout clearTimeout() -> clearTimeout
     134:135:okio.Timeout clearDeadline() -> clearDeadline
     145:152:void throwIfReached() -> throwIfReached
-okio.Timeout$1 -> ajz:
+okio.Timeout$1 -> ajy:
     50:50:okio.Timeout timeout(long,java.util.concurrent.TimeUnit) -> timeout
     54:54:okio.Timeout deadlineNanoTime(long) -> deadlineNanoTime
     58:58:void throwIfReached() -> throwIfReached
-okio.Util -> aka:
+okio.Util -> ajz:
     java.nio.charset.Charset UTF_8 -> a
     28:32:void checkOffsetAndCount(long,long,long) -> a
     35:38:short reverseBytesShort(short) -> a
@@ -27854,7 +27870,7 @@ org.aspectj.internal.lang.reflect.AdviceImpl -> org.aspectj.internal.lang.reflec
     107:113:java.lang.String getName() -> getName
     117:117:org.aspectj.lang.reflect.PointcutExpression getPointcutExpression() -> getPointcutExpression
     121:184:java.lang.String toString() -> toString
-org.aspectj.internal.lang.reflect.AdviceImpl$1 -> akb:
+org.aspectj.internal.lang.reflect.AdviceImpl$1 -> aka:
     int[] $SwitchMap$org$aspectj$lang$reflect$AdviceKind -> a
 org.aspectj.internal.lang.reflect.AjTypeImpl -> org.aspectj.internal.lang.reflect.AjTypeImpl:
     java.lang.Class clazz -> a
@@ -27964,7 +27980,7 @@ org.aspectj.internal.lang.reflect.DeclareAnnotationImpl -> org.aspectj.internal.
     82:82:java.lang.annotation.Annotation getAnnotation() -> getAnnotation
     86:86:java.lang.String getAnnotationAsText() -> getAnnotationAsText
     90:112:java.lang.String toString() -> toString
-org.aspectj.internal.lang.reflect.DeclareAnnotationImpl$1 -> akc:
+org.aspectj.internal.lang.reflect.DeclareAnnotationImpl$1 -> akb:
     int[] $SwitchMap$org$aspectj$lang$reflect$DeclareAnnotation$Kind -> a
 org.aspectj.internal.lang.reflect.DeclareErrorOrWarningImpl -> org.aspectj.internal.lang.reflect.DeclareErrorOrWarningImpl:
     org.aspectj.lang.reflect.PointcutExpression pc -> a
@@ -28048,7 +28064,7 @@ org.aspectj.internal.lang.reflect.PointcutBasedPerClauseImpl -> org.aspectj.inte
     org.aspectj.lang.reflect.PointcutExpression pointcutExpression -> a
     34:34:org.aspectj.lang.reflect.PointcutExpression getPointcutExpression() -> getPointcutExpression
     38:47:java.lang.String toString() -> toString
-org.aspectj.internal.lang.reflect.PointcutBasedPerClauseImpl$1 -> akd:
+org.aspectj.internal.lang.reflect.PointcutBasedPerClauseImpl$1 -> akc:
     int[] $SwitchMap$org$aspectj$lang$reflect$PerClauseKind -> a
 org.aspectj.internal.lang.reflect.PointcutExpressionImpl -> org.aspectj.internal.lang.reflect.PointcutExpressionImpl:
     java.lang.String expression -> a
@@ -28076,7 +28092,7 @@ org.aspectj.internal.lang.reflect.StringToType -> org.aspectj.internal.lang.refl
     29:37:java.lang.reflect.Type[] commaSeparatedListToTypeArray(java.lang.String,java.lang.Class) -> commaSeparatedListToTypeArray
     43:56:java.lang.reflect.Type stringToType(java.lang.String,java.lang.Class) -> stringToType
     62:68:java.lang.reflect.Type makeParameterizedType(java.lang.String,java.lang.Class) -> a
-org.aspectj.internal.lang.reflect.StringToType$1 -> ake:
+org.aspectj.internal.lang.reflect.StringToType$1 -> akd:
     java.lang.reflect.Type[] val$typeParams -> a
     java.lang.Class val$baseClass -> b
     71:71:java.lang.reflect.Type[] getActualTypeArguments() -> getActualTypeArguments
@@ -28518,7 +28534,7 @@ org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11 -> org.aspectj.runti
     67:68:void dec() -> dec
     71:71:boolean isNotZero() -> isNotZero
     76:76:void removeThreadCounter() -> removeThreadCounter
-org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11$Counter -> akf:
+org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11$Counter -> ake:
     int value -> a
 org.aspectj.runtime.internal.cflowstack.ThreadStack -> org.aspectj.runtime.internal.cflowstack.ThreadStack:
     java.util.Stack getThreadStack() -> getThreadStack
@@ -28529,17 +28545,17 @@ org.aspectj.runtime.internal.cflowstack.ThreadStackFactory -> org.aspectj.runtim
 org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl -> org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl:
     32:32:org.aspectj.runtime.internal.cflowstack.ThreadStack getNewThreadStack() -> getNewThreadStack
     58:58:org.aspectj.runtime.internal.cflowstack.ThreadCounter getNewThreadCounter() -> getNewThreadCounter
-org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$1 -> akg:
-org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadCounterImpl -> akh:
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$1 -> akf:
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadCounterImpl -> akg:
     38:38:java.lang.Object initialValue() -> initialValue
     41:41:org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadCounterImpl$Counter getThreadCounter() -> a
     45:46:void removeThreadCounter() -> removeThreadCounter
     48:48:void inc() -> inc
     49:49:void dec() -> dec
     50:50:boolean isNotZero() -> isNotZero
-org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadCounterImpl$Counter -> aki:
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadCounterImpl$Counter -> akh:
     int value -> a
-org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadStackImpl -> akj:
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadStackImpl -> aki:
     21:21:java.lang.Object initialValue() -> initialValue
     24:24:java.util.Stack getThreadStack() -> getThreadStack
     27:28:void removeThreadStack() -> removeThreadStack
@@ -28553,27 +28569,27 @@ org.aspectj.runtime.internal.cflowstack.ThreadStackImpl11 -> org.aspectj.runtime
     int change_count -> d
     29:52:java.util.Stack getThreadStack() -> getThreadStack
     57:57:void removeThreadStack() -> removeThreadStack
-org.aspectj.runtime.reflect.AdviceSignatureImpl -> akk:
+org.aspectj.runtime.reflect.AdviceSignatureImpl -> akj:
     java.lang.Class returnType -> a
     java.lang.reflect.Method adviceMethod -> m
     42:43:java.lang.Class getReturnType() -> getReturnType
     47:56:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
     60:68:java.lang.String toAdviceName(java.lang.String) -> a
     75:82:java.lang.reflect.Method getAdvice() -> getAdvice
-org.aspectj.runtime.reflect.CatchClauseSignatureImpl -> akl:
+org.aspectj.runtime.reflect.CatchClauseSignatureImpl -> akk:
     java.lang.Class parameterType -> a
     java.lang.String parameterName -> b
     36:37:java.lang.Class getParameterType() -> getParameterType
     40:41:java.lang.String getParameterName() -> getParameterName
     45:45:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
-org.aspectj.runtime.reflect.CodeSignatureImpl -> akm:
+org.aspectj.runtime.reflect.CodeSignatureImpl -> akl:
     java.lang.Class[] parameterTypes -> b
     java.lang.String[] parameterNames -> c
     java.lang.Class[] exceptionTypes -> d
     37:38:java.lang.Class[] getParameterTypes() -> getParameterTypes
     41:42:java.lang.String[] getParameterNames() -> getParameterNames
     45:46:java.lang.Class[] getExceptionTypes() -> getExceptionTypes
-org.aspectj.runtime.reflect.ConstructorSignatureImpl -> akn:
+org.aspectj.runtime.reflect.ConstructorSignatureImpl -> akm:
     java.lang.reflect.Constructor constructor -> a
     34:34:java.lang.String getName() -> getName
     37:42:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
@@ -28632,12 +28648,12 @@ org.aspectj.runtime.reflect.FieldSignatureImpl -> org.aspectj.runtime.reflect.Fi
     37:38:java.lang.Class getFieldType() -> getFieldType
     42:49:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
     56:63:java.lang.reflect.Field getField() -> getField
-org.aspectj.runtime.reflect.InitializerSignatureImpl -> ako:
+org.aspectj.runtime.reflect.InitializerSignatureImpl -> akn:
     java.lang.reflect.Constructor constructor -> a
     35:35:java.lang.String getName() -> getName
     39:44:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
     51:58:java.lang.reflect.Constructor getInitializer() -> getInitializer
-org.aspectj.runtime.reflect.JoinPointImpl -> akp:
+org.aspectj.runtime.reflect.JoinPointImpl -> ako:
     java.lang.Object _this -> a
     java.lang.Object target -> b
     java.lang.Object[] args -> c
@@ -28656,8 +28672,8 @@ org.aspectj.runtime.reflect.JoinPointImpl -> akp:
     141:142:void set$AroundClosure(org.aspectj.runtime.internal.AroundClosure) -> set$AroundClosure
     146:149:java.lang.Object proceed() -> proceed
     154:221:java.lang.Object proceed(java.lang.Object[]) -> proceed
-org.aspectj.runtime.reflect.JoinPointImpl$EnclosingStaticPartImpl -> akq:
-org.aspectj.runtime.reflect.JoinPointImpl$StaticPartImpl -> akr:
+org.aspectj.runtime.reflect.JoinPointImpl$EnclosingStaticPartImpl -> akp:
+org.aspectj.runtime.reflect.JoinPointImpl$StaticPartImpl -> akq:
     java.lang.String kind -> a
     org.aspectj.lang.Signature signature -> b
     org.aspectj.lang.reflect.SourceLocation sourceLocation -> c
@@ -28670,18 +28686,18 @@ org.aspectj.runtime.reflect.JoinPointImpl$StaticPartImpl -> akr:
     62:62:java.lang.String toString() -> toString
     66:66:java.lang.String toShortString() -> toShortString
     70:70:java.lang.String toLongString() -> toLongString
-org.aspectj.runtime.reflect.LockSignatureImpl -> aks:
+org.aspectj.runtime.reflect.LockSignatureImpl -> akr:
     java.lang.Class parameterType -> a
     32:33:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
-org.aspectj.runtime.reflect.MemberSignatureImpl -> akt:
-org.aspectj.runtime.reflect.MethodSignatureImpl -> aku:
+org.aspectj.runtime.reflect.MemberSignatureImpl -> aks:
+org.aspectj.runtime.reflect.MethodSignatureImpl -> akt:
     java.lang.reflect.Method method -> m
     java.lang.Class returnType -> a
     38:40:java.lang.Class getReturnType() -> getReturnType
     44:55:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
     64:75:java.lang.reflect.Method getMethod() -> getMethod
     88:112:java.lang.reflect.Method search(java.lang.Class,java.lang.String,java.lang.Class[],java.util.Set) -> a
-org.aspectj.runtime.reflect.SignatureImpl -> akv:
+org.aspectj.runtime.reflect.SignatureImpl -> aku:
     boolean useCache -> a
     int modifiers -> e
     java.lang.String name -> f
@@ -28708,16 +28724,16 @@ org.aspectj.runtime.reflect.SignatureImpl -> akv:
     161:162:java.lang.Class extractType(int) -> c
     173:178:java.lang.String[] extractStrings(int) -> d
     181:186:java.lang.Class[] extractTypes(int) -> e
-org.aspectj.runtime.reflect.SignatureImpl$Cache -> akw:
+org.aspectj.runtime.reflect.SignatureImpl$Cache -> akv:
     java.lang.String get(int) -> a
     void set(int,java.lang.String) -> a
-org.aspectj.runtime.reflect.SignatureImpl$CacheImpl -> akx:
+org.aspectj.runtime.reflect.SignatureImpl$CacheImpl -> akw:
     java.lang.ref.SoftReference toStringCacheRef -> a
     217:221:java.lang.String get(int) -> a
     225:230:void set(int,java.lang.String) -> a
     233:233:java.lang.String[] array() -> a
     237:239:java.lang.String[] makeCache() -> b
-org.aspectj.runtime.reflect.SourceLocationImpl -> aky:
+org.aspectj.runtime.reflect.SourceLocationImpl -> akx:
     java.lang.Class withinType -> a
     java.lang.String fileName -> b
     int line -> c
@@ -28726,7 +28742,7 @@ org.aspectj.runtime.reflect.SourceLocationImpl -> aky:
     32:32:int getLine() -> getLine
     33:33:int getColumn() -> getColumn
     36:36:java.lang.String toString() -> toString
-org.aspectj.runtime.reflect.StringMaker -> akz:
+org.aspectj.runtime.reflect.StringMaker -> aky:
     boolean shortTypeNames -> a
     boolean includeArgs -> b
     boolean includeThrows -> c
@@ -28748,7 +28764,7 @@ org.aspectj.runtime.reflect.StringMaker -> akz:
     112:116:void addTypeNames(java.lang.StringBuffer,java.lang.Class[]) -> a
     119:132:void addSignature(java.lang.StringBuffer,java.lang.Class[]) -> b
     135:139:void addThrows(java.lang.StringBuffer,java.lang.Class[]) -> c
-org.aspectj.runtime.reflect.UnlockSignatureImpl -> ala:
+org.aspectj.runtime.reflect.UnlockSignatureImpl -> akz:
     java.lang.Class parameterType -> a
     32:33:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
 retrofit.Callback -> retrofit.Callback:
@@ -29463,7 +29479,7 @@ uk.co.chrisjenx.calligraphy.BuildConfig -> uk.co.chrisjenx.calligraphy.BuildConf
     java.lang.String FLAVOR -> FLAVOR
     int VERSION_CODE -> VERSION_CODE
     java.lang.String VERSION_NAME -> VERSION_NAME
-uk.co.chrisjenx.calligraphy.CalligraphyActivityFactory -> alb:
+uk.co.chrisjenx.calligraphy.CalligraphyActivityFactory -> ala:
     android.view.View onActivityCreateView(android.view.View,android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> a
 uk.co.chrisjenx.calligraphy.CalligraphyConfig -> uk.co.chrisjenx.calligraphy.CalligraphyConfig:
     uk.co.chrisjenx.calligraphy.CalligraphyConfig sInstance -> a
@@ -29503,7 +29519,7 @@ uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper -> uk.co.chrisjenx.calligr
     59:59:android.view.View onActivityCreateView(android.app.Activity,android.view.View,android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> onActivityCreateView
     69:72:uk.co.chrisjenx.calligraphy.CalligraphyActivityFactory get(android.app.Activity) -> a
     109:115:java.lang.Object getSystemService(java.lang.String) -> getSystemService
-uk.co.chrisjenx.calligraphy.CalligraphyFactory -> alc:
+uk.co.chrisjenx.calligraphy.CalligraphyFactory -> alb:
     java.util.Map sStyles -> a
     int mAttributeId -> b
     49:64:int[] getStyleForTextView(android.widget.TextView) -> a
@@ -29513,13 +29529,13 @@ uk.co.chrisjenx.calligraphy.CalligraphyFactory -> alc:
     111:113:boolean matchesResourceIdName(android.view.View,java.lang.String) -> a
     132:136:android.view.View onViewCreated(android.view.View,android.content.Context,android.util.AttributeSet) -> a
     140:204:void onViewCreatedInternal(android.view.View,android.content.Context,android.util.AttributeSet) -> b
-uk.co.chrisjenx.calligraphy.CalligraphyFactory$1 -> ald:
-uk.co.chrisjenx.calligraphy.CalligraphyFactory$2 -> ale:
+uk.co.chrisjenx.calligraphy.CalligraphyFactory$1 -> alc:
+uk.co.chrisjenx.calligraphy.CalligraphyFactory$2 -> ald:
     android.view.ViewGroup val$parent -> a
     android.content.Context val$context -> b
     uk.co.chrisjenx.calligraphy.CalligraphyFactory this$0 -> c
     186:201:void onGlobalLayout() -> onGlobalLayout
-uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater -> alf:
+uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater -> ale:
     java.lang.String[] sClassPrefixList -> a
     int mAttributeId -> b
     uk.co.chrisjenx.calligraphy.CalligraphyFactory mCalligraphyFactory -> c
@@ -29536,15 +29552,15 @@ uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater -> alf:
     159:170:android.view.View onCreateView(java.lang.String,android.util.AttributeSet) -> onCreateView
     196:213:android.view.View createCustomViewInternal(android.view.View,android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> b
     20:20:android.view.View access$000(uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater,android.view.View,android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> a
-uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater$PrivateWrapperFactory2 -> alg:
+uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater$PrivateWrapperFactory2 -> alf:
     uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater mInflater -> c
     296:298:android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
-uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater$WrapperFactory -> alh:
+uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater$WrapperFactory -> alg:
     android.view.LayoutInflater$Factory mFactory -> a
     uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater mInflater -> b
     uk.co.chrisjenx.calligraphy.CalligraphyFactory mCalligraphyFactory -> c
     237:246:android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
-uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater$WrapperFactory2 -> ali:
+uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater$WrapperFactory2 -> alh:
     android.view.LayoutInflater$Factory2 mFactory2 -> a
     uk.co.chrisjenx.calligraphy.CalligraphyFactory mCalligraphyFactory -> b
     267:268:android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
@@ -29570,7 +29586,7 @@ uk.co.chrisjenx.calligraphy.CalligraphyUtils -> uk.co.chrisjenx.calligraphy.Call
     251:266:java.lang.String pullFontPathFromTheme(android.content.Context,int,int) -> a
     280:310:java.lang.String pullFontPathFromTheme(android.content.Context,int,int,int) -> a
     321:329:boolean canCheckForV7Toolbar() -> a
-uk.co.chrisjenx.calligraphy.CalligraphyUtils$1 -> alj:
+uk.co.chrisjenx.calligraphy.CalligraphyUtils$1 -> ali:
     android.graphics.Typeface val$typeface -> a
     81:81:void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     85:85:void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
@@ -30527,7 +30543,7 @@ uk.co.chrisjenx.calligraphy.R$styleable -> uk.co.chrisjenx.calligraphy.R$styleab
     int View_android_focusable -> View_android_focusable
     int View_paddingEnd -> View_paddingEnd
     int View_paddingStart -> View_paddingStart
-uk.co.chrisjenx.calligraphy.ReflectionUtils -> alk:
+uk.co.chrisjenx.calligraphy.ReflectionUtils -> alj:
     15:20:java.lang.reflect.Field getField(java.lang.Class,java.lang.String) -> a
     25:28:java.lang.Object getValue(java.lang.reflect.Field,java.lang.Object) -> a
     33:36:void setValue(java.lang.reflect.Field,java.lang.Object,java.lang.Object) -> a

@@ -164,6 +164,8 @@ public class SplashActivity extends BaseActivity {
             calendar.setTimeInMillis(System.currentTimeMillis());
             calendar.add(Calendar.DATE, REPEAT_DB_MAINTAINCE_AFTER_DAYS);
 
+           // calendar.set(CALENDAR.HO);
+
             mAlarmManager.setInexactRepeating(AlarmManager.RTC, calendar.getTimeInMillis(),
                     AlarmManager.INTERVAL_DAY * REPEAT_DB_MAINTAINCE_AFTER_DAYS, pendingIntent);
         }

@@ -18,8 +18,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -67,15 +67,13 @@ public class NewsFragment extends BaseFragment {
     public ImageView mNewsIv;
 
     @InjectView(com.radmagnet.R.id.category)
-    public TextView mCategoryTv;
+    public ImageView mCategoryIv;
 
     @InjectView(R.id.specific_details)
-    public LinearLayout mSpecificDetailsContainer;
-
+    public FrameLayout mSpecificDetailsContainer;
 
     @InjectView(com.radmagnet.R.id.categoryColor)
     public View mCategoryColor;
-
 
     @InjectView(com.radmagnet.R.id.webView)
     public WebView mWebView;
@@ -92,6 +90,9 @@ public class NewsFragment extends BaseFragment {
 
     @InjectView(com.radmagnet.R.id.scrollView)
     public ScrollView mScrollView;
+
+    @InjectView(R.id.newItem)
+    public TextView mNewItemTv;
 
     Toolbar toolbar;
 
@@ -157,7 +158,7 @@ public class NewsFragment extends BaseFragment {
         ButterKnife.inject(this, fragmentView);
         setupToolbar(fragmentView);
 
-        mCategoryTv.setVisibility(View.GONE);
+        mCategoryIv.setVisibility(View.GONE);
         setupAllViews();
 
         return fragmentView;
@@ -226,6 +227,14 @@ public class NewsFragment extends BaseFragment {
             e.printStackTrace();
         }
 
+        //is the news item read
+        if(mNews.isRead())
+            mNewItemTv.setVisibility(View.GONE);
+        else {
+            mNewItemTv.setVisibility(View.VISIBLE);
+            mNewItemTv.getBackground().setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
+        }
+
         //news headline
         mHeadlineTv.setText((mNews.getHeadline() != null) ? mNews.getHeadline() : getActivity().getString(com.radmagnet.R.string.missingHeadline_txt));
 
@@ -239,11 +248,14 @@ public class NewsFragment extends BaseFragment {
         mCategoryColor.setBackgroundColor(color);
 
         if (mNews.getStartDate() != null && mNews.getStartDate().getTime() != 0) {
+
             Drawable drawable = mSpecificDetailsContainer.getBackground();
             drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
             EventsView eventsView = new EventsView(getActivity());
             eventsView.setDate(mNews.getStartDate());
-            if (mSpecificDetailsContainer.getChildCount() < 2)
+
+
+            if (mSpecificDetailsContainer.getChildCount() < 1)
                 mSpecificDetailsContainer.addView(eventsView);
 
             mSpecificDetailsContainer.setVisibility(View.VISIBLE);

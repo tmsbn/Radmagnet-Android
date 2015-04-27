@@ -43,31 +43,7 @@ public class CheckAppReceiver extends BroadcastReceiver {
         Notification notification = builder.build();
         notificationManager.notify(BaseApplication.NOTIF_REQUEST_CODE, notification);
 
-        /**
-         * Database manintainance
-         */
-        Realm realm = Realm.getInstance(context);
-        final RealmResults<News> results = realm.where(News.class).findAllSorted("createdDate", false);
-        final int size = results.size();
-        realm.beginTransaction();
-        realm.executeTransaction(new Realm.Transaction() {
-            @Override
-            public void execute(Realm realm) {
 
-                if (size >= MAX_DB_COUNT) {
-
-                    for (int i = size-1; i > MAX_DB_COUNT; i--) {
-                        if (!results.get(i).isBookmarked())
-                            results.get(i).removeFromRealm();
-                    }
-
-                }
-
-
-            }
-        });
-
-        realm.close();
 
 
     }

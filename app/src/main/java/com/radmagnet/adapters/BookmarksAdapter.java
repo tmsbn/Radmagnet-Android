@@ -69,7 +69,7 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
     @Override
     public BookmarksViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
 
-        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(com.radmagnet.R.layout.lv_rw_bookmark, viewGroup, false);
+        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(com.radmagnet.R.layout.row_bookmark, viewGroup, false);
 
         return new BookmarksViewHolder(itemView);
     }

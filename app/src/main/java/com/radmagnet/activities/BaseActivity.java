@@ -86,6 +86,21 @@ public abstract class BaseActivity extends ActionBarActivity {
         return Color.WHITE;
     }
 
+
+    public Drawable getIconFromCategory(String categoryName) throws Exception{
+
+        String drawableName = "";
+        for (Category category : getConfig().categories) {
+            if (category.getValue().contains(categoryName))
+                drawableName = category.getIcon();
+        }
+
+        int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
+        return getResources().getDrawable(resID);
+
+
+    }
+
     public String getTitleFromConfig(String categoryName) {
 
         ArrayList<Category> categories = getConfig().categories;
@@ -148,8 +163,6 @@ public abstract class BaseActivity extends ActionBarActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
-
-
 
 
         if (withTitle) {

@@ -9782,14 +9782,22 @@ com.radmagnet.R$drawable: int btn_start_n
 com.radmagnet.R$drawable: int btn_start_p
 com.radmagnet.R$drawable: int btn_yellow_n
 com.radmagnet.R$drawable: int btn_yellow_p
+com.radmagnet.R$drawable: int ic_alltherad
 com.radmagnet.R$drawable: int ic_back
 com.radmagnet.R$drawable: int ic_bookmark
 com.radmagnet.R$drawable: int ic_bookmark_a
 com.radmagnet.R$drawable: int ic_bookmark_n
 com.radmagnet.R$drawable: int ic_branding
+com.radmagnet.R$drawable: int ic_cityhotspots
+com.radmagnet.R$drawable: int ic_deals
+com.radmagnet.R$drawable: int ic_events
 com.radmagnet.R$drawable: int ic_fb
+com.radmagnet.R$drawable: int ic_feedback
 com.radmagnet.R$drawable: int ic_launcher
+com.radmagnet.R$drawable: int ic_lifehacks
+com.radmagnet.R$drawable: int ic_radilove
 com.radmagnet.R$drawable: int ic_share
+com.radmagnet.R$drawable: int ic_uninews
 com.radmagnet.R$drawable: int rounded_rectangle
 com.radmagnet.R$drawable: int rounded_rectangle_with_red_border
 com.radmagnet.R$drawable: int transparent_gradiant_selector
@@ -9836,6 +9844,7 @@ com.radmagnet.R$id: int card_view
 com.radmagnet.R$id: int categories_list
 com.radmagnet.R$id: int category
 com.radmagnet.R$id: int categoryColor
+com.radmagnet.R$id: int categoryIcon
 com.radmagnet.R$id: int checkbox
 com.radmagnet.R$id: int circlePagerIndicator
 com.radmagnet.R$id: int collapseActionView
@@ -9873,6 +9882,7 @@ com.radmagnet.R$id: int middle
 com.radmagnet.R$id: int month
 com.radmagnet.R$id: int name
 com.radmagnet.R$id: int never
+com.radmagnet.R$id: int newItem
 com.radmagnet.R$id: int newRads_text
 com.radmagnet.R$id: int newsCategoryTitle
 com.radmagnet.R$id: int newsDetailsLayout
@@ -9967,9 +9977,9 @@ com.radmagnet.R$layout: int layout_events
 com.radmagnet.R$layout: int layout_news
 com.radmagnet.R$layout: int layout_splash_1
 com.radmagnet.R$layout: int layout_splash_2
-com.radmagnet.R$layout: int lv_rw_bookmark
-com.radmagnet.R$layout: int lv_rw_category
-com.radmagnet.R$layout: int lv_rw_news
+com.radmagnet.R$layout: int row_bookmark
+com.radmagnet.R$layout: int row_category
+com.radmagnet.R$layout: int row_news
 com.radmagnet.R$layout: int sidebar_news
 com.radmagnet.R$layout: int support_simple_spinner_dropdown_item
 com.radmagnet.R$layout: int toolbar
@@ -10016,6 +10026,7 @@ com.radmagnet.R$string: int feedback_txt
 com.radmagnet.R$string: int hello_blank_fragment
 com.radmagnet.R$string: int hello_world
 com.radmagnet.R$string: int missingHeadline_txt
+com.radmagnet.R$string: int new_txt
 com.radmagnet.R$string: int noRadsHere_msg
 com.radmagnet.R$string: int noUpdatesAvaliable_msg
 com.radmagnet.R$string: int notif_content
@@ -10619,6 +10630,7 @@ com.radmagnet.activities.BaseActivity: BaseActivity()
 com.radmagnet.activities.BaseActivity: void onCreate(android.os.Bundle)
 com.radmagnet.activities.BaseActivity: com.radmagnet.models.ConfigVars getConfig()
 com.radmagnet.activities.BaseActivity: int getColorFromCategory(java.lang.String)
+com.radmagnet.activities.BaseActivity: android.graphics.drawable.Drawable getIconFromCategory(java.lang.String)
 com.radmagnet.activities.BaseActivity: java.lang.String getTitleFromConfig(java.lang.String)
 com.radmagnet.activities.BaseActivity: android.graphics.drawable.Drawable applyColorToDrawable(int,int)
 com.radmagnet.activities.BaseActivity: void attachBaseContext(android.content.Context)
@@ -10855,14 +10867,15 @@ com.radmagnet.fragment.NewsFragment: android.widget.TextView mDateTv
 com.radmagnet.fragment.NewsFragment: android.widget.TextView mCreatorTv
 com.radmagnet.fragment.NewsFragment: android.widget.ImageView mCreatorDpIv
 com.radmagnet.fragment.NewsFragment: android.widget.ImageView mNewsIv
-com.radmagnet.fragment.NewsFragment: android.widget.TextView mCategoryTv
-com.radmagnet.fragment.NewsFragment: android.widget.LinearLayout mSpecificDetailsContainer
+com.radmagnet.fragment.NewsFragment: android.widget.ImageView mCategoryIv
+com.radmagnet.fragment.NewsFragment: android.widget.FrameLayout mSpecificDetailsContainer
 com.radmagnet.fragment.NewsFragment: android.view.View mCategoryColor
 com.radmagnet.fragment.NewsFragment: android.webkit.WebView mWebView
 com.radmagnet.fragment.NewsFragment: android.widget.TextView mLocation
 com.radmagnet.fragment.NewsFragment: android.widget.ProgressBar mProgressBar
 com.radmagnet.fragment.NewsFragment: android.widget.TextView newsCategoryTitle
 com.radmagnet.fragment.NewsFragment: android.widget.ScrollView mScrollView
+com.radmagnet.fragment.NewsFragment: android.widget.TextView mNewItemTv
 com.radmagnet.fragment.NewsFragment: NewsFragment()
 com.radmagnet.fragment.NewsFragment: com.radmagnet.fragment.NewsFragment newInstance(java.lang.String)
 com.radmagnet.fragment.NewsFragment: void onCreate(android.os.Bundle)
@@ -10888,10 +10901,13 @@ com.radmagnet.models.Category
 com.radmagnet.models.Category: java.lang.String name
 com.radmagnet.models.Category: java.lang.String color
 com.radmagnet.models.Category: java.lang.String value
+com.radmagnet.models.Category: java.lang.String icon
 com.radmagnet.models.Category: boolean isSelected
 com.radmagnet.models.Category: boolean isSection
-com.radmagnet.models.Category: Category(java.lang.String,java.lang.String,java.lang.String,boolean)
-com.radmagnet.models.Category: Category(java.lang.String,java.lang.String)
+com.radmagnet.models.Category: Category(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)
+com.radmagnet.models.Category: Category(java.lang.String,java.lang.String,java.lang.String)
+com.radmagnet.models.Category: java.lang.String getIcon()
+com.radmagnet.models.Category: void setIcon(java.lang.String)
 com.radmagnet.models.Category: java.lang.String getName()
 com.radmagnet.models.Category: java.lang.String getColor()
 com.radmagnet.models.Category: java.lang.String getValue()
@@ -10929,8 +10945,11 @@ com.radmagnet.models.News: java.lang.String creatorDp
 com.radmagnet.models.News: java.lang.String location
 com.radmagnet.models.News: java.lang.String shareUrl
 com.radmagnet.models.News: long key
+com.radmagnet.models.News: boolean isRead
 com.radmagnet.models.News: boolean isBookmarked
 com.radmagnet.models.News: News()
+com.radmagnet.models.News: boolean isRead()
+com.radmagnet.models.News: void setRead(boolean)
 com.radmagnet.models.News: java.lang.String getShareUrl()
 com.radmagnet.models.News: void setShareUrl(java.lang.String)
 com.radmagnet.models.News: long getKey()
@@ -14312,6 +14331,8 @@ io.realm.NewsRealmProxy: java.lang.String getShareUrl()
 io.realm.NewsRealmProxy: void setShareUrl(java.lang.String)
 io.realm.NewsRealmProxy: long getKey()
 io.realm.NewsRealmProxy: void setKey(long)
+io.realm.NewsRealmProxy: boolean isRead()
+io.realm.NewsRealmProxy: void setRead(boolean)
 io.realm.NewsRealmProxy: boolean isBookmarked()
 io.realm.NewsRealmProxy: void setBookmarked(boolean)
 io.realm.NewsRealmProxy: io.realm.internal.Table initTable(io.realm.internal.ImplicitTransaction)

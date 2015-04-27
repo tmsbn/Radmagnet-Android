@@ -4,13 +4,13 @@ package com.radmagnet.adapters;
 import android.content.Context;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
-import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -76,7 +76,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
     @Override
     public NewsHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
 
-        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(com.radmagnet.R.layout.lv_rw_news, viewGroup, false);
+        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(com.radmagnet.R.layout.row_news, viewGroup, false);
 
         return new NewsHolder(itemView);
     }
@@ -93,9 +93,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         final News news = mRealmResults.get(position);
 
         holder.creatorTv.setText(news.getCreator());
-
-
-
 
         try {
 
@@ -122,22 +119,41 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             //category line
             int color = activity.getColorFromCategory(news.getCategory());
             holder.categoryLine.setBackgroundColor(color);
-            Drawable drawable = holder.linearLayout.getBackground();
+
 
             //category
-            holder.categoryTv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
-            drawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
+           // holder.categoryIv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
+            holder.categoryIv.getBackground().setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
+            try{
+                holder.categoryIv.setImageDrawable(activity.getIconFromCategory(news.getCategory()));
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
+
+
+            //is the news item read
+            if(news.isRead())
+                holder.isNewTv.setVisibility(View.GONE);
+            else {
+                holder.isNewTv.setVisibility(View.VISIBLE);
+                holder.isNewTv.getBackground().setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
+
+            }
+
 
             //events
+            holder.frameLayout.getBackground().setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
             if (news.getStartDate() != null && news.getStartDate().getTime() != 0) {
+
                 EventsView eventsView = new EventsView(mContext);
                 eventsView.setDate(news.getStartDate());
-                if (holder.linearLayout.getChildCount() < 2)
-                    holder.linearLayout.addView(eventsView);
+                if (holder.frameLayout.getChildCount() == 0)
+                    holder.frameLayout.addView(eventsView);
 
             } else {
-                if (holder.linearLayout.getChildCount() > 1)
-                    holder.linearLayout.removeViewAt(1);
+                if (holder.frameLayout.getChildCount() > 0)
+                    holder.frameLayout.removeViewAt(0);
             }
 
             //location
@@ -186,16 +202,17 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
         ImageView creatorDp;
         ImageButton bookmarkIbtn;
         View categoryLine;
-        TextView categoryTv;
+        ImageView categoryIv;
         ImageView newsImageIv;
-        LinearLayout linearLayout;
+        FrameLayout frameLayout;
         TextView location;
+        TextView isNewTv;
 
 
         public NewsHolder(View v) {
 
             super(v);
-            categoryTv = (TextView) v.findViewById(com.radmagnet.R.id.category);
+            categoryIv = (ImageView) v.findViewById(com.radmagnet.R.id.category);
             creatorTv = (TextView) v.findViewById(com.radmagnet.R.id.creator);
             categoryLine = v.findViewById(com.radmagnet.R.id.categoryColor);
             dateTv = (TextView) v.findViewById(com.radmagnet.R.id.date);
@@ -203,8 +220,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             headlineTv = (TextView) v.findViewById(com.radmagnet.R.id.headline);
             newsImageIv = (ImageView) v.findViewById(com.radmagnet.R.id.newsImage);
             creatorDp = (ImageView) v.findViewById(com.radmagnet.R.id.creatorDp);
-            linearLayout = (LinearLayout) v.findViewById(com.radmagnet.R.id.specific_details);
+            frameLayout = (FrameLayout) v.findViewById(com.radmagnet.R.id.specific_details);
             location = (TextView) v.findViewById(R.id.location);
+            isNewTv= (TextView) v.findViewById(R.id.newItem);
 
 
         }

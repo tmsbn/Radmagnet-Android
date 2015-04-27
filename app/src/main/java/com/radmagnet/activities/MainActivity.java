@@ -92,7 +92,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.radmagnet.R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
         ButterKnife.inject(this);
         setupActionBar(false, mToolbar);
@@ -134,35 +134,14 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
         mSwipeLayout.setOnRefreshListener(this);
 
-        final float THRESHOLD = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5, getResources().getDisplayMetrics());
-
         newRadsTv.disableViewsOnAnimation(mSwipeLayout);
-
-        mNewsRv.setOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-            }
-
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-
-                if (THRESHOLD < Math.abs(dy)) {
-                    if (dy < 0) {
-
-                    }
-                }
-
-                super.onScrolled(recyclerView, dx, dy);
-            }
-        });
     }
 
 
     private void setupCategoriesList() {
 
         ArrayList<Category> categories = getConfig().categories;
-        categories.add(0, new Category(getString(R.string.allTheRad_txt), "#" + Integer.toHexString(getResources().getColor(android.R.color.white)), "", true));
+        categories.add(0, new Category(getString(R.string.allTheRad_txt), "#" + Integer.toHexString(getResources().getColor(android.R.color.white)), "", "ic_alltherad", true));
         mCategoriesAdapter = new CategoriesAdapter(this, categories);
         mCategoriesLv.setAdapter(mCategoriesAdapter);
         mCategoriesLv.setOnItemClickListener(this);
@@ -174,8 +153,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
 
         ArrayList<Category> options = new ArrayList<>();
-        options.add(new Category(getString(com.radmagnet.R.string.radsILove_txt), "#333333"));
-        options.add(new Category(getString(com.radmagnet.R.string.feedback_txt), "#D9E021"));
+        options.add(new Category(getString(com.radmagnet.R.string.radsILove_txt), "#333333","ic_radilove"));
+        options.add(new Category(getString(com.radmagnet.R.string.feedback_txt), "#D9E021","ic_feedback"));
 
         mOtherOptionsLv.setAdapter(new OtherOptionsAdapter(this, options));
 
@@ -255,13 +234,21 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     }
 
     @Override
-    public void onItemClick(News newsItem, int position) {
+    public void onItemClick(final News newsItem, int position) {
 
         ArrayList<String> realmIds = new ArrayList<>();
+
         RealmResults<News> results = mNewsAdapter.getRealmResults();
         for (News news : results) {
             realmIds.add(news.getId());
         }
+
+        Realm.getInstance(this).executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                newsItem.setRead(true);
+            }
+        });
 
         Intent intent = new Intent(this, DetailsActivity.class);
         intent.putExtra("position", position);
@@ -395,7 +382,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     public boolean onCreateOptionsMenu(Menu menu) {
 
         getMenuInflater().inflate(com.radmagnet.R.menu.menu_main, menu);
-        MenuItem menuItem = menu.findItem(com.radmagnet.R.id.action_search);
+        MenuItem menuItem = menu.findItem(R.id.action_search);
         MenuItemCompat.setOnActionExpandListener(menuItem, new MenuItemCompat.OnActionExpandListener() {
 
             @Override
@@ -434,12 +421,12 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
         switch (parent.getId()) {
 
-            case com.radmagnet.R.id.newsList:
+            case R.id.newsList:
 
 
                 break;
 
-            case com.radmagnet.R.id.categories_list:
+            case R.id.categories_list:
 
                 mCategoriesAdapter.setSelectedCategory(position);
                 mSelectedCategory = mCategoriesAdapter.getItem(position).getValue();

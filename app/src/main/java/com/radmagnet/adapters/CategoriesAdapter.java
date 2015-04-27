@@ -2,6 +2,7 @@ package com.radmagnet.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.radmagnet.R;
+import com.radmagnet.activities.BaseActivity;
 import com.radmagnet.models.Category;
 
 import java.util.ArrayList;
@@ -33,7 +36,7 @@ public class CategoriesAdapter extends ArrayAdapter<Category> {
             getItem(previousSelected).setSelected(false);
 
         previousSelected = position;
-        getItem(position).setSelected( true);
+        getItem(position).setSelected(true);
         notifyDataSetChanged();
 
     }
@@ -44,18 +47,28 @@ public class CategoriesAdapter extends ArrayAdapter<Category> {
         Category category = getItem(position);
         if (convertView == null) {
 
-            convertView = LayoutInflater.from(getContext()).inflate(com.radmagnet.R.layout.lv_rw_category, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(com.radmagnet.R.layout.row_category, parent, false);
         }
 
         ImageView thumbnailTv = (ImageView) convertView.findViewById(com.radmagnet.R.id.thumbnail);
         TextView categoryTv = (TextView) convertView.findViewById(com.radmagnet.R.id.category);
+        ImageView categoryIconIv = (ImageView) convertView.findViewById(R.id.categoryIcon);
+
+        try {
+
+            int resID = getContext().getResources().getIdentifier(category.getIcon(), "drawable", getContext().getPackageName());
+            categoryIconIv.setImageDrawable(getContext().getResources().getDrawable(resID));
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
         if (getItem(position).isSelected()) {
             convertView.setActivated(true);
-            previousSelected=position;
-        }
-        else
+            previousSelected = position;
+        } else
             convertView.setActivated(false);
 
 

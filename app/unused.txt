@@ -1211,7 +1211,7 @@ com.radmagnet.activities.SplashActivity:
     private static final int REPEAT_DB_MAINTAINCE_AFTER_DAYS
 com.radmagnet.adapters.NewsAdapter:
     int height
-    235:240:private void setAnimation(android.view.View,int)
+    253:258:private void setAnimation(android.view.View,int)
 com.radmagnet.api.RadmagnetApi:
     private static final java.lang.String URL
 com.radmagnet.fragment.NewsFragment:

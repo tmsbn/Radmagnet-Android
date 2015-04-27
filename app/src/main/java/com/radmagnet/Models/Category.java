@@ -13,20 +13,34 @@ public class Category {
 
     private String value;
 
+    private String icon;
+
     private boolean isSelected = false;
 
     private boolean isSection = false;
 
-    public Category(String name, String color, String value, boolean isSelected) {
+    public Category(String name, String color, String value, String icon, boolean isSelected) {
         this.name = name;
         this.color = color;
         this.value = value;
+        this.icon = icon;
         this.isSelected = isSelected;
     }
 
-    public Category(String name, String color) {
+
+
+    public Category(String name, String color, String icon) {
         this.name = name;
         this.color = color;
+        this.icon = icon;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 
     public String getName() {
