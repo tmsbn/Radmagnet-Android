@@ -37,7 +37,7 @@ public class SplashActivity extends BaseActivity {
     AlarmManager mAlarmManager;
 
     private static final int REPEAT_NOTIF_AFTER_DAYS = 3;
-    private static final int REPEAT_DB_MAINTAINCE_AFTER_DAYS = 2;
+    private static final int REPEAT_DB_MAINTAINCE_AFTER_DAYS = 4;
 
     @InjectView(com.radmagnet.R.id.introPager)
     AutoScrollViewPager mIntroPager;

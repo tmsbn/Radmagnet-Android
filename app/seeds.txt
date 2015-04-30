@@ -11005,57 +11005,6 @@ com.radmagnet.utils.CustomDurationScroller: CustomDurationScroller(android.conte
 com.radmagnet.utils.CustomDurationScroller: CustomDurationScroller(android.content.Context,android.view.animation.Interpolator)
 com.radmagnet.utils.CustomDurationScroller: void setScrollDurationFactor(double)
 com.radmagnet.utils.CustomDurationScroller: void startScroll(int,int,int,int,int)
-com.squareup.javawriter.JavaWriter
-com.squareup.javawriter.JavaWriter: JavaWriter(java.io.Writer)
-com.squareup.javawriter.JavaWriter: void setCompressingTypes(boolean)
-com.squareup.javawriter.JavaWriter: boolean isCompressingTypes()
-com.squareup.javawriter.JavaWriter: void setIndent(java.lang.String)
-com.squareup.javawriter.JavaWriter: java.lang.String getIndent()
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitPackage(java.lang.String)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitImports(java.lang.String[])
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitImports(java.lang.Class[])
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitImports(java.util.Collection)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitStaticImports(java.lang.String[])
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitStaticImports(java.util.Collection)
-com.squareup.javawriter.JavaWriter: java.lang.String compressType(java.lang.String)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter beginInitializer(boolean)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter endInitializer()
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter beginType(java.lang.String,java.lang.String)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter beginType(java.lang.String,java.lang.String,java.util.Set)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter beginType(java.lang.String,java.lang.String,java.util.Set,java.lang.String,java.lang.String[])
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter endType()
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitField(java.lang.String,java.lang.String)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitField(java.lang.String,java.lang.String,java.util.Set)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitField(java.lang.String,java.lang.String,java.util.Set,java.lang.String)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter beginMethod(java.lang.String,java.lang.String,java.util.Set,java.lang.String[])
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter beginMethod(java.lang.String,java.lang.String,java.util.Set,java.util.List,java.util.List)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter beginConstructor(java.util.Set,java.lang.String[])
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter beginConstructor(java.util.Set,java.util.List,java.util.List)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitJavadoc(java.lang.String,java.lang.Object[])
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitSingleLineComment(java.lang.String,java.lang.Object[])
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitEmptyLine()
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitEnumValue(java.lang.String)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitEnumValue(java.lang.String,boolean)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitEnumValues(java.lang.Iterable)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitAnnotation(java.lang.String)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitAnnotation(java.lang.Class)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitAnnotation(java.lang.Class,java.lang.Object)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitAnnotation(java.lang.String,java.lang.Object)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitAnnotation(java.lang.Class,java.util.Map)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitAnnotation(java.lang.String,java.util.Map)
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter emitStatement(java.lang.String,java.lang.Object[])
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter beginControlFlow(java.lang.String,java.lang.Object[])
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter nextControlFlow(java.lang.String,java.lang.Object[])
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter endControlFlow()
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter endControlFlow(java.lang.String,java.lang.Object[])
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter endMethod()
-com.squareup.javawriter.JavaWriter: com.squareup.javawriter.JavaWriter endConstructor()
-com.squareup.javawriter.JavaWriter: java.lang.String stringLiteral(java.lang.String)
-com.squareup.javawriter.JavaWriter: java.lang.String type(java.lang.Class,java.lang.String[])
-com.squareup.javawriter.JavaWriter: java.lang.String rawType(java.lang.String)
-com.squareup.javawriter.JavaWriter: void close()
-com.squareup.javawriter.JavaWriter$Scope: com.squareup.javawriter.JavaWriter$Scope[] values()
-com.squareup.javawriter.JavaWriter$Scope: com.squareup.javawriter.JavaWriter$Scope valueOf(java.lang.String)
 com.squareup.okhttp.Address
 com.squareup.okhttp.Address: java.net.Proxy proxy
 com.squareup.okhttp.Address: java.lang.String uriHost
@@ -14304,6 +14253,23 @@ io.realm.BuildConfig: int VERSION_CODE
 io.realm.BuildConfig: java.lang.String VERSION_NAME
 io.realm.BuildConfig: BuildConfig()
 io.realm.NewsRealmProxy
+io.realm.NewsRealmProxy: long INDEX_CATEGORY
+io.realm.NewsRealmProxy: long INDEX_ID
+io.realm.NewsRealmProxy: long INDEX_POSTID
+io.realm.NewsRealmProxy: long INDEX_CREATEDDATE
+io.realm.NewsRealmProxy: long INDEX_STARTDATE
+io.realm.NewsRealmProxy: long INDEX_ACTIVE
+io.realm.NewsRealmProxy: long INDEX_HEADLINE
+io.realm.NewsRealmProxy: long INDEX_IMAGEURL
+io.realm.NewsRealmProxy: long INDEX_CREATOR
+io.realm.NewsRealmProxy: long INDEX_CREATORDP
+io.realm.NewsRealmProxy: long INDEX_LOCATION
+io.realm.NewsRealmProxy: long INDEX_SHAREURL
+io.realm.NewsRealmProxy: long INDEX_KEY
+io.realm.NewsRealmProxy: long INDEX_ISREAD
+io.realm.NewsRealmProxy: long INDEX_ISBOOKMARKED
+io.realm.NewsRealmProxy: java.util.Map columnIndices
+io.realm.NewsRealmProxy: java.util.List FIELD_NAMES
 io.realm.NewsRealmProxy: NewsRealmProxy()
 io.realm.NewsRealmProxy: java.lang.String getCategory()
 io.realm.NewsRealmProxy: void setCategory(java.lang.String)
@@ -14338,14 +14304,16 @@ io.realm.NewsRealmProxy: void setBookmarked(boolean)
 io.realm.NewsRealmProxy: io.realm.internal.Table initTable(io.realm.internal.ImplicitTransaction)
 io.realm.NewsRealmProxy: void validateTable(io.realm.internal.ImplicitTransaction)
 io.realm.NewsRealmProxy: java.util.List getFieldNames()
-io.realm.NewsRealmProxy: void populateUsingJsonObject(com.radmagnet.models.News,org.json.JSONObject)
-io.realm.NewsRealmProxy: void populateUsingJsonStream(com.radmagnet.models.News,android.util.JsonReader)
+io.realm.NewsRealmProxy: java.util.Map getColumnIndices()
+io.realm.NewsRealmProxy: com.radmagnet.models.News createOrUpdateUsingJsonObject(io.realm.Realm,org.json.JSONObject,boolean)
+io.realm.NewsRealmProxy: com.radmagnet.models.News createUsingJsonStream(io.realm.Realm,android.util.JsonReader)
 io.realm.NewsRealmProxy: com.radmagnet.models.News copyOrUpdate(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map)
 io.realm.NewsRealmProxy: com.radmagnet.models.News copy(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map)
 io.realm.NewsRealmProxy: com.radmagnet.models.News update(io.realm.Realm,com.radmagnet.models.News,com.radmagnet.models.News,java.util.Map)
 io.realm.NewsRealmProxy: java.lang.String toString()
 io.realm.NewsRealmProxy: int hashCode()
 io.realm.NewsRealmProxy: boolean equals(java.lang.Object)
+io.realm.NewsRealmProxy: void <clinit>()
 io.realm.Realm
 io.realm.Realm: java.lang.String DEFAULT_REALM_NAME
 io.realm.Realm: java.lang.String TAG
@@ -14380,7 +14348,7 @@ io.realm.Realm: java.util.List changeListeners
 io.realm.Realm: java.util.Map tables
 io.realm.Realm: java.util.Set customSchema
 io.realm.Realm: long UNVERSIONED
-io.realm.Realm: java.util.Map columnIndices
+io.realm.Realm: io.realm.internal.ColumnIndices columnIndices
 io.realm.Realm: void checkIfValid()
 io.realm.Realm: Realm(java.lang.String,byte[],boolean)
 io.realm.Realm: void finalize()
@@ -14414,10 +14382,12 @@ io.realm.Realm: io.realm.RealmObject createObjectFromJson(java.lang.Class,java.l
 io.realm.Realm: io.realm.RealmObject createOrUpdateObjectFromJson(java.lang.Class,java.lang.String)
 io.realm.Realm: io.realm.RealmObject createObjectFromJson(java.lang.Class,java.io.InputStream)
 io.realm.Realm: io.realm.RealmObject createOrUpdateObjectFromJson(java.lang.Class,java.io.InputStream)
-io.realm.Realm: io.realm.RealmObject createStandaloneRealmObjectInstance(java.lang.Class)
+io.realm.Realm: java.util.Scanner getFullStringScanner(java.io.InputStream)
 io.realm.Realm: void writeCopyTo(java.io.File)
 io.realm.Realm: void writeEncryptedCopyTo(java.io.File,byte[])
 io.realm.Realm: io.realm.RealmObject createObject(java.lang.Class)
+io.realm.Realm: io.realm.RealmObject createObject(java.lang.Class,java.lang.Object)
+io.realm.Realm: io.realm.internal.Table initTable(java.lang.Class)
 io.realm.Realm: java.lang.Class getProxyClass(java.lang.Class)
 io.realm.Realm: void remove(java.lang.Class,long)
 io.realm.Realm: io.realm.RealmObject get(java.lang.Class,long)
@@ -14450,7 +14420,6 @@ io.realm.Realm: long getVersion()
 io.realm.Realm: void setVersion(long)
 io.realm.Realm: java.lang.Class getRealmClassFromObject(io.realm.RealmObject)
 io.realm.Realm: io.realm.RealmObject copyOrUpdate(io.realm.RealmObject,boolean)
-io.realm.Realm: boolean isObjectInRealm(io.realm.RealmObject)
 io.realm.Realm: void checkNotNullObject(io.realm.RealmObject)
 io.realm.Realm: void checkHasPrimaryKey(io.realm.RealmObject)
 io.realm.Realm: void checkHasPrimaryKey(java.lang.Class)
@@ -14460,8 +14429,10 @@ io.realm.Realm: void migrateRealmAtPath(java.lang.String,io.realm.RealmMigration
 io.realm.Realm: void migrateRealmAtPath(java.lang.String,byte[],io.realm.RealmMigration,boolean)
 io.realm.Realm: boolean deleteRealmFile(android.content.Context)
 io.realm.Realm: boolean deleteRealmFile(android.content.Context,java.lang.String)
-io.realm.Realm: boolean compactRealmFile(android.content.Context,java.lang.String)
+io.realm.Realm: boolean deleteRealmFile(java.io.File)
+io.realm.Realm: boolean compactRealmFile(android.content.Context,java.lang.String,byte[])
 io.realm.Realm: boolean compactRealmFile(android.content.Context)
+io.realm.Realm: boolean compactRealmFile(android.content.Context,java.lang.String)
 io.realm.Realm: java.lang.String getPath()
 io.realm.Realm: void setSchema(java.lang.Class[])
 io.realm.Realm: java.lang.String getClassSimpleName(java.lang.Class)
@@ -14500,8 +14471,8 @@ io.realm.RealmChangeListener
 io.realm.RealmChangeListener: void onChange()
 io.realm.RealmJsonImpl
 io.realm.RealmJsonImpl: RealmJsonImpl()
-io.realm.RealmJsonImpl: void populateUsingJsonObject(io.realm.RealmObject,org.json.JSONObject)
-io.realm.RealmJsonImpl: void populateUsingJsonStream(io.realm.RealmObject,android.util.JsonReader)
+io.realm.RealmJsonImpl: io.realm.RealmObject createOrUpdateUsingJsonObject(java.lang.Class,io.realm.Realm,org.json.JSONObject,boolean)
+io.realm.RealmJsonImpl: io.realm.RealmObject createUsingJsonStream(java.lang.Class,io.realm.Realm,android.util.JsonReader)
 io.realm.RealmList
 io.realm.RealmList: java.lang.String ONLY_IN_MANAGED_MODE_MESSAGE
 io.realm.RealmList: java.lang.String NULL_OBJECTS_NOT_ALLOWED_MESSAGE
@@ -14557,6 +14528,8 @@ io.realm.RealmQuery: RealmQuery(io.realm.Realm,io.realm.internal.LinkView,java.l
 io.realm.RealmQuery: boolean containsDot(java.lang.String)
 io.realm.RealmQuery: java.lang.String[] splitString(java.lang.String)
 io.realm.RealmQuery: long[] getColumnIndices(java.lang.String,io.realm.internal.ColumnType)
+io.realm.RealmQuery: io.realm.RealmQuery isNull(java.lang.String)
+io.realm.RealmQuery: io.realm.RealmQuery isNotNull(java.lang.String)
 io.realm.RealmQuery: io.realm.RealmQuery equalTo(java.lang.String,java.lang.String)
 io.realm.RealmQuery: io.realm.RealmQuery equalTo(java.lang.String,java.lang.String,boolean)
 io.realm.RealmQuery: io.realm.RealmQuery equalTo(java.lang.String,int)
@@ -14719,6 +14692,12 @@ io.realm.exceptions.RealmIOException: RealmIOException(java.lang.String,java.lan
 io.realm.exceptions.RealmMigrationNeededException
 io.realm.exceptions.RealmMigrationNeededException: RealmMigrationNeededException(java.lang.String)
 io.realm.exceptions.RealmMigrationNeededException: RealmMigrationNeededException(java.lang.String,java.lang.Throwable)
+io.realm.internal.ColumnIndices
+io.realm.internal.ColumnIndices: java.util.Map classes
+io.realm.internal.ColumnIndices: ColumnIndices()
+io.realm.internal.ColumnIndices: void addClass(java.lang.Class,java.util.Map)
+io.realm.internal.ColumnIndices: java.util.Map getClassFields(java.lang.Class)
+io.realm.internal.ColumnIndices: long getColumnIndex(java.lang.Class,java.lang.String)
 io.realm.internal.ColumnType
 io.realm.internal.ColumnType: io.realm.internal.ColumnType BOOLEAN
 io.realm.internal.ColumnType: io.realm.internal.ColumnType INTEGER
@@ -14910,9 +14889,32 @@ io.realm.internal.ReadTransaction: ReadTransaction(io.realm.internal.Context,io.
 io.realm.internal.ReadTransaction: void endRead()
 io.realm.internal.ReadTransaction: void close()
 io.realm.internal.ReadTransaction: void finalize()
+io.realm.internal.RealmCore
+io.realm.internal.RealmCore: java.lang.String FILE_SEP
+io.realm.internal.RealmCore: java.lang.String PATH_SEP
+io.realm.internal.RealmCore: java.lang.String BINARIES_PATH
+io.realm.internal.RealmCore: java.lang.String JAVA_LIBRARY_PATH
+io.realm.internal.RealmCore: java.util.concurrent.atomic.AtomicBoolean libraryIsLoaded
+io.realm.internal.RealmCore: RealmCore()
+io.realm.internal.RealmCore: boolean osIsWindows()
+io.realm.internal.RealmCore: byte[] serialize(java.io.Serializable)
+io.realm.internal.RealmCore: java.io.Serializable deserialize(java.nio.ByteBuffer)
+io.realm.internal.RealmCore: java.io.Serializable deserialize(byte[])
+io.realm.internal.RealmCore: void gcGuaranteed()
+io.realm.internal.RealmCore: void gcOnExit()
+io.realm.internal.RealmCore: void init()
+io.realm.internal.RealmCore: void loadLibrary()
+io.realm.internal.RealmCore: java.lang.String loadLibraryWindows()
+io.realm.internal.RealmCore: java.lang.String loadCorrectLibrary(java.lang.String[])
+io.realm.internal.RealmCore: void addNativeLibraryPath(java.lang.String)
+io.realm.internal.RealmCore: void resetLibraryPath()
+io.realm.internal.RealmCore: void <clinit>()
+io.realm.internal.RealmCore$1
+io.realm.internal.RealmCore$1: RealmCore$1()
+io.realm.internal.RealmCore$1: void run()
 io.realm.internal.RealmJson
-io.realm.internal.RealmJson: void populateUsingJsonObject(io.realm.RealmObject,org.json.JSONObject)
-io.realm.internal.RealmJson: void populateUsingJsonStream(io.realm.RealmObject,android.util.JsonReader)
+io.realm.internal.RealmJson: io.realm.RealmObject createOrUpdateUsingJsonObject(java.lang.Class,io.realm.Realm,org.json.JSONObject,boolean)
+io.realm.internal.RealmJson: io.realm.RealmObject createUsingJsonStream(java.lang.Class,io.realm.Realm,android.util.JsonReader)
 io.realm.internal.Row
 io.realm.internal.Row: io.realm.internal.Context context
 io.realm.internal.Row: io.realm.internal.Table parent
@@ -15010,6 +15012,7 @@ io.realm.internal.SharedGroup: boolean isClosed()
 io.realm.internal.SharedGroup: java.lang.String nativeGetDefaultReplicationDatabaseFileName()
 io.realm.internal.SharedGroup: boolean hasChanged()
 io.realm.internal.SharedGroup: void reserve(long)
+io.realm.internal.SharedGroup: boolean compact()
 io.realm.internal.SharedGroup: void nativeReserve(long,long)
 io.realm.internal.SharedGroup: boolean nativeHasChanged(long)
 io.realm.internal.SharedGroup: long nativeBeginRead(long)
@@ -15018,6 +15021,7 @@ io.realm.internal.SharedGroup: long nativeBeginWrite(long)
 io.realm.internal.SharedGroup: void nativeCommit(long)
 io.realm.internal.SharedGroup: void nativeRollback(long)
 io.realm.internal.SharedGroup: long nativeCreate(java.lang.String,int,boolean,boolean,byte[])
+io.realm.internal.SharedGroup: boolean nativeCompact(long)
 io.realm.internal.SharedGroup: void checkNativePtrNotZero()
 io.realm.internal.SharedGroup: void nativeClose(long)
 io.realm.internal.SharedGroup: void nativeCloseReplication(long)
@@ -15108,6 +15112,7 @@ io.realm.internal.Table: void nativeRemoveLast(long)
 io.realm.internal.Table: void moveLastOver(long)
 io.realm.internal.Table: void nativeMoveLastOver(long,long)
 io.realm.internal.Table: long addEmptyRow()
+io.realm.internal.Table: long addEmptyRowWithPrimaryKey(java.lang.Object)
 io.realm.internal.Table: long addEmptyRows(long)
 io.realm.internal.Table: long nativeAddEmptyRow(long,long)
 io.realm.internal.Table: long add(java.lang.Object[])
@@ -15205,6 +15210,7 @@ io.realm.internal.Table: void nullifyLink(long,long)
 io.realm.internal.Table: void nativeNullifyLink(long,long,long)
 io.realm.internal.Table: boolean isImmutable()
 io.realm.internal.Table: void checkImmutable()
+io.realm.internal.Table: void checkHasPrimaryKey()
 io.realm.internal.Table: long sumLong(long)
 io.realm.internal.Table: long nativeSumInt(long,long)
 io.realm.internal.Table: long maximumLong(long)
@@ -15541,6 +15547,8 @@ io.realm.internal.TableQuery: long nativeMaximumDate(long,long,long,long,long)
 io.realm.internal.TableQuery: java.util.Date minimumDate(long,long,long,long)
 io.realm.internal.TableQuery: java.util.Date minimumDate(long)
 io.realm.internal.TableQuery: long nativeMinimumDate(long,long,long,long,long)
+io.realm.internal.TableQuery: io.realm.internal.TableQuery isNull(long)
+io.realm.internal.TableQuery: void nativeIsNull(long,long)
 io.realm.internal.TableQuery: long count(long,long,long)
 io.realm.internal.TableQuery: long count()
 io.realm.internal.TableQuery: long nativeCount(long,long,long,long)
@@ -15734,29 +15742,6 @@ io.realm.internal.TableView$Order: io.realm.internal.TableView$Order[] values()
 io.realm.internal.TableView$Order: io.realm.internal.TableView$Order valueOf(java.lang.String)
 io.realm.internal.TableView$Order: TableView$Order(java.lang.String,int)
 io.realm.internal.TableView$Order: void <clinit>()
-io.realm.internal.TightDB
-io.realm.internal.TightDB: java.lang.String FILE_SEP
-io.realm.internal.TightDB: java.lang.String PATH_SEP
-io.realm.internal.TightDB: java.lang.String BINARIES_PATH
-io.realm.internal.TightDB: java.lang.String JAVA_LIBRARY_PATH
-io.realm.internal.TightDB: java.util.concurrent.atomic.AtomicBoolean libraryIsLoaded
-io.realm.internal.TightDB: TightDB()
-io.realm.internal.TightDB: boolean osIsWindows()
-io.realm.internal.TightDB: byte[] serialize(java.io.Serializable)
-io.realm.internal.TightDB: java.io.Serializable deserialize(java.nio.ByteBuffer)
-io.realm.internal.TightDB: java.io.Serializable deserialize(byte[])
-io.realm.internal.TightDB: void gcGuaranteed()
-io.realm.internal.TightDB: void gcOnExit()
-io.realm.internal.TightDB: void initTightDB()
-io.realm.internal.TightDB: void loadLibrary()
-io.realm.internal.TightDB: java.lang.String loadLibraryWindows()
-io.realm.internal.TightDB: java.lang.String loadCorrectLibrary(java.lang.String[])
-io.realm.internal.TightDB: void addNativeLibraryPath(java.lang.String)
-io.realm.internal.TightDB: void resetLibraryPath()
-io.realm.internal.TightDB: void <clinit>()
-io.realm.internal.TightDB$1
-io.realm.internal.TightDB$1: TightDB$1()
-io.realm.internal.TightDB$1: void run()
 io.realm.internal.Util
 io.realm.internal.Util: Util()
 io.realm.internal.Util: long getNativeMemUsage()
@@ -15936,36 +15921,36 @@ io.realm.processor.RealmJSonImplGenerator: java.lang.String CLASS_NAME
 io.realm.processor.RealmJSonImplGenerator: java.lang.String EXCEPTION_MSG
 io.realm.processor.RealmJSonImplGenerator: RealmJSonImplGenerator(javax.annotation.processing.ProcessingEnvironment,java.util.Set)
 io.realm.processor.RealmJSonImplGenerator: void generate()
-io.realm.processor.RealmJSonImplGenerator: void emitPopulateUsingJsonObject(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmJSonImplGenerator: void emitPopulateUsingJsonStream(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmJSonImplGenerator: void emitProxySwitch(java.lang.String,com.squareup.javawriter.JavaWriter)
+io.realm.processor.RealmJSonImplGenerator: void emitCreateOrUpdateUsingJsonObject(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmJSonImplGenerator: void emitCreateUsingJsonStream(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmJSonImplGenerator: void emitProxySwitch(java.lang.String,io.realm.processor.javawriter.JavaWriter)
 io.realm.processor.RealmJsonTypeHelper
 io.realm.processor.RealmJsonTypeHelper: java.util.Map JAVA_TO_JSON_TYPES
 io.realm.processor.RealmJsonTypeHelper: RealmJsonTypeHelper()
-io.realm.processor.RealmJsonTypeHelper: void emitFillJavaTypeWithJsonValue(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmJsonTypeHelper: void emitFillRealmObjectWithJsonValue(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmJsonTypeHelper: void emitFillRealmListWithJsonValue(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmJsonTypeHelper: void emitFillJavaTypeFromStream(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmJsonTypeHelper: void emitFillRealmObjectFromStream(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmJsonTypeHelper: void emitFillRealmListFromStream(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper: void emitFillJavaTypeWithJsonValue(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper: void emitFillRealmObjectWithJsonValue(java.lang.String,java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper: void emitFillRealmListWithJsonValue(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper: void emitFillJavaTypeFromStream(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper: void emitFillRealmObjectFromStream(java.lang.String,java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper: void emitFillRealmListFromStream(java.lang.String,java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
 io.realm.processor.RealmJsonTypeHelper: void <clinit>()
 io.realm.processor.RealmJsonTypeHelper$1
 io.realm.processor.RealmJsonTypeHelper$1: RealmJsonTypeHelper$1()
-io.realm.processor.RealmJsonTypeHelper$1: void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmJsonTypeHelper$1: void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper$1: void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper$1: void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
 io.realm.processor.RealmJsonTypeHelper$2
 io.realm.processor.RealmJsonTypeHelper$2: RealmJsonTypeHelper$2()
-io.realm.processor.RealmJsonTypeHelper$2: void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmJsonTypeHelper$2: void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper$2: void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper$2: void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
 io.realm.processor.RealmJsonTypeHelper$JsonToRealmTypeConverter
-io.realm.processor.RealmJsonTypeHelper$JsonToRealmTypeConverter: void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmJsonTypeHelper$JsonToRealmTypeConverter: void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper$JsonToRealmTypeConverter: void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper$JsonToRealmTypeConverter: void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
 io.realm.processor.RealmJsonTypeHelper$SimpleTypeConverter
 io.realm.processor.RealmJsonTypeHelper$SimpleTypeConverter: java.lang.String castType
 io.realm.processor.RealmJsonTypeHelper$SimpleTypeConverter: java.lang.String jsonType
 io.realm.processor.RealmJsonTypeHelper$SimpleTypeConverter: RealmJsonTypeHelper$SimpleTypeConverter(java.lang.String,java.lang.String)
-io.realm.processor.RealmJsonTypeHelper$SimpleTypeConverter: void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmJsonTypeHelper$SimpleTypeConverter: void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper$SimpleTypeConverter: void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmJsonTypeHelper$SimpleTypeConverter: void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter)
 io.realm.processor.RealmJsonTypeHelper$SimpleTypeConverter: RealmJsonTypeHelper$SimpleTypeConverter(java.lang.String,java.lang.String,io.realm.processor.RealmJsonTypeHelper$1)
 io.realm.processor.RealmProcessor
 io.realm.processor.RealmProcessor: java.util.Set classesToValidate
@@ -15987,18 +15972,21 @@ io.realm.processor.RealmProxyClassGenerator: java.util.Map JAVA_TO_COLUMN_TYPES
 io.realm.processor.RealmProxyClassGenerator: java.util.Map CASTING_TYPES
 io.realm.processor.RealmProxyClassGenerator: RealmProxyClassGenerator(javax.annotation.processing.ProcessingEnvironment,io.realm.processor.ClassMetaData)
 io.realm.processor.RealmProxyClassGenerator: void generate()
-io.realm.processor.RealmProxyClassGenerator: void emitAccessors(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmProxyClassGenerator: void emitInitTableMethod(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmProxyClassGenerator: void emitValidateTableMethod(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmProxyClassGenerator: void emitGetFieldNamesMethod(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmProxyClassGenerator: void emitCopyOrUpdateMethod(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmProxyClassGenerator: void emitCopyMethod(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmProxyClassGenerator: void emitUpdateMethod(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmProxyClassGenerator: void emitToStringMethod(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmProxyClassGenerator: void emitHashcodeMethod(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmProxyClassGenerator: void emitEqualsMethod(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmProxyClassGenerator: void emitPopulateUsingJsonObjectMethod(com.squareup.javawriter.JavaWriter)
-io.realm.processor.RealmProxyClassGenerator: void emitPopulateUsingJsonStreamMethod(com.squareup.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitClassFields(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitAccessors(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitInitTableMethod(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitValidateTableMethod(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitGetFieldNamesMethod(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitGetColumnIndicesMethod(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitCopyOrUpdateMethod(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitCopyMethod(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitUpdateMethod(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitToStringMethod(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitHashcodeMethod(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitEqualsMethod(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitCreateOrUpdateUsingJsonObject(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: void emitCreateUsingJsonStream(io.realm.processor.javawriter.JavaWriter)
+io.realm.processor.RealmProxyClassGenerator: java.lang.String staticFieldIndexVarName(javax.lang.model.element.VariableElement)
 io.realm.processor.RealmProxyClassGenerator: void <clinit>()
 io.realm.processor.RealmValidationListGenerator
 io.realm.processor.RealmValidationListGenerator: javax.annotation.processing.ProcessingEnvironment processingEnvironment
@@ -16048,6 +16036,93 @@ io.realm.processor.Utils: javax.lang.model.element.Element getSuperClass(javax.l
 io.realm.processor.Version
 io.realm.processor.Version: java.lang.String VERSION
 io.realm.processor.Version: Version()
+io.realm.processor.javawriter.JavaWriter
+io.realm.processor.javawriter.JavaWriter: java.util.regex.Pattern TYPE_PATTERN
+io.realm.processor.javawriter.JavaWriter: int MAX_SINGLE_LINE_ATTRIBUTES
+io.realm.processor.javawriter.JavaWriter: java.lang.String INDENT
+io.realm.processor.javawriter.JavaWriter: java.util.Map importedTypes
+io.realm.processor.javawriter.JavaWriter: java.lang.String packagePrefix
+io.realm.processor.javawriter.JavaWriter: java.util.Deque scopes
+io.realm.processor.javawriter.JavaWriter: java.util.Deque types
+io.realm.processor.javawriter.JavaWriter: java.io.Writer out
+io.realm.processor.javawriter.JavaWriter: boolean isCompressingTypes
+io.realm.processor.javawriter.JavaWriter: java.lang.String indent
+io.realm.processor.javawriter.JavaWriter: java.util.EnumSet METHOD_SCOPES
+io.realm.processor.javawriter.JavaWriter: JavaWriter(java.io.Writer)
+io.realm.processor.javawriter.JavaWriter: void setCompressingTypes(boolean)
+io.realm.processor.javawriter.JavaWriter: boolean isCompressingTypes()
+io.realm.processor.javawriter.JavaWriter: void setIndent(java.lang.String)
+io.realm.processor.javawriter.JavaWriter: java.lang.String getIndent()
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitPackage(java.lang.String)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitImports(java.lang.String[])
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitImports(java.lang.Class[])
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitImports(java.util.Collection)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitStaticImports(java.lang.String[])
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitStaticImports(java.util.Collection)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitCompressedType(java.lang.String)
+io.realm.processor.javawriter.JavaWriter: java.lang.String compressType(java.lang.String)
+io.realm.processor.javawriter.JavaWriter: boolean isClassInPackage(java.lang.String,java.lang.String)
+io.realm.processor.javawriter.JavaWriter: boolean isAmbiguous(java.lang.String)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter beginInitializer(boolean)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter endInitializer()
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter beginType(java.lang.String,java.lang.String)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter beginType(java.lang.String,java.lang.String,java.util.Set)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter beginType(java.lang.String,java.lang.String,java.util.Set,java.lang.String,java.lang.String[])
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter endType()
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitField(java.lang.String,java.lang.String)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitField(java.lang.String,java.lang.String,java.util.Set)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitField(java.lang.String,java.lang.String,java.util.Set,java.lang.String)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter beginMethod(java.lang.String,java.lang.String,java.util.Set,java.lang.String[])
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter beginMethod(java.lang.String,java.lang.String,java.util.Set,java.util.List,java.util.List)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter beginConstructor(java.util.Set,java.lang.String[])
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter beginConstructor(java.util.Set,java.util.List,java.util.List)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitJavadoc(java.lang.String,java.lang.Object[])
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitSingleLineComment(java.lang.String,java.lang.Object[])
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitEmptyLine()
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitEnumValue(java.lang.String)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitEnumValue(java.lang.String,boolean)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitLastEnumValue(java.lang.String)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitEnumValues(java.lang.Iterable)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitAnnotation(java.lang.String)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitAnnotation(java.lang.Class)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitAnnotation(java.lang.Class,java.lang.Object)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitAnnotation(java.lang.String,java.lang.Object)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitAnnotation(java.lang.Class,java.util.Map)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitAnnotation(java.lang.String,java.util.Map)
+io.realm.processor.javawriter.JavaWriter: boolean containsArray(java.util.Collection)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitAnnotationValue(java.lang.Object)
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter emitStatement(java.lang.String,java.lang.Object[])
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter beginControlFlow(java.lang.String,java.lang.Object[])
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter nextControlFlow(java.lang.String,java.lang.Object[])
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter endControlFlow()
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter endControlFlow(java.lang.String,java.lang.Object[])
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter endMethod()
+io.realm.processor.javawriter.JavaWriter: io.realm.processor.javawriter.JavaWriter endConstructor()
+io.realm.processor.javawriter.JavaWriter: java.lang.String stringLiteral(java.lang.String)
+io.realm.processor.javawriter.JavaWriter: java.lang.String type(java.lang.Class,java.lang.String[])
+io.realm.processor.javawriter.JavaWriter: java.lang.String rawType(java.lang.String)
+io.realm.processor.javawriter.JavaWriter: void close()
+io.realm.processor.javawriter.JavaWriter: void emitModifiers(java.util.Set)
+io.realm.processor.javawriter.JavaWriter: void indent()
+io.realm.processor.javawriter.JavaWriter: void hangingIndent()
+io.realm.processor.javawriter.JavaWriter: void checkInMethod()
+io.realm.processor.javawriter.JavaWriter: void popScope(io.realm.processor.javawriter.JavaWriter$Scope[])
+io.realm.processor.javawriter.JavaWriter: void <clinit>()
+io.realm.processor.javawriter.JavaWriter$Scope
+io.realm.processor.javawriter.JavaWriter$Scope: io.realm.processor.javawriter.JavaWriter$Scope TYPE_DECLARATION
+io.realm.processor.javawriter.JavaWriter$Scope: io.realm.processor.javawriter.JavaWriter$Scope INTERFACE_DECLARATION
+io.realm.processor.javawriter.JavaWriter$Scope: io.realm.processor.javawriter.JavaWriter$Scope ABSTRACT_METHOD
+io.realm.processor.javawriter.JavaWriter$Scope: io.realm.processor.javawriter.JavaWriter$Scope NON_ABSTRACT_METHOD
+io.realm.processor.javawriter.JavaWriter$Scope: io.realm.processor.javawriter.JavaWriter$Scope CONSTRUCTOR
+io.realm.processor.javawriter.JavaWriter$Scope: io.realm.processor.javawriter.JavaWriter$Scope CONTROL_FLOW
+io.realm.processor.javawriter.JavaWriter$Scope: io.realm.processor.javawriter.JavaWriter$Scope ANNOTATION_ATTRIBUTE
+io.realm.processor.javawriter.JavaWriter$Scope: io.realm.processor.javawriter.JavaWriter$Scope ANNOTATION_ARRAY_VALUE
+io.realm.processor.javawriter.JavaWriter$Scope: io.realm.processor.javawriter.JavaWriter$Scope INITIALIZER
+io.realm.processor.javawriter.JavaWriter$Scope: io.realm.processor.javawriter.JavaWriter$Scope[] $VALUES
+io.realm.processor.javawriter.JavaWriter$Scope: io.realm.processor.javawriter.JavaWriter$Scope[] values()
+io.realm.processor.javawriter.JavaWriter$Scope: io.realm.processor.javawriter.JavaWriter$Scope valueOf(java.lang.String)
+io.realm.processor.javawriter.JavaWriter$Scope: JavaWriter$Scope(java.lang.String,int)
+io.realm.processor.javawriter.JavaWriter$Scope: void <clinit>()
 jp.wasabeef.recyclerview.BuildConfig
 jp.wasabeef.recyclerview.BuildConfig: boolean DEBUG
 jp.wasabeef.recyclerview.BuildConfig: java.lang.String APPLICATION_ID

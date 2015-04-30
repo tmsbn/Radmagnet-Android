@@ -20011,87 +20011,6 @@ com.radmagnet.utils.CustomDurationScroller -> com.radmagnet.utils.CustomDuration
     double scrollFactor -> a
     40:41:void setScrollDurationFactor(double) -> setScrollDurationFactor
     45:46:void startScroll(int,int,int,int,int) -> startScroll
-com.squareup.javawriter.JavaWriter -> com.squareup.javawriter.JavaWriter:
-    java.util.regex.Pattern TYPE_PATTERN -> a
-    java.util.Map importedTypes -> b
-    java.lang.String packagePrefix -> c
-    java.util.Deque scopes -> d
-    java.util.Deque types -> e
-    java.io.Writer out -> f
-    boolean isCompressingTypes -> g
-    java.lang.String indent -> h
-    java.util.EnumSet METHOD_SCOPES -> i
-    52:53:void setCompressingTypes(boolean) -> setCompressingTypes
-    56:56:boolean isCompressingTypes() -> isCompressingTypes
-    60:61:void setIndent(java.lang.String) -> setIndent
-    64:64:java.lang.String getIndent() -> getIndent
-    69:80:com.squareup.javawriter.JavaWriter emitPackage(java.lang.String) -> emitPackage
-    88:88:com.squareup.javawriter.JavaWriter emitImports(java.lang.String[]) -> emitImports
-    96:100:com.squareup.javawriter.JavaWriter emitImports(java.lang.Class[]) -> emitImports
-    108:120:com.squareup.javawriter.JavaWriter emitImports(java.util.Collection) -> emitImports
-    128:128:com.squareup.javawriter.JavaWriter emitStaticImports(java.lang.String[]) -> emitStaticImports
-    136:148:com.squareup.javawriter.JavaWriter emitStaticImports(java.util.Collection) -> emitStaticImports
-    157:162:com.squareup.javawriter.JavaWriter emitCompressedType(java.lang.String) -> a
-    167:204:java.lang.String compressType(java.lang.String) -> compressType
-    208:217:boolean isClassInPackage(java.lang.String,java.lang.String) -> a
-    226:226:boolean isAmbiguous(java.lang.String) -> b
-    235:243:com.squareup.javawriter.JavaWriter beginInitializer(boolean) -> beginInitializer
-    248:251:com.squareup.javawriter.JavaWriter endInitializer() -> endInitializer
-    260:260:com.squareup.javawriter.JavaWriter beginType(java.lang.String,java.lang.String) -> beginType
-    270:270:com.squareup.javawriter.JavaWriter beginType(java.lang.String,java.lang.String,java.util.Set) -> beginType
-    281:304:com.squareup.javawriter.JavaWriter beginType(java.lang.String,java.lang.String,java.util.Set,java.lang.String,java.lang.String[]) -> beginType
-    309:313:com.squareup.javawriter.JavaWriter endType() -> endType
-    318:318:com.squareup.javawriter.JavaWriter emitField(java.lang.String,java.lang.String) -> emitField
-    324:324:com.squareup.javawriter.JavaWriter emitField(java.lang.String,java.lang.String,java.util.Set) -> emitField
-    330:351:com.squareup.javawriter.JavaWriter emitField(java.lang.String,java.lang.String,java.util.Set,java.lang.String) -> emitField
-    368:368:com.squareup.javawriter.JavaWriter beginMethod(java.lang.String,java.lang.String,java.util.Set,java.lang.String[]) -> beginMethod
-    386:425:com.squareup.javawriter.JavaWriter beginMethod(java.lang.String,java.lang.String,java.util.Set,java.util.List,java.util.List) -> beginMethod
-    430:431:com.squareup.javawriter.JavaWriter beginConstructor(java.util.Set,java.lang.String[]) -> beginConstructor
-    437:438:com.squareup.javawriter.JavaWriter beginConstructor(java.util.Set,java.util.List,java.util.List) -> beginConstructor
-    443:458:com.squareup.javawriter.JavaWriter emitJavadoc(java.lang.String,java.lang.Object[]) -> emitJavadoc
-    463:467:com.squareup.javawriter.JavaWriter emitSingleLineComment(java.lang.String,java.lang.Object[]) -> emitSingleLineComment
-    471:472:com.squareup.javawriter.JavaWriter emitEmptyLine() -> emitEmptyLine
-    476:479:com.squareup.javawriter.JavaWriter emitEnumValue(java.lang.String) -> emitEnumValue
-    487:487:com.squareup.javawriter.JavaWriter emitEnumValue(java.lang.String,boolean) -> emitEnumValue
-    491:494:com.squareup.javawriter.JavaWriter emitLastEnumValue(java.lang.String) -> c
-    499:510:com.squareup.javawriter.JavaWriter emitEnumValues(java.lang.Iterable) -> emitEnumValues
-    515:515:com.squareup.javawriter.JavaWriter emitAnnotation(java.lang.String) -> emitAnnotation
-    520:520:com.squareup.javawriter.JavaWriter emitAnnotation(java.lang.Class) -> emitAnnotation
-    532:532:com.squareup.javawriter.JavaWriter emitAnnotation(java.lang.Class,java.lang.Object) -> emitAnnotation
-    543:550:com.squareup.javawriter.JavaWriter emitAnnotation(java.lang.String,java.lang.Object) -> emitAnnotation
-    556:556:com.squareup.javawriter.JavaWriter emitAnnotation(java.lang.Class,java.util.Map) -> emitAnnotation
-    568:610:com.squareup.javawriter.JavaWriter emitAnnotation(java.lang.String,java.util.Map) -> emitAnnotation
-    614:619:boolean containsArray(java.util.Collection) -> a
-    627:648:com.squareup.javawriter.JavaWriter emitAnnotationValue(java.lang.Object) -> a
-    656:666:com.squareup.javawriter.JavaWriter emitStatement(java.lang.String,java.lang.Object[]) -> emitStatement
-    674:679:com.squareup.javawriter.JavaWriter beginControlFlow(java.lang.String,java.lang.Object[]) -> beginControlFlow
-    687:693:com.squareup.javawriter.JavaWriter nextControlFlow(java.lang.String,java.lang.Object[]) -> nextControlFlow
-    697:697:com.squareup.javawriter.JavaWriter endControlFlow() -> endControlFlow
-    705:714:com.squareup.javawriter.JavaWriter endControlFlow(java.lang.String,java.lang.Object[]) -> endControlFlow
-    719:727:com.squareup.javawriter.JavaWriter endMethod() -> endMethod
-    732:735:com.squareup.javawriter.JavaWriter endConstructor() -> endConstructor
-    740:775:java.lang.String stringLiteral(java.lang.String) -> stringLiteral
-    780:795:java.lang.String type(java.lang.Class,java.lang.String[]) -> type
-    800:804:java.lang.String rawType(java.lang.String) -> rawType
-    808:809:void close() -> close
-    813:823:void emitModifiers(java.util.Set) -> a
-    826:829:void indent() -> a
-    832:835:void hangingIndent() -> b
-    841:844:void checkInMethod() -> c
-    847:850:void popScope(com.squareup.javawriter.JavaWriter$Scope[]) -> a
-com.squareup.javawriter.JavaWriter$Scope -> agc:
-    com.squareup.javawriter.JavaWriter$Scope TYPE_DECLARATION -> a
-    com.squareup.javawriter.JavaWriter$Scope INTERFACE_DECLARATION -> b
-    com.squareup.javawriter.JavaWriter$Scope ABSTRACT_METHOD -> c
-    com.squareup.javawriter.JavaWriter$Scope NON_ABSTRACT_METHOD -> d
-    com.squareup.javawriter.JavaWriter$Scope CONSTRUCTOR -> e
-    com.squareup.javawriter.JavaWriter$Scope CONTROL_FLOW -> f
-    com.squareup.javawriter.JavaWriter$Scope ANNOTATION_ATTRIBUTE -> g
-    com.squareup.javawriter.JavaWriter$Scope ANNOTATION_ARRAY_VALUE -> h
-    com.squareup.javawriter.JavaWriter$Scope INITIALIZER -> i
-    com.squareup.javawriter.JavaWriter$Scope[] $VALUES -> j
-    852:852:com.squareup.javawriter.JavaWriter$Scope[] values() -> values
-    852:852:com.squareup.javawriter.JavaWriter$Scope valueOf(java.lang.String) -> valueOf
 com.squareup.okhttp.Address -> com.squareup.okhttp.Address:
     java.net.Proxy proxy -> proxy
     java.lang.String uriHost -> uriHost
@@ -22398,7 +22317,7 @@ com.squareup.okhttp.internal.ws.WebSocketWriter$FrameSink -> com.squareup.okhttp
     283:299:void close() -> close
     262:262:com.squareup.okhttp.internal.ws.WebSocket$PayloadType access$102(com.squareup.okhttp.internal.ws.WebSocketWriter$FrameSink,com.squareup.okhttp.internal.ws.WebSocket$PayloadType) -> access$102
     262:262:boolean access$202(com.squareup.okhttp.internal.ws.WebSocketWriter$FrameSink,boolean) -> access$202
-com.squareup.picasso.Action -> agd:
+com.squareup.picasso.Action -> agc:
     com.squareup.picasso.Picasso picasso -> a
     com.squareup.picasso.Request request -> b
     java.lang.ref.WeakReference target -> c
@@ -22424,15 +22343,15 @@ com.squareup.picasso.Action -> agd:
     101:101:com.squareup.picasso.Picasso getPicasso() -> j
     105:105:com.squareup.picasso.Picasso$Priority getPriority() -> k
     109:109:java.lang.Object getTag() -> l
-com.squareup.picasso.Action$RequestWeakReference -> age:
+com.squareup.picasso.Action$RequestWeakReference -> agd:
     com.squareup.picasso.Action action -> a
-com.squareup.picasso.AssetRequestHandler -> agf:
+com.squareup.picasso.AssetRequestHandler -> age:
     int ASSET_PREFIX_LENGTH -> a
     android.content.res.AssetManager assetManager -> b
     39:41:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     45:46:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
     50:50:java.lang.String getFilePath(com.squareup.picasso.Request) -> a
-com.squareup.picasso.BitmapHunter -> agg:
+com.squareup.picasso.BitmapHunter -> agf:
     java.lang.Object DECODE_LOCK -> t
     java.lang.ThreadLocal NAME_BUILDER -> u
     java.util.concurrent.atomic.AtomicInteger SEQUENCE_GENERATOR -> v
@@ -22481,23 +22400,23 @@ com.squareup.picasso.BitmapHunter -> agg:
     425:483:android.graphics.Bitmap applyCustomTransformations(java.util.List,android.graphics.Bitmap) -> a
     487:564:android.graphics.Bitmap transformResult(com.squareup.picasso.Request,android.graphics.Bitmap,int) -> a
     569:569:boolean shouldResize(boolean,int,int,int,int) -> a
-com.squareup.picasso.BitmapHunter$1 -> agh:
+com.squareup.picasso.BitmapHunter$1 -> agg:
     54:54:java.lang.StringBuilder initialValue() -> a
     52:52:java.lang.Object initialValue() -> initialValue
-com.squareup.picasso.BitmapHunter$2 -> agi:
+com.squareup.picasso.BitmapHunter$2 -> agh:
     62:62:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     66:66:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
-com.squareup.picasso.BitmapHunter$3 -> agj:
+com.squareup.picasso.BitmapHunter$3 -> agi:
     com.squareup.picasso.Transformation val$transformation -> a
     java.lang.RuntimeException val$e -> b
     433:434:void run() -> run
-com.squareup.picasso.BitmapHunter$4 -> agk:
+com.squareup.picasso.BitmapHunter$4 -> agj:
     java.lang.StringBuilder val$builder -> a
     452:452:void run() -> run
-com.squareup.picasso.BitmapHunter$5 -> agl:
+com.squareup.picasso.BitmapHunter$5 -> agk:
     com.squareup.picasso.Transformation val$transformation -> a
     461:462:void run() -> run
-com.squareup.picasso.BitmapHunter$6 -> agm:
+com.squareup.picasso.BitmapHunter$6 -> agl:
     com.squareup.picasso.Transformation val$transformation -> a
     473:474:void run() -> run
 com.squareup.picasso.Cache -> com.squareup.picasso.Cache:
@@ -22508,7 +22427,7 @@ com.squareup.picasso.Cache -> com.squareup.picasso.Cache:
     int maxSize() -> maxSize
     void clear() -> clear
     void clearKeyUri(java.lang.String) -> clearKeyUri
-com.squareup.picasso.Cache$1 -> agn:
+com.squareup.picasso.Cache$1 -> agm:
     49:49:android.graphics.Bitmap get(java.lang.String) -> get
     54:54:void set(java.lang.String,android.graphics.Bitmap) -> set
     57:57:int size() -> size
@@ -22521,26 +22440,26 @@ com.squareup.picasso.Callback -> com.squareup.picasso.Callback:
 com.squareup.picasso.Callback$EmptyCallback -> com.squareup.picasso.Callback$EmptyCallback:
     26:26:void onSuccess() -> onSuccess
     29:29:void onError() -> onError
-com.squareup.picasso.ContactsPhotoRequestHandler -> ago:
+com.squareup.picasso.ContactsPhotoRequestHandler -> agn:
     android.content.UriMatcher matcher -> b
     android.content.Context context -> a
     64:67:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     71:71:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
     75:94:java.io.InputStream getInputStream(com.squareup.picasso.Request) -> a
-com.squareup.picasso.ContactsPhotoRequestHandler$ContactPhotoStreamIcs -> agp:
+com.squareup.picasso.ContactsPhotoRequestHandler$ContactPhotoStreamIcs -> ago:
     101:101:java.io.InputStream get(android.content.ContentResolver,android.net.Uri) -> a
-com.squareup.picasso.ContentStreamRequestHandler -> agq:
+com.squareup.picasso.ContentStreamRequestHandler -> agp:
     android.content.Context context -> a
     35:35:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     39:39:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
     43:44:java.io.InputStream getInputStream(com.squareup.picasso.Request) -> a
-com.squareup.picasso.DeferredRequestCreator -> agr:
+com.squareup.picasso.DeferredRequestCreator -> agq:
     com.squareup.picasso.RequestCreator creator -> a
     java.lang.ref.WeakReference target -> b
     com.squareup.picasso.Callback callback -> c
     41:60:boolean onPreDraw() -> onPreDraw
     64:74:void cancel() -> a
-com.squareup.picasso.Dispatcher -> ags:
+com.squareup.picasso.Dispatcher -> agr:
     com.squareup.picasso.Dispatcher$DispatcherThread dispatcherThread -> a
     android.content.Context context -> b
     java.util.concurrent.ExecutorService service -> c
@@ -22583,18 +22502,18 @@ com.squareup.picasso.Dispatcher -> ags:
     438:443:void markForReplay(com.squareup.picasso.Action) -> e
     446:453:void batch(com.squareup.picasso.BitmapHunter) -> g
     456:467:void logBatch(java.util.List) -> a
-com.squareup.picasso.Dispatcher$1 -> agt:
+com.squareup.picasso.Dispatcher$1 -> ags:
     com.squareup.picasso.Dispatcher this$0 -> a
     131:132:void run() -> run
-com.squareup.picasso.Dispatcher$DispatcherHandler -> agu:
+com.squareup.picasso.Dispatcher$DispatcherHandler -> agt:
     com.squareup.picasso.Dispatcher dispatcher -> a
     478:534:void handleMessage(android.os.Message) -> handleMessage
-com.squareup.picasso.Dispatcher$DispatcherHandler$1 -> agv:
+com.squareup.picasso.Dispatcher$DispatcherHandler$1 -> agu:
     android.os.Message val$msg -> a
     com.squareup.picasso.Dispatcher$DispatcherHandler this$0 -> b
     530:530:void run() -> run
-com.squareup.picasso.Dispatcher$DispatcherThread -> agw:
-com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver -> agx:
+com.squareup.picasso.Dispatcher$DispatcherThread -> agv:
+com.squareup.picasso.Dispatcher$NetworkBroadcastReceiver -> agw:
     com.squareup.picasso.Dispatcher dispatcher -> a
     553:559:void register() -> a
     562:563:void unregister() -> b
@@ -22613,21 +22532,21 @@ com.squareup.picasso.Downloader$Response -> com.squareup.picasso.Downloader$Resp
 com.squareup.picasso.Downloader$ResponseException -> com.squareup.picasso.Downloader$ResponseException:
     boolean localCacheOnly -> a
     int responseCode -> b
-com.squareup.picasso.FetchAction -> agy:
+com.squareup.picasso.FetchAction -> agx:
     java.lang.Object target -> m
     com.squareup.picasso.Callback callback -> n
     33:36:void complete(android.graphics.Bitmap,com.squareup.picasso.Picasso$LoadedFrom) -> a
     39:42:void error() -> a
     45:47:void cancel() -> b
     50:50:java.lang.Object getTarget() -> d
-com.squareup.picasso.FileRequestHandler -> agz:
+com.squareup.picasso.FileRequestHandler -> agy:
     38:38:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     42:42:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
     46:56:int getFileExifRotation(android.net.Uri) -> a
-com.squareup.picasso.GetAction -> aha:
+com.squareup.picasso.GetAction -> agz:
     27:27:void complete(android.graphics.Bitmap,com.squareup.picasso.Picasso$LoadedFrom) -> a
     30:30:void error() -> a
-com.squareup.picasso.ImageViewAction -> ahb:
+com.squareup.picasso.ImageViewAction -> aha:
     com.squareup.picasso.Callback callback -> m
     36:53:void complete(android.graphics.Bitmap,com.squareup.picasso.Picasso$LoadedFrom) -> a
     56:69:void error() -> a
@@ -22652,7 +22571,7 @@ com.squareup.picasso.LruCache -> com.squareup.picasso.LruCache:
     154:154:int missCount() -> missCount
     159:159:int putCount() -> putCount
     164:164:int evictionCount() -> evictionCount
-com.squareup.picasso.MarkableInputStream -> ahc:
+com.squareup.picasso.MarkableInputStream -> ahb:
     java.io.InputStream in -> a
     long offset -> b
     long reset -> c
@@ -22671,13 +22590,13 @@ com.squareup.picasso.MarkableInputStream -> ahc:
     152:152:int available() -> available
     156:157:void close() -> close
     160:160:boolean markSupported() -> markSupported
-com.squareup.picasso.MediaStoreRequestHandler -> ahd:
+com.squareup.picasso.MediaStoreRequestHandler -> ahc:
     java.lang.String[] CONTENT_ORIENTATION -> b
     49:51:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     55:92:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
     96:101:com.squareup.picasso.MediaStoreRequestHandler$PicassoKind getPicassoKind(int,int) -> a
     105:117:int getExifOrientation(android.content.ContentResolver,android.net.Uri) -> a
-com.squareup.picasso.MediaStoreRequestHandler$PicassoKind -> ahe:
+com.squareup.picasso.MediaStoreRequestHandler$PicassoKind -> ahd:
     com.squareup.picasso.MediaStoreRequestHandler$PicassoKind MICRO -> a
     com.squareup.picasso.MediaStoreRequestHandler$PicassoKind MINI -> b
     com.squareup.picasso.MediaStoreRequestHandler$PicassoKind FULL -> c
@@ -22707,7 +22626,7 @@ com.squareup.picasso.NetworkPolicy -> com.squareup.picasso.NetworkPolicy:
     36:36:boolean shouldReadFromDiskCache(int) -> shouldReadFromDiskCache
     40:40:boolean shouldWriteToDiskCache(int) -> shouldWriteToDiskCache
     44:44:boolean isOfflineOnly(int) -> isOfflineOnly
-com.squareup.picasso.NetworkRequestHandler -> ahf:
+com.squareup.picasso.NetworkRequestHandler -> ahe:
     com.squareup.picasso.Downloader downloader -> a
     com.squareup.picasso.Stats stats -> b
     42:43:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
@@ -22715,7 +22634,7 @@ com.squareup.picasso.NetworkRequestHandler -> ahf:
     76:76:int getRetryCount() -> a
     80:80:boolean shouldRetry(boolean,android.net.NetworkInfo) -> a
     84:84:boolean supportsReplay() -> b
-com.squareup.picasso.NetworkRequestHandler$ContentLengthException -> ahg:
+com.squareup.picasso.NetworkRequestHandler$ContentLengthException -> ahf:
 com.squareup.picasso.OkHttpDownloader -> com.squareup.picasso.OkHttpDownloader:
     com.squareup.okhttp.OkHttpClient client -> a
     31:35:com.squareup.okhttp.OkHttpClient defaultOkHttpClient() -> a
@@ -22774,7 +22693,7 @@ com.squareup.picasso.Picasso -> com.squareup.picasso.Picasso:
     640:647:com.squareup.picasso.Picasso with(android.content.Context) -> with
     656:662:void setSingletonInstance(com.squareup.picasso.Picasso) -> setSingletonInstance
     59:59:void access$000(com.squareup.picasso.Picasso,java.lang.Object) -> a
-com.squareup.picasso.Picasso$1 -> ahh:
+com.squareup.picasso.Picasso$1 -> ahg:
     110:139:void handleMessage(android.os.Message) -> handleMessage
 com.squareup.picasso.Picasso$Builder -> com.squareup.picasso.Picasso$Builder:
     android.content.Context context -> a
@@ -22798,12 +22717,12 @@ com.squareup.picasso.Picasso$Builder -> com.squareup.picasso.Picasso$Builder:
     793:794:com.squareup.picasso.Picasso$Builder indicatorsEnabled(boolean) -> indicatorsEnabled
     804:805:com.squareup.picasso.Picasso$Builder loggingEnabled(boolean) -> loggingEnabled
     810:829:com.squareup.picasso.Picasso build() -> build
-com.squareup.picasso.Picasso$CleanupThread -> ahi:
+com.squareup.picasso.Picasso$CleanupThread -> ahh:
     java.lang.ref.ReferenceQueue referenceQueue -> a
     android.os.Handler handler -> b
     598:614:void run() -> run
     617:618:void shutdown() -> a
-com.squareup.picasso.Picasso$CleanupThread$1 -> ahj:
+com.squareup.picasso.Picasso$CleanupThread$1 -> ahi:
     java.lang.Exception val$e -> a
     com.squareup.picasso.Picasso$CleanupThread this$0 -> b
     608:608:void run() -> run
@@ -22827,9 +22746,9 @@ com.squareup.picasso.Picasso$Priority -> com.squareup.picasso.Picasso$Priority:
 com.squareup.picasso.Picasso$RequestTransformer -> com.squareup.picasso.Picasso$RequestTransformer:
     com.squareup.picasso.Picasso$RequestTransformer IDENTITY -> IDENTITY
     com.squareup.picasso.Request transformRequest(com.squareup.picasso.Request) -> transformRequest
-com.squareup.picasso.Picasso$RequestTransformer$1 -> ahk:
+com.squareup.picasso.Picasso$RequestTransformer$1 -> ahj:
     91:91:com.squareup.picasso.Request transformRequest(com.squareup.picasso.Request) -> transformRequest
-com.squareup.picasso.PicassoDrawable -> ahl:
+com.squareup.picasso.PicassoDrawable -> ahk:
     android.graphics.Paint DEBUG_PAINT -> e
     boolean debugging -> f
     float density -> g
@@ -22846,15 +22765,15 @@ com.squareup.picasso.PicassoDrawable -> ahl:
     139:143:void onBoundsChange(android.graphics.Rect) -> onBoundsChange
     146:153:void drawDebugIndicator(android.graphics.Canvas) -> a
     156:164:android.graphics.Path getTrianglePath(android.graphics.Point,int) -> a
-com.squareup.picasso.PicassoExecutorService -> ahm:
+com.squareup.picasso.PicassoExecutorService -> ahl:
     43:78:void adjustThreadCount(android.net.NetworkInfo) -> a
     81:83:void setThreadCount(int) -> a
     87:89:java.util.concurrent.Future submit(java.lang.Runnable) -> submit
-com.squareup.picasso.PicassoExecutorService$PicassoFutureTask -> ahn:
+com.squareup.picasso.PicassoExecutorService$PicassoFutureTask -> ahm:
     com.squareup.picasso.BitmapHunter hunter -> a
     103:108:int compareTo(com.squareup.picasso.PicassoExecutorService$PicassoFutureTask) -> a
     92:92:int compareTo(java.lang.Object) -> compareTo
-com.squareup.picasso.RemoteViewsAction -> aho:
+com.squareup.picasso.RemoteViewsAction -> ahn:
     android.widget.RemoteViews remoteViews -> m
     int viewId -> n
     com.squareup.picasso.RemoteViewsAction$RemoteViewsTarget target -> o
@@ -22864,16 +22783,16 @@ com.squareup.picasso.RemoteViewsAction -> aho:
     59:61:void setImageResource(int) -> a
     void update() -> n
     27:27:java.lang.Object getTarget() -> d
-com.squareup.picasso.RemoteViewsAction$AppWidgetAction -> ahp:
+com.squareup.picasso.RemoteViewsAction$AppWidgetAction -> aho:
     int[] appWidgetIds -> o
     98:100:void update() -> n
     87:87:java.lang.Object getTarget() -> d
-com.squareup.picasso.RemoteViewsAction$NotificationAction -> ahq:
+com.squareup.picasso.RemoteViewsAction$NotificationAction -> ahp:
     int notificationId -> o
     android.app.Notification notification -> p
     116:118:void update() -> n
     103:103:java.lang.Object getTarget() -> d
-com.squareup.picasso.RemoteViewsAction$RemoteViewsTarget -> ahr:
+com.squareup.picasso.RemoteViewsAction$RemoteViewsTarget -> ahq:
     android.widget.RemoteViews remoteViews -> a
     int viewId -> b
     75:78:boolean equals(java.lang.Object) -> equals
@@ -22907,7 +22826,7 @@ com.squareup.picasso.Request -> com.squareup.picasso.Request:
     179:179:boolean needsMatrixTransform() -> e
     183:183:boolean hasCustomTransformations() -> f
     187:187:com.squareup.picasso.Request$Builder buildUpon() -> buildUpon
-com.squareup.picasso.Request$1 -> ahs:
+com.squareup.picasso.Request$1 -> ahr:
 com.squareup.picasso.Request$Builder -> com.squareup.picasso.Request$Builder:
     android.net.Uri uri -> a
     int resourceId -> b
@@ -23012,12 +22931,12 @@ com.squareup.picasso.RequestHandler$Result -> com.squareup.picasso.RequestHandle
     82:82:java.io.InputStream getStream() -> getStream
     90:90:com.squareup.picasso.Picasso$LoadedFrom getLoadedFrom() -> getLoadedFrom
     98:98:int getExifOrientation() -> a
-com.squareup.picasso.ResourceRequestHandler -> aht:
+com.squareup.picasso.ResourceRequestHandler -> ahs:
     android.content.Context context -> a
     35:39:boolean canHandleRequest(com.squareup.picasso.Request) -> canHandleRequest
     43:45:com.squareup.picasso.RequestHandler$Result load(com.squareup.picasso.Request,int) -> load
     49:54:android.graphics.Bitmap decodeResource(android.content.res.Resources,int,com.squareup.picasso.Request) -> a
-com.squareup.picasso.Stats -> ahu:
+com.squareup.picasso.Stats -> aht:
     android.os.HandlerThread statsThread -> a
     com.squareup.picasso.Cache cache -> b
     android.os.Handler handler -> c
@@ -23046,10 +22965,10 @@ com.squareup.picasso.Stats -> ahu:
     109:112:com.squareup.picasso.StatsSnapshot createSnapshot() -> f
     117:119:void processBitmap(android.graphics.Bitmap,int) -> a
     122:122:long getAverage(int,long) -> a
-com.squareup.picasso.Stats$StatsHandler -> ahv:
+com.squareup.picasso.Stats$StatsHandler -> ahu:
     com.squareup.picasso.Stats stats -> a
     135:158:void handleMessage(android.os.Message) -> handleMessage
-com.squareup.picasso.Stats$StatsHandler$1 -> ahw:
+com.squareup.picasso.Stats$StatsHandler$1 -> ahv:
     android.os.Message val$msg -> a
     com.squareup.picasso.Stats$StatsHandler this$0 -> b
     154:154:void run() -> run
@@ -23075,7 +22994,7 @@ com.squareup.picasso.Target -> com.squareup.picasso.Target:
     void onBitmapLoaded(android.graphics.Bitmap,com.squareup.picasso.Picasso$LoadedFrom) -> onBitmapLoaded
     void onBitmapFailed(android.graphics.drawable.Drawable) -> onBitmapFailed
     void onPrepareLoad(android.graphics.drawable.Drawable) -> onPrepareLoad
-com.squareup.picasso.TargetAction -> ahx:
+com.squareup.picasso.TargetAction -> ahw:
     30:41:void complete(android.graphics.Bitmap,com.squareup.picasso.Picasso$LoadedFrom) -> a
     44:52:void error() -> a
 com.squareup.picasso.Transformation -> com.squareup.picasso.Transformation:
@@ -23090,13 +23009,13 @@ com.squareup.picasso.UrlConnectionDownloader -> com.squareup.picasso.UrlConnecti
     61:103:com.squareup.picasso.Downloader$Response load(android.net.Uri,int) -> load
     107:110:void shutdown() -> shutdown
     114:124:void installCacheIfNeeded(android.content.Context) -> a
-com.squareup.picasso.UrlConnectionDownloader$1 -> ahy:
+com.squareup.picasso.UrlConnectionDownloader$1 -> ahx:
     43:43:java.lang.StringBuilder initialValue() -> a
     41:41:java.lang.Object initialValue() -> initialValue
-com.squareup.picasso.UrlConnectionDownloader$ResponseCacheIcs -> ahz:
+com.squareup.picasso.UrlConnectionDownloader$ResponseCacheIcs -> ahy:
     128:134:java.lang.Object install(android.content.Context) -> a
     139:142:void close(java.lang.Object) -> a
-com.squareup.picasso.Utils -> aia:
+com.squareup.picasso.Utils -> ahz:
     java.lang.StringBuilder MAIN_THREAD_KEY_BUILDER -> a
     107:115:int getBitmapBytes(android.graphics.Bitmap) -> a
     119:122:java.lang.Object checkNotNull(java.lang.Object,java.lang.String) -> a
@@ -23122,15 +23041,15 @@ com.squareup.picasso.Utils -> aia:
     319:326:boolean isWebPFile(java.io.InputStream) -> c
     330:355:int getResourceId(android.content.res.Resources,com.squareup.picasso.Request) -> a
     359:369:android.content.res.Resources getResources(android.content.Context,com.squareup.picasso.Request) -> a
-com.squareup.picasso.Utils$ActivityManagerHoneycomb -> aib:
+com.squareup.picasso.Utils$ActivityManagerHoneycomb -> aia:
     376:376:int getLargeMemoryClass(android.app.ActivityManager) -> a
-com.squareup.picasso.Utils$BitmapHoneycombMR1 -> aic:
+com.squareup.picasso.Utils$BitmapHoneycombMR1 -> aib:
     401:401:int getByteCount(android.graphics.Bitmap) -> a
-com.squareup.picasso.Utils$OkHttpLoaderCreator -> aid:
+com.squareup.picasso.Utils$OkHttpLoaderCreator -> aic:
     407:407:com.squareup.picasso.Downloader create(android.content.Context) -> a
-com.squareup.picasso.Utils$PicassoThread -> aie:
+com.squareup.picasso.Utils$PicassoThread -> aid:
     393:395:void run() -> run
-com.squareup.picasso.Utils$PicassoThreadFactory -> aif:
+com.squareup.picasso.Utils$PicassoThreadFactory -> aie:
     383:383:java.lang.Thread newThread(java.lang.Runnable) -> newThread
 com.viewpagerindicator.BuildConfig -> com.viewpagerindicator.BuildConfig:
     boolean DEBUG -> DEBUG
@@ -23183,12 +23102,12 @@ com.viewpagerindicator.CirclePageIndicator -> com.viewpagerindicator.CirclePageI
     490:504:int measureShort(int) -> b
     509:514:void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     518:521:android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
-com.viewpagerindicator.CirclePageIndicator$1 -> aig:
+com.viewpagerindicator.CirclePageIndicator$1 -> aif:
 com.viewpagerindicator.CirclePageIndicator$SavedState -> com.viewpagerindicator.CirclePageIndicator$SavedState:
     int currentPage -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     538:540:void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.viewpagerindicator.CirclePageIndicator$SavedState$1 -> aih:
+com.viewpagerindicator.CirclePageIndicator$SavedState$1 -> aig:
     546:546:com.viewpagerindicator.CirclePageIndicator$SavedState createFromParcel(android.os.Parcel) -> a
     551:551:com.viewpagerindicator.CirclePageIndicator$SavedState[] newArray(int) -> a
     543:543:java.lang.Object[] newArray(int) -> newArray
@@ -23211,14 +23130,14 @@ com.viewpagerindicator.IconPageIndicator -> com.viewpagerindicator.IconPageIndic
     151:166:void setCurrentItem(int) -> setCurrentItem
     170:171:void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener) -> setOnPageChangeListener
     36:36:java.lang.Runnable access$002(com.viewpagerindicator.IconPageIndicator,java.lang.Runnable) -> a
-com.viewpagerindicator.IconPageIndicator$1 -> aii:
+com.viewpagerindicator.IconPageIndicator$1 -> aih:
     android.view.View val$iconView -> a
     com.viewpagerindicator.IconPageIndicator this$0 -> b
     63:66:void run() -> run
 com.viewpagerindicator.IconPagerAdapter -> com.viewpagerindicator.IconPagerAdapter:
     int getIconResId(int) -> getIconResId
     int getCount() -> getCount
-com.viewpagerindicator.IcsLinearLayout -> aij:
+com.viewpagerindicator.IcsLinearLayout -> aii:
     int[] LL -> a
     android.graphics.drawable.Drawable mDivider -> b
     int mDividerWidth -> c
@@ -23273,12 +23192,12 @@ com.viewpagerindicator.LinePageIndicator -> com.viewpagerindicator.LinePageIndic
     384:398:int measureHeight(int) -> b
     403:407:void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     411:414:android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
-com.viewpagerindicator.LinePageIndicator$1 -> aik:
+com.viewpagerindicator.LinePageIndicator$1 -> aij:
 com.viewpagerindicator.LinePageIndicator$SavedState -> com.viewpagerindicator.LinePageIndicator$SavedState:
     int currentPage -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     431:433:void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.viewpagerindicator.LinePageIndicator$SavedState$1 -> ail:
+com.viewpagerindicator.LinePageIndicator$SavedState$1 -> aik:
     439:439:com.viewpagerindicator.LinePageIndicator$SavedState createFromParcel(android.os.Parcel) -> a
     444:444:com.viewpagerindicator.LinePageIndicator$SavedState[] newArray(int) -> a
     436:436:java.lang.Object[] newArray(int) -> newArray
@@ -23464,16 +23383,16 @@ com.viewpagerindicator.TabPageIndicator -> com.viewpagerindicator.TabPageIndicat
     37:37:com.viewpagerindicator.TabPageIndicator$OnTabReselectedListener access$100(com.viewpagerindicator.TabPageIndicator) -> b
     37:37:java.lang.Runnable access$202(com.viewpagerindicator.TabPageIndicator,java.lang.Runnable) -> a
     37:37:int access$400(com.viewpagerindicator.TabPageIndicator) -> c
-com.viewpagerindicator.TabPageIndicator$1 -> aim:
+com.viewpagerindicator.TabPageIndicator$1 -> ail:
     com.viewpagerindicator.TabPageIndicator this$0 -> a
     57:64:void onClick(android.view.View) -> onClick
-com.viewpagerindicator.TabPageIndicator$2 -> ain:
+com.viewpagerindicator.TabPageIndicator$2 -> aim:
     android.view.View val$tabView -> a
     com.viewpagerindicator.TabPageIndicator this$0 -> b
     127:130:void run() -> run
 com.viewpagerindicator.TabPageIndicator$OnTabReselectedListener -> com.viewpagerindicator.TabPageIndicator$OnTabReselectedListener:
     void onTabReselected(int) -> onTabReselected
-com.viewpagerindicator.TabPageIndicator$TabView -> aio:
+com.viewpagerindicator.TabPageIndicator$TabView -> ain:
     int mIndex -> b
     com.viewpagerindicator.TabPageIndicator this$0 -> a
     270:277:void onMeasure(int,int) -> onMeasure
@@ -23554,7 +23473,7 @@ com.viewpagerindicator.TitlePageIndicator -> com.viewpagerindicator.TitlePageInd
     817:821:void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
     825:828:android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
     864:868:java.lang.CharSequence getTitle(int) -> a
-com.viewpagerindicator.TitlePageIndicator$1 -> aip:
+com.viewpagerindicator.TitlePageIndicator$1 -> aio:
     int[] $SwitchMap$com$viewpagerindicator$TitlePageIndicator$IndicatorStyle -> a
 com.viewpagerindicator.TitlePageIndicator$IndicatorStyle -> com.viewpagerindicator.TitlePageIndicator$IndicatorStyle:
     com.viewpagerindicator.TitlePageIndicator$IndicatorStyle None -> None
@@ -23579,7 +23498,7 @@ com.viewpagerindicator.TitlePageIndicator$SavedState -> com.viewpagerindicator.T
     int currentPage -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     845:847:void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.viewpagerindicator.TitlePageIndicator$SavedState$1 -> aiq:
+com.viewpagerindicator.TitlePageIndicator$SavedState$1 -> aip:
     853:853:com.viewpagerindicator.TitlePageIndicator$SavedState createFromParcel(android.os.Parcel) -> a
     858:858:com.viewpagerindicator.TitlePageIndicator$SavedState[] newArray(int) -> a
     850:850:java.lang.Object[] newArray(int) -> newArray
@@ -23624,17 +23543,17 @@ com.viewpagerindicator.UnderlinePageIndicator -> com.viewpagerindicator.Underlin
     38:38:android.graphics.Paint access$100(com.viewpagerindicator.UnderlinePageIndicator) -> b
     38:38:int access$200(com.viewpagerindicator.UnderlinePageIndicator) -> c
     38:38:java.lang.Runnable access$300(com.viewpagerindicator.UnderlinePageIndicator) -> d
-com.viewpagerindicator.UnderlinePageIndicator$1 -> air:
+com.viewpagerindicator.UnderlinePageIndicator$1 -> aiq:
     com.viewpagerindicator.UnderlinePageIndicator this$0 -> a
     62:70:void run() -> run
-com.viewpagerindicator.UnderlinePageIndicator$2 -> ais:
+com.viewpagerindicator.UnderlinePageIndicator$2 -> air:
     com.viewpagerindicator.UnderlinePageIndicator this$0 -> a
     281:284:void run() -> run
 com.viewpagerindicator.UnderlinePageIndicator$SavedState -> com.viewpagerindicator.UnderlinePageIndicator$SavedState:
     int currentPage -> a
     android.os.Parcelable$Creator CREATOR -> CREATOR
     385:387:void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.viewpagerindicator.UnderlinePageIndicator$SavedState$1 -> ait:
+com.viewpagerindicator.UnderlinePageIndicator$SavedState$1 -> ais:
     393:393:com.viewpagerindicator.UnderlinePageIndicator$SavedState createFromParcel(android.os.Parcel) -> a
     398:398:com.viewpagerindicator.UnderlinePageIndicator$SavedState[] newArray(int) -> a
     390:390:java.lang.Object[] newArray(int) -> newArray
@@ -23648,7 +23567,7 @@ de.keyboardsurfer.android.widget.crouton.Configuration -> de.keyboardsurfer.andr
     int inAnimationResId -> b
     int outAnimationResId -> c
     124:124:java.lang.String toString() -> toString
-de.keyboardsurfer.android.widget.crouton.Configuration$1 -> aiu:
+de.keyboardsurfer.android.widget.crouton.Configuration$1 -> ait:
 de.keyboardsurfer.android.widget.crouton.Configuration$Builder -> de.keyboardsurfer.android.widget.crouton.Configuration$Builder:
     int durationInMilliseconds -> a
     int inAnimationResId -> b
@@ -23726,7 +23645,7 @@ de.keyboardsurfer.android.widget.crouton.Crouton -> de.keyboardsurfer.android.wi
     936:942:void setTextWithCustomFont(android.widget.TextView,java.lang.String) -> a
     945:950:void initializeTextViewShadow(android.content.res.Resources,android.widget.TextView) -> a
     954:978:android.widget.ImageView initializeImageView() -> p
-de.keyboardsurfer.android.widget.crouton.DefaultAnimationsBuilder -> aiv:
+de.keyboardsurfer.android.widget.crouton.DefaultAnimationsBuilder -> aiu:
     android.view.animation.Animation slideInDownAnimation -> a
     android.view.animation.Animation slideOutUpAnimation -> b
     int lastInAnimationHeight -> c
@@ -23741,7 +23660,7 @@ de.keyboardsurfer.android.widget.crouton.DefaultAnimationsBuilder -> aiv:
 de.keyboardsurfer.android.widget.crouton.LifecycleCallback -> de.keyboardsurfer.android.widget.crouton.LifecycleCallback:
     void onDisplayed() -> onDisplayed
     void onRemoved() -> onRemoved
-de.keyboardsurfer.android.widget.crouton.Manager -> aiw:
+de.keyboardsurfer.android.widget.crouton.Manager -> aiv:
     de.keyboardsurfer.android.widget.crouton.Manager INSTANCE -> a
     java.util.Queue croutonQueue -> b
     66:70:de.keyboardsurfer.android.widget.crouton.Manager getInstance() -> a
@@ -23766,7 +23685,7 @@ de.keyboardsurfer.android.widget.crouton.Manager -> aiw:
     436:467:void announceForAccessibilityCompat(android.content.Context,java.lang.CharSequence) -> a
     471:471:java.lang.String toString() -> toString
     45:45:void access$000(de.keyboardsurfer.android.widget.crouton.Manager,de.keyboardsurfer.android.widget.crouton.Crouton,int,long) -> a
-de.keyboardsurfer.android.widget.crouton.Manager$1 -> aix:
+de.keyboardsurfer.android.widget.crouton.Manager$1 -> aiw:
     android.view.View val$croutonView -> a
     de.keyboardsurfer.android.widget.crouton.Crouton val$crouton -> b
     de.keyboardsurfer.android.widget.crouton.Manager this$0 -> c
@@ -23805,7 +23724,7 @@ de.keyboardsurfer.android.widget.crouton.Style -> de.keyboardsurfer.android.widg
     java.lang.String fontName -> x
     int fontNameResId -> y
     536:536:java.lang.String toString() -> toString
-de.keyboardsurfer.android.widget.crouton.Style$1 -> aiy:
+de.keyboardsurfer.android.widget.crouton.Style$1 -> aix:
 de.keyboardsurfer.android.widget.crouton.Style$Builder -> de.keyboardsurfer.android.widget.crouton.Style$Builder:
     de.keyboardsurfer.android.widget.crouton.Configuration configuration -> a
     int backgroundColorValue -> b
@@ -23920,7 +23839,7 @@ hugo.weaving.internal.Hugo -> hugo.weaving.internal.Hugo:
     1:1:void ajc$postClinit() -> a
     1:1:void ajc$inlineAccessMethod$hugo_weaving_internal_Hugo$hugo_weaving_internal_Hugo$enterMethod(org.aspectj.lang.JoinPoint) -> ajc$inlineAccessMethod$hugo_weaving_internal_Hugo$hugo_weaving_internal_Hugo$enterMethod
     1:1:void ajc$inlineAccessMethod$hugo_weaving_internal_Hugo$hugo_weaving_internal_Hugo$exitMethod(org.aspectj.lang.JoinPoint,java.lang.Object,long) -> ajc$inlineAccessMethod$hugo_weaving_internal_Hugo$hugo_weaving_internal_Hugo$exitMethod
-hugo.weaving.internal.Strings -> aiz:
+hugo.weaving.internal.Strings -> aiy:
     10:25:java.lang.String toString(java.lang.Object) -> a
     29:66:java.lang.String printableToString(java.lang.String) -> a
     70:94:java.lang.String arrayToString(java.lang.Class,java.lang.Object) -> a
@@ -23936,47 +23855,65 @@ io.realm.BuildConfig -> io.realm.BuildConfig:
     int VERSION_CODE -> VERSION_CODE
     java.lang.String VERSION_NAME -> VERSION_NAME
 io.realm.NewsRealmProxy -> io.realm.NewsRealmProxy:
-    29:30:java.lang.String getCategory() -> getCategory
-    35:37:void setCategory(java.lang.String) -> setCategory
-    41:42:java.lang.String getId() -> getId
-    47:49:void setId(java.lang.String) -> setId
-    53:54:java.lang.String getPostId() -> getPostId
-    59:61:void setPostId(java.lang.String) -> setPostId
-    65:66:java.util.Date getCreatedDate() -> getCreatedDate
-    71:73:void setCreatedDate(java.util.Date) -> setCreatedDate
-    77:78:java.util.Date getStartDate() -> getStartDate
-    83:85:void setStartDate(java.util.Date) -> setStartDate
-    89:90:boolean isActive() -> isActive
-    95:97:void setActive(boolean) -> setActive
-    101:102:java.lang.String getHeadline() -> getHeadline
-    107:109:void setHeadline(java.lang.String) -> setHeadline
-    113:114:java.lang.String getImageUrl() -> getImageUrl
-    119:121:void setImageUrl(java.lang.String) -> setImageUrl
-    125:126:java.lang.String getCreator() -> getCreator
-    131:133:void setCreator(java.lang.String) -> setCreator
-    137:138:java.lang.String getCreatorDp() -> getCreatorDp
-    143:145:void setCreatorDp(java.lang.String) -> setCreatorDp
-    149:150:java.lang.String getLocation() -> getLocation
-    155:157:void setLocation(java.lang.String) -> setLocation
-    161:162:java.lang.String getShareUrl() -> getShareUrl
-    167:169:void setShareUrl(java.lang.String) -> setShareUrl
-    173:174:long getKey() -> getKey
-    179:181:void setKey(long) -> setKey
-    185:186:boolean isRead() -> isRead
-    191:193:void setRead(boolean) -> setRead
-    197:198:boolean isBookmarked() -> isBookmarked
-    203:205:void setBookmarked(boolean) -> setBookmarked
-    208:229:io.realm.internal.Table initTable(io.realm.internal.ImplicitTransaction) -> initTable
-    233:333:void validateTable(io.realm.internal.ImplicitTransaction) -> validateTable
-    336:336:java.util.List getFieldNames() -> getFieldNames
-    341:401:void populateUsingJsonObject(com.radmagnet.models.News,org.json.JSONObject) -> populateUsingJsonObject
-    405:458:void populateUsingJsonStream(com.radmagnet.models.News,android.util.JsonReader) -> populateUsingJsonStream
-    461:480:com.radmagnet.models.News copyOrUpdate(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map) -> copyOrUpdate
-    485:502:com.radmagnet.models.News copy(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map) -> copy
-    506:520:com.radmagnet.models.News update(io.realm.Realm,com.radmagnet.models.News,com.radmagnet.models.News,java.util.Map) -> update
-    525:589:java.lang.String toString() -> toString
-    594:602:int hashCode() -> hashCode
-    607:621:boolean equals(java.lang.Object) -> equals
+    long INDEX_CATEGORY -> INDEX_CATEGORY
+    long INDEX_ID -> INDEX_ID
+    long INDEX_POSTID -> INDEX_POSTID
+    long INDEX_CREATEDDATE -> INDEX_CREATEDDATE
+    long INDEX_STARTDATE -> INDEX_STARTDATE
+    long INDEX_ACTIVE -> INDEX_ACTIVE
+    long INDEX_HEADLINE -> INDEX_HEADLINE
+    long INDEX_IMAGEURL -> INDEX_IMAGEURL
+    long INDEX_CREATOR -> INDEX_CREATOR
+    long INDEX_CREATORDP -> INDEX_CREATORDP
+    long INDEX_LOCATION -> INDEX_LOCATION
+    long INDEX_SHAREURL -> INDEX_SHAREURL
+    long INDEX_KEY -> INDEX_KEY
+    long INDEX_ISREAD -> INDEX_ISREAD
+    long INDEX_ISBOOKMARKED -> INDEX_ISBOOKMARKED
+    java.util.Map columnIndices -> columnIndices
+    java.util.List FIELD_NAMES -> FIELD_NAMES
+    69:70:java.lang.String getCategory() -> getCategory
+    75:77:void setCategory(java.lang.String) -> setCategory
+    81:82:java.lang.String getId() -> getId
+    87:89:void setId(java.lang.String) -> setId
+    93:94:java.lang.String getPostId() -> getPostId
+    99:101:void setPostId(java.lang.String) -> setPostId
+    105:106:java.util.Date getCreatedDate() -> getCreatedDate
+    111:113:void setCreatedDate(java.util.Date) -> setCreatedDate
+    117:118:java.util.Date getStartDate() -> getStartDate
+    123:125:void setStartDate(java.util.Date) -> setStartDate
+    129:130:boolean isActive() -> isActive
+    135:137:void setActive(boolean) -> setActive
+    141:142:java.lang.String getHeadline() -> getHeadline
+    147:149:void setHeadline(java.lang.String) -> setHeadline
+    153:154:java.lang.String getImageUrl() -> getImageUrl
+    159:161:void setImageUrl(java.lang.String) -> setImageUrl
+    165:166:java.lang.String getCreator() -> getCreator
+    171:173:void setCreator(java.lang.String) -> setCreator
+    177:178:java.lang.String getCreatorDp() -> getCreatorDp
+    183:185:void setCreatorDp(java.lang.String) -> setCreatorDp
+    189:190:java.lang.String getLocation() -> getLocation
+    195:197:void setLocation(java.lang.String) -> setLocation
+    201:202:java.lang.String getShareUrl() -> getShareUrl
+    207:209:void setShareUrl(java.lang.String) -> setShareUrl
+    213:214:long getKey() -> getKey
+    219:221:void setKey(long) -> setKey
+    225:226:boolean isRead() -> isRead
+    231:233:void setRead(boolean) -> setRead
+    237:238:boolean isBookmarked() -> isBookmarked
+    243:245:void setBookmarked(boolean) -> setBookmarked
+    248:269:io.realm.internal.Table initTable(io.realm.internal.ImplicitTransaction) -> initTable
+    273:405:void validateTable(io.realm.internal.ImplicitTransaction) -> validateTable
+    408:408:java.util.List getFieldNames() -> getFieldNames
+    412:412:java.util.Map getColumnIndices() -> getColumnIndices
+    417:492:com.radmagnet.models.News createOrUpdateUsingJsonObject(io.realm.Realm,org.json.JSONObject,boolean) -> createOrUpdateUsingJsonObject
+    497:550:com.radmagnet.models.News createUsingJsonStream(io.realm.Realm,android.util.JsonReader) -> createUsingJsonStream
+    554:576:com.radmagnet.models.News copyOrUpdate(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map) -> copyOrUpdate
+    581:598:com.radmagnet.models.News copy(io.realm.Realm,com.radmagnet.models.News,boolean,java.util.Map) -> copy
+    602:616:com.radmagnet.models.News update(io.realm.Realm,com.radmagnet.models.News,com.radmagnet.models.News,java.util.Map) -> update
+    621:685:java.lang.String toString() -> toString
+    690:698:int hashCode() -> hashCode
+    703:717:boolean equals(java.lang.Object) -> equals
 io.realm.Realm -> io.realm.Realm:
     java.lang.String DEFAULT_REALM_NAME -> DEFAULT_REALM_NAME
     java.lang.String TAG -> TAG
@@ -24011,7 +23948,7 @@ io.realm.Realm -> io.realm.Realm:
     java.util.Map tables -> tables
     java.util.Set customSchema -> customSchema
     long UNVERSIONED -> UNVERSIONED
-    java.util.Map columnIndices -> columnIndices
+    io.realm.internal.ColumnIndices columnIndices -> columnIndices
     188:197:void checkIfValid() -> checkIfValid
     214:221:void finalize() -> finalize
     231:253:void close() -> close
@@ -24029,79 +23966,82 @@ io.realm.Realm -> io.realm.Realm:
     459:459:io.realm.Realm getInstance(java.io.File,byte[]) -> getInstance
     479:479:io.realm.Realm getInstance(java.io.File,java.lang.String,byte[]) -> getInstance
     483:488:io.realm.Realm create(java.io.File,java.lang.String,byte[]) -> create
-    494:536:io.realm.Realm createAndValidate(java.lang.String,byte[],boolean,boolean) -> createAndValidate
-    540:546:void checkValidRealmPath(java.io.File,java.lang.String) -> checkValidRealmPath
-    552:669:void initializeRealm(io.realm.Realm) -> initializeRealm
-    682:694:void createAllFromJson(java.lang.Class,org.json.JSONArray) -> createAllFromJson
-    708:722:void createOrUpdateAllFromJson(java.lang.Class,org.json.JSONArray) -> createOrUpdateAllFromJson
-    735:747:void createAllFromJson(java.lang.Class,java.lang.String) -> createAllFromJson
-    761:774:void createOrUpdateAllFromJson(java.lang.Class,java.lang.String) -> createOrUpdateAllFromJson
-    790:805:void createAllFromJson(java.lang.Class,java.io.InputStream) -> createAllFromJson
-    820:837:void createOrUpdateAllFromJson(java.lang.Class,java.io.InputStream) -> createOrUpdateAllFromJson
-    852:863:io.realm.RealmObject createObjectFromJson(java.lang.Class,org.json.JSONObject) -> createObjectFromJson
-    878:892:io.realm.RealmObject createOrUpdateObjectFromJson(java.lang.Class,org.json.JSONObject) -> createOrUpdateObjectFromJson
-    907:918:io.realm.RealmObject createObjectFromJson(java.lang.Class,java.lang.String) -> createObjectFromJson
-    934:946:io.realm.RealmObject createOrUpdateObjectFromJson(java.lang.Class,java.lang.String) -> createOrUpdateObjectFromJson
-    963:973:io.realm.RealmObject createObjectFromJson(java.lang.Class,java.io.InputStream) -> createObjectFromJson
-    990:1004:io.realm.RealmObject createOrUpdateObjectFromJson(java.lang.Class,java.io.InputStream) -> createOrUpdateObjectFromJson
-    1009:1013:io.realm.RealmObject createStandaloneRealmObjectInstance(java.lang.Class) -> createStandaloneRealmObjectInstance
-    1029:1030:void writeCopyTo(java.io.File) -> writeCopyTo
-    1044:1049:void writeEncryptedCopyTo(java.io.File,byte[]) -> writeEncryptedCopyTo
-    1061:1087:io.realm.RealmObject createObject(java.lang.Class) -> createObject
-    1092:1105:java.lang.Class getProxyClass(java.lang.Class) -> getProxyClass
-    1109:1110:void remove(java.lang.Class,long) -> remove
-    1116:1165:io.realm.RealmObject get(java.lang.Class,long) -> get
-    1178:1183:io.realm.RealmObject copyToRealm(io.realm.RealmObject) -> copyToRealm
-    1197:1203:io.realm.RealmObject copyToRealmOrUpdate(io.realm.RealmObject) -> copyToRealmOrUpdate
-    1217:1226:java.util.List copyToRealm(java.lang.Iterable) -> copyToRealm
-    1240:1249:java.util.List copyToRealmOrUpdate(java.lang.Iterable) -> copyToRealmOrUpdate
-    1253:1253:java.lang.String getProxyClassName(java.lang.String) -> getProxyClassName
-    1257:1257:boolean contains(java.lang.Class) -> contains
-    1269:1270:io.realm.RealmQuery where(java.lang.Class) -> where
-    1283:1283:io.realm.RealmResults allObjects(java.lang.Class) -> allObjects
-    1298:1307:io.realm.RealmResults allObjectsSorted(java.lang.Class,java.lang.String,boolean) -> allObjectsSorted
-    1327:1327:io.realm.RealmResults allObjectsSorted(java.lang.Class,java.lang.String,boolean,java.lang.String,boolean) -> allObjectsSorted
-    1350:1350:io.realm.RealmResults allObjectsSorted(java.lang.Class,java.lang.String,boolean,java.lang.String,boolean,java.lang.String,boolean) -> allObjectsSorted
-    1369:1389:io.realm.RealmResults allObjectsSorted(java.lang.Class,java.lang.String[],boolean[]) -> allObjectsSorted
-    1401:1403:void addChangeListener(io.realm.RealmChangeListener) -> addChangeListener
-    1412:1414:void removeChangeListener(io.realm.RealmChangeListener) -> removeChangeListener
-    1422:1424:void removeAllChangeListeners() -> removeAllChangeListeners
-    1427:1431:void sendNotifications() -> sendNotifications
-    1435:1435:boolean hasChanged() -> hasChanged
-    1447:1449:void refresh() -> refresh
-    1466:1468:void beginTransaction() -> beginTransaction
-    1480:1496:void commitTransaction() -> commitTransaction
-    1510:1512:void cancelTransaction() -> cancelTransaction
-    1523:1536:void executeTransaction(io.realm.Realm$Transaction) -> executeTransaction
-    1545:1546:void clear(java.lang.Class) -> clear
-    1549:1549:int getId() -> getId
-    1554:1559:android.os.Handler getHandler() -> getHandler
-    1564:1568:long getVersion() -> getVersion
-    1573:1579:void setVersion(long) -> setVersion
-    1583:1588:java.lang.Class getRealmClassFromObject(io.realm.RealmObject) -> getRealmClassFromObject
-    1594:1611:io.realm.RealmObject copyOrUpdate(io.realm.RealmObject,boolean) -> copyOrUpdate
-    1616:1616:boolean isObjectInRealm(io.realm.RealmObject) -> isObjectInRealm
-    1620:1623:void checkNotNullObject(io.realm.RealmObject) -> checkNotNullObject
-    1626:1630:void checkHasPrimaryKey(io.realm.RealmObject) -> checkHasPrimaryKey
-    1633:1636:void checkHasPrimaryKey(java.lang.Class) -> checkHasPrimaryKey
-    1640:1641:void migrateRealmAtPath(java.lang.String,io.realm.RealmMigration) -> migrateRealmAtPath
-    1644:1645:void migrateRealmAtPath(java.lang.String,byte[],io.realm.RealmMigration) -> migrateRealmAtPath
-    1648:1649:void migrateRealmAtPath(java.lang.String,io.realm.RealmMigration,boolean) -> migrateRealmAtPath
-    1653:1660:void migrateRealmAtPath(java.lang.String,byte[],io.realm.RealmMigration,boolean) -> migrateRealmAtPath
-    1672:1672:boolean deleteRealmFile(android.content.Context) -> deleteRealmFile
-    1684:1706:boolean deleteRealmFile(android.content.Context,java.lang.String) -> deleteRealmFile
-    1723:1745:boolean compactRealmFile(android.content.Context,java.lang.String) -> compactRealmFile
-    1761:1761:boolean compactRealmFile(android.content.Context) -> compactRealmFile
-    1770:1770:java.lang.String getPath() -> getPath
-    1785:1789:void setSchema(java.lang.Class[]) -> setSchema
-    1803:1808:java.lang.String getClassSimpleName(java.lang.Class) -> getClassSimpleName
-    121:121:io.realm.internal.ImplicitTransaction access$000(io.realm.Realm) -> access$000
+    495:538:io.realm.Realm createAndValidate(java.lang.String,byte[],boolean,boolean) -> createAndValidate
+    542:548:void checkValidRealmPath(java.io.File,java.lang.String) -> checkValidRealmPath
+    554:659:void initializeRealm(io.realm.Realm) -> initializeRealm
+    672:683:void createAllFromJson(java.lang.Class,org.json.JSONArray) -> createAllFromJson
+    697:708:void createOrUpdateAllFromJson(java.lang.Class,org.json.JSONArray) -> createOrUpdateAllFromJson
+    721:733:void createAllFromJson(java.lang.Class,java.lang.String) -> createAllFromJson
+    747:760:void createOrUpdateAllFromJson(java.lang.Class,java.lang.String) -> createOrUpdateAllFromJson
+    776:790:void createAllFromJson(java.lang.Class,java.io.InputStream) -> createAllFromJson
+    805:826:void createOrUpdateAllFromJson(java.lang.Class,java.io.InputStream) -> createOrUpdateAllFromJson
+    841:848:io.realm.RealmObject createObjectFromJson(java.lang.Class,org.json.JSONObject) -> createObjectFromJson
+    864:871:io.realm.RealmObject createOrUpdateObjectFromJson(java.lang.Class,org.json.JSONObject) -> createOrUpdateObjectFromJson
+    887:898:io.realm.RealmObject createObjectFromJson(java.lang.Class,java.lang.String) -> createObjectFromJson
+    914:926:io.realm.RealmObject createOrUpdateObjectFromJson(java.lang.Class,java.lang.String) -> createOrUpdateObjectFromJson
+    943:951:io.realm.RealmObject createObjectFromJson(java.lang.Class,java.io.InputStream) -> createObjectFromJson
+    968:984:io.realm.RealmObject createOrUpdateObjectFromJson(java.lang.Class,java.io.InputStream) -> createOrUpdateObjectFromJson
+    990:990:java.util.Scanner getFullStringScanner(java.io.InputStream) -> getFullStringScanner
+    1005:1006:void writeCopyTo(java.io.File) -> writeCopyTo
+    1020:1025:void writeEncryptedCopyTo(java.io.File,byte[]) -> writeEncryptedCopyTo
+    1036:1038:io.realm.RealmObject createObject(java.lang.Class) -> createObject
+    1052:1054:io.realm.RealmObject createObject(java.lang.Class,java.lang.Object) -> createObject
+    1058:1083:io.realm.internal.Table initTable(java.lang.Class) -> initTable
+    1088:1101:java.lang.Class getProxyClass(java.lang.Class) -> getProxyClass
+    1105:1106:void remove(java.lang.Class,long) -> remove
+    1112:1161:io.realm.RealmObject get(java.lang.Class,long) -> get
+    1174:1175:io.realm.RealmObject copyToRealm(io.realm.RealmObject) -> copyToRealm
+    1189:1191:io.realm.RealmObject copyToRealmOrUpdate(io.realm.RealmObject) -> copyToRealmOrUpdate
+    1205:1214:java.util.List copyToRealm(java.lang.Iterable) -> copyToRealm
+    1228:1237:java.util.List copyToRealmOrUpdate(java.lang.Iterable) -> copyToRealmOrUpdate
+    1241:1241:java.lang.String getProxyClassName(java.lang.String) -> getProxyClassName
+    1245:1245:boolean contains(java.lang.Class) -> contains
+    1257:1258:io.realm.RealmQuery where(java.lang.Class) -> where
+    1271:1271:io.realm.RealmResults allObjects(java.lang.Class) -> allObjects
+    1286:1295:io.realm.RealmResults allObjectsSorted(java.lang.Class,java.lang.String,boolean) -> allObjectsSorted
+    1315:1315:io.realm.RealmResults allObjectsSorted(java.lang.Class,java.lang.String,boolean,java.lang.String,boolean) -> allObjectsSorted
+    1338:1338:io.realm.RealmResults allObjectsSorted(java.lang.Class,java.lang.String,boolean,java.lang.String,boolean,java.lang.String,boolean) -> allObjectsSorted
+    1357:1377:io.realm.RealmResults allObjectsSorted(java.lang.Class,java.lang.String[],boolean[]) -> allObjectsSorted
+    1389:1391:void addChangeListener(io.realm.RealmChangeListener) -> addChangeListener
+    1400:1402:void removeChangeListener(io.realm.RealmChangeListener) -> removeChangeListener
+    1410:1412:void removeAllChangeListeners() -> removeAllChangeListeners
+    1415:1419:void sendNotifications() -> sendNotifications
+    1423:1423:boolean hasChanged() -> hasChanged
+    1435:1437:void refresh() -> refresh
+    1454:1456:void beginTransaction() -> beginTransaction
+    1468:1484:void commitTransaction() -> commitTransaction
+    1498:1500:void cancelTransaction() -> cancelTransaction
+    1511:1524:void executeTransaction(io.realm.Realm$Transaction) -> executeTransaction
+    1533:1534:void clear(java.lang.Class) -> clear
+    1537:1537:int getId() -> getId
+    1542:1547:android.os.Handler getHandler() -> getHandler
+    1552:1556:long getVersion() -> getVersion
+    1561:1567:void setVersion(long) -> setVersion
+    1571:1576:java.lang.Class getRealmClassFromObject(io.realm.RealmObject) -> getRealmClassFromObject
+    1582:1599:io.realm.RealmObject copyOrUpdate(io.realm.RealmObject,boolean) -> copyOrUpdate
+    1604:1607:void checkNotNullObject(io.realm.RealmObject) -> checkNotNullObject
+    1610:1614:void checkHasPrimaryKey(io.realm.RealmObject) -> checkHasPrimaryKey
+    1617:1620:void checkHasPrimaryKey(java.lang.Class) -> checkHasPrimaryKey
+    1624:1625:void migrateRealmAtPath(java.lang.String,io.realm.RealmMigration) -> migrateRealmAtPath
+    1628:1629:void migrateRealmAtPath(java.lang.String,byte[],io.realm.RealmMigration) -> migrateRealmAtPath
+    1632:1633:void migrateRealmAtPath(java.lang.String,io.realm.RealmMigration,boolean) -> migrateRealmAtPath
+    1637:1644:void migrateRealmAtPath(java.lang.String,byte[],io.realm.RealmMigration,boolean) -> migrateRealmAtPath
+    1656:1656:boolean deleteRealmFile(android.content.Context) -> deleteRealmFile
+    1668:1668:boolean deleteRealmFile(android.content.Context,java.lang.String) -> deleteRealmFile
+    1679:1704:boolean deleteRealmFile(java.io.File) -> deleteRealmFile
+    1725:1744:boolean compactRealmFile(android.content.Context,java.lang.String,byte[]) -> compactRealmFile
+    1762:1762:boolean compactRealmFile(android.content.Context) -> compactRealmFile
+    1781:1781:boolean compactRealmFile(android.content.Context,java.lang.String) -> compactRealmFile
+    1790:1790:java.lang.String getPath() -> getPath
+    1805:1809:void setSchema(java.lang.Class[]) -> setSchema
+    1823:1828:java.lang.String getClassSimpleName(java.lang.Class) -> getClassSimpleName
+    122:122:io.realm.internal.ImplicitTransaction access$000(io.realm.Realm) -> access$000
 io.realm.Realm$1 -> io.realm.Realm$1:
-    130:130:java.util.Map initialValue() -> initialValue
-    126:126:java.lang.Object initialValue() -> initialValue
+    131:131:java.util.Map initialValue() -> initialValue
+    127:127:java.lang.Object initialValue() -> initialValue
 io.realm.Realm$2 -> io.realm.Realm$2:
-    139:139:java.util.Map initialValue() -> initialValue
-    135:135:java.lang.Object initialValue() -> initialValue
+    140:140:java.util.Map initialValue() -> initialValue
+    136:136:java.lang.Object initialValue() -> initialValue
 io.realm.Realm$RealmCallback -> io.realm.Realm$RealmCallback:
     io.realm.Realm this$0 -> this$0
     281:285:boolean handleMessage(android.os.Message) -> handleMessage
@@ -24122,8 +24062,8 @@ io.realm.RealmBaseAdapter$1 -> io.realm.RealmBaseAdapter$1:
 io.realm.RealmChangeListener -> io.realm.RealmChangeListener:
     void onChange() -> onChange
 io.realm.RealmJsonImpl -> io.realm.RealmJsonImpl:
-    21:27:void populateUsingJsonObject(io.realm.RealmObject,org.json.JSONObject) -> populateUsingJsonObject
-    32:38:void populateUsingJsonStream(io.realm.RealmObject,android.util.JsonReader) -> populateUsingJsonStream
+    21:24:io.realm.RealmObject createOrUpdateUsingJsonObject(java.lang.Class,io.realm.Realm,org.json.JSONObject,boolean) -> createOrUpdateUsingJsonObject
+    31:34:io.realm.RealmObject createUsingJsonStream(java.lang.Class,io.realm.Realm,android.util.JsonReader) -> createUsingJsonStream
 io.realm.RealmList -> io.realm.RealmList:
     java.lang.String ONLY_IN_MANAGED_MODE_MESSAGE -> ONLY_IN_MANAGED_MODE_MESSAGE
     java.lang.String NULL_OBJECTS_NOT_ALLOWED_MESSAGE -> NULL_OBJECTS_NOT_ALLOWED_MESSAGE
@@ -24133,25 +24073,25 @@ io.realm.RealmList -> io.realm.RealmList:
     io.realm.internal.LinkView view -> view
     io.realm.Realm realm -> realm
     java.util.List nonManagedList -> nonManagedList
-    105:111:void add(int,io.realm.RealmObject) -> add
-    118:124:boolean add(io.realm.RealmObject) -> add
-    132:141:io.realm.RealmObject set(int,io.realm.RealmObject) -> set
-    156:168:void move(int,int) -> move
-    175:180:void clear() -> clear
-    187:192:io.realm.RealmObject remove(int) -> remove
-    201:204:io.realm.RealmObject get(int) -> get
-    214:219:io.realm.RealmObject first() -> first
-    228:233:io.realm.RealmObject last() -> last
-    241:244:int size() -> size
-    255:258:io.realm.RealmQuery where() -> where
-    263:266:void checkValidObject(io.realm.RealmObject) -> checkValidObject
-    269:273:void checkIndex(int) -> checkIndex
-    277:291:java.lang.String toString() -> toString
-    43:43:java.lang.Object set(int,java.lang.Object) -> set
-    43:43:java.lang.Object remove(int) -> remove
-    43:43:java.lang.Object get(int) -> get
-    43:43:boolean add(java.lang.Object) -> add
-    43:43:void add(int,java.lang.Object) -> add
+    107:113:void add(int,io.realm.RealmObject) -> add
+    120:126:boolean add(io.realm.RealmObject) -> add
+    134:143:io.realm.RealmObject set(int,io.realm.RealmObject) -> set
+    158:170:void move(int,int) -> move
+    177:182:void clear() -> clear
+    189:194:io.realm.RealmObject remove(int) -> remove
+    203:206:io.realm.RealmObject get(int) -> get
+    216:221:io.realm.RealmObject first() -> first
+    230:235:io.realm.RealmObject last() -> last
+    243:246:int size() -> size
+    257:260:io.realm.RealmQuery where() -> where
+    265:268:void checkValidObject(io.realm.RealmObject) -> checkValidObject
+    271:275:void checkIndex(int) -> checkIndex
+    279:293:java.lang.String toString() -> toString
+    44:44:java.lang.Object set(int,java.lang.Object) -> set
+    44:44:java.lang.Object remove(int) -> remove
+    44:44:java.lang.Object get(int) -> get
+    44:44:boolean add(java.lang.Object) -> add
+    44:44:void add(int,java.lang.Object) -> add
 io.realm.RealmMigration -> io.realm.RealmMigration:
     long execute(io.realm.Realm,long) -> execute
 io.realm.RealmObject -> io.realm.RealmObject:
@@ -24172,79 +24112,81 @@ io.realm.RealmQuery -> io.realm.RealmQuery:
     105:105:boolean containsDot(java.lang.String) -> containsDot
     112:130:java.lang.String[] splitString(java.lang.String) -> splitString
     135:168:long[] getColumnIndices(java.lang.String,io.realm.internal.ColumnType) -> getColumnIndices
-    184:184:io.realm.RealmQuery equalTo(java.lang.String,java.lang.String) -> equalTo
-    199:201:io.realm.RealmQuery equalTo(java.lang.String,java.lang.String,boolean) -> equalTo
-    214:216:io.realm.RealmQuery equalTo(java.lang.String,int) -> equalTo
-    229:231:io.realm.RealmQuery equalTo(java.lang.String,long) -> equalTo
-    244:246:io.realm.RealmQuery equalTo(java.lang.String,double) -> equalTo
-    259:261:io.realm.RealmQuery equalTo(java.lang.String,float) -> equalTo
-    274:276:io.realm.RealmQuery equalTo(java.lang.String,boolean) -> equalTo
-    289:291:io.realm.RealmQuery equalTo(java.lang.String,java.util.Date) -> equalTo
-    306:306:io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.String) -> notEqualTo
-    320:325:io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.String,boolean) -> notEqualTo
-    338:340:io.realm.RealmQuery notEqualTo(java.lang.String,int) -> notEqualTo
-    353:355:io.realm.RealmQuery notEqualTo(java.lang.String,long) -> notEqualTo
-    368:370:io.realm.RealmQuery notEqualTo(java.lang.String,double) -> notEqualTo
-    383:385:io.realm.RealmQuery notEqualTo(java.lang.String,float) -> notEqualTo
-    398:400:io.realm.RealmQuery notEqualTo(java.lang.String,boolean) -> notEqualTo
-    413:415:io.realm.RealmQuery notEqualTo(java.lang.String,java.util.Date) -> notEqualTo
-    430:432:io.realm.RealmQuery greaterThan(java.lang.String,int) -> greaterThan
-    445:447:io.realm.RealmQuery greaterThan(java.lang.String,long) -> greaterThan
-    460:462:io.realm.RealmQuery greaterThan(java.lang.String,double) -> greaterThan
-    475:477:io.realm.RealmQuery greaterThan(java.lang.String,float) -> greaterThan
-    490:492:io.realm.RealmQuery greaterThan(java.lang.String,java.util.Date) -> greaterThan
-    505:507:io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,int) -> greaterThanOrEqualTo
-    520:522:io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,long) -> greaterThanOrEqualTo
-    535:537:io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,double) -> greaterThanOrEqualTo
-    550:552:io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,float) -> greaterThanOrEqualTo
-    565:567:io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,java.util.Date) -> greaterThanOrEqualTo
-    582:584:io.realm.RealmQuery lessThan(java.lang.String,int) -> lessThan
-    597:599:io.realm.RealmQuery lessThan(java.lang.String,long) -> lessThan
-    612:614:io.realm.RealmQuery lessThan(java.lang.String,double) -> lessThan
-    627:629:io.realm.RealmQuery lessThan(java.lang.String,float) -> lessThan
-    642:644:io.realm.RealmQuery lessThan(java.lang.String,java.util.Date) -> lessThan
-    657:659:io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,int) -> lessThanOrEqualTo
-    672:674:io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,long) -> lessThanOrEqualTo
-    687:689:io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,double) -> lessThanOrEqualTo
-    702:704:io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,float) -> lessThanOrEqualTo
-    717:719:io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,java.util.Date) -> lessThanOrEqualTo
-    735:737:io.realm.RealmQuery between(java.lang.String,int,int) -> between
-    751:753:io.realm.RealmQuery between(java.lang.String,long,long) -> between
-    767:769:io.realm.RealmQuery between(java.lang.String,double,double) -> between
-    783:785:io.realm.RealmQuery between(java.lang.String,float,float) -> between
-    799:801:io.realm.RealmQuery between(java.lang.String,java.util.Date,java.util.Date) -> between
-    817:817:io.realm.RealmQuery contains(java.lang.String,java.lang.String) -> contains
-    831:833:io.realm.RealmQuery contains(java.lang.String,java.lang.String,boolean) -> contains
-    846:846:io.realm.RealmQuery beginsWith(java.lang.String,java.lang.String) -> beginsWith
-    860:862:io.realm.RealmQuery beginsWith(java.lang.String,java.lang.String,boolean) -> beginsWith
-    875:875:io.realm.RealmQuery endsWith(java.lang.String,java.lang.String) -> endsWith
-    889:891:io.realm.RealmQuery endsWith(java.lang.String,java.lang.String,boolean) -> endsWith
-    903:904:io.realm.RealmQuery beginGroup() -> beginGroup
-    914:915:io.realm.RealmQuery endGroup() -> endGroup
-    923:924:io.realm.RealmQuery or() -> or
-    932:933:io.realm.RealmQuery not() -> not
-    947:948:long sumInt(java.lang.String) -> sumInt
-    958:959:double sumDouble(java.lang.String) -> sumDouble
-    969:970:double sumFloat(java.lang.String) -> sumFloat
-    982:983:double averageInt(java.lang.String) -> averageInt
-    993:994:double averageDouble(java.lang.String) -> averageDouble
-    1004:1005:double averageFloat(java.lang.String) -> averageFloat
-    1017:1018:long minimumInt(java.lang.String) -> minimumInt
-    1028:1029:double minimumDouble(java.lang.String) -> minimumDouble
-    1039:1040:float minimumFloat(java.lang.String) -> minimumFloat
-    1050:1051:java.util.Date minimumDate(java.lang.String) -> minimumDate
-    1063:1064:long maximumInt(java.lang.String) -> maximumInt
-    1074:1075:double maximumDouble(java.lang.String) -> maximumDouble
-    1085:1086:float maximumFloat(java.lang.String) -> maximumFloat
-    1096:1097:java.util.Date maximumDate(java.lang.String) -> maximumDate
-    1107:1107:long count() -> count
-    1121:1121:io.realm.RealmResults findAll() -> findAll
-    1135:1142:io.realm.RealmResults findAllSorted(java.lang.String,boolean) -> findAllSorted
-    1156:1156:io.realm.RealmResults findAllSorted(java.lang.String) -> findAllSorted
-    1170:1198:io.realm.RealmResults findAllSorted(java.lang.String[],boolean[]) -> findAllSorted
-    1216:1216:io.realm.RealmResults findAllSorted(java.lang.String,boolean,java.lang.String,boolean) -> findAllSorted
-    1237:1237:io.realm.RealmResults findAllSorted(java.lang.String,boolean,java.lang.String,boolean,java.lang.String,boolean) -> findAllSorted
-    1249:1253:io.realm.RealmObject findFirst() -> findFirst
+    181:187:io.realm.RealmQuery isNull(java.lang.String) -> isNull
+    198:198:io.realm.RealmQuery isNotNull(java.lang.String) -> isNotNull
+    213:213:io.realm.RealmQuery equalTo(java.lang.String,java.lang.String) -> equalTo
+    228:230:io.realm.RealmQuery equalTo(java.lang.String,java.lang.String,boolean) -> equalTo
+    243:245:io.realm.RealmQuery equalTo(java.lang.String,int) -> equalTo
+    258:260:io.realm.RealmQuery equalTo(java.lang.String,long) -> equalTo
+    273:275:io.realm.RealmQuery equalTo(java.lang.String,double) -> equalTo
+    288:290:io.realm.RealmQuery equalTo(java.lang.String,float) -> equalTo
+    303:305:io.realm.RealmQuery equalTo(java.lang.String,boolean) -> equalTo
+    318:320:io.realm.RealmQuery equalTo(java.lang.String,java.util.Date) -> equalTo
+    335:335:io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.String) -> notEqualTo
+    349:354:io.realm.RealmQuery notEqualTo(java.lang.String,java.lang.String,boolean) -> notEqualTo
+    367:369:io.realm.RealmQuery notEqualTo(java.lang.String,int) -> notEqualTo
+    382:384:io.realm.RealmQuery notEqualTo(java.lang.String,long) -> notEqualTo
+    397:399:io.realm.RealmQuery notEqualTo(java.lang.String,double) -> notEqualTo
+    412:414:io.realm.RealmQuery notEqualTo(java.lang.String,float) -> notEqualTo
+    427:429:io.realm.RealmQuery notEqualTo(java.lang.String,boolean) -> notEqualTo
+    442:444:io.realm.RealmQuery notEqualTo(java.lang.String,java.util.Date) -> notEqualTo
+    459:461:io.realm.RealmQuery greaterThan(java.lang.String,int) -> greaterThan
+    474:476:io.realm.RealmQuery greaterThan(java.lang.String,long) -> greaterThan
+    489:491:io.realm.RealmQuery greaterThan(java.lang.String,double) -> greaterThan
+    504:506:io.realm.RealmQuery greaterThan(java.lang.String,float) -> greaterThan
+    519:521:io.realm.RealmQuery greaterThan(java.lang.String,java.util.Date) -> greaterThan
+    534:536:io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,int) -> greaterThanOrEqualTo
+    549:551:io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,long) -> greaterThanOrEqualTo
+    564:566:io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,double) -> greaterThanOrEqualTo
+    579:581:io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,float) -> greaterThanOrEqualTo
+    594:596:io.realm.RealmQuery greaterThanOrEqualTo(java.lang.String,java.util.Date) -> greaterThanOrEqualTo
+    611:613:io.realm.RealmQuery lessThan(java.lang.String,int) -> lessThan
+    626:628:io.realm.RealmQuery lessThan(java.lang.String,long) -> lessThan
+    641:643:io.realm.RealmQuery lessThan(java.lang.String,double) -> lessThan
+    656:658:io.realm.RealmQuery lessThan(java.lang.String,float) -> lessThan
+    671:673:io.realm.RealmQuery lessThan(java.lang.String,java.util.Date) -> lessThan
+    686:688:io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,int) -> lessThanOrEqualTo
+    701:703:io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,long) -> lessThanOrEqualTo
+    716:718:io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,double) -> lessThanOrEqualTo
+    731:733:io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,float) -> lessThanOrEqualTo
+    746:748:io.realm.RealmQuery lessThanOrEqualTo(java.lang.String,java.util.Date) -> lessThanOrEqualTo
+    764:766:io.realm.RealmQuery between(java.lang.String,int,int) -> between
+    780:782:io.realm.RealmQuery between(java.lang.String,long,long) -> between
+    796:798:io.realm.RealmQuery between(java.lang.String,double,double) -> between
+    812:814:io.realm.RealmQuery between(java.lang.String,float,float) -> between
+    828:830:io.realm.RealmQuery between(java.lang.String,java.util.Date,java.util.Date) -> between
+    846:846:io.realm.RealmQuery contains(java.lang.String,java.lang.String) -> contains
+    860:862:io.realm.RealmQuery contains(java.lang.String,java.lang.String,boolean) -> contains
+    875:875:io.realm.RealmQuery beginsWith(java.lang.String,java.lang.String) -> beginsWith
+    889:891:io.realm.RealmQuery beginsWith(java.lang.String,java.lang.String,boolean) -> beginsWith
+    904:904:io.realm.RealmQuery endsWith(java.lang.String,java.lang.String) -> endsWith
+    918:920:io.realm.RealmQuery endsWith(java.lang.String,java.lang.String,boolean) -> endsWith
+    932:933:io.realm.RealmQuery beginGroup() -> beginGroup
+    943:944:io.realm.RealmQuery endGroup() -> endGroup
+    952:953:io.realm.RealmQuery or() -> or
+    961:962:io.realm.RealmQuery not() -> not
+    976:977:long sumInt(java.lang.String) -> sumInt
+    987:988:double sumDouble(java.lang.String) -> sumDouble
+    998:999:double sumFloat(java.lang.String) -> sumFloat
+    1011:1012:double averageInt(java.lang.String) -> averageInt
+    1022:1023:double averageDouble(java.lang.String) -> averageDouble
+    1033:1034:double averageFloat(java.lang.String) -> averageFloat
+    1046:1047:long minimumInt(java.lang.String) -> minimumInt
+    1057:1058:double minimumDouble(java.lang.String) -> minimumDouble
+    1068:1069:float minimumFloat(java.lang.String) -> minimumFloat
+    1079:1080:java.util.Date minimumDate(java.lang.String) -> minimumDate
+    1092:1093:long maximumInt(java.lang.String) -> maximumInt
+    1103:1104:double maximumDouble(java.lang.String) -> maximumDouble
+    1114:1115:float maximumFloat(java.lang.String) -> maximumFloat
+    1125:1126:java.util.Date maximumDate(java.lang.String) -> maximumDate
+    1136:1136:long count() -> count
+    1150:1150:io.realm.RealmResults findAll() -> findAll
+    1164:1171:io.realm.RealmResults findAllSorted(java.lang.String,boolean) -> findAllSorted
+    1185:1185:io.realm.RealmResults findAllSorted(java.lang.String) -> findAllSorted
+    1199:1227:io.realm.RealmResults findAllSorted(java.lang.String[],boolean[]) -> findAllSorted
+    1245:1245:io.realm.RealmResults findAllSorted(java.lang.String,boolean,java.lang.String,boolean) -> findAllSorted
+    1266:1266:io.realm.RealmResults findAllSorted(java.lang.String,boolean,java.lang.String,boolean,java.lang.String,boolean) -> findAllSorted
+    1278:1282:io.realm.RealmObject findFirst() -> findFirst
 io.realm.RealmResults -> io.realm.RealmResults:
     java.lang.Class classSpec -> classSpec
     io.realm.Realm realm -> realm
@@ -24320,6 +24262,11 @@ io.realm.annotations.RealmClass -> io.realm.annotations.RealmClass:
 io.realm.exceptions.RealmException -> io.realm.exceptions.RealmException:
 io.realm.exceptions.RealmIOException -> io.realm.exceptions.RealmIOException:
 io.realm.exceptions.RealmMigrationNeededException -> io.realm.exceptions.RealmMigrationNeededException:
+io.realm.internal.ColumnIndices -> io.realm.internal.ColumnIndices:
+    java.util.Map classes -> classes
+    36:37:void addClass(java.lang.Class,java.util.Map) -> addClass
+    43:43:java.util.Map getClassFields(java.lang.Class) -> getClassFields
+    50:55:long getColumnIndex(java.lang.Class,java.lang.String) -> getColumnIndex
 io.realm.internal.ColumnType -> io.realm.internal.ColumnType:
     io.realm.internal.ColumnType BOOLEAN -> BOOLEAN
     io.realm.internal.ColumnType INTEGER -> INTEGER
@@ -24472,9 +24419,29 @@ io.realm.internal.ReadTransaction -> io.realm.internal.ReadTransaction:
     29:30:void endRead() -> endRead
     34:35:void close() -> close
     37:37:void finalize() -> finalize
+io.realm.internal.RealmCore -> io.realm.internal.RealmCore:
+    java.lang.String FILE_SEP -> FILE_SEP
+    java.lang.String PATH_SEP -> PATH_SEP
+    java.lang.String BINARIES_PATH -> BINARIES_PATH
+    java.lang.String JAVA_LIBRARY_PATH -> JAVA_LIBRARY_PATH
+    java.util.concurrent.atomic.AtomicBoolean libraryIsLoaded -> libraryIsLoaded
+    61:62:boolean osIsWindows() -> osIsWindows
+    67:73:byte[] serialize(java.io.Serializable) -> serialize
+    78:78:java.io.Serializable deserialize(java.nio.ByteBuffer) -> deserialize
+    83:89:java.io.Serializable deserialize(byte[]) -> deserialize
+    101:106:void gcGuaranteed() -> gcGuaranteed
+    112:118:void gcOnExit() -> gcOnExit
+    122:123:void init() -> init
+    126:149:void loadLibrary() -> loadLibrary
+    154:175:java.lang.String loadLibraryWindows() -> loadLibraryWindows
+    179:186:java.lang.String loadCorrectLibrary(java.lang.String[]) -> loadCorrectLibrary
+    192:197:void addNativeLibraryPath(java.lang.String) -> addNativeLibraryPath
+    208:214:void resetLibraryPath() -> resetLibraryPath
+io.realm.internal.RealmCore$1 -> io.realm.internal.RealmCore$1:
+    115:116:void run() -> run
 io.realm.internal.RealmJson -> io.realm.internal.RealmJson:
-    void populateUsingJsonObject(io.realm.RealmObject,org.json.JSONObject) -> populateUsingJsonObject
-    void populateUsingJsonStream(io.realm.RealmObject,android.util.JsonReader) -> populateUsingJsonStream
+    io.realm.RealmObject createOrUpdateUsingJsonObject(java.lang.Class,io.realm.Realm,org.json.JSONObject,boolean) -> createOrUpdateUsingJsonObject
+    io.realm.RealmObject createUsingJsonStream(java.lang.Class,io.realm.Realm,android.util.JsonReader) -> createUsingJsonStream
 io.realm.internal.Row -> io.realm.internal.Row:
     io.realm.internal.Context context -> context
     io.realm.internal.Table parent -> parent
@@ -24567,6 +24534,7 @@ io.realm.internal.SharedGroup -> io.realm.internal.SharedGroup:
     java.lang.String nativeGetDefaultReplicationDatabaseFileName() -> nativeGetDefaultReplicationDatabaseFileName
     219:219:boolean hasChanged() -> hasChanged
     223:224:void reserve(long) -> reserve
+    233:233:boolean compact() -> compact
     void nativeReserve(long,long) -> nativeReserve
     boolean nativeHasChanged(long) -> nativeHasChanged
     long nativeBeginRead(long) -> nativeBeginRead
@@ -24575,7 +24543,8 @@ io.realm.internal.SharedGroup -> io.realm.internal.SharedGroup:
     void nativeCommit(long) -> nativeCommit
     void nativeRollback(long) -> nativeRollback
     long nativeCreate(java.lang.String,int,boolean,boolean,byte[]) -> nativeCreate
-    247:250:void checkNativePtrNotZero() -> checkNativePtrNotZero
+    boolean nativeCompact(long) -> nativeCompact
+    259:262:void checkNativePtrNotZero() -> checkNativePtrNotZero
     void nativeClose(long) -> nativeClose
     void nativeCloseReplication(long) -> nativeCloseReplication
 io.realm.internal.SharedGroup$Durability -> io.realm.internal.SharedGroup$Durability:
@@ -24658,28 +24627,29 @@ io.realm.internal.Table -> io.realm.internal.Table:
     void nativeRemoveLast(long) -> nativeRemoveLast
     361:363:void moveLastOver(long) -> moveLastOver
     void nativeMoveLastOver(long,long) -> nativeMoveLastOver
-    369:390:long addEmptyRow() -> addEmptyRow
-    394:404:long addEmptyRows(long) -> addEmptyRows
+    368:389:long addEmptyRow() -> addEmptyRow
+    393:434:long addEmptyRowWithPrimaryKey(java.lang.Object) -> addEmptyRowWithPrimaryKey
+    438:448:long addEmptyRows(long) -> addEmptyRows
     long nativeAddEmptyRow(long,long) -> nativeAddEmptyRow
-    416:418:long add(java.lang.Object[]) -> add
-    428:506:void addAt(long,java.lang.Object[]) -> addAt
-    509:509:boolean isPrimaryKeyColumn(long) -> isPrimaryKeyColumn
-    513:522:void insertSubtableValues(long,long,java.lang.Object) -> insertSubtableValues
-    527:529:void insertLinkList(long,long) -> insertLinkList
+    460:462:long add(java.lang.Object[]) -> add
+    472:550:void addAt(long,java.lang.Object[]) -> addAt
+    553:553:boolean isPrimaryKeyColumn(long) -> isPrimaryKeyColumn
+    557:566:void insertSubtableValues(long,long,java.lang.Object) -> insertSubtableValues
+    571:573:void insertLinkList(long,long) -> insertLinkList
     void nativeInsertLinkList(long,long,long) -> nativeInsertLinkList
-    541:547:io.realm.internal.TableView getSortedView(long,io.realm.internal.TableView$Order) -> getSortedView
-    558:560:io.realm.internal.TableView getSortedView(long) -> getSortedView
+    585:591:io.realm.internal.TableView getSortedView(long,io.realm.internal.TableView$Order) -> getSortedView
+    602:604:io.realm.internal.TableView getSortedView(long) -> getSortedView
     long nativeGetSortedView(long,long,boolean) -> nativeGetSortedView
-    567:569:io.realm.internal.TableView getSortedView(long[],boolean[]) -> getSortedView
+    611:613:io.realm.internal.TableView getSortedView(long[],boolean[]) -> getSortedView
     long nativeGetSortedViewMulti(long,long[],boolean[]) -> nativeGetSortedViewMulti
-    580:613:void set(long,java.lang.Object[]) -> set
-    620:620:io.realm.internal.Table$InternalMethods getInternalMethods() -> getInternalMethods
-    629:641:long getPrimaryKey() -> getPrimaryKey
-    651:654:boolean isPrimaryKey(long) -> isPrimaryKey
-    662:662:boolean hasPrimaryKey() -> hasPrimaryKey
-    666:675:void checkStringValueIsLegal(long,long,java.lang.String) -> checkStringValueIsLegal
-    678:684:void checkIntValueIsLegal(long,long,long) -> checkIntValueIsLegal
-    687:687:void throwDuplicatePrimaryKeyException(java.lang.Object) -> throwDuplicatePrimaryKeyException
+    624:657:void set(long,java.lang.Object[]) -> set
+    664:664:io.realm.internal.Table$InternalMethods getInternalMethods() -> getInternalMethods
+    673:685:long getPrimaryKey() -> getPrimaryKey
+    695:698:boolean isPrimaryKey(long) -> isPrimaryKey
+    706:706:boolean hasPrimaryKey() -> hasPrimaryKey
+    710:719:void checkStringValueIsLegal(long,long,java.lang.String) -> checkStringValueIsLegal
+    722:728:void checkIntValueIsLegal(long,long,long) -> checkIntValueIsLegal
+    731:731:void throwDuplicatePrimaryKeyException(java.lang.Object) -> throwDuplicatePrimaryKeyException
     void nativeInsertFloat(long,long,long,float) -> nativeInsertFloat
     void nativeInsertDouble(long,long,long,double) -> nativeInsertDouble
     void nativeInsertLong(long,long,long,long) -> nativeInsertLong
@@ -24690,170 +24660,171 @@ io.realm.internal.Table -> io.realm.internal.Table:
     void nativeInsertByteArray(long,long,long,byte[]) -> nativeInsertByteArray
     void nativeInsertSubtable(long,long,long) -> nativeInsertSubtable
     void nativeInsertDone(long) -> nativeInsertDone
-    797:797:long getLong(long,long) -> getLong
+    841:841:long getLong(long,long) -> getLong
     long nativeGetLong(long,long,long) -> nativeGetLong
-    804:804:boolean getBoolean(long,long) -> getBoolean
+    848:848:boolean getBoolean(long,long) -> getBoolean
     boolean nativeGetBoolean(long,long,long) -> nativeGetBoolean
-    811:811:float getFloat(long,long) -> getFloat
+    855:855:float getFloat(long,long) -> getFloat
     float nativeGetFloat(long,long,long) -> nativeGetFloat
-    818:818:double getDouble(long,long) -> getDouble
+    862:862:double getDouble(long,long) -> getDouble
     double nativeGetDouble(long,long,long) -> nativeGetDouble
-    825:825:java.util.Date getDate(long,long) -> getDate
+    869:869:java.util.Date getDate(long,long) -> getDate
     long nativeGetDateTime(long,long,long) -> nativeGetDateTime
-    841:841:java.lang.String getString(long,long) -> getString
+    885:885:java.lang.String getString(long,long) -> getString
     java.lang.String nativeGetString(long,long,long) -> nativeGetString
-    866:866:byte[] getBinaryByteArray(long,long) -> getBinaryByteArray
+    910:910:byte[] getBinaryByteArray(long,long) -> getBinaryByteArray
     byte[] nativeGetByteArray(long,long,long) -> nativeGetByteArray
-    873:873:io.realm.internal.Mixed getMixed(long,long) -> getMixed
-    878:878:io.realm.internal.ColumnType getMixedType(long,long) -> getMixedType
+    917:917:io.realm.internal.Mixed getMixed(long,long) -> getMixed
+    922:922:io.realm.internal.ColumnType getMixedType(long,long) -> getMixedType
     int nativeGetMixedType(long,long,long) -> nativeGetMixedType
     io.realm.internal.Mixed nativeGetMixed(long,long,long) -> nativeGetMixed
-    886:886:long getLink(long,long) -> getLink
+    930:930:long getLink(long,long) -> getLink
     long nativeGetLink(long,long,long) -> nativeGetLink
-    894:902:io.realm.internal.Table getLinkTarget(long) -> getLinkTarget
+    938:946:io.realm.internal.Table getLinkTarget(long) -> getLinkTarget
     long nativeGetLinkTarget(long,long) -> nativeGetLinkTarget
-    922:930:io.realm.internal.Table getSubtable(long,long) -> getSubtable
+    966:974:io.realm.internal.Table getSubtable(long,long) -> getSubtable
     long nativeGetSubtable(long,long,long) -> nativeGetSubtable
-    941:948:io.realm.internal.Table getSubtableDuringInsert(long,long) -> getSubtableDuringInsert
+    985:992:io.realm.internal.Table getSubtableDuringInsert(long,long) -> getSubtableDuringInsert
     long nativeGetSubtableDuringInsert(long,long,long) -> nativeGetSubtableDuringInsert
-    956:956:long getSubtableSize(long,long) -> getSubtableSize
+    1000:1000:long getSubtableSize(long,long) -> getSubtableSize
     long nativeGetSubtableSize(long,long,long) -> nativeGetSubtableSize
-    962:964:void clearSubtable(long,long) -> clearSubtable
+    1006:1008:void clearSubtable(long,long) -> clearSubtable
     void nativeClearSubtable(long,long,long) -> nativeClearSubtable
-    970:971:io.realm.internal.Row getRow(long) -> getRow
+    1014:1015:io.realm.internal.Row getRow(long) -> getRow
     long nativeGetRowPtr(long,long) -> nativeGetRowPtr
-    983:986:void setLong(long,long,long) -> setLong
+    1027:1030:void setLong(long,long,long) -> setLong
     void nativeSetLong(long,long,long,long) -> nativeSetLong
-    992:994:void setBoolean(long,long,boolean) -> setBoolean
+    1036:1038:void setBoolean(long,long,boolean) -> setBoolean
     void nativeSetBoolean(long,long,long,boolean) -> nativeSetBoolean
-    1000:1002:void setFloat(long,long,float) -> setFloat
+    1044:1046:void setFloat(long,long,float) -> setFloat
     void nativeSetFloat(long,long,long,float) -> nativeSetFloat
-    1008:1010:void setDouble(long,long,double) -> setDouble
+    1052:1054:void setDouble(long,long,double) -> setDouble
     void nativeSetDouble(long,long,long,double) -> nativeSetDouble
-    1016:1020:void setDate(long,long,java.util.Date) -> setDate
+    1060:1064:void setDate(long,long,java.util.Date) -> setDate
     void nativeSetDate(long,long,long,long) -> nativeSetDate
-    1026:1029:void setString(long,long,java.lang.String) -> setString
+    1070:1073:void setString(long,long,java.lang.String) -> setString
     void nativeSetString(long,long,long,java.lang.String) -> nativeSetString
-    1062:1066:void setBinaryByteArray(long,long,byte[]) -> setBinaryByteArray
+    1106:1110:void setBinaryByteArray(long,long,byte[]) -> setBinaryByteArray
     void nativeSetByteArray(long,long,long,byte[]) -> nativeSetByteArray
-    1081:1085:void setMixed(long,long,io.realm.internal.Mixed) -> setMixed
+    1125:1129:void setMixed(long,long,io.realm.internal.Mixed) -> setMixed
     void nativeSetMixed(long,long,long,io.realm.internal.Mixed) -> nativeSetMixed
-    1090:1092:void setLink(long,long,long) -> setLink
+    1134:1136:void setLink(long,long,long) -> setLink
     void nativeSetLink(long,long,long,long) -> nativeSetLink
-    1105:1107:void adjust(long,long) -> adjust
+    1149:1151:void adjust(long,long) -> adjust
     void nativeAddInt(long,long,long) -> nativeAddInt
-    1113:1118:void setIndex(long) -> setIndex
-    1132:1138:void setPrimaryKey(java.lang.String) -> setPrimaryKey
+    1157:1162:void setIndex(long) -> setIndex
+    1176:1182:void setPrimaryKey(java.lang.String) -> setPrimaryKey
     long nativeSetPrimaryKey(long,long,java.lang.String) -> nativeSetPrimaryKey
-    1143:1154:io.realm.internal.Table getPrimaryKeyTable() -> getPrimaryKeyTable
-    1159:1164:io.realm.internal.Group getTableGroup() -> getTableGroup
+    1187:1198:io.realm.internal.Table getPrimaryKeyTable() -> getPrimaryKeyTable
+    1203:1208:io.realm.internal.Group getTableGroup() -> getTableGroup
     void nativeSetIndex(long,long) -> nativeSetIndex
-    1172:1172:boolean hasIndex(long) -> hasIndex
+    1216:1216:boolean hasIndex(long) -> hasIndex
     boolean nativeHasIndex(long,long) -> nativeHasIndex
-    1179:1179:boolean isNullLink(long,long) -> isNullLink
+    1223:1223:boolean isNullLink(long,long) -> isNullLink
     boolean nativeIsNullLink(long,long,long) -> nativeIsNullLink
-    1185:1186:void nullifyLink(long,long) -> nullifyLink
+    1229:1230:void nullifyLink(long,long) -> nullifyLink
     void nativeNullifyLink(long,long,long) -> nativeNullifyLink
-    1192:1195:boolean isImmutable() -> isImmutable
-    1200:1203:void checkImmutable() -> checkImmutable
-    1212:1212:long sumLong(long) -> sumLong
+    1236:1239:boolean isImmutable() -> isImmutable
+    1244:1247:void checkImmutable() -> checkImmutable
+    1250:1253:void checkHasPrimaryKey() -> checkHasPrimaryKey
+    1262:1262:long sumLong(long) -> sumLong
     long nativeSumInt(long,long) -> nativeSumInt
-    1219:1219:long maximumLong(long) -> maximumLong
+    1269:1269:long maximumLong(long) -> maximumLong
     long nativeMaximumInt(long,long) -> nativeMaximumInt
-    1226:1226:long minimumLong(long) -> minimumLong
+    1276:1276:long minimumLong(long) -> minimumLong
     long nativeMinimumInt(long,long) -> nativeMinimumInt
-    1233:1233:double averageLong(long) -> averageLong
+    1283:1283:double averageLong(long) -> averageLong
     double nativeAverageInt(long,long) -> nativeAverageInt
-    1241:1241:double sumFloat(long) -> sumFloat
+    1291:1291:double sumFloat(long) -> sumFloat
     double nativeSumFloat(long,long) -> nativeSumFloat
-    1248:1248:float maximumFloat(long) -> maximumFloat
+    1298:1298:float maximumFloat(long) -> maximumFloat
     float nativeMaximumFloat(long,long) -> nativeMaximumFloat
-    1255:1255:float minimumFloat(long) -> minimumFloat
+    1305:1305:float minimumFloat(long) -> minimumFloat
     float nativeMinimumFloat(long,long) -> nativeMinimumFloat
-    1262:1262:double averageFloat(long) -> averageFloat
+    1312:1312:double averageFloat(long) -> averageFloat
     double nativeAverageFloat(long,long) -> nativeAverageFloat
-    1270:1270:double sumDouble(long) -> sumDouble
+    1320:1320:double sumDouble(long) -> sumDouble
     double nativeSumDouble(long,long) -> nativeSumDouble
-    1277:1277:double maximumDouble(long) -> maximumDouble
+    1327:1327:double maximumDouble(long) -> maximumDouble
     double nativeMaximumDouble(long,long) -> nativeMaximumDouble
-    1284:1284:double minimumDouble(long) -> minimumDouble
+    1334:1334:double minimumDouble(long) -> minimumDouble
     double nativeMinimumDouble(long,long) -> nativeMinimumDouble
-    1291:1291:double averageDouble(long) -> averageDouble
+    1341:1341:double averageDouble(long) -> averageDouble
     double nativeAverageDouble(long,long) -> nativeAverageDouble
-    1300:1300:java.util.Date maximumDate(long) -> maximumDate
+    1350:1350:java.util.Date maximumDate(long) -> maximumDate
     long nativeMaximumDate(long,long) -> nativeMaximumDate
-    1307:1307:java.util.Date minimumDate(long) -> minimumDate
+    1357:1357:java.util.Date minimumDate(long) -> minimumDate
     long nativeMinimumDate(long,long) -> nativeMinimumDate
-    1318:1318:long count(long,long) -> count
+    1368:1368:long count(long,long) -> count
     long nativeCountLong(long,long,long) -> nativeCountLong
-    1325:1325:long count(long,float) -> count
+    1375:1375:long count(long,float) -> count
     long nativeCountFloat(long,long,float) -> nativeCountFloat
-    1331:1331:long count(long,double) -> count
+    1381:1381:long count(long,double) -> count
     long nativeCountDouble(long,long,double) -> nativeCountDouble
-    1338:1338:long count(long,java.lang.String) -> count
+    1388:1388:long count(long,java.lang.String) -> count
     long nativeCountString(long,long,java.lang.String) -> nativeCountString
-    1351:1358:io.realm.internal.TableQuery where() -> where
+    1401:1408:io.realm.internal.TableQuery where() -> where
     long nativeWhere(long) -> nativeWhere
-    1366:1366:long findFirstLong(long,long) -> findFirstLong
+    1416:1416:long findFirstLong(long,long) -> findFirstLong
     long nativeFindFirstInt(long,long,long) -> nativeFindFirstInt
-    1373:1373:long findFirstBoolean(long,boolean) -> findFirstBoolean
+    1423:1423:long findFirstBoolean(long,boolean) -> findFirstBoolean
     long nativeFindFirstBool(long,long,boolean) -> nativeFindFirstBool
-    1380:1380:long findFirstFloat(long,float) -> findFirstFloat
+    1430:1430:long findFirstFloat(long,float) -> findFirstFloat
     long nativeFindFirstFloat(long,long,float) -> nativeFindFirstFloat
-    1387:1387:long findFirstDouble(long,double) -> findFirstDouble
+    1437:1437:long findFirstDouble(long,double) -> findFirstDouble
     long nativeFindFirstDouble(long,long,double) -> nativeFindFirstDouble
-    1394:1394:long findFirstDate(long,java.util.Date) -> findFirstDate
+    1444:1444:long findFirstDate(long,java.util.Date) -> findFirstDate
     long nativeFindFirstDate(long,long,long) -> nativeFindFirstDate
-    1401:1401:long findFirstString(long,java.lang.String) -> findFirstString
+    1451:1451:long findFirstString(long,java.lang.String) -> findFirstString
     long nativeFindFirstString(long,long,java.lang.String) -> nativeFindFirstString
-    1408:1414:io.realm.internal.TableView findAllLong(long,long) -> findAllLong
+    1458:1464:io.realm.internal.TableView findAllLong(long,long) -> findAllLong
     long nativeFindAllInt(long,long,long) -> nativeFindAllInt
-    1423:1429:io.realm.internal.TableView findAllBoolean(long,boolean) -> findAllBoolean
+    1473:1479:io.realm.internal.TableView findAllBoolean(long,boolean) -> findAllBoolean
     long nativeFindAllBool(long,long,boolean) -> nativeFindAllBool
-    1438:1444:io.realm.internal.TableView findAllFloat(long,float) -> findAllFloat
+    1488:1494:io.realm.internal.TableView findAllFloat(long,float) -> findAllFloat
     long nativeFindAllFloat(long,long,float) -> nativeFindAllFloat
-    1453:1459:io.realm.internal.TableView findAllDouble(long,double) -> findAllDouble
+    1503:1509:io.realm.internal.TableView findAllDouble(long,double) -> findAllDouble
     long nativeFindAllDouble(long,long,double) -> nativeFindAllDouble
-    1468:1474:io.realm.internal.TableView findAllDate(long,java.util.Date) -> findAllDate
+    1518:1524:io.realm.internal.TableView findAllDate(long,java.util.Date) -> findAllDate
     long nativeFindAllDate(long,long,long) -> nativeFindAllDate
-    1483:1489:io.realm.internal.TableView findAllString(long,java.lang.String) -> findAllString
+    1533:1539:io.realm.internal.TableView findAllString(long,java.lang.String) -> findAllString
     long nativeFindAllString(long,long,java.lang.String) -> nativeFindAllString
-    1498:1498:long lowerBoundLong(long,long) -> lowerBoundLong
-    1502:1502:long upperBoundLong(long,long) -> upperBoundLong
+    1548:1548:long lowerBoundLong(long,long) -> lowerBoundLong
+    1552:1552:long upperBoundLong(long,long) -> upperBoundLong
     long nativeLowerBoundInt(long,long,long) -> nativeLowerBoundInt
     long nativeUpperBoundInt(long,long,long) -> nativeUpperBoundInt
-    1511:1517:io.realm.internal.Table pivot(long,long,io.realm.internal.TableOrView$PivotType) -> pivot
+    1561:1567:io.realm.internal.Table pivot(long,long,io.realm.internal.TableOrView$PivotType) -> pivot
     void nativePivot(long,long,long,int,long) -> nativePivot
-    1526:1532:io.realm.internal.TableView getDistinctView(long) -> getDistinctView
+    1576:1582:io.realm.internal.TableView getDistinctView(long) -> getDistinctView
     long nativeGetDistinctView(long,long) -> nativeGetDistinctView
-    1544:1544:java.lang.String getName() -> getName
+    1594:1594:java.lang.String getName() -> getName
     java.lang.String nativeGetName(long) -> nativeGetName
-    1551:1553:void optimize() -> optimize
+    1601:1603:void optimize() -> optimize
     void nativeOptimize(long) -> nativeOptimize
-    1559:1559:java.lang.String toJson() -> toJson
+    1609:1609:java.lang.String toJson() -> toJson
     java.lang.String nativeToJson(long) -> nativeToJson
-    1566:1566:java.lang.String toString() -> toString
-    1571:1571:java.lang.String toString(long) -> toString
+    1616:1616:java.lang.String toString() -> toString
+    1621:1621:java.lang.String toString(long) -> toString
     java.lang.String nativeToString(long,long) -> nativeToString
-    1578:1578:java.lang.String rowToString(long) -> rowToString
+    1628:1628:java.lang.String rowToString(long) -> rowToString
     java.lang.String nativeRowToString(long,long) -> nativeRowToString
-    1585:1585:long sync() -> sync
-    1589:1589:void throwImmutable() -> throwImmutable
+    1635:1635:long sync() -> sync
+    1639:1639:void throwImmutable() -> throwImmutable
     30:30:void access$000(io.realm.internal.Table,long,long,java.lang.Object) -> access$000
 io.realm.internal.Table$1 -> io.realm.internal.Table$1:
     int[] $SwitchMap$io$realm$internal$ColumnType -> $SwitchMap$io$realm$internal$ColumnType
 io.realm.internal.Table$InternalMethods -> io.realm.internal.Table$InternalMethods:
     io.realm.internal.Table this$0 -> this$0
-    695:697:void insertLong(long,long,long) -> insertLong
-    700:702:void insertDouble(long,long,double) -> insertDouble
-    705:707:void insertFloat(long,long,float) -> insertFloat
-    710:712:void insertBoolean(long,long,boolean) -> insertBoolean
-    715:717:void insertDate(long,long,java.util.Date) -> insertDate
-    720:722:void insertString(long,long,java.lang.String) -> insertString
-    725:727:void insertMixed(long,long,io.realm.internal.Mixed) -> insertMixed
-    744:749:void insertBinary(long,long,byte[]) -> insertBinary
-    752:755:void insertSubtable(long,long,java.lang.Object[][]) -> insertSubtable
-    758:760:void insertDone() -> insertDone
+    739:741:void insertLong(long,long,long) -> insertLong
+    744:746:void insertDouble(long,long,double) -> insertDouble
+    749:751:void insertFloat(long,long,float) -> insertFloat
+    754:756:void insertBoolean(long,long,boolean) -> insertBoolean
+    759:761:void insertDate(long,long,java.util.Date) -> insertDate
+    764:766:void insertString(long,long,java.lang.String) -> insertString
+    769:771:void insertMixed(long,long,io.realm.internal.Mixed) -> insertMixed
+    788:793:void insertBinary(long,long,byte[]) -> insertBinary
+    796:799:void insertSubtable(long,long,java.lang.Object[][]) -> insertSubtable
+    802:804:void insertDone() -> insertDone
 io.realm.internal.TableOrView -> io.realm.internal.TableOrView:
     int NO_MATCH -> NO_MATCH
     void clear() -> clear
@@ -25086,13 +25057,15 @@ io.realm.internal.TableQuery -> io.realm.internal.TableQuery:
     653:654:java.util.Date minimumDate(long,long,long,long) -> minimumDate
     657:658:java.util.Date minimumDate(long) -> minimumDate
     long nativeMinimumDate(long,long,long,long,long) -> nativeMinimumDate
-    667:668:long count(long,long,long) -> count
-    672:673:long count() -> count
+    665:666:io.realm.internal.TableQuery isNull(long) -> isNull
+    void nativeIsNull(long,long) -> nativeIsNull
+    675:676:long count(long,long,long) -> count
+    680:681:long count() -> count
     long nativeCount(long,long,long,long) -> nativeCount
-    681:683:long remove(long,long) -> remove
-    687:689:long remove() -> remove
+    689:691:long remove(long,long) -> remove
+    695:697:long remove() -> remove
     long nativeRemove(long,long,long,long) -> nativeRemove
-    695:695:void throwImmutable() -> throwImmutable
+    703:703:void throwImmutable() -> throwImmutable
 io.realm.internal.TableSchema -> io.realm.internal.TableSchema:
     io.realm.internal.TableSchema getSubtableSchema(long) -> getSubtableSchema
     long addColumn(io.realm.internal.ColumnType,java.lang.String) -> addColumn
@@ -25274,26 +25247,6 @@ io.realm.internal.TableView$Order -> io.realm.internal.TableView$Order:
     io.realm.internal.TableView$Order[] $VALUES -> $VALUES
     851:851:io.realm.internal.TableView$Order[] values() -> values
     851:851:io.realm.internal.TableView$Order valueOf(java.lang.String) -> valueOf
-io.realm.internal.TightDB -> io.realm.internal.TightDB:
-    java.lang.String FILE_SEP -> FILE_SEP
-    java.lang.String PATH_SEP -> PATH_SEP
-    java.lang.String BINARIES_PATH -> BINARIES_PATH
-    java.lang.String JAVA_LIBRARY_PATH -> JAVA_LIBRARY_PATH
-    java.util.concurrent.atomic.AtomicBoolean libraryIsLoaded -> libraryIsLoaded
-    61:62:boolean osIsWindows() -> osIsWindows
-    67:73:byte[] serialize(java.io.Serializable) -> serialize
-    78:78:java.io.Serializable deserialize(java.nio.ByteBuffer) -> deserialize
-    83:89:java.io.Serializable deserialize(byte[]) -> deserialize
-    101:106:void gcGuaranteed() -> gcGuaranteed
-    112:118:void gcOnExit() -> gcOnExit
-    122:123:void initTightDB() -> initTightDB
-    126:149:void loadLibrary() -> loadLibrary
-    154:175:java.lang.String loadLibraryWindows() -> loadLibraryWindows
-    179:186:java.lang.String loadCorrectLibrary(java.lang.String[]) -> loadCorrectLibrary
-    192:197:void addNativeLibraryPath(java.lang.String) -> addNativeLibraryPath
-    208:214:void resetLibraryPath() -> resetLibraryPath
-io.realm.internal.TightDB$1 -> io.realm.internal.TightDB$1:
-    115:116:void run() -> run
 io.realm.internal.Util -> io.realm.internal.Util:
     28:28:long getNativeMemUsage() -> getNativeMemUsage
     long nativeGetMemUsage() -> nativeGetMemUsage
@@ -25424,24 +25377,24 @@ io.realm.processor.ClassMetaData -> io.realm.processor.ClassMetaData:
     java.util.List validPrimaryKeyTypes -> validPrimaryKeyTypes
     javax.lang.model.util.Types typeUtils -> typeUtils
     89:110:boolean generateMetaData(javax.annotation.processing.Messager) -> generateMetaData
-    115:142:boolean checkMethods() -> checkMethods
-    149:179:boolean checkSetterMethod(java.lang.String) -> checkSetterMethod
-    186:234:boolean checkGetterMethod(java.lang.String) -> checkGetterMethod
-    239:242:boolean checkRequireSetters() -> checkRequireSetters
-    247:250:boolean checkRequiredGetters() -> checkRequiredGetters
-    255:259:boolean checkDefaultConstructor() -> checkDefaultConstructor
-    266:343:boolean categorizeClassElements() -> categorizeClassElements
-    347:347:java.lang.String getSimpleClassName() -> getSimpleClassName
-    356:356:boolean isModelClass() -> isModelClass
-    360:360:java.lang.String getFullyQualifiedClassName() -> getFullyQualifiedClassName
-    364:364:java.util.List getFields() -> getFields
-    368:368:java.lang.String getGetter(java.lang.String) -> getGetter
-    372:372:java.lang.String getSetter(java.lang.String) -> getSetter
-    376:376:java.util.List getIndexedFields() -> getIndexedFields
-    380:380:boolean hasPrimaryKey() -> hasPrimaryKey
-    384:384:javax.lang.model.element.VariableElement getPrimaryKey() -> getPrimaryKey
-    388:388:java.lang.String getPrimaryKeyGetter() -> getPrimaryKeyGetter
-    392:397:boolean isValidPrimaryKeyType(javax.lang.model.type.TypeMirror) -> isValidPrimaryKeyType
+    115:144:boolean checkMethods() -> checkMethods
+    151:177:boolean checkSetterMethod(java.lang.String) -> checkSetterMethod
+    184:228:boolean checkGetterMethod(java.lang.String) -> checkGetterMethod
+    233:236:boolean checkRequireSetters() -> checkRequireSetters
+    241:244:boolean checkRequiredGetters() -> checkRequiredGetters
+    249:253:boolean checkDefaultConstructor() -> checkDefaultConstructor
+    260:341:boolean categorizeClassElements() -> categorizeClassElements
+    345:345:java.lang.String getSimpleClassName() -> getSimpleClassName
+    354:354:boolean isModelClass() -> isModelClass
+    358:358:java.lang.String getFullyQualifiedClassName() -> getFullyQualifiedClassName
+    362:362:java.util.List getFields() -> getFields
+    366:366:java.lang.String getGetter(java.lang.String) -> getGetter
+    370:370:java.lang.String getSetter(java.lang.String) -> getSetter
+    374:374:java.util.List getIndexedFields() -> getIndexedFields
+    378:378:boolean hasPrimaryKey() -> hasPrimaryKey
+    382:382:javax.lang.model.element.VariableElement getPrimaryKey() -> getPrimaryKey
+    386:386:java.lang.String getPrimaryKeyGetter() -> getPrimaryKeyGetter
+    390:395:boolean isValidPrimaryKeyType(javax.lang.model.type.TypeMirror) -> isValidPrimaryKeyType
 io.realm.processor.Constants -> io.realm.processor.Constants:
     java.lang.String REALM_PACKAGE_NAME -> REALM_PACKAGE_NAME
     java.lang.String PROXY_SUFFIX -> PROXY_SUFFIX
@@ -25455,31 +25408,31 @@ io.realm.processor.RealmJSonImplGenerator -> io.realm.processor.RealmJSonImplGen
     java.lang.String CLASS_NAME -> CLASS_NAME
     java.lang.String EXCEPTION_MSG -> EXCEPTION_MSG
     43:77:void generate() -> generate
-    80:91:void emitPopulateUsingJsonObject(com.squareup.javawriter.JavaWriter) -> emitPopulateUsingJsonObject
-    94:105:void emitPopulateUsingJsonStream(com.squareup.javawriter.JavaWriter) -> emitPopulateUsingJsonStream
-    111:125:void emitProxySwitch(java.lang.String,com.squareup.javawriter.JavaWriter) -> emitProxySwitch
+    80:91:void emitCreateOrUpdateUsingJsonObject(io.realm.processor.javawriter.JavaWriter) -> emitCreateOrUpdateUsingJsonObject
+    94:105:void emitCreateUsingJsonStream(io.realm.processor.javawriter.JavaWriter) -> emitCreateUsingJsonStream
+    111:124:void emitProxySwitch(java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitProxySwitch
 io.realm.processor.RealmJsonTypeHelper -> io.realm.processor.RealmJsonTypeHelper:
     java.util.Map JAVA_TO_JSON_TYPES -> JAVA_TO_JSON_TYPES
-    91:95:void emitFillJavaTypeWithJsonValue(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitFillJavaTypeWithJsonValue
-    99:107:void emitFillRealmObjectWithJsonValue(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitFillRealmObjectWithJsonValue
-    112:124:void emitFillRealmListWithJsonValue(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitFillRealmListWithJsonValue
-    128:131:void emitFillJavaTypeFromStream(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitFillJavaTypeFromStream
-    134:138:void emitFillRealmObjectFromStream(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitFillRealmObjectFromStream
-    141:152:void emitFillRealmListFromStream(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitFillRealmListFromStream
+    91:95:void emitFillJavaTypeWithJsonValue(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitFillJavaTypeWithJsonValue
+    99:105:void emitFillRealmObjectWithJsonValue(java.lang.String,java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitFillRealmObjectWithJsonValue
+    110:120:void emitFillRealmListWithJsonValue(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitFillRealmListWithJsonValue
+    124:127:void emitFillJavaTypeFromStream(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitFillJavaTypeFromStream
+    130:133:void emitFillRealmObjectFromStream(java.lang.String,java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitFillRealmObjectFromStream
+    136:143:void emitFillRealmListFromStream(java.lang.String,java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitFillRealmListFromStream
 io.realm.processor.RealmJsonTypeHelper$1 -> io.realm.processor.RealmJsonTypeHelper$1:
-    51:62:void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitTypeConversion
-    66:75:void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitStreamTypeConversion
+    51:62:void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitTypeConversion
+    66:75:void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitStreamTypeConversion
 io.realm.processor.RealmJsonTypeHelper$2 -> io.realm.processor.RealmJsonTypeHelper$2:
-    80:81:void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitTypeConversion
-    85:86:void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitStreamTypeConversion
+    80:81:void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitTypeConversion
+    85:86:void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitStreamTypeConversion
 io.realm.processor.RealmJsonTypeHelper$JsonToRealmTypeConverter -> io.realm.processor.RealmJsonTypeHelper$JsonToRealmTypeConverter:
-    void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitTypeConversion
-    void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitStreamTypeConversion
+    void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitTypeConversion
+    void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitStreamTypeConversion
 io.realm.processor.RealmJsonTypeHelper$SimpleTypeConverter -> io.realm.processor.RealmJsonTypeHelper$SimpleTypeConverter:
     java.lang.String castType -> castType
     java.lang.String jsonType -> jsonType
-    174:182:void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitTypeConversion
-    186:190:void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,com.squareup.javawriter.JavaWriter) -> emitStreamTypeConversion
+    165:173:void emitTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitTypeConversion
+    177:181:void emitStreamTypeConversion(java.lang.String,java.lang.String,java.lang.String,io.realm.processor.javawriter.JavaWriter) -> emitStreamTypeConversion
 io.realm.processor.RealmProcessor -> io.realm.processor.RealmProcessor:
     java.util.Set classesToValidate -> classesToValidate
     boolean done -> done
@@ -25497,19 +25450,22 @@ io.realm.processor.RealmProxyClassGenerator -> io.realm.processor.RealmProxyClas
     java.util.Map NULLABLE_JAVA_TYPES -> NULLABLE_JAVA_TYPES
     java.util.Map JAVA_TO_COLUMN_TYPES -> JAVA_TO_COLUMN_TYPES
     java.util.Map CASTING_TYPES -> CASTING_TYPES
-    127:203:void generate() -> generate
-    206:297:void emitAccessors(com.squareup.javawriter.JavaWriter) -> emitAccessors
-    300:352:void emitInitTableMethod(com.squareup.javawriter.JavaWriter) -> emitInitTableMethod
-    355:432:void emitValidateTableMethod(com.squareup.javawriter.JavaWriter) -> emitValidateTableMethod
-    435:451:void emitGetFieldNamesMethod(com.squareup.javawriter.JavaWriter) -> emitGetFieldNamesMethod
-    454:500:void emitCopyOrUpdateMethod(com.squareup.javawriter.JavaWriter) -> emitCopyOrUpdateMethod
-    503:563:void emitCopyMethod(com.squareup.javawriter.JavaWriter) -> emitCopyMethod
-    567:631:void emitUpdateMethod(com.squareup.javawriter.JavaWriter) -> emitUpdateMethod
-    634:672:void emitToStringMethod(com.squareup.javawriter.JavaWriter) -> emitToStringMethod
-    675:688:void emitHashcodeMethod(com.squareup.javawriter.JavaWriter) -> emitHashcodeMethod
-    691:711:void emitEqualsMethod(com.squareup.javawriter.JavaWriter) -> emitEqualsMethod
-    714:753:void emitPopulateUsingJsonObjectMethod(com.squareup.javawriter.JavaWriter) -> emitPopulateUsingJsonObjectMethod
-    756:813:void emitPopulateUsingJsonStreamMethod(com.squareup.javawriter.JavaWriter) -> emitPopulateUsingJsonStreamMethod
+    127:208:void generate() -> generate
+    211:224:void emitClassFields(io.realm.processor.javawriter.JavaWriter) -> emitClassFields
+    227:318:void emitAccessors(io.realm.processor.javawriter.JavaWriter) -> emitAccessors
+    321:373:void emitInitTableMethod(io.realm.processor.javawriter.JavaWriter) -> emitInitTableMethod
+    376:485:void emitValidateTableMethod(io.realm.processor.javawriter.JavaWriter) -> emitValidateTableMethod
+    488:492:void emitGetFieldNamesMethod(io.realm.processor.javawriter.JavaWriter) -> emitGetFieldNamesMethod
+    495:499:void emitGetColumnIndicesMethod(io.realm.processor.javawriter.JavaWriter) -> emitGetColumnIndicesMethod
+    502:554:void emitCopyOrUpdateMethod(io.realm.processor.javawriter.JavaWriter) -> emitCopyOrUpdateMethod
+    557:621:void emitCopyMethod(io.realm.processor.javawriter.JavaWriter) -> emitCopyMethod
+    625:689:void emitUpdateMethod(io.realm.processor.javawriter.JavaWriter) -> emitUpdateMethod
+    692:730:void emitToStringMethod(io.realm.processor.javawriter.JavaWriter) -> emitToStringMethod
+    733:746:void emitHashcodeMethod(io.realm.processor.javawriter.JavaWriter) -> emitHashcodeMethod
+    749:769:void emitEqualsMethod(io.realm.processor.javawriter.JavaWriter) -> emitEqualsMethod
+    773:836:void emitCreateOrUpdateUsingJsonObject(io.realm.processor.javawriter.JavaWriter) -> emitCreateOrUpdateUsingJsonObject
+    839:897:void emitCreateUsingJsonStream(io.realm.processor.javawriter.JavaWriter) -> emitCreateUsingJsonStream
+    900:900:java.lang.String staticFieldIndexVarName(javax.lang.model.element.VariableElement) -> staticFieldIndexVarName
 io.realm.processor.RealmValidationListGenerator -> io.realm.processor.RealmValidationListGenerator:
     javax.annotation.processing.ProcessingEnvironment processingEnvironment -> processingEnvironment
     java.util.Set classesToValidate -> classesToValidate
@@ -25552,6 +25508,89 @@ io.realm.processor.Utils -> io.realm.processor.Utils:
     110:110:javax.lang.model.element.Element getSuperClass(javax.lang.model.element.TypeElement) -> getSuperClass
 io.realm.processor.Version -> io.realm.processor.Version:
     java.lang.String VERSION -> VERSION
+io.realm.processor.javawriter.JavaWriter -> io.realm.processor.javawriter.JavaWriter:
+    java.util.regex.Pattern TYPE_PATTERN -> TYPE_PATTERN
+    int MAX_SINGLE_LINE_ATTRIBUTES -> MAX_SINGLE_LINE_ATTRIBUTES
+    java.lang.String INDENT -> INDENT
+    java.util.Map importedTypes -> importedTypes
+    java.lang.String packagePrefix -> packagePrefix
+    java.util.Deque scopes -> scopes
+    java.util.Deque types -> types
+    java.io.Writer out -> out
+    boolean isCompressingTypes -> isCompressingTypes
+    java.lang.String indent -> indent
+    java.util.EnumSet METHOD_SCOPES -> METHOD_SCOPES
+    52:53:void setCompressingTypes(boolean) -> setCompressingTypes
+    56:56:boolean isCompressingTypes() -> isCompressingTypes
+    60:61:void setIndent(java.lang.String) -> setIndent
+    64:64:java.lang.String getIndent() -> getIndent
+    69:80:io.realm.processor.javawriter.JavaWriter emitPackage(java.lang.String) -> emitPackage
+    88:88:io.realm.processor.javawriter.JavaWriter emitImports(java.lang.String[]) -> emitImports
+    96:100:io.realm.processor.javawriter.JavaWriter emitImports(java.lang.Class[]) -> emitImports
+    108:120:io.realm.processor.javawriter.JavaWriter emitImports(java.util.Collection) -> emitImports
+    128:128:io.realm.processor.javawriter.JavaWriter emitStaticImports(java.lang.String[]) -> emitStaticImports
+    136:148:io.realm.processor.javawriter.JavaWriter emitStaticImports(java.util.Collection) -> emitStaticImports
+    157:162:io.realm.processor.javawriter.JavaWriter emitCompressedType(java.lang.String) -> emitCompressedType
+    167:204:java.lang.String compressType(java.lang.String) -> compressType
+    208:217:boolean isClassInPackage(java.lang.String,java.lang.String) -> isClassInPackage
+    226:226:boolean isAmbiguous(java.lang.String) -> isAmbiguous
+    235:243:io.realm.processor.javawriter.JavaWriter beginInitializer(boolean) -> beginInitializer
+    248:251:io.realm.processor.javawriter.JavaWriter endInitializer() -> endInitializer
+    260:260:io.realm.processor.javawriter.JavaWriter beginType(java.lang.String,java.lang.String) -> beginType
+    270:270:io.realm.processor.javawriter.JavaWriter beginType(java.lang.String,java.lang.String,java.util.Set) -> beginType
+    281:304:io.realm.processor.javawriter.JavaWriter beginType(java.lang.String,java.lang.String,java.util.Set,java.lang.String,java.lang.String[]) -> beginType
+    309:313:io.realm.processor.javawriter.JavaWriter endType() -> endType
+    318:318:io.realm.processor.javawriter.JavaWriter emitField(java.lang.String,java.lang.String) -> emitField
+    324:324:io.realm.processor.javawriter.JavaWriter emitField(java.lang.String,java.lang.String,java.util.Set) -> emitField
+    330:351:io.realm.processor.javawriter.JavaWriter emitField(java.lang.String,java.lang.String,java.util.Set,java.lang.String) -> emitField
+    368:368:io.realm.processor.javawriter.JavaWriter beginMethod(java.lang.String,java.lang.String,java.util.Set,java.lang.String[]) -> beginMethod
+    386:425:io.realm.processor.javawriter.JavaWriter beginMethod(java.lang.String,java.lang.String,java.util.Set,java.util.List,java.util.List) -> beginMethod
+    430:431:io.realm.processor.javawriter.JavaWriter beginConstructor(java.util.Set,java.lang.String[]) -> beginConstructor
+    437:438:io.realm.processor.javawriter.JavaWriter beginConstructor(java.util.Set,java.util.List,java.util.List) -> beginConstructor
+    443:458:io.realm.processor.javawriter.JavaWriter emitJavadoc(java.lang.String,java.lang.Object[]) -> emitJavadoc
+    463:467:io.realm.processor.javawriter.JavaWriter emitSingleLineComment(java.lang.String,java.lang.Object[]) -> emitSingleLineComment
+    471:472:io.realm.processor.javawriter.JavaWriter emitEmptyLine() -> emitEmptyLine
+    476:479:io.realm.processor.javawriter.JavaWriter emitEnumValue(java.lang.String) -> emitEnumValue
+    487:487:io.realm.processor.javawriter.JavaWriter emitEnumValue(java.lang.String,boolean) -> emitEnumValue
+    491:494:io.realm.processor.javawriter.JavaWriter emitLastEnumValue(java.lang.String) -> emitLastEnumValue
+    499:510:io.realm.processor.javawriter.JavaWriter emitEnumValues(java.lang.Iterable) -> emitEnumValues
+    515:515:io.realm.processor.javawriter.JavaWriter emitAnnotation(java.lang.String) -> emitAnnotation
+    520:520:io.realm.processor.javawriter.JavaWriter emitAnnotation(java.lang.Class) -> emitAnnotation
+    532:532:io.realm.processor.javawriter.JavaWriter emitAnnotation(java.lang.Class,java.lang.Object) -> emitAnnotation
+    543:550:io.realm.processor.javawriter.JavaWriter emitAnnotation(java.lang.String,java.lang.Object) -> emitAnnotation
+    556:556:io.realm.processor.javawriter.JavaWriter emitAnnotation(java.lang.Class,java.util.Map) -> emitAnnotation
+    568:610:io.realm.processor.javawriter.JavaWriter emitAnnotation(java.lang.String,java.util.Map) -> emitAnnotation
+    614:619:boolean containsArray(java.util.Collection) -> containsArray
+    627:648:io.realm.processor.javawriter.JavaWriter emitAnnotationValue(java.lang.Object) -> emitAnnotationValue
+    656:666:io.realm.processor.javawriter.JavaWriter emitStatement(java.lang.String,java.lang.Object[]) -> emitStatement
+    674:679:io.realm.processor.javawriter.JavaWriter beginControlFlow(java.lang.String,java.lang.Object[]) -> beginControlFlow
+    687:693:io.realm.processor.javawriter.JavaWriter nextControlFlow(java.lang.String,java.lang.Object[]) -> nextControlFlow
+    697:697:io.realm.processor.javawriter.JavaWriter endControlFlow() -> endControlFlow
+    705:714:io.realm.processor.javawriter.JavaWriter endControlFlow(java.lang.String,java.lang.Object[]) -> endControlFlow
+    719:727:io.realm.processor.javawriter.JavaWriter endMethod() -> endMethod
+    732:735:io.realm.processor.javawriter.JavaWriter endConstructor() -> endConstructor
+    740:775:java.lang.String stringLiteral(java.lang.String) -> stringLiteral
+    780:795:java.lang.String type(java.lang.Class,java.lang.String[]) -> type
+    800:804:java.lang.String rawType(java.lang.String) -> rawType
+    808:809:void close() -> close
+    813:823:void emitModifiers(java.util.Set) -> emitModifiers
+    826:829:void indent() -> indent
+    832:835:void hangingIndent() -> hangingIndent
+    841:844:void checkInMethod() -> checkInMethod
+    847:850:void popScope(io.realm.processor.javawriter.JavaWriter$Scope[]) -> popScope
+io.realm.processor.javawriter.JavaWriter$Scope -> io.realm.processor.javawriter.JavaWriter$Scope:
+    io.realm.processor.javawriter.JavaWriter$Scope TYPE_DECLARATION -> TYPE_DECLARATION
+    io.realm.processor.javawriter.JavaWriter$Scope INTERFACE_DECLARATION -> INTERFACE_DECLARATION
+    io.realm.processor.javawriter.JavaWriter$Scope ABSTRACT_METHOD -> ABSTRACT_METHOD
+    io.realm.processor.javawriter.JavaWriter$Scope NON_ABSTRACT_METHOD -> NON_ABSTRACT_METHOD
+    io.realm.processor.javawriter.JavaWriter$Scope CONSTRUCTOR -> CONSTRUCTOR
+    io.realm.processor.javawriter.JavaWriter$Scope CONTROL_FLOW -> CONTROL_FLOW
+    io.realm.processor.javawriter.JavaWriter$Scope ANNOTATION_ATTRIBUTE -> ANNOTATION_ATTRIBUTE
+    io.realm.processor.javawriter.JavaWriter$Scope ANNOTATION_ARRAY_VALUE -> ANNOTATION_ARRAY_VALUE
+    io.realm.processor.javawriter.JavaWriter$Scope INITIALIZER -> INITIALIZER
+    io.realm.processor.javawriter.JavaWriter$Scope[] $VALUES -> $VALUES
+    852:852:io.realm.processor.javawriter.JavaWriter$Scope[] values() -> values
+    852:852:io.realm.processor.javawriter.JavaWriter$Scope valueOf(java.lang.String) -> valueOf
 jp.wasabeef.recyclerview.BuildConfig -> jp.wasabeef.recyclerview.BuildConfig:
     boolean DEBUG -> DEBUG
     java.lang.String APPLICATION_ID -> APPLICATION_ID
@@ -26549,19 +26588,19 @@ jp.wasabeef.recyclerview.animators.BaseItemAnimator -> jp.wasabeef.recyclerview.
     30:30:java.util.ArrayList access$700(jp.wasabeef.recyclerview.animators.BaseItemAnimator) -> d
     30:30:void access$800(jp.wasabeef.recyclerview.animators.BaseItemAnimator) -> e
     30:30:java.util.ArrayList access$1000(jp.wasabeef.recyclerview.animators.BaseItemAnimator) -> f
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$1 -> aja:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$1 -> aiz:
     java.util.ArrayList val$moves -> a
     jp.wasabeef.recyclerview.animators.BaseItemAnimator this$0 -> b
     119:125:void run() -> run
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$2 -> ajb:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$2 -> aja:
     java.util.ArrayList val$changes -> a
     jp.wasabeef.recyclerview.animators.BaseItemAnimator this$0 -> b
     143:148:void run() -> run
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$3 -> ajc:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$3 -> ajb:
     java.util.ArrayList val$additions -> a
     jp.wasabeef.recyclerview.animators.BaseItemAnimator this$0 -> b
     165:170:void run() -> run
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$4 -> ajd:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$4 -> ajc:
     android.support.v7.widget.RecyclerView$ViewHolder val$holder -> a
     int val$deltaX -> b
     int val$deltaY -> c
@@ -26570,20 +26609,20 @@ jp.wasabeef.recyclerview.animators.BaseItemAnimator$4 -> ajd:
     252:253:void onAnimationStart(android.view.View) -> onAnimationStart
     257:263:void onAnimationCancel(android.view.View) -> onAnimationCancel
     267:271:void onAnimationEnd(android.view.View) -> onAnimationEnd
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$5 -> aje:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$5 -> ajd:
     jp.wasabeef.recyclerview.animators.BaseItemAnimator$ChangeInfo val$changeInfo -> a
     android.support.v4.view.ViewPropertyAnimatorCompat val$oldViewAnim -> b
     jp.wasabeef.recyclerview.animators.BaseItemAnimator this$0 -> c
     313:314:void onAnimationStart(android.view.View) -> onAnimationStart
     318:325:void onAnimationEnd(android.view.View) -> onAnimationEnd
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$6 -> ajf:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$6 -> aje:
     jp.wasabeef.recyclerview.animators.BaseItemAnimator$ChangeInfo val$changeInfo -> a
     android.support.v4.view.ViewPropertyAnimatorCompat val$newViewAnimation -> b
     android.view.View val$newView -> c
     jp.wasabeef.recyclerview.animators.BaseItemAnimator this$0 -> d
     335:336:void onAnimationStart(android.view.View) -> onAnimationStart
     340:347:void onAnimationEnd(android.view.View) -> onAnimationEnd
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$ChangeInfo -> ajg:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$ChangeInfo -> ajf:
     android.support.v7.widget.RecyclerView$ViewHolder oldHolder -> a
     android.support.v7.widget.RecyclerView$ViewHolder newHolder -> b
     int fromX -> c
@@ -26603,13 +26642,13 @@ jp.wasabeef.recyclerview.animators.BaseItemAnimator$DefaultRemoveVpaListener -> 
     655:656:void onAnimationStart(android.view.View) -> onAnimationStart
     660:661:void onAnimationCancel(android.view.View) -> onAnimationCancel
     665:669:void onAnimationEnd(android.view.View) -> onAnimationEnd
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$MoveInfo -> ajh:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$MoveInfo -> ajg:
     android.support.v7.widget.RecyclerView$ViewHolder holder -> a
     int fromX -> b
     int fromY -> c
     int toX -> d
     int toY -> e
-jp.wasabeef.recyclerview.animators.BaseItemAnimator$VpaListenerAdapter -> aji:
+jp.wasabeef.recyclerview.animators.BaseItemAnimator$VpaListenerAdapter -> ajh:
     607:607:void onAnimationStart(android.view.View) -> onAnimationStart
     611:611:void onAnimationEnd(android.view.View) -> onAnimationEnd
     615:615:void onAnimationCancel(android.view.View) -> onAnimationCancel
@@ -26746,7 +26785,7 @@ okio.AsyncTimeout -> okio.AsyncTimeout:
     257:260:java.io.IOException exit(java.io.IOException) -> exit
     293:316:okio.AsyncTimeout awaitTimeout() -> awaitTimeout
     40:40:okio.AsyncTimeout access$000() -> access$000
-okio.AsyncTimeout$1 -> ajj:
+okio.AsyncTimeout$1 -> aji:
     okio.Sink val$sink -> a
     okio.AsyncTimeout this$0 -> b
     152:162:void write(okio.Buffer,long) -> write
@@ -26754,16 +26793,16 @@ okio.AsyncTimeout$1 -> ajj:
     178:188:void close() -> close
     191:191:okio.Timeout timeout() -> timeout
     195:195:java.lang.String toString() -> toString
-okio.AsyncTimeout$2 -> ajk:
+okio.AsyncTimeout$2 -> ajj:
     okio.Source val$source -> a
     okio.AsyncTimeout this$0 -> b
     208:217:long read(okio.Buffer,long) -> read
     222:231:void close() -> close
     234:234:okio.Timeout timeout() -> timeout
     238:238:java.lang.String toString() -> toString
-okio.AsyncTimeout$Watchdog -> ajl:
+okio.AsyncTimeout$Watchdog -> ajk:
     272:280:void run() -> run
-okio.Base64 -> ajm:
+okio.Base64 -> ajl:
     byte[] MAP -> a
     31:107:byte[] decode(java.lang.String) -> a
     118:144:java.lang.String encode(byte[]) -> a
@@ -26856,14 +26895,14 @@ okio.Buffer -> okio.Buffer:
     47:47:okio.BufferedSink write(byte[],int,int) -> write
     47:47:okio.BufferedSink write(byte[]) -> write
     47:47:okio.BufferedSink write(okio.ByteString) -> write
-okio.Buffer$1 -> ajn:
+okio.Buffer$1 -> ajm:
     okio.Buffer this$0 -> a
     66:67:void write(int) -> write
     70:71:void write(byte[],int,int) -> write
     74:74:void flush() -> flush
     77:77:void close() -> close
     80:80:java.lang.String toString() -> toString
-okio.Buffer$2 -> ajo:
+okio.Buffer$2 -> ajn:
     okio.Buffer this$0 -> a
     108:109:int read() -> read
     113:113:int read(byte[],int,int) -> read
@@ -27029,7 +27068,7 @@ okio.Okio -> okio.Okio:
     195:198:okio.Source source(java.net.Socket) -> source
     202:202:okio.AsyncTimeout timeout(java.net.Socket) -> a
     36:36:java.util.logging.Logger access$000() -> a
-okio.Okio$1 -> ajp:
+okio.Okio$1 -> ajo:
     okio.Timeout val$timeout -> a
     java.io.OutputStream val$out -> b
     73:89:void write(okio.Buffer,long) -> write
@@ -27037,17 +27076,17 @@ okio.Okio$1 -> ajp:
     96:97:void close() -> close
     100:100:okio.Timeout timeout() -> timeout
     104:104:java.lang.String toString() -> toString
-okio.Okio$2 -> ajq:
+okio.Okio$2 -> ajp:
     okio.Timeout val$timeout -> a
     java.io.InputStream val$in -> b
     132:140:long read(okio.Buffer,long) -> read
     144:145:void close() -> close
     148:148:okio.Timeout timeout() -> timeout
     152:152:java.lang.String toString() -> toString
-okio.Okio$3 -> ajr:
+okio.Okio$3 -> ajq:
     java.net.Socket val$socket -> a
     205:209:void timedOut() -> timedOut
-okio.RealBufferedSink -> ajs:
+okio.RealBufferedSink -> ajr:
     okio.Buffer buffer -> a
     okio.Sink sink -> b
     boolean closed -> c
@@ -27075,14 +27114,14 @@ okio.RealBufferedSink -> ajs:
     215:215:okio.Timeout timeout() -> timeout
     219:219:java.lang.String toString() -> toString
     22:22:boolean access$000(okio.RealBufferedSink) -> a
-okio.RealBufferedSink$1 -> ajt:
+okio.RealBufferedSink$1 -> ajs:
     okio.RealBufferedSink this$0 -> a
     154:157:void write(int) -> write
     160:163:void write(byte[],int,int) -> write
     167:170:void flush() -> flush
     173:174:void close() -> close
     177:177:java.lang.String toString() -> toString
-okio.RealBufferedSource -> aju:
+okio.RealBufferedSource -> ajt:
     okio.Buffer buffer -> a
     okio.Source source -> b
     boolean closed -> c
@@ -27123,14 +27162,14 @@ okio.RealBufferedSource -> aju:
     328:328:okio.Timeout timeout() -> timeout
     332:332:java.lang.String toString() -> toString
     25:25:boolean access$000(okio.RealBufferedSource) -> a
-okio.RealBufferedSource$1 -> ajv:
+okio.RealBufferedSource$1 -> aju:
     okio.RealBufferedSource this$0 -> a
     285:290:int read() -> read
     294:302:int read(byte[],int,int) -> read
     306:307:int available() -> available
     311:312:void close() -> close
     315:315:java.lang.String toString() -> toString
-okio.Segment -> ajw:
+okio.Segment -> ajv:
     byte[] data -> a
     int pos -> b
     int limit -> c
@@ -27141,7 +27180,7 @@ okio.Segment -> ajw:
     82:102:okio.Segment split(int) -> a
     111:116:void compact() -> b
     122:134:void writeTo(okio.Segment,int) -> a
-okio.SegmentPool -> ajx:
+okio.SegmentPool -> ajw:
     okio.SegmentPool INSTANCE -> a
     okio.Segment next -> c
     long byteCount -> b
@@ -27170,11 +27209,11 @@ okio.Timeout -> okio.Timeout:
     128:129:okio.Timeout clearTimeout() -> clearTimeout
     134:135:okio.Timeout clearDeadline() -> clearDeadline
     145:152:void throwIfReached() -> throwIfReached
-okio.Timeout$1 -> ajy:
+okio.Timeout$1 -> ajx:
     50:50:okio.Timeout timeout(long,java.util.concurrent.TimeUnit) -> timeout
     54:54:okio.Timeout deadlineNanoTime(long) -> deadlineNanoTime
     58:58:void throwIfReached() -> throwIfReached
-okio.Util -> ajz:
+okio.Util -> ajy:
     java.nio.charset.Charset UTF_8 -> a
     28:32:void checkOffsetAndCount(long,long,long) -> a
     35:38:short reverseBytesShort(short) -> a
@@ -27870,7 +27909,7 @@ org.aspectj.internal.lang.reflect.AdviceImpl -> org.aspectj.internal.lang.reflec
     107:113:java.lang.String getName() -> getName
     117:117:org.aspectj.lang.reflect.PointcutExpression getPointcutExpression() -> getPointcutExpression
     121:184:java.lang.String toString() -> toString
-org.aspectj.internal.lang.reflect.AdviceImpl$1 -> aka:
+org.aspectj.internal.lang.reflect.AdviceImpl$1 -> ajz:
     int[] $SwitchMap$org$aspectj$lang$reflect$AdviceKind -> a
 org.aspectj.internal.lang.reflect.AjTypeImpl -> org.aspectj.internal.lang.reflect.AjTypeImpl:
     java.lang.Class clazz -> a
@@ -27980,7 +28019,7 @@ org.aspectj.internal.lang.reflect.DeclareAnnotationImpl -> org.aspectj.internal.
     82:82:java.lang.annotation.Annotation getAnnotation() -> getAnnotation
     86:86:java.lang.String getAnnotationAsText() -> getAnnotationAsText
     90:112:java.lang.String toString() -> toString
-org.aspectj.internal.lang.reflect.DeclareAnnotationImpl$1 -> akb:
+org.aspectj.internal.lang.reflect.DeclareAnnotationImpl$1 -> aka:
     int[] $SwitchMap$org$aspectj$lang$reflect$DeclareAnnotation$Kind -> a
 org.aspectj.internal.lang.reflect.DeclareErrorOrWarningImpl -> org.aspectj.internal.lang.reflect.DeclareErrorOrWarningImpl:
     org.aspectj.lang.reflect.PointcutExpression pc -> a
@@ -28064,7 +28103,7 @@ org.aspectj.internal.lang.reflect.PointcutBasedPerClauseImpl -> org.aspectj.inte
     org.aspectj.lang.reflect.PointcutExpression pointcutExpression -> a
     34:34:org.aspectj.lang.reflect.PointcutExpression getPointcutExpression() -> getPointcutExpression
     38:47:java.lang.String toString() -> toString
-org.aspectj.internal.lang.reflect.PointcutBasedPerClauseImpl$1 -> akc:
+org.aspectj.internal.lang.reflect.PointcutBasedPerClauseImpl$1 -> akb:
     int[] $SwitchMap$org$aspectj$lang$reflect$PerClauseKind -> a
 org.aspectj.internal.lang.reflect.PointcutExpressionImpl -> org.aspectj.internal.lang.reflect.PointcutExpressionImpl:
     java.lang.String expression -> a
@@ -28092,7 +28131,7 @@ org.aspectj.internal.lang.reflect.StringToType -> org.aspectj.internal.lang.refl
     29:37:java.lang.reflect.Type[] commaSeparatedListToTypeArray(java.lang.String,java.lang.Class) -> commaSeparatedListToTypeArray
     43:56:java.lang.reflect.Type stringToType(java.lang.String,java.lang.Class) -> stringToType
     62:68:java.lang.reflect.Type makeParameterizedType(java.lang.String,java.lang.Class) -> a
-org.aspectj.internal.lang.reflect.StringToType$1 -> akd:
+org.aspectj.internal.lang.reflect.StringToType$1 -> akc:
     java.lang.reflect.Type[] val$typeParams -> a
     java.lang.Class val$baseClass -> b
     71:71:java.lang.reflect.Type[] getActualTypeArguments() -> getActualTypeArguments
@@ -28534,7 +28573,7 @@ org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11 -> org.aspectj.runti
     67:68:void dec() -> dec
     71:71:boolean isNotZero() -> isNotZero
     76:76:void removeThreadCounter() -> removeThreadCounter
-org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11$Counter -> ake:
+org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11$Counter -> akd:
     int value -> a
 org.aspectj.runtime.internal.cflowstack.ThreadStack -> org.aspectj.runtime.internal.cflowstack.ThreadStack:
     java.util.Stack getThreadStack() -> getThreadStack
@@ -28545,17 +28584,17 @@ org.aspectj.runtime.internal.cflowstack.ThreadStackFactory -> org.aspectj.runtim
 org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl -> org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl:
     32:32:org.aspectj.runtime.internal.cflowstack.ThreadStack getNewThreadStack() -> getNewThreadStack
     58:58:org.aspectj.runtime.internal.cflowstack.ThreadCounter getNewThreadCounter() -> getNewThreadCounter
-org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$1 -> akf:
-org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadCounterImpl -> akg:
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$1 -> ake:
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadCounterImpl -> akf:
     38:38:java.lang.Object initialValue() -> initialValue
     41:41:org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadCounterImpl$Counter getThreadCounter() -> a
     45:46:void removeThreadCounter() -> removeThreadCounter
     48:48:void inc() -> inc
     49:49:void dec() -> dec
     50:50:boolean isNotZero() -> isNotZero
-org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadCounterImpl$Counter -> akh:
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadCounterImpl$Counter -> akg:
     int value -> a
-org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadStackImpl -> aki:
+org.aspectj.runtime.internal.cflowstack.ThreadStackFactoryImpl$ThreadStackImpl -> akh:
     21:21:java.lang.Object initialValue() -> initialValue
     24:24:java.util.Stack getThreadStack() -> getThreadStack
     27:28:void removeThreadStack() -> removeThreadStack
@@ -28569,27 +28608,27 @@ org.aspectj.runtime.internal.cflowstack.ThreadStackImpl11 -> org.aspectj.runtime
     int change_count -> d
     29:52:java.util.Stack getThreadStack() -> getThreadStack
     57:57:void removeThreadStack() -> removeThreadStack
-org.aspectj.runtime.reflect.AdviceSignatureImpl -> akj:
+org.aspectj.runtime.reflect.AdviceSignatureImpl -> aki:
     java.lang.Class returnType -> a
     java.lang.reflect.Method adviceMethod -> m
     42:43:java.lang.Class getReturnType() -> getReturnType
     47:56:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
     60:68:java.lang.String toAdviceName(java.lang.String) -> a
     75:82:java.lang.reflect.Method getAdvice() -> getAdvice
-org.aspectj.runtime.reflect.CatchClauseSignatureImpl -> akk:
+org.aspectj.runtime.reflect.CatchClauseSignatureImpl -> akj:
     java.lang.Class parameterType -> a
     java.lang.String parameterName -> b
     36:37:java.lang.Class getParameterType() -> getParameterType
     40:41:java.lang.String getParameterName() -> getParameterName
     45:45:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
-org.aspectj.runtime.reflect.CodeSignatureImpl -> akl:
+org.aspectj.runtime.reflect.CodeSignatureImpl -> akk:
     java.lang.Class[] parameterTypes -> b
     java.lang.String[] parameterNames -> c
     java.lang.Class[] exceptionTypes -> d
     37:38:java.lang.Class[] getParameterTypes() -> getParameterTypes
     41:42:java.lang.String[] getParameterNames() -> getParameterNames
     45:46:java.lang.Class[] getExceptionTypes() -> getExceptionTypes
-org.aspectj.runtime.reflect.ConstructorSignatureImpl -> akm:
+org.aspectj.runtime.reflect.ConstructorSignatureImpl -> akl:
     java.lang.reflect.Constructor constructor -> a
     34:34:java.lang.String getName() -> getName
     37:42:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
@@ -28648,12 +28687,12 @@ org.aspectj.runtime.reflect.FieldSignatureImpl -> org.aspectj.runtime.reflect.Fi
     37:38:java.lang.Class getFieldType() -> getFieldType
     42:49:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
     56:63:java.lang.reflect.Field getField() -> getField
-org.aspectj.runtime.reflect.InitializerSignatureImpl -> akn:
+org.aspectj.runtime.reflect.InitializerSignatureImpl -> akm:
     java.lang.reflect.Constructor constructor -> a
     35:35:java.lang.String getName() -> getName
     39:44:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
     51:58:java.lang.reflect.Constructor getInitializer() -> getInitializer
-org.aspectj.runtime.reflect.JoinPointImpl -> ako:
+org.aspectj.runtime.reflect.JoinPointImpl -> akn:
     java.lang.Object _this -> a
     java.lang.Object target -> b
     java.lang.Object[] args -> c
@@ -28672,8 +28711,8 @@ org.aspectj.runtime.reflect.JoinPointImpl -> ako:
     141:142:void set$AroundClosure(org.aspectj.runtime.internal.AroundClosure) -> set$AroundClosure
     146:149:java.lang.Object proceed() -> proceed
     154:221:java.lang.Object proceed(java.lang.Object[]) -> proceed
-org.aspectj.runtime.reflect.JoinPointImpl$EnclosingStaticPartImpl -> akp:
-org.aspectj.runtime.reflect.JoinPointImpl$StaticPartImpl -> akq:
+org.aspectj.runtime.reflect.JoinPointImpl$EnclosingStaticPartImpl -> ako:
+org.aspectj.runtime.reflect.JoinPointImpl$StaticPartImpl -> akp:
     java.lang.String kind -> a
     org.aspectj.lang.Signature signature -> b
     org.aspectj.lang.reflect.SourceLocation sourceLocation -> c
@@ -28686,18 +28725,18 @@ org.aspectj.runtime.reflect.JoinPointImpl$StaticPartImpl -> akq:
     62:62:java.lang.String toString() -> toString
     66:66:java.lang.String toShortString() -> toShortString
     70:70:java.lang.String toLongString() -> toLongString
-org.aspectj.runtime.reflect.LockSignatureImpl -> akr:
+org.aspectj.runtime.reflect.LockSignatureImpl -> akq:
     java.lang.Class parameterType -> a
     32:33:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
-org.aspectj.runtime.reflect.MemberSignatureImpl -> aks:
-org.aspectj.runtime.reflect.MethodSignatureImpl -> akt:
+org.aspectj.runtime.reflect.MemberSignatureImpl -> akr:
+org.aspectj.runtime.reflect.MethodSignatureImpl -> aks:
     java.lang.reflect.Method method -> m
     java.lang.Class returnType -> a
     38:40:java.lang.Class getReturnType() -> getReturnType
     44:55:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
     64:75:java.lang.reflect.Method getMethod() -> getMethod
     88:112:java.lang.reflect.Method search(java.lang.Class,java.lang.String,java.lang.Class[],java.util.Set) -> a
-org.aspectj.runtime.reflect.SignatureImpl -> aku:
+org.aspectj.runtime.reflect.SignatureImpl -> akt:
     boolean useCache -> a
     int modifiers -> e
     java.lang.String name -> f
@@ -28724,16 +28763,16 @@ org.aspectj.runtime.reflect.SignatureImpl -> aku:
     161:162:java.lang.Class extractType(int) -> c
     173:178:java.lang.String[] extractStrings(int) -> d
     181:186:java.lang.Class[] extractTypes(int) -> e
-org.aspectj.runtime.reflect.SignatureImpl$Cache -> akv:
+org.aspectj.runtime.reflect.SignatureImpl$Cache -> aku:
     java.lang.String get(int) -> a
     void set(int,java.lang.String) -> a
-org.aspectj.runtime.reflect.SignatureImpl$CacheImpl -> akw:
+org.aspectj.runtime.reflect.SignatureImpl$CacheImpl -> akv:
     java.lang.ref.SoftReference toStringCacheRef -> a
     217:221:java.lang.String get(int) -> a
     225:230:void set(int,java.lang.String) -> a
     233:233:java.lang.String[] array() -> a
     237:239:java.lang.String[] makeCache() -> b
-org.aspectj.runtime.reflect.SourceLocationImpl -> akx:
+org.aspectj.runtime.reflect.SourceLocationImpl -> akw:
     java.lang.Class withinType -> a
     java.lang.String fileName -> b
     int line -> c
@@ -28742,7 +28781,7 @@ org.aspectj.runtime.reflect.SourceLocationImpl -> akx:
     32:32:int getLine() -> getLine
     33:33:int getColumn() -> getColumn
     36:36:java.lang.String toString() -> toString
-org.aspectj.runtime.reflect.StringMaker -> aky:
+org.aspectj.runtime.reflect.StringMaker -> akx:
     boolean shortTypeNames -> a
     boolean includeArgs -> b
     boolean includeThrows -> c
@@ -28764,7 +28803,7 @@ org.aspectj.runtime.reflect.StringMaker -> aky:
     112:116:void addTypeNames(java.lang.StringBuffer,java.lang.Class[]) -> a
     119:132:void addSignature(java.lang.StringBuffer,java.lang.Class[]) -> b
     135:139:void addThrows(java.lang.StringBuffer,java.lang.Class[]) -> c
-org.aspectj.runtime.reflect.UnlockSignatureImpl -> akz:
+org.aspectj.runtime.reflect.UnlockSignatureImpl -> aky:
     java.lang.Class parameterType -> a
     32:33:java.lang.String createToString(org.aspectj.runtime.reflect.StringMaker) -> createToString
 retrofit.Callback -> retrofit.Callback:
@@ -29479,7 +29518,7 @@ uk.co.chrisjenx.calligraphy.BuildConfig -> uk.co.chrisjenx.calligraphy.BuildConf
     java.lang.String FLAVOR -> FLAVOR
     int VERSION_CODE -> VERSION_CODE
     java.lang.String VERSION_NAME -> VERSION_NAME
-uk.co.chrisjenx.calligraphy.CalligraphyActivityFactory -> ala:
+uk.co.chrisjenx.calligraphy.CalligraphyActivityFactory -> akz:
     android.view.View onActivityCreateView(android.view.View,android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> a
 uk.co.chrisjenx.calligraphy.CalligraphyConfig -> uk.co.chrisjenx.calligraphy.CalligraphyConfig:
     uk.co.chrisjenx.calligraphy.CalligraphyConfig sInstance -> a
@@ -29519,7 +29558,7 @@ uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper -> uk.co.chrisjenx.calligr
     59:59:android.view.View onActivityCreateView(android.app.Activity,android.view.View,android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> onActivityCreateView
     69:72:uk.co.chrisjenx.calligraphy.CalligraphyActivityFactory get(android.app.Activity) -> a
     109:115:java.lang.Object getSystemService(java.lang.String) -> getSystemService
-uk.co.chrisjenx.calligraphy.CalligraphyFactory -> alb:
+uk.co.chrisjenx.calligraphy.CalligraphyFactory -> ala:
     java.util.Map sStyles -> a
     int mAttributeId -> b
     49:64:int[] getStyleForTextView(android.widget.TextView) -> a
@@ -29529,13 +29568,13 @@ uk.co.chrisjenx.calligraphy.CalligraphyFactory -> alb:
     111:113:boolean matchesResourceIdName(android.view.View,java.lang.String) -> a
     132:136:android.view.View onViewCreated(android.view.View,android.content.Context,android.util.AttributeSet) -> a
     140:204:void onViewCreatedInternal(android.view.View,android.content.Context,android.util.AttributeSet) -> b
-uk.co.chrisjenx.calligraphy.CalligraphyFactory$1 -> alc:
-uk.co.chrisjenx.calligraphy.CalligraphyFactory$2 -> ald:
+uk.co.chrisjenx.calligraphy.CalligraphyFactory$1 -> alb:
+uk.co.chrisjenx.calligraphy.CalligraphyFactory$2 -> alc:
     android.view.ViewGroup val$parent -> a
     android.content.Context val$context -> b
     uk.co.chrisjenx.calligraphy.CalligraphyFactory this$0 -> c
     186:201:void onGlobalLayout() -> onGlobalLayout
-uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater -> ale:
+uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater -> ald:
     java.lang.String[] sClassPrefixList -> a
     int mAttributeId -> b
     uk.co.chrisjenx.calligraphy.CalligraphyFactory mCalligraphyFactory -> c
@@ -29552,15 +29591,15 @@ uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater -> ale:
     159:170:android.view.View onCreateView(java.lang.String,android.util.AttributeSet) -> onCreateView
     196:213:android.view.View createCustomViewInternal(android.view.View,android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> b
     20:20:android.view.View access$000(uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater,android.view.View,android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> a
-uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater$PrivateWrapperFactory2 -> alf:
+uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater$PrivateWrapperFactory2 -> ale:
     uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater mInflater -> c
     296:298:android.view.View onCreateView(android.view.View,java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
-uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater$WrapperFactory -> alg:
+uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater$WrapperFactory -> alf:
     android.view.LayoutInflater$Factory mFactory -> a
     uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater mInflater -> b
     uk.co.chrisjenx.calligraphy.CalligraphyFactory mCalligraphyFactory -> c
     237:246:android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
-uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater$WrapperFactory2 -> alh:
+uk.co.chrisjenx.calligraphy.CalligraphyLayoutInflater$WrapperFactory2 -> alg:
     android.view.LayoutInflater$Factory2 mFactory2 -> a
     uk.co.chrisjenx.calligraphy.CalligraphyFactory mCalligraphyFactory -> b
     267:268:android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet) -> onCreateView
@@ -29586,7 +29625,7 @@ uk.co.chrisjenx.calligraphy.CalligraphyUtils -> uk.co.chrisjenx.calligraphy.Call
     251:266:java.lang.String pullFontPathFromTheme(android.content.Context,int,int) -> a
     280:310:java.lang.String pullFontPathFromTheme(android.content.Context,int,int,int) -> a
     321:329:boolean canCheckForV7Toolbar() -> a
-uk.co.chrisjenx.calligraphy.CalligraphyUtils$1 -> ali:
+uk.co.chrisjenx.calligraphy.CalligraphyUtils$1 -> alh:
     android.graphics.Typeface val$typeface -> a
     81:81:void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
     85:85:void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
@@ -30543,7 +30582,7 @@ uk.co.chrisjenx.calligraphy.R$styleable -> uk.co.chrisjenx.calligraphy.R$styleab
     int View_android_focusable -> View_android_focusable
     int View_paddingEnd -> View_paddingEnd
     int View_paddingStart -> View_paddingStart
-uk.co.chrisjenx.calligraphy.ReflectionUtils -> alj:
+uk.co.chrisjenx.calligraphy.ReflectionUtils -> ali:
     15:20:java.lang.reflect.Field getField(java.lang.Class,java.lang.String) -> a
     25:28:java.lang.Object getValue(java.lang.reflect.Field,java.lang.Object) -> a
     33:36:void setValue(java.lang.reflect.Field,java.lang.Object,java.lang.Object) -> a

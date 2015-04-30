@@ -1216,9 +1216,6 @@ com.radmagnet.api.RadmagnetApi:
     private static final java.lang.String URL
 com.radmagnet.fragment.NewsFragment:
     private android.support.v7.widget.ShareActionProvider mShareActionProvider
-com.squareup.javawriter.JavaWriter:
-    private static final int MAX_SINGLE_LINE_ATTRIBUTES
-    private static final java.lang.String INDENT
 com.squareup.picasso.AssetRequestHandler:
     protected static final java.lang.String ANDROID_ASSET
 com.squareup.picasso.ContactsPhotoRequestHandler:
