@@ -49,5 +49,6 @@
     <string name="copyright_txt"><u>copyright @ 2015 RADMAGNET</u></string>
     <string name="noRadsHere_msg">Oops! No Rads Here! \n Pull to Refresh</string>
     <string name="new_txt">NEW</string>
+    <string name="noLovedRads_msg">You don\'t love any Rads yet</string>
 
 </resources>

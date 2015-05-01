@@ -8,10 +8,12 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.h6ah4i.android.widget.advrecyclerview.animator.SwipeDismissItemAnimator;
 import com.h6ah4i.android.widget.advrecyclerview.swipeable.RecyclerViewSwipeManager;
 import com.h6ah4i.android.widget.advrecyclerview.touchguard.RecyclerViewTouchActionGuardManager;
+import com.radmagnet.R;
 import com.radmagnet.adapters.BookmarksAdapter;
 import com.radmagnet.models.News;
 
@@ -29,8 +31,11 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
     @InjectView(com.radmagnet.R.id.bookmarksList)
     RecyclerView mBookmarksRv;
 
-    @InjectView(com.radmagnet.R.id.toolbar)
+    @InjectView(R.id.toolbarLayout)
     Toolbar mToolbar;
+
+    @InjectView(R.id.emptyView)
+    TextView mEmptyTv;
 
     BookmarksAdapter mBookmarkAdapter;
 
@@ -48,7 +53,7 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
 
         ButterKnife.inject(this);
 
-        setupActionBar(true, (Toolbar) findViewById(com.radmagnet.R.id.toolbar));
+        setupActionBar(true, mToolbar);
         setupNewsList();
 
     }
@@ -61,6 +66,9 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
         mRecyclerViewTouchActionGuardManager.setInterceptVerticalScrollingWhileAnimationRunning(true);
         mRecyclerViewTouchActionGuardManager.setEnabled(true);
 
+
+
+
         mBookmarkAdapter = new BookmarksAdapter(this, getRealmData(), true);
 
         mRecyclerViewSwipeManager = new RecyclerViewSwipeManager();
@@ -69,6 +77,7 @@ public class BookmarkActivity extends BaseActivity implements SearchView.OnQuery
         mBookmarksRv.setLayoutManager(new LinearLayoutManager(this));
         mBookmarksRv.setAdapter(mRecyclerViewSwipeManager.createWrappedAdapter(mBookmarkAdapter));
         mBookmarksRv.setItemAnimator(new SwipeDismissItemAnimator());
+        mBookmarkAdapter.setEmptyView(mEmptyTv);
 
         mRecyclerViewTouchActionGuardManager.attachRecyclerView(mBookmarksRv);
         mRecyclerViewSwipeManager.attachRecyclerView(mBookmarksRv);

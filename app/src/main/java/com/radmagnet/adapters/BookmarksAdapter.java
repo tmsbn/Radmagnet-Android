@@ -35,7 +35,10 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
 
     BookmarkListener bookmarkListener;
 
-    String mSearchTerm="";
+
+    TextView emptyTv;
+
+    String mSearchTerm = "";
 
     public BookmarksAdapter(Context context, RealmResults<News> realmResults, boolean automaticUpdate) {
 
@@ -53,13 +56,29 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
             Realm.getInstance(context).addChangeListener(new RealmChangeListener() {
                 @Override
                 public void onChange() {
+
                     notifyDataSetChanged();
+                    refreshEmptyView();
                 }
             });
         }
 
 
         setHasStableIds(true);
+    }
+
+    public void refreshEmptyView() {
+
+        if (mRealmResults.size() == 0)
+            emptyTv.setVisibility(View.VISIBLE);
+        else
+            emptyTv.setVisibility(View.GONE);
+
+    }
+
+    public void setEmptyView(TextView emptyTv) {
+        this.emptyTv = emptyTv;
+        refreshEmptyView();
     }
 
     public void setOnItemClickedListener(BookmarkListener bookmarkListener) {
@@ -83,12 +102,12 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
     @Override
     public void onBindViewHolder(BookmarksViewHolder holder, final int position) {
 
-        News news=mRealmResults.get(position);
+        News news = mRealmResults.get(position);
         holder.headlineTv.setText(news.getHeadline());
         holder.dateTv.setText(new SimpleDateFormat(BaseApplication.DATE_FORMAT, Locale.US).format(news.getCreatedDate()));
         try {
             Picasso.with(mContext).load(news.getImageUrl()).into(holder.icon);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         holder.container.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +121,7 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
 
         if (mContext instanceof BaseActivity) {
             BaseActivity activity = (BaseActivity) mContext;
-            holder.headlineTv.setText(activity.highlight(mSearchTerm,news.getHeadline()));
+            holder.headlineTv.setText(activity.highlight(mSearchTerm, news.getHeadline()));
             int color = activity.getColorFromCategory(news.getCategory());
             holder.categoryTv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
             Drawable drawable = holder.categoryTv.getBackground();
@@ -110,8 +129,6 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
         }
 
     }
-
-
 
 
     @Override
@@ -131,7 +148,7 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
 
     @Override
     public void onSetSwipeBackground(BookmarksViewHolder bookmarksViewHolder, int reaction) {
-       // bookmarksViewHolder.itemView.setBackgroundResource(R.color.dark_gray);
+        // bookmarksViewHolder.itemView.setBackgroundResource(R.color.dark_gray);
 
     }
 
@@ -177,7 +194,6 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
             categoryTv = (TextView) v.findViewById(com.radmagnet.R.id.category);
 
 
-
         }
 
 
@@ -201,6 +217,6 @@ public class BookmarksAdapter extends RecyclerView.Adapter<BookmarksAdapter.Book
 
     public interface BookmarkListener {
 
-        public void onItemClick(News news,int position);
+        public void onItemClick(News news, int position);
     }
 }

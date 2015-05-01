@@ -1338,8 +1338,6 @@ de.keyboardsurfer.android.widget.crouton.DefaultAnimationsBuilder:
     private static final long DURATION
     29:31:private DefaultAnimationsBuilder()
 de.keyboardsurfer.android.widget.crouton.Manager$Messages
-hugo.weaving.internal.Strings:
-    156:157:private Strings()
 jp.wasabeef.recyclerview.animators.BaseItemAnimator:
     private static final boolean DEBUG
 jp.wasabeef.recyclerview.animators.adapters.AlphaInAnimationAdapter:
@@ -1365,44 +1363,6 @@ okio.SegmentPool:
     static final long MAX_SIZE
 okio.Util:
     24:25:private Util()
-org.aspectj.internal.lang.reflect.AdviceImpl:
-    private static final java.lang.String AJC_INTERNAL
-org.aspectj.internal.lang.reflect.AjTypeImpl:
-    private static final java.lang.String ajcMagic
-org.aspectj.internal.lang.reflect.InterTypeMethodDeclarationImpl:
-    private org.aspectj.lang.reflect.AjType[] parameterTypes
-    private java.lang.reflect.Type[] genericParameterTypes
-    private org.aspectj.lang.reflect.AjType returnType
-    private java.lang.reflect.Type genericReturnType
-    private org.aspectj.lang.reflect.AjType[] exceptionTypes
-org.aspectj.lang.Aspects:
-    private static final java.lang.String ASPECTOF
-    private static final java.lang.String HASASPECT
-org.aspectj.lang.Aspects14:
-    private static final java.lang.String ASPECTOF
-    private static final java.lang.String HASASPECT
-org.aspectj.lang.internal.lang.PlaceHolder
-org.aspectj.runtime.internal.cflowstack.ThreadCounterImpl11:
-    private static final int COLLECT_AT
-    private static final int MIN_COLLECT_AT
-org.aspectj.runtime.internal.cflowstack.ThreadStackImpl11:
-    private static final int COLLECT_AT
-    private static final int MIN_COLLECT_AT
-org.aspectj.runtime.reflect.LockSignatureImpl:
-    37:38:public java.lang.Class getParameterType()
-org.aspectj.runtime.reflect.SignatureImpl:
-    static final char SEP
-    static final java.lang.String INNER_SEP
-    86:88:java.lang.String fullTypeName(java.lang.Class)
-    92:94:java.lang.String stripPackageName(java.lang.String)
-    98:100:java.lang.String shortTypeName(java.lang.Class)
-    104:108:void addFullTypeNames(java.lang.StringBuffer,java.lang.Class[])
-    110:114:void addShortTypeNames(java.lang.StringBuffer,java.lang.Class[])
-    117:118:void addTypeArray(java.lang.StringBuffer,java.lang.Class[])
-    193:194:static void setUseCache(boolean)
-    197:197:static boolean getUseCache()
-org.aspectj.runtime.reflect.UnlockSignatureImpl:
-    37:38:public java.lang.Class getParameterType()
 uk.co.chrisjenx.calligraphy.CalligraphyFactory:
     private static final java.lang.String ACTION_BAR_TITLE
     private static final java.lang.String ACTION_BAR_SUBTITLE
