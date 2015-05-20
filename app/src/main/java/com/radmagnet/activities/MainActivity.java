@@ -40,6 +40,7 @@ import io.realm.Realm;
 import io.realm.RealmQuery;
 import io.realm.RealmResults;
 import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
+import jp.wasabeef.recyclerview.animators.adapters.SlideInBottomAnimationAdapter;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -110,12 +111,16 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
         linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mNewsRv.setLayoutManager(linearLayoutManager);
+
         SlideInUpAnimator slideInUpAnimator = new SlideInUpAnimator();
         slideInUpAnimator.setChangeDuration(1000);
+
         mNewsRv.setItemAnimator(slideInUpAnimator);
         mNewsAdapter = new NewsAdapter(this, getRealmData(), true);
-        //SlideInBottomAnimationAdapter slideInBottomAnimationAdapter = new SlideInBottomAnimationAdapter(mNewsAdapter);
-        //slideInBottomAnimationAdapter.setDuration(700);
+
+        SlideInBottomAnimationAdapter slideInBottomAnimationAdapter = new SlideInBottomAnimationAdapter(mNewsAdapter);
+        slideInBottomAnimationAdapter.setDuration(1000);
+
 
         mNewsRv.setAdapter(mNewsAdapter);
         mNewsAdapter.setOnItemClickedListener(this);
@@ -431,6 +436,7 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
                 mCategoriesAdapter.setSelectedCategory(position);
                 mSelectedCategory = mCategoriesAdapter.getItem(position).getValue();
                 mNewsAdapter.updateRealmResults(getRealmData());
+
                 mDrawerLayout.closeDrawers();
 
                 break;

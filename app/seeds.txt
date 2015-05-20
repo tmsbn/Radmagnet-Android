@@ -28,7 +28,7 @@ android.support.annotation.StyleableRes
 android.support.annotation.XmlRes
 android.support.v4.BuildConfig
 android.support.v4.BuildConfig: boolean DEBUG
-android.support.v4.BuildConfig: java.lang.String PACKAGE_NAME
+android.support.v4.BuildConfig: java.lang.String APPLICATION_ID
 android.support.v4.BuildConfig: java.lang.String BUILD_TYPE
 android.support.v4.BuildConfig: java.lang.String FLAVOR
 android.support.v4.BuildConfig: int VERSION_CODE
@@ -619,6 +619,14 @@ android.support.v4.app.NotificationCompat$CarExtender: android.graphics.Bitmap g
 android.support.v4.app.NotificationCompat$CarExtender: android.support.v4.app.NotificationCompat$CarExtender setUnreadConversation(android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation)
 android.support.v4.app.NotificationCompat$CarExtender: android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation getUnreadConversation()
 android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation
+android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation: java.lang.String[] getMessages()
+android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation: android.support.v4.app.RemoteInput getRemoteInput()
+android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation: android.app.PendingIntent getReplyPendingIntent()
+android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation: android.app.PendingIntent getReadPendingIntent()
+android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation: java.lang.String[] getParticipants()
+android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation: java.lang.String getParticipant()
+android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation: long getLatestTimestamp()
+android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation: android.support.v4.app.RemoteInputCompatBase$RemoteInput getRemoteInput()
 android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation$Builder
 android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation$Builder: NotificationCompat$CarExtender$UnreadConversation$Builder(java.lang.String)
 android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation$Builder: android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation$Builder addMessage(java.lang.String)
@@ -973,6 +981,7 @@ android.support.v4.content.pm.ActivityInfoCompat: int CONFIG_UI_MODE
 android.support.v4.content.res.ResourcesCompat
 android.support.v4.content.res.ResourcesCompat: ResourcesCompat()
 android.support.v4.content.res.ResourcesCompat: android.graphics.drawable.Drawable getDrawable(android.content.res.Resources,int,android.content.res.Resources$Theme)
+android.support.v4.content.res.ResourcesCompat: android.graphics.drawable.Drawable getDrawableForDensity(android.content.res.Resources,int,int,android.content.res.Resources$Theme)
 android.support.v4.database.DatabaseUtilsCompat
 android.support.v4.database.DatabaseUtilsCompat: java.lang.String concatenateWhere(java.lang.String,java.lang.String)
 android.support.v4.database.DatabaseUtilsCompat: java.lang.String[] appendSelectionArgs(java.lang.String[],java.lang.String[])
@@ -1049,6 +1058,52 @@ android.support.v4.internal.view.SupportMenuItem: boolean collapseActionView()
 android.support.v4.internal.view.SupportMenuItem: boolean isActionViewExpanded()
 android.support.v4.internal.view.SupportMenuItem: android.support.v4.internal.view.SupportMenuItem setSupportOnActionExpandListener(android.support.v4.view.MenuItemCompat$OnActionExpandListener)
 android.support.v4.internal.view.SupportSubMenu
+android.support.v4.media.MediaDescriptionCompat
+android.support.v4.media.MediaDescriptionCompat: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.MediaDescriptionCompat: java.lang.String getMediaId()
+android.support.v4.media.MediaDescriptionCompat: java.lang.CharSequence getTitle()
+android.support.v4.media.MediaDescriptionCompat: java.lang.CharSequence getSubtitle()
+android.support.v4.media.MediaDescriptionCompat: java.lang.CharSequence getDescription()
+android.support.v4.media.MediaDescriptionCompat: android.graphics.Bitmap getIconBitmap()
+android.support.v4.media.MediaDescriptionCompat: android.net.Uri getIconUri()
+android.support.v4.media.MediaDescriptionCompat: android.os.Bundle getExtras()
+android.support.v4.media.MediaDescriptionCompat: int describeContents()
+android.support.v4.media.MediaDescriptionCompat: void writeToParcel(android.os.Parcel,int)
+android.support.v4.media.MediaDescriptionCompat: java.lang.String toString()
+android.support.v4.media.MediaDescriptionCompat: java.lang.Object getMediaDescription()
+android.support.v4.media.MediaDescriptionCompat: android.support.v4.media.MediaDescriptionCompat fromMediaDescription(java.lang.Object)
+android.support.v4.media.MediaDescriptionCompat$Builder
+android.support.v4.media.MediaDescriptionCompat$Builder: MediaDescriptionCompat$Builder()
+android.support.v4.media.MediaDescriptionCompat$Builder: android.support.v4.media.MediaDescriptionCompat$Builder setMediaId(java.lang.String)
+android.support.v4.media.MediaDescriptionCompat$Builder: android.support.v4.media.MediaDescriptionCompat$Builder setTitle(java.lang.CharSequence)
+android.support.v4.media.MediaDescriptionCompat$Builder: android.support.v4.media.MediaDescriptionCompat$Builder setSubtitle(java.lang.CharSequence)
+android.support.v4.media.MediaDescriptionCompat$Builder: android.support.v4.media.MediaDescriptionCompat$Builder setDescription(java.lang.CharSequence)
+android.support.v4.media.MediaDescriptionCompat$Builder: android.support.v4.media.MediaDescriptionCompat$Builder setIconBitmap(android.graphics.Bitmap)
+android.support.v4.media.MediaDescriptionCompat$Builder: android.support.v4.media.MediaDescriptionCompat$Builder setIconUri(android.net.Uri)
+android.support.v4.media.MediaDescriptionCompat$Builder: android.support.v4.media.MediaDescriptionCompat$Builder setExtras(android.os.Bundle)
+android.support.v4.media.MediaDescriptionCompat$Builder: android.support.v4.media.MediaDescriptionCompat build()
+android.support.v4.media.MediaDescriptionCompatApi21
+android.support.v4.media.MediaDescriptionCompatApi21: MediaDescriptionCompatApi21()
+android.support.v4.media.MediaDescriptionCompatApi21: java.lang.String getMediaId(java.lang.Object)
+android.support.v4.media.MediaDescriptionCompatApi21: java.lang.CharSequence getTitle(java.lang.Object)
+android.support.v4.media.MediaDescriptionCompatApi21: java.lang.CharSequence getSubtitle(java.lang.Object)
+android.support.v4.media.MediaDescriptionCompatApi21: java.lang.CharSequence getDescription(java.lang.Object)
+android.support.v4.media.MediaDescriptionCompatApi21: android.graphics.Bitmap getIconBitmap(java.lang.Object)
+android.support.v4.media.MediaDescriptionCompatApi21: android.net.Uri getIconUri(java.lang.Object)
+android.support.v4.media.MediaDescriptionCompatApi21: android.os.Bundle getExtras(java.lang.Object)
+android.support.v4.media.MediaDescriptionCompatApi21: void writeToParcel(java.lang.Object,android.os.Parcel,int)
+android.support.v4.media.MediaDescriptionCompatApi21: java.lang.Object fromParcel(android.os.Parcel)
+android.support.v4.media.MediaDescriptionCompatApi21$Builder
+android.support.v4.media.MediaDescriptionCompatApi21$Builder: MediaDescriptionCompatApi21$Builder()
+android.support.v4.media.MediaDescriptionCompatApi21$Builder: java.lang.Object newInstance()
+android.support.v4.media.MediaDescriptionCompatApi21$Builder: void setMediaId(java.lang.Object,java.lang.String)
+android.support.v4.media.MediaDescriptionCompatApi21$Builder: void setTitle(java.lang.Object,java.lang.CharSequence)
+android.support.v4.media.MediaDescriptionCompatApi21$Builder: void setSubtitle(java.lang.Object,java.lang.CharSequence)
+android.support.v4.media.MediaDescriptionCompatApi21$Builder: void setDescription(java.lang.Object,java.lang.CharSequence)
+android.support.v4.media.MediaDescriptionCompatApi21$Builder: void setIconBitmap(java.lang.Object,android.graphics.Bitmap)
+android.support.v4.media.MediaDescriptionCompatApi21$Builder: void setIconUri(java.lang.Object,android.net.Uri)
+android.support.v4.media.MediaDescriptionCompatApi21$Builder: void setExtras(java.lang.Object,android.os.Bundle)
+android.support.v4.media.MediaDescriptionCompatApi21$Builder: java.lang.Object build(java.lang.Object)
 android.support.v4.media.MediaMetadataCompat
 android.support.v4.media.MediaMetadataCompat: java.lang.String METADATA_KEY_TITLE
 android.support.v4.media.MediaMetadataCompat: java.lang.String METADATA_KEY_ARTIST
@@ -1076,6 +1131,7 @@ android.support.v4.media.MediaMetadataCompat: java.lang.String METADATA_KEY_DISP
 android.support.v4.media.MediaMetadataCompat: java.lang.String METADATA_KEY_DISPLAY_DESCRIPTION
 android.support.v4.media.MediaMetadataCompat: java.lang.String METADATA_KEY_DISPLAY_ICON
 android.support.v4.media.MediaMetadataCompat: java.lang.String METADATA_KEY_DISPLAY_ICON_URI
+android.support.v4.media.MediaMetadataCompat: java.lang.String METADATA_KEY_MEDIA_ID
 android.support.v4.media.MediaMetadataCompat: android.os.Parcelable$Creator CREATOR
 android.support.v4.media.MediaMetadataCompat: boolean containsKey(java.lang.String)
 android.support.v4.media.MediaMetadataCompat: java.lang.CharSequence getText(java.lang.String)
@@ -1083,10 +1139,12 @@ android.support.v4.media.MediaMetadataCompat: java.lang.String getString(java.la
 android.support.v4.media.MediaMetadataCompat: long getLong(java.lang.String)
 android.support.v4.media.MediaMetadataCompat: android.support.v4.media.RatingCompat getRating(java.lang.String)
 android.support.v4.media.MediaMetadataCompat: android.graphics.Bitmap getBitmap(java.lang.String)
+android.support.v4.media.MediaMetadataCompat: android.support.v4.media.MediaDescriptionCompat getDescription()
 android.support.v4.media.MediaMetadataCompat: int describeContents()
 android.support.v4.media.MediaMetadataCompat: void writeToParcel(android.os.Parcel,int)
 android.support.v4.media.MediaMetadataCompat: int size()
 android.support.v4.media.MediaMetadataCompat: java.util.Set keySet()
+android.support.v4.media.MediaMetadataCompat: android.os.Bundle getBundle()
 android.support.v4.media.MediaMetadataCompat: android.support.v4.media.MediaMetadataCompat fromMediaMetadata(java.lang.Object)
 android.support.v4.media.MediaMetadataCompat: java.lang.Object getMediaMetadata()
 android.support.v4.media.MediaMetadataCompat$Builder
@@ -1288,6 +1346,57 @@ android.support.v4.media.routing.MediaRouterJellybeanMr2$RouteInfo: boolean isCo
 android.support.v4.media.routing.MediaRouterJellybeanMr2$UserRouteInfo
 android.support.v4.media.routing.MediaRouterJellybeanMr2$UserRouteInfo: MediaRouterJellybeanMr2$UserRouteInfo()
 android.support.v4.media.routing.MediaRouterJellybeanMr2$UserRouteInfo: void setDescription(java.lang.Object,java.lang.CharSequence)
+android.support.v4.media.session.IMediaControllerCallback
+android.support.v4.media.session.IMediaControllerCallback: void onEvent(java.lang.String,android.os.Bundle)
+android.support.v4.media.session.IMediaControllerCallback: void onSessionDestroyed()
+android.support.v4.media.session.IMediaControllerCallback: void onPlaybackStateChanged(android.support.v4.media.session.PlaybackStateCompat)
+android.support.v4.media.session.IMediaControllerCallback: void onMetadataChanged(android.support.v4.media.MediaMetadataCompat)
+android.support.v4.media.session.IMediaControllerCallback: void onQueueChanged(java.util.List)
+android.support.v4.media.session.IMediaControllerCallback: void onQueueTitleChanged(java.lang.CharSequence)
+android.support.v4.media.session.IMediaControllerCallback: void onExtrasChanged(android.os.Bundle)
+android.support.v4.media.session.IMediaControllerCallback: void onVolumeInfoChanged(android.support.v4.media.session.ParcelableVolumeInfo)
+android.support.v4.media.session.IMediaControllerCallback$Stub
+android.support.v4.media.session.IMediaControllerCallback$Stub: IMediaControllerCallback$Stub()
+android.support.v4.media.session.IMediaControllerCallback$Stub: android.support.v4.media.session.IMediaControllerCallback asInterface(android.os.IBinder)
+android.support.v4.media.session.IMediaControllerCallback$Stub: android.os.IBinder asBinder()
+android.support.v4.media.session.IMediaControllerCallback$Stub: boolean onTransact(int,android.os.Parcel,android.os.Parcel,int)
+android.support.v4.media.session.IMediaSession
+android.support.v4.media.session.IMediaSession: void sendCommand(java.lang.String,android.os.Bundle,android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper)
+android.support.v4.media.session.IMediaSession: boolean sendMediaButton(android.view.KeyEvent)
+android.support.v4.media.session.IMediaSession: void registerCallbackListener(android.support.v4.media.session.IMediaControllerCallback)
+android.support.v4.media.session.IMediaSession: void unregisterCallbackListener(android.support.v4.media.session.IMediaControllerCallback)
+android.support.v4.media.session.IMediaSession: boolean isTransportControlEnabled()
+android.support.v4.media.session.IMediaSession: java.lang.String getPackageName()
+android.support.v4.media.session.IMediaSession: java.lang.String getTag()
+android.support.v4.media.session.IMediaSession: android.app.PendingIntent getLaunchPendingIntent()
+android.support.v4.media.session.IMediaSession: long getFlags()
+android.support.v4.media.session.IMediaSession: android.support.v4.media.session.ParcelableVolumeInfo getVolumeAttributes()
+android.support.v4.media.session.IMediaSession: void adjustVolume(int,int,java.lang.String)
+android.support.v4.media.session.IMediaSession: void setVolumeTo(int,int,java.lang.String)
+android.support.v4.media.session.IMediaSession: void play()
+android.support.v4.media.session.IMediaSession: void playFromMediaId(java.lang.String,android.os.Bundle)
+android.support.v4.media.session.IMediaSession: void playFromSearch(java.lang.String,android.os.Bundle)
+android.support.v4.media.session.IMediaSession: void skipToQueueItem(long)
+android.support.v4.media.session.IMediaSession: void pause()
+android.support.v4.media.session.IMediaSession: void stop()
+android.support.v4.media.session.IMediaSession: void next()
+android.support.v4.media.session.IMediaSession: void previous()
+android.support.v4.media.session.IMediaSession: void fastForward()
+android.support.v4.media.session.IMediaSession: void rewind()
+android.support.v4.media.session.IMediaSession: void seekTo(long)
+android.support.v4.media.session.IMediaSession: void rate(android.support.v4.media.RatingCompat)
+android.support.v4.media.session.IMediaSession: void sendCustomAction(java.lang.String,android.os.Bundle)
+android.support.v4.media.session.IMediaSession: android.support.v4.media.MediaMetadataCompat getMetadata()
+android.support.v4.media.session.IMediaSession: android.support.v4.media.session.PlaybackStateCompat getPlaybackState()
+android.support.v4.media.session.IMediaSession: java.util.List getQueue()
+android.support.v4.media.session.IMediaSession: java.lang.CharSequence getQueueTitle()
+android.support.v4.media.session.IMediaSession: android.os.Bundle getExtras()
+android.support.v4.media.session.IMediaSession: int getRatingType()
+android.support.v4.media.session.IMediaSession$Stub
+android.support.v4.media.session.IMediaSession$Stub: IMediaSession$Stub()
+android.support.v4.media.session.IMediaSession$Stub: android.support.v4.media.session.IMediaSession asInterface(android.os.IBinder)
+android.support.v4.media.session.IMediaSession$Stub: android.os.IBinder asBinder()
+android.support.v4.media.session.IMediaSession$Stub: boolean onTransact(int,android.os.Parcel,android.os.Parcel,int)
 android.support.v4.media.session.MediaControllerCompat
 android.support.v4.media.session.MediaControllerCompat: MediaControllerCompat(android.content.Context,android.support.v4.media.session.MediaSessionCompat)
 android.support.v4.media.session.MediaControllerCompat: MediaControllerCompat(android.content.Context,android.support.v4.media.session.MediaSessionCompat$Token)
@@ -1295,12 +1404,21 @@ android.support.v4.media.session.MediaControllerCompat: android.support.v4.media
 android.support.v4.media.session.MediaControllerCompat: boolean dispatchMediaButtonEvent(android.view.KeyEvent)
 android.support.v4.media.session.MediaControllerCompat: android.support.v4.media.session.PlaybackStateCompat getPlaybackState()
 android.support.v4.media.session.MediaControllerCompat: android.support.v4.media.MediaMetadataCompat getMetadata()
+android.support.v4.media.session.MediaControllerCompat: java.util.List getQueue()
+android.support.v4.media.session.MediaControllerCompat: java.lang.CharSequence getQueueTitle()
+android.support.v4.media.session.MediaControllerCompat: android.os.Bundle getExtras()
 android.support.v4.media.session.MediaControllerCompat: int getRatingType()
+android.support.v4.media.session.MediaControllerCompat: long getFlags()
 android.support.v4.media.session.MediaControllerCompat: android.support.v4.media.session.MediaControllerCompat$PlaybackInfo getPlaybackInfo()
+android.support.v4.media.session.MediaControllerCompat: android.app.PendingIntent getSessionActivity()
+android.support.v4.media.session.MediaControllerCompat: android.support.v4.media.session.MediaSessionCompat$Token getSessionToken()
+android.support.v4.media.session.MediaControllerCompat: void setVolumeTo(int,int)
+android.support.v4.media.session.MediaControllerCompat: void adjustVolume(int,int)
 android.support.v4.media.session.MediaControllerCompat: void registerCallback(android.support.v4.media.session.MediaControllerCompat$Callback)
 android.support.v4.media.session.MediaControllerCompat: void registerCallback(android.support.v4.media.session.MediaControllerCompat$Callback,android.os.Handler)
 android.support.v4.media.session.MediaControllerCompat: void unregisterCallback(android.support.v4.media.session.MediaControllerCompat$Callback)
 android.support.v4.media.session.MediaControllerCompat: void sendCommand(java.lang.String,android.os.Bundle,android.os.ResultReceiver)
+android.support.v4.media.session.MediaControllerCompat: java.lang.String getPackageName()
 android.support.v4.media.session.MediaControllerCompat: java.lang.Object getMediaController()
 android.support.v4.media.session.MediaControllerCompat$Callback
 android.support.v4.media.session.MediaControllerCompat$Callback: MediaControllerCompat$Callback()
@@ -1308,6 +1426,11 @@ android.support.v4.media.session.MediaControllerCompat$Callback: void onSessionD
 android.support.v4.media.session.MediaControllerCompat$Callback: void onSessionEvent(java.lang.String,android.os.Bundle)
 android.support.v4.media.session.MediaControllerCompat$Callback: void onPlaybackStateChanged(android.support.v4.media.session.PlaybackStateCompat)
 android.support.v4.media.session.MediaControllerCompat$Callback: void onMetadataChanged(android.support.v4.media.MediaMetadataCompat)
+android.support.v4.media.session.MediaControllerCompat$Callback: void onQueueChanged(java.util.List)
+android.support.v4.media.session.MediaControllerCompat$Callback: void onQueueTitleChanged(java.lang.CharSequence)
+android.support.v4.media.session.MediaControllerCompat$Callback: void onExtrasChanged(android.os.Bundle)
+android.support.v4.media.session.MediaControllerCompat$Callback: void onAudioInfoChanged(android.support.v4.media.session.MediaControllerCompat$PlaybackInfo)
+android.support.v4.media.session.MediaControllerCompat$Callback: void binderDied()
 android.support.v4.media.session.MediaControllerCompat$PlaybackInfo
 android.support.v4.media.session.MediaControllerCompat$PlaybackInfo: int PLAYBACK_TYPE_LOCAL
 android.support.v4.media.session.MediaControllerCompat$PlaybackInfo: int PLAYBACK_TYPE_REMOTE
@@ -1318,6 +1441,9 @@ android.support.v4.media.session.MediaControllerCompat$PlaybackInfo: int getMaxV
 android.support.v4.media.session.MediaControllerCompat$PlaybackInfo: int getCurrentVolume()
 android.support.v4.media.session.MediaControllerCompat$TransportControls
 android.support.v4.media.session.MediaControllerCompat$TransportControls: void play()
+android.support.v4.media.session.MediaControllerCompat$TransportControls: void playFromMediaId(java.lang.String,android.os.Bundle)
+android.support.v4.media.session.MediaControllerCompat$TransportControls: void playFromSearch(java.lang.String,android.os.Bundle)
+android.support.v4.media.session.MediaControllerCompat$TransportControls: void skipToQueueItem(long)
 android.support.v4.media.session.MediaControllerCompat$TransportControls: void pause()
 android.support.v4.media.session.MediaControllerCompat$TransportControls: void stop()
 android.support.v4.media.session.MediaControllerCompat$TransportControls: void seekTo(long)
@@ -1326,6 +1452,8 @@ android.support.v4.media.session.MediaControllerCompat$TransportControls: void s
 android.support.v4.media.session.MediaControllerCompat$TransportControls: void rewind()
 android.support.v4.media.session.MediaControllerCompat$TransportControls: void skipToPrevious()
 android.support.v4.media.session.MediaControllerCompat$TransportControls: void setRating(android.support.v4.media.RatingCompat)
+android.support.v4.media.session.MediaControllerCompat$TransportControls: void sendCustomAction(android.support.v4.media.session.PlaybackStateCompat$CustomAction,android.os.Bundle)
+android.support.v4.media.session.MediaControllerCompat$TransportControls: void sendCustomAction(java.lang.String,android.os.Bundle)
 android.support.v4.media.session.MediaControllerCompatApi21$Callback
 android.support.v4.media.session.MediaControllerCompatApi21$Callback: void onSessionDestroyed()
 android.support.v4.media.session.MediaControllerCompatApi21$Callback: void onSessionEvent(java.lang.String,android.os.Bundle)
@@ -1350,12 +1478,18 @@ android.support.v4.media.session.MediaControllerCompatApi21$TransportControls: v
 android.support.v4.media.session.MediaControllerCompatApi21$TransportControls: void skipToNext(java.lang.Object)
 android.support.v4.media.session.MediaControllerCompatApi21$TransportControls: void skipToPrevious(java.lang.Object)
 android.support.v4.media.session.MediaControllerCompatApi21$TransportControls: void setRating(java.lang.Object,java.lang.Object)
+android.support.v4.media.session.MediaControllerCompatApi21$TransportControls: void playFromMediaId(java.lang.Object,java.lang.String,android.os.Bundle)
+android.support.v4.media.session.MediaControllerCompatApi21$TransportControls: void playFromSearch(java.lang.Object,java.lang.String,android.os.Bundle)
+android.support.v4.media.session.MediaControllerCompatApi21$TransportControls: void skipToQueueItem(java.lang.Object,long)
+android.support.v4.media.session.MediaControllerCompatApi21$TransportControls: void sendCustomAction(java.lang.Object,java.lang.String,android.os.Bundle)
 android.support.v4.media.session.MediaSessionCompat
 android.support.v4.media.session.MediaSessionCompat: int FLAG_HANDLES_MEDIA_BUTTONS
 android.support.v4.media.session.MediaSessionCompat: int FLAG_HANDLES_TRANSPORT_CONTROLS
-android.support.v4.media.session.MediaSessionCompat: MediaSessionCompat(android.content.Context,java.lang.String)
+android.support.v4.media.session.MediaSessionCompat: MediaSessionCompat(android.content.Context,java.lang.String,android.content.ComponentName,android.app.PendingIntent)
 android.support.v4.media.session.MediaSessionCompat: void setCallback(android.support.v4.media.session.MediaSessionCompat$Callback)
 android.support.v4.media.session.MediaSessionCompat: void setCallback(android.support.v4.media.session.MediaSessionCompat$Callback,android.os.Handler)
+android.support.v4.media.session.MediaSessionCompat: void setSessionActivity(android.app.PendingIntent)
+android.support.v4.media.session.MediaSessionCompat: void setMediaButtonReceiver(android.app.PendingIntent)
 android.support.v4.media.session.MediaSessionCompat: void setFlags(int)
 android.support.v4.media.session.MediaSessionCompat: void setPlaybackToLocal(int)
 android.support.v4.media.session.MediaSessionCompat: void setPlaybackToRemote(android.support.v4.media.VolumeProviderCompat)
@@ -1364,15 +1498,26 @@ android.support.v4.media.session.MediaSessionCompat: boolean isActive()
 android.support.v4.media.session.MediaSessionCompat: void sendSessionEvent(java.lang.String,android.os.Bundle)
 android.support.v4.media.session.MediaSessionCompat: void release()
 android.support.v4.media.session.MediaSessionCompat: android.support.v4.media.session.MediaSessionCompat$Token getSessionToken()
+android.support.v4.media.session.MediaSessionCompat: android.support.v4.media.session.MediaControllerCompat getController()
 android.support.v4.media.session.MediaSessionCompat: void setPlaybackState(android.support.v4.media.session.PlaybackStateCompat)
 android.support.v4.media.session.MediaSessionCompat: void setMetadata(android.support.v4.media.MediaMetadataCompat)
+android.support.v4.media.session.MediaSessionCompat: void setQueue(java.util.List)
+android.support.v4.media.session.MediaSessionCompat: void setQueueTitle(java.lang.CharSequence)
+android.support.v4.media.session.MediaSessionCompat: void setRatingType(int)
+android.support.v4.media.session.MediaSessionCompat: void setExtras(android.os.Bundle)
 android.support.v4.media.session.MediaSessionCompat: java.lang.Object getMediaSession()
-android.support.v4.media.session.MediaSessionCompat: android.support.v4.media.session.MediaSessionCompat obtain(java.lang.Object)
+android.support.v4.media.session.MediaSessionCompat: java.lang.Object getRemoteControlClient()
+android.support.v4.media.session.MediaSessionCompat: void addOnActiveChangeListener(android.support.v4.media.session.MediaSessionCompat$OnActiveChangeListener)
+android.support.v4.media.session.MediaSessionCompat: void removeOnActiveChangeListener(android.support.v4.media.session.MediaSessionCompat$OnActiveChangeListener)
+android.support.v4.media.session.MediaSessionCompat: android.support.v4.media.session.MediaSessionCompat obtain(android.content.Context,java.lang.Object)
 android.support.v4.media.session.MediaSessionCompat$Callback
 android.support.v4.media.session.MediaSessionCompat$Callback: MediaSessionCompat$Callback()
 android.support.v4.media.session.MediaSessionCompat$Callback: void onCommand(java.lang.String,android.os.Bundle,android.os.ResultReceiver)
 android.support.v4.media.session.MediaSessionCompat$Callback: boolean onMediaButtonEvent(android.content.Intent)
 android.support.v4.media.session.MediaSessionCompat$Callback: void onPlay()
+android.support.v4.media.session.MediaSessionCompat$Callback: void onPlayFromMediaId(java.lang.String,android.os.Bundle)
+android.support.v4.media.session.MediaSessionCompat$Callback: void onPlayFromSearch(java.lang.String,android.os.Bundle)
+android.support.v4.media.session.MediaSessionCompat$Callback: void onSkipToQueueItem(long)
 android.support.v4.media.session.MediaSessionCompat$Callback: void onPause()
 android.support.v4.media.session.MediaSessionCompat$Callback: void onSkipToNext()
 android.support.v4.media.session.MediaSessionCompat$Callback: void onSkipToPrevious()
@@ -1381,15 +1526,66 @@ android.support.v4.media.session.MediaSessionCompat$Callback: void onRewind()
 android.support.v4.media.session.MediaSessionCompat$Callback: void onStop()
 android.support.v4.media.session.MediaSessionCompat$Callback: void onSeekTo(long)
 android.support.v4.media.session.MediaSessionCompat$Callback: void onSetRating(android.support.v4.media.RatingCompat)
+android.support.v4.media.session.MediaSessionCompat$Callback: void onCustomAction(java.lang.String,android.os.Bundle)
+android.support.v4.media.session.MediaSessionCompat$OnActiveChangeListener
+android.support.v4.media.session.MediaSessionCompat$OnActiveChangeListener: void onActiveChanged()
+android.support.v4.media.session.MediaSessionCompat$QueueItem
+android.support.v4.media.session.MediaSessionCompat$QueueItem: int UNKNOWN_ID
+android.support.v4.media.session.MediaSessionCompat$QueueItem: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.MediaSessionCompat$QueueItem: MediaSessionCompat$QueueItem(android.support.v4.media.MediaDescriptionCompat,long)
+android.support.v4.media.session.MediaSessionCompat$QueueItem: android.support.v4.media.MediaDescriptionCompat getDescription()
+android.support.v4.media.session.MediaSessionCompat$QueueItem: long getQueueId()
+android.support.v4.media.session.MediaSessionCompat$QueueItem: void writeToParcel(android.os.Parcel,int)
+android.support.v4.media.session.MediaSessionCompat$QueueItem: int describeContents()
+android.support.v4.media.session.MediaSessionCompat$QueueItem: java.lang.Object getQueueItem()
+android.support.v4.media.session.MediaSessionCompat$QueueItem: android.support.v4.media.session.MediaSessionCompat$QueueItem obtain(java.lang.Object)
+android.support.v4.media.session.MediaSessionCompat$QueueItem: java.lang.String toString()
+android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper
+android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper: android.os.Parcelable$Creator CREATOR
 android.support.v4.media.session.MediaSessionCompat$Token
 android.support.v4.media.session.MediaSessionCompat$Token: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.MediaSessionCompat$Token: android.support.v4.media.session.MediaSessionCompat$Token fromToken(java.lang.Object)
 android.support.v4.media.session.MediaSessionCompat$Token: int describeContents()
 android.support.v4.media.session.MediaSessionCompat$Token: void writeToParcel(android.os.Parcel,int)
 android.support.v4.media.session.MediaSessionCompat$Token: java.lang.Object getToken()
+android.support.v4.media.session.MediaSessionCompatApi14
+android.support.v4.media.session.MediaSessionCompatApi14: MediaSessionCompatApi14()
+android.support.v4.media.session.MediaSessionCompatApi14: java.lang.Object createRemoteControlClient(android.app.PendingIntent)
+android.support.v4.media.session.MediaSessionCompatApi14: void setState(java.lang.Object,int)
+android.support.v4.media.session.MediaSessionCompatApi14: void setMetadata(java.lang.Object,android.os.Bundle)
+android.support.v4.media.session.MediaSessionCompatApi14: void registerRemoteControlClient(android.content.Context,java.lang.Object)
+android.support.v4.media.session.MediaSessionCompatApi14: void unregisterRemoteControlClient(android.content.Context,java.lang.Object)
+android.support.v4.media.session.MediaSessionCompatApi14$Callback
+android.support.v4.media.session.MediaSessionCompatApi14$Callback: void onCommand(java.lang.String,android.os.Bundle,android.os.ResultReceiver)
+android.support.v4.media.session.MediaSessionCompatApi14$Callback: boolean onMediaButtonEvent(android.content.Intent)
+android.support.v4.media.session.MediaSessionCompatApi14$Callback: void onPlay()
+android.support.v4.media.session.MediaSessionCompatApi14$Callback: void onPause()
+android.support.v4.media.session.MediaSessionCompatApi14$Callback: void onSkipToNext()
+android.support.v4.media.session.MediaSessionCompatApi14$Callback: void onSkipToPrevious()
+android.support.v4.media.session.MediaSessionCompatApi14$Callback: void onFastForward()
+android.support.v4.media.session.MediaSessionCompatApi14$Callback: void onRewind()
+android.support.v4.media.session.MediaSessionCompatApi14$Callback: void onStop()
+android.support.v4.media.session.MediaSessionCompatApi14$Callback: void onSeekTo(long)
+android.support.v4.media.session.MediaSessionCompatApi14$Callback: void onSetRating(java.lang.Object)
+android.support.v4.media.session.MediaSessionCompatApi18
+android.support.v4.media.session.MediaSessionCompatApi18: MediaSessionCompatApi18()
+android.support.v4.media.session.MediaSessionCompatApi18: java.lang.Object createPlaybackPositionUpdateListener(android.support.v4.media.session.MediaSessionCompatApi14$Callback)
+android.support.v4.media.session.MediaSessionCompatApi18: void registerMediaButtonEventReceiver(android.content.Context,android.app.PendingIntent)
+android.support.v4.media.session.MediaSessionCompatApi18: void unregisterMediaButtonEventReceiver(android.content.Context,android.app.PendingIntent)
+android.support.v4.media.session.MediaSessionCompatApi18: void setState(java.lang.Object,int,long,float,long)
+android.support.v4.media.session.MediaSessionCompatApi18: void setOnPlaybackPositionUpdateListener(java.lang.Object,java.lang.Object)
+android.support.v4.media.session.MediaSessionCompatApi19
+android.support.v4.media.session.MediaSessionCompatApi19: MediaSessionCompatApi19()
+android.support.v4.media.session.MediaSessionCompatApi19: java.lang.Object createMetadataUpdateListener(android.support.v4.media.session.MediaSessionCompatApi14$Callback)
+android.support.v4.media.session.MediaSessionCompatApi19: void setMetadata(java.lang.Object,android.os.Bundle,boolean)
+android.support.v4.media.session.MediaSessionCompatApi19: void setOnMetadataUpdateListener(java.lang.Object,java.lang.Object)
 android.support.v4.media.session.MediaSessionCompatApi21$Callback
 android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onCommand(java.lang.String,android.os.Bundle,android.os.ResultReceiver)
 android.support.v4.media.session.MediaSessionCompatApi21$Callback: boolean onMediaButtonEvent(android.content.Intent)
 android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onPlay()
+android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onPlayFromMediaId(java.lang.String,android.os.Bundle)
+android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onPlayFromSearch(java.lang.String,android.os.Bundle)
+android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onSkipToQueueItem(long)
 android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onPause()
 android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onSkipToNext()
 android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onSkipToPrevious()
@@ -1398,6 +1594,22 @@ android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onRewind
 android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onStop()
 android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onSeekTo(long)
 android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onSetRating(java.lang.Object)
+android.support.v4.media.session.MediaSessionCompatApi21$Callback: void onCustomAction(java.lang.String,android.os.Bundle)
+android.support.v4.media.session.MediaSessionCompatApi8
+android.support.v4.media.session.MediaSessionCompatApi8: MediaSessionCompatApi8()
+android.support.v4.media.session.MediaSessionCompatApi8: void registerMediaButtonEventReceiver(android.content.Context,android.content.ComponentName)
+android.support.v4.media.session.MediaSessionCompatApi8: void unregisterMediaButtonEventReceiver(android.content.Context,android.content.ComponentName)
+android.support.v4.media.session.ParcelableVolumeInfo
+android.support.v4.media.session.ParcelableVolumeInfo: int volumeType
+android.support.v4.media.session.ParcelableVolumeInfo: int audioStream
+android.support.v4.media.session.ParcelableVolumeInfo: int controlType
+android.support.v4.media.session.ParcelableVolumeInfo: int maxVolume
+android.support.v4.media.session.ParcelableVolumeInfo: int currentVolume
+android.support.v4.media.session.ParcelableVolumeInfo: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.ParcelableVolumeInfo: ParcelableVolumeInfo(int,int,int,int,int)
+android.support.v4.media.session.ParcelableVolumeInfo: ParcelableVolumeInfo(android.os.Parcel)
+android.support.v4.media.session.ParcelableVolumeInfo: int describeContents()
+android.support.v4.media.session.ParcelableVolumeInfo: void writeToParcel(android.os.Parcel,int)
 android.support.v4.media.session.PlaybackStateCompat
 android.support.v4.media.session.PlaybackStateCompat: long ACTION_STOP
 android.support.v4.media.session.PlaybackStateCompat: long ACTION_PAUSE
@@ -1440,11 +1652,25 @@ android.support.v4.media.session.PlaybackStateCompat: java.lang.Object getPlayba
 android.support.v4.media.session.PlaybackStateCompat$Builder
 android.support.v4.media.session.PlaybackStateCompat$Builder: PlaybackStateCompat$Builder()
 android.support.v4.media.session.PlaybackStateCompat$Builder: PlaybackStateCompat$Builder(android.support.v4.media.session.PlaybackStateCompat)
-android.support.v4.media.session.PlaybackStateCompat$Builder: void setState(int,long,float)
-android.support.v4.media.session.PlaybackStateCompat$Builder: void setBufferedPosition(long)
-android.support.v4.media.session.PlaybackStateCompat$Builder: void setActions(long)
-android.support.v4.media.session.PlaybackStateCompat$Builder: void setErrorMessage(java.lang.CharSequence)
+android.support.v4.media.session.PlaybackStateCompat$Builder: android.support.v4.media.session.PlaybackStateCompat$Builder setState(int,long,float)
+android.support.v4.media.session.PlaybackStateCompat$Builder: android.support.v4.media.session.PlaybackStateCompat$Builder setState(int,long,float,long)
+android.support.v4.media.session.PlaybackStateCompat$Builder: android.support.v4.media.session.PlaybackStateCompat$Builder setBufferedPosition(long)
+android.support.v4.media.session.PlaybackStateCompat$Builder: android.support.v4.media.session.PlaybackStateCompat$Builder setActions(long)
+android.support.v4.media.session.PlaybackStateCompat$Builder: android.support.v4.media.session.PlaybackStateCompat$Builder setErrorMessage(java.lang.CharSequence)
 android.support.v4.media.session.PlaybackStateCompat$Builder: android.support.v4.media.session.PlaybackStateCompat build()
+android.support.v4.media.session.PlaybackStateCompat$CustomAction
+android.support.v4.media.session.PlaybackStateCompat$CustomAction: android.os.Parcelable$Creator CREATOR
+android.support.v4.media.session.PlaybackStateCompat$CustomAction: void writeToParcel(android.os.Parcel,int)
+android.support.v4.media.session.PlaybackStateCompat$CustomAction: int describeContents()
+android.support.v4.media.session.PlaybackStateCompat$CustomAction: java.lang.String getAction()
+android.support.v4.media.session.PlaybackStateCompat$CustomAction: java.lang.CharSequence getName()
+android.support.v4.media.session.PlaybackStateCompat$CustomAction: int getIcon()
+android.support.v4.media.session.PlaybackStateCompat$CustomAction: android.os.Bundle getExtras()
+android.support.v4.media.session.PlaybackStateCompat$CustomAction: java.lang.String toString()
+android.support.v4.media.session.PlaybackStateCompat$CustomAction$Builder
+android.support.v4.media.session.PlaybackStateCompat$CustomAction$Builder: PlaybackStateCompat$CustomAction$Builder(java.lang.String,java.lang.CharSequence,int)
+android.support.v4.media.session.PlaybackStateCompat$CustomAction$Builder: android.support.v4.media.session.PlaybackStateCompat$CustomAction$Builder setExtras(android.os.Bundle)
+android.support.v4.media.session.PlaybackStateCompat$CustomAction$Builder: android.support.v4.media.session.PlaybackStateCompat$CustomAction build()
 android.support.v4.net.ConnectivityManagerCompat
 android.support.v4.net.ConnectivityManagerCompat: ConnectivityManagerCompat()
 android.support.v4.net.ConnectivityManagerCompat: boolean isActiveNetworkMetered(android.net.ConnectivityManager)
@@ -1993,8 +2219,11 @@ android.support.v4.view.ViewCompat: int getWindowSystemUiVisibility(android.view
 android.support.v4.view.ViewCompat: void requestApplyInsets(android.view.View)
 android.support.v4.view.ViewCompat: void setChildrenDrawingOrderEnabled(android.view.ViewGroup,boolean)
 android.support.v4.view.ViewCompat: boolean getFitsSystemWindows(android.view.View)
+android.support.v4.view.ViewCompat: void setFitsSystemWindows(android.view.View,boolean)
 android.support.v4.view.ViewCompat: void jumpDrawablesToCurrentState(android.view.View)
 android.support.v4.view.ViewCompat: void setOnApplyWindowInsetsListener(android.view.View,android.support.v4.view.OnApplyWindowInsetsListener)
+android.support.v4.view.ViewCompat: void setSaveFromParentEnabled(android.view.View,boolean)
+android.support.v4.view.ViewCompat: void setActivated(android.view.View,boolean)
 android.support.v4.view.ViewCompatKitKat
 android.support.v4.view.ViewCompatKitKat: ViewCompatKitKat()
 android.support.v4.view.ViewCompatKitKat: int getAccessibilityLiveRegion(android.view.View)
@@ -2246,6 +2475,7 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompat: void addChild
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat: void addChild(android.view.View,int)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat: int getActions()
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat: void addAction(int)
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat: void addAction(android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat: boolean performAction(int)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat: boolean performAction(int,android.os.Bundle)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat: void setMovementGranularities(int)
@@ -2305,6 +2535,7 @@ android.support.v4.view.accessibility.AccessibilityNodeInfoCompat: int hashCode(
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat: boolean equals(java.lang.Object)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat: java.lang.String toString()
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat
+android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat: AccessibilityNodeInfoCompat$AccessibilityActionCompat(int,java.lang.CharSequence)
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat: int getId()
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat: java.lang.CharSequence getLabel()
 android.support.v4.view.accessibility.AccessibilityNodeInfoCompat$CollectionInfoCompat
@@ -2485,6 +2716,7 @@ android.support.v4.widget.DrawerLayout: void onLayout(boolean,int,int,int,int)
 android.support.v4.widget.DrawerLayout: void requestLayout()
 android.support.v4.widget.DrawerLayout: void computeScroll()
 android.support.v4.widget.DrawerLayout: void setStatusBarBackground(android.graphics.drawable.Drawable)
+android.support.v4.widget.DrawerLayout: android.graphics.drawable.Drawable getStatusBarBackgroundDrawable()
 android.support.v4.widget.DrawerLayout: void setStatusBarBackground(int)
 android.support.v4.widget.DrawerLayout: void setStatusBarBackgroundColor(int)
 android.support.v4.widget.DrawerLayout: void onDraw(android.graphics.Canvas)
@@ -2720,6 +2952,8 @@ android.support.v4.widget.SwipeRefreshLayout: void setOnRefreshListener(android.
 android.support.v4.widget.SwipeRefreshLayout: void setRefreshing(boolean)
 android.support.v4.widget.SwipeRefreshLayout: void setAnimationProgress(float)
 android.support.v4.widget.SwipeRefreshLayout: void setProgressBackgroundColor(int)
+android.support.v4.widget.SwipeRefreshLayout: void setProgressBackgroundColorSchemeResource(int)
+android.support.v4.widget.SwipeRefreshLayout: void setProgressBackgroundColorSchemeColor(int)
 android.support.v4.widget.SwipeRefreshLayout: void setColorScheme(int[])
 android.support.v4.widget.SwipeRefreshLayout: void setColorSchemeResources(int[])
 android.support.v4.widget.SwipeRefreshLayout: void setColorSchemeColors(int[])
@@ -2727,6 +2961,7 @@ android.support.v4.widget.SwipeRefreshLayout: boolean isRefreshing()
 android.support.v4.widget.SwipeRefreshLayout: void setDistanceToTriggerSync(int)
 android.support.v4.widget.SwipeRefreshLayout: void onLayout(boolean,int,int,int,int)
 android.support.v4.widget.SwipeRefreshLayout: void onMeasure(int,int)
+android.support.v4.widget.SwipeRefreshLayout: int getProgressCircleDiameter()
 android.support.v4.widget.SwipeRefreshLayout: boolean canChildScrollUp()
 android.support.v4.widget.SwipeRefreshLayout: boolean onInterceptTouchEvent(android.view.MotionEvent)
 android.support.v4.widget.SwipeRefreshLayout: void requestDisallowInterceptTouchEvent(boolean)
@@ -2869,6 +3104,7 @@ android.support.v7.app.ActionBar: android.support.v7.view.ActionMode startAction
 android.support.v7.app.ActionBar: boolean openOptionsMenu()
 android.support.v7.app.ActionBar: boolean invalidateOptionsMenu()
 android.support.v7.app.ActionBar: boolean onMenuKeyEvent(android.view.KeyEvent)
+android.support.v7.app.ActionBar: boolean onKeyShortcut(int,android.view.KeyEvent)
 android.support.v7.app.ActionBar: boolean collapseActionView()
 android.support.v7.app.ActionBar: void setWindowTitle(java.lang.CharSequence)
 android.support.v7.app.ActionBar$DisplayOptions
@@ -2919,10 +3155,10 @@ android.support.v7.app.ActionBarActivity: void setContentView(android.view.View)
 android.support.v7.app.ActionBarActivity: void setContentView(android.view.View,android.view.ViewGroup$LayoutParams)
 android.support.v7.app.ActionBarActivity: void addContentView(android.view.View,android.view.ViewGroup$LayoutParams)
 android.support.v7.app.ActionBarActivity: void onCreate(android.os.Bundle)
+android.support.v7.app.ActionBarActivity: void onPostCreate(android.os.Bundle)
 android.support.v7.app.ActionBarActivity: void onConfigurationChanged(android.content.res.Configuration)
 android.support.v7.app.ActionBarActivity: void onStop()
 android.support.v7.app.ActionBarActivity: void onPostResume()
-android.support.v7.app.ActionBarActivity: android.view.View onCreatePanelView(int)
 android.support.v7.app.ActionBarActivity: boolean onMenuItemSelected(int,android.view.MenuItem)
 android.support.v7.app.ActionBarActivity: void onDestroy()
 android.support.v7.app.ActionBarActivity: void onTitleChanged(java.lang.CharSequence,int)
@@ -2951,7 +3187,7 @@ android.support.v7.app.ActionBarActivity: void supportNavigateUpTo(android.conte
 android.support.v7.app.ActionBarActivity: android.support.v4.app.ActionBarDrawerToggle$Delegate getDrawerToggleDelegate()
 android.support.v7.app.ActionBarActivity: android.support.v7.app.ActionBarDrawerToggle$Delegate getV7DrawerToggleDelegate()
 android.support.v7.app.ActionBarActivity: boolean onKeyShortcut(int,android.view.KeyEvent)
-android.support.v7.app.ActionBarActivity: boolean onKeyDown(int,android.view.KeyEvent)
+android.support.v7.app.ActionBarActivity: boolean dispatchKeyEvent(android.view.KeyEvent)
 android.support.v7.app.ActionBarActivity: void onContentChanged()
 android.support.v7.app.ActionBarActivity: void onSupportContentChanged()
 android.support.v7.app.ActionBarActivity: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)
@@ -2978,11 +3214,12 @@ android.support.v7.app.ActionBarDrawerToggle$Delegate: void setActionBarUpIndica
 android.support.v7.app.ActionBarDrawerToggle$Delegate: void setActionBarDescription(int)
 android.support.v7.app.ActionBarDrawerToggle$Delegate: android.graphics.drawable.Drawable getThemeUpIndicator()
 android.support.v7.app.ActionBarDrawerToggle$Delegate: android.content.Context getActionBarThemedContext()
+android.support.v7.app.ActionBarDrawerToggle$Delegate: boolean isNavigationVisible()
 android.support.v7.app.ActionBarDrawerToggle$DelegateProvider
 android.support.v7.app.ActionBarDrawerToggle$DelegateProvider: android.support.v7.app.ActionBarDrawerToggle$Delegate getDrawerToggleDelegate()
 android.support.v7.appcompat.BuildConfig
 android.support.v7.appcompat.BuildConfig: boolean DEBUG
-android.support.v7.appcompat.BuildConfig: java.lang.String PACKAGE_NAME
+android.support.v7.appcompat.BuildConfig: java.lang.String APPLICATION_ID
 android.support.v7.appcompat.BuildConfig: java.lang.String BUILD_TYPE
 android.support.v7.appcompat.BuildConfig: java.lang.String FLAVOR
 android.support.v7.appcompat.BuildConfig: int VERSION_CODE
@@ -2993,6 +3230,8 @@ android.support.v7.appcompat.R: R()
 android.support.v7.appcompat.R$anim
 android.support.v7.appcompat.R$anim: int abc_fade_in
 android.support.v7.appcompat.R$anim: int abc_fade_out
+android.support.v7.appcompat.R$anim: int abc_grow_fade_in_from_bottom
+android.support.v7.appcompat.R$anim: int abc_shrink_fade_out_from_bottom
 android.support.v7.appcompat.R$anim: int abc_slide_in_bottom
 android.support.v7.appcompat.R$anim: int abc_slide_in_top
 android.support.v7.appcompat.R$anim: int abc_slide_out_bottom
@@ -3249,7 +3488,12 @@ android.support.v7.appcompat.R$dimen: int abc_action_bar_subtitle_top_margin_mat
 android.support.v7.appcompat.R$dimen: int abc_action_button_min_height_material
 android.support.v7.appcompat.R$dimen: int abc_action_button_min_width_material
 android.support.v7.appcompat.R$dimen: int abc_action_button_min_width_overflow_material
+android.support.v7.appcompat.R$dimen: int abc_button_inset_horizontal_material
+android.support.v7.appcompat.R$dimen: int abc_button_inset_vertical_material
+android.support.v7.appcompat.R$dimen: int abc_button_padding_horizontal_material
+android.support.v7.appcompat.R$dimen: int abc_button_padding_vertical_material
 android.support.v7.appcompat.R$dimen: int abc_config_prefDialogWidth
+android.support.v7.appcompat.R$dimen: int abc_control_corner_material
 android.support.v7.appcompat.R$dimen: int abc_control_inset_material
 android.support.v7.appcompat.R$dimen: int abc_control_padding_material
 android.support.v7.appcompat.R$dimen: int abc_dropdownitem_icon_width
@@ -3283,14 +3527,16 @@ android.support.v7.appcompat.R$dimen: int disabled_alpha_material_dark
 android.support.v7.appcompat.R$dimen: int disabled_alpha_material_light
 android.support.v7.appcompat.R$dimen: R$dimen()
 android.support.v7.appcompat.R$drawable
-android.support.v7.appcompat.R$drawable: int abc_ab_share_pack_holo_dark
-android.support.v7.appcompat.R$drawable: int abc_ab_share_pack_holo_light
+android.support.v7.appcompat.R$drawable: int abc_ab_share_pack_mtrl_alpha
 android.support.v7.appcompat.R$drawable: int abc_btn_check_material
 android.support.v7.appcompat.R$drawable: int abc_btn_check_to_on_mtrl_000
 android.support.v7.appcompat.R$drawable: int abc_btn_check_to_on_mtrl_015
+android.support.v7.appcompat.R$drawable: int abc_btn_default_mtrl_shape
 android.support.v7.appcompat.R$drawable: int abc_btn_radio_material
 android.support.v7.appcompat.R$drawable: int abc_btn_radio_to_on_mtrl_000
 android.support.v7.appcompat.R$drawable: int abc_btn_radio_to_on_mtrl_015
+android.support.v7.appcompat.R$drawable: int abc_btn_rating_star_off_mtrl_alpha
+android.support.v7.appcompat.R$drawable: int abc_btn_rating_star_on_mtrl_alpha
 android.support.v7.appcompat.R$drawable: int abc_btn_switch_to_on_mtrl_00001
 android.support.v7.appcompat.R$drawable: int abc_btn_switch_to_on_mtrl_00012
 android.support.v7.appcompat.R$drawable: int abc_cab_background_internal_bg
@@ -3324,7 +3570,9 @@ android.support.v7.appcompat.R$drawable: int abc_list_selector_holo_dark
 android.support.v7.appcompat.R$drawable: int abc_list_selector_holo_light
 android.support.v7.appcompat.R$drawable: int abc_menu_hardkey_panel_mtrl_mult
 android.support.v7.appcompat.R$drawable: int abc_popup_background_mtrl_mult
+android.support.v7.appcompat.R$drawable: int abc_ratingbar_full_material
 android.support.v7.appcompat.R$drawable: int abc_spinner_mtrl_am_alpha
+android.support.v7.appcompat.R$drawable: int abc_spinner_textfield_background_material
 android.support.v7.appcompat.R$drawable: int abc_switch_thumb_material
 android.support.v7.appcompat.R$drawable: int abc_switch_track_mtrl_alpha
 android.support.v7.appcompat.R$drawable: int abc_tab_indicator_material
@@ -3401,6 +3649,8 @@ android.support.v7.appcompat.R$id: int withText
 android.support.v7.appcompat.R$id: int wrap_content
 android.support.v7.appcompat.R$id: R$id()
 android.support.v7.appcompat.R$integer
+android.support.v7.appcompat.R$integer: int abc_config_activityDefaultDur
+android.support.v7.appcompat.R$integer: int abc_config_activityShortDur
 android.support.v7.appcompat.R$integer: int abc_max_action_buttons
 android.support.v7.appcompat.R$integer: R$integer()
 android.support.v7.appcompat.R$layout
@@ -3412,7 +3662,6 @@ android.support.v7.appcompat.R$layout: int abc_action_menu_layout
 android.support.v7.appcompat.R$layout: int abc_action_mode_bar
 android.support.v7.appcompat.R$layout: int abc_action_mode_close_item_material
 android.support.v7.appcompat.R$layout: int abc_activity_chooser_view
-android.support.v7.appcompat.R$layout: int abc_activity_chooser_view_include
 android.support.v7.appcompat.R$layout: int abc_activity_chooser_view_list_item
 android.support.v7.appcompat.R$layout: int abc_expanded_menu_layout
 android.support.v7.appcompat.R$layout: int abc_list_menu_item_checkbox
@@ -3448,6 +3697,8 @@ android.support.v7.appcompat.R$string: int abc_shareactionprovider_share_with_ap
 android.support.v7.appcompat.R$string: int abc_toolbar_collapse_description
 android.support.v7.appcompat.R$string: R$string()
 android.support.v7.appcompat.R$style
+android.support.v7.appcompat.R$style: int Animation_AppCompat_DropDownUp
+android.support.v7.appcompat.R$style: int Base_Animation_AppCompat_DropDownUp
 android.support.v7.appcompat.R$style: int Base_TextAppearance_AppCompat
 android.support.v7.appcompat.R$style: int Base_TextAppearance_AppCompat_Body1
 android.support.v7.appcompat.R$style: int Base_TextAppearance_AppCompat_Body2
@@ -3486,6 +3737,7 @@ android.support.v7.appcompat.R$style: int Base_TextAppearance_AppCompat_Widget_D
 android.support.v7.appcompat.R$style: int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large
 android.support.v7.appcompat.R$style: int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small
 android.support.v7.appcompat.R$style: int Base_TextAppearance_AppCompat_Widget_Switch
+android.support.v7.appcompat.R$style: int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 android.support.v7.appcompat.R$style: int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 android.support.v7.appcompat.R$style: int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 android.support.v7.appcompat.R$style: int Base_TextAppearance_Widget_AppCompat_Toolbar_Title
@@ -3530,8 +3782,11 @@ android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_ActionButton_Ove
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_ActionMode
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_ActivityChooserView
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_AutoCompleteTextView
+android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Button
+android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Button_Small
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_CompoundButton_Switch
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_DrawerArrowToggle
+android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_DrawerArrowToggle_Common
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_DropDownItem_Spinner
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_EditText
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Light_ActionBar
@@ -3540,8 +3795,6 @@ android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Light_ActionBar_
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabText
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabView
-android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Light_ActivityChooserView
-android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Light_AutoCompleteTextView
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Light_PopupMenu
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Light_PopupMenu_Overflow
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_ListPopupWindow
@@ -3552,9 +3805,12 @@ android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_PopupMenu_Overfl
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_PopupWindow
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_ProgressBar
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_ProgressBar_Horizontal
+android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_RatingBar
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_SearchView
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Spinner
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Spinner_DropDown_ActionBar
+android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Spinner_Underlined
+android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_TextView_SpinnerItem
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Toolbar
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Toolbar_Button_Navigation
 android.support.v7.appcompat.R$style: int Platform_AppCompat
@@ -3614,6 +3870,7 @@ android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Widget_DropDo
 android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Widget_PopupMenu_Large
 android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Widget_PopupMenu_Small
 android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Widget_Switch
+android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 android.support.v7.appcompat.R$style: int TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 android.support.v7.appcompat.R$style: int TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 android.support.v7.appcompat.R$style: int TextAppearance_Widget_AppCompat_Toolbar_Title
@@ -3643,6 +3900,8 @@ android.support.v7.appcompat.R$style: int Widget_AppCompat_ActionButton_Overflow
 android.support.v7.appcompat.R$style: int Widget_AppCompat_ActionMode
 android.support.v7.appcompat.R$style: int Widget_AppCompat_ActivityChooserView
 android.support.v7.appcompat.R$style: int Widget_AppCompat_AutoCompleteTextView
+android.support.v7.appcompat.R$style: int Widget_AppCompat_Button
+android.support.v7.appcompat.R$style: int Widget_AppCompat_Button_Small
 android.support.v7.appcompat.R$style: int Widget_AppCompat_CompoundButton_Switch
 android.support.v7.appcompat.R$style: int Widget_AppCompat_DrawerArrowToggle
 android.support.v7.appcompat.R$style: int Widget_AppCompat_DropDownItem_Spinner
@@ -3677,10 +3936,13 @@ android.support.v7.appcompat.R$style: int Widget_AppCompat_PopupMenu_Overflow
 android.support.v7.appcompat.R$style: int Widget_AppCompat_PopupWindow
 android.support.v7.appcompat.R$style: int Widget_AppCompat_ProgressBar
 android.support.v7.appcompat.R$style: int Widget_AppCompat_ProgressBar_Horizontal
+android.support.v7.appcompat.R$style: int Widget_AppCompat_RatingBar
 android.support.v7.appcompat.R$style: int Widget_AppCompat_SearchView
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Spinner
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Spinner_DropDown
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Spinner_DropDown_ActionBar
+android.support.v7.appcompat.R$style: int Widget_AppCompat_Spinner_Underlined
+android.support.v7.appcompat.R$style: int Widget_AppCompat_TextView_SpinnerItem
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Toolbar
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Toolbar_Button_Navigation
 android.support.v7.appcompat.R$style: R$style()
@@ -3825,6 +4087,10 @@ android.support.v7.appcompat.R$styleable: int Spinner_popupPromptView
 android.support.v7.appcompat.R$styleable: int Spinner_prompt
 android.support.v7.appcompat.R$styleable: int Spinner_spinnerMode
 android.support.v7.appcompat.R$styleable: int[] SwitchCompat
+android.support.v7.appcompat.R$styleable: int[] SwitchCompatTextAppearance
+android.support.v7.appcompat.R$styleable: int SwitchCompatTextAppearance_android_textColor
+android.support.v7.appcompat.R$styleable: int SwitchCompatTextAppearance_android_textSize
+android.support.v7.appcompat.R$styleable: int SwitchCompatTextAppearance_textAllCaps
 android.support.v7.appcompat.R$styleable: int SwitchCompat_android_textOff
 android.support.v7.appcompat.R$styleable: int SwitchCompat_android_textOn
 android.support.v7.appcompat.R$styleable: int SwitchCompat_android_thumb
@@ -3867,6 +4133,7 @@ android.support.v7.appcompat.R$styleable: int Theme_actionModeWebSearchDrawable
 android.support.v7.appcompat.R$styleable: int Theme_actionOverflowButtonStyle
 android.support.v7.appcompat.R$styleable: int Theme_actionOverflowMenuStyle
 android.support.v7.appcompat.R$styleable: int Theme_activityChooserViewStyle
+android.support.v7.appcompat.R$styleable: int Theme_android_windowAnimationStyle
 android.support.v7.appcompat.R$styleable: int Theme_android_windowIsFloating
 android.support.v7.appcompat.R$styleable: int Theme_buttonBarButtonStyle
 android.support.v7.appcompat.R$styleable: int Theme_buttonBarStyle
@@ -4074,10 +4341,10 @@ android.support.v7.internal.app.ToolbarActionBar: boolean openOptionsMenu()
 android.support.v7.internal.app.ToolbarActionBar: boolean invalidateOptionsMenu()
 android.support.v7.internal.app.ToolbarActionBar: boolean collapseActionView()
 android.support.v7.internal.app.ToolbarActionBar: boolean onMenuKeyEvent(android.view.KeyEvent)
+android.support.v7.internal.app.ToolbarActionBar: boolean onKeyShortcut(int,android.view.KeyEvent)
 android.support.v7.internal.app.ToolbarActionBar: void addOnMenuVisibilityListener(android.support.v7.app.ActionBar$OnMenuVisibilityListener)
 android.support.v7.internal.app.ToolbarActionBar: void removeOnMenuVisibilityListener(android.support.v7.app.ActionBar$OnMenuVisibilityListener)
 android.support.v7.internal.app.ToolbarActionBar: void dispatchMenuVisibilityChanged(boolean)
-android.support.v7.internal.app.ToolbarActionBar: void setListMenuPresenter(android.support.v7.internal.view.menu.ListMenuPresenter)
 android.support.v7.internal.app.WindowCallback
 android.support.v7.internal.app.WindowCallback: boolean onMenuItemSelected(int,android.view.MenuItem)
 android.support.v7.internal.app.WindowCallback: boolean onCreatePanelMenu(int,android.view.Menu)
@@ -4171,7 +4438,7 @@ android.support.v7.internal.app.WindowDecorActionBar: void setLogo(android.graph
 android.support.v7.internal.app.WindowDecorActionBar: boolean hasLogo()
 android.support.v7.internal.app.WindowDecorActionBar: void setDefaultDisplayHomeAsUpEnabled(boolean)
 android.support.v7.internal.app.WindowDecorActionBar$ActionModeImpl
-android.support.v7.internal.app.WindowDecorActionBar$ActionModeImpl: WindowDecorActionBar$ActionModeImpl(android.support.v7.internal.app.WindowDecorActionBar,android.support.v7.view.ActionMode$Callback)
+android.support.v7.internal.app.WindowDecorActionBar$ActionModeImpl: WindowDecorActionBar$ActionModeImpl(android.support.v7.internal.app.WindowDecorActionBar,android.content.Context,android.support.v7.view.ActionMode$Callback)
 android.support.v7.internal.app.WindowDecorActionBar$ActionModeImpl: android.view.MenuInflater getMenuInflater()
 android.support.v7.internal.app.WindowDecorActionBar$ActionModeImpl: android.view.Menu getMenu()
 android.support.v7.internal.app.WindowDecorActionBar$ActionModeImpl: void finish()
@@ -4935,6 +5202,8 @@ android.support.v7.internal.widget.ActivityChooserView: void setOnDismissListene
 android.support.v7.internal.widget.ActivityChooserView: void setInitialActivityCount(int)
 android.support.v7.internal.widget.ActivityChooserView: void setDefaultActionButtonContentDescription(int)
 android.support.v7.internal.widget.ActivityChooserView: android.support.v7.widget.ListPopupWindow getListPopupWindow()
+android.support.v7.internal.widget.ActivityChooserView$InnerLayout
+android.support.v7.internal.widget.ActivityChooserView$InnerLayout: ActivityChooserView$InnerLayout(android.content.Context,android.util.AttributeSet)
 android.support.v7.internal.widget.AdapterViewCompat
 android.support.v7.internal.widget.AdapterViewCompat: int INVALID_POSITION
 android.support.v7.internal.widget.AdapterViewCompat: long INVALID_ROW_ID
@@ -5081,6 +5350,13 @@ android.support.v7.internal.widget.DecorToolbar: void setDefaultNavigationConten
 android.support.v7.internal.widget.DecorToolbar: void setDefaultNavigationIcon(android.graphics.drawable.Drawable)
 android.support.v7.internal.widget.DecorToolbar: void saveHierarchyState(android.util.SparseArray)
 android.support.v7.internal.widget.DecorToolbar: void restoreHierarchyState(android.util.SparseArray)
+android.support.v7.internal.widget.DecorToolbar: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v7.internal.widget.DecorToolbar: int getHeight()
+android.support.v7.internal.widget.DecorToolbar: void setVisibility(int)
+android.support.v7.internal.widget.DecorToolbar: int getVisibility()
+android.support.v7.internal.widget.DecorToolbar: void setMenuCallbacks(android.support.v7.internal.view.menu.MenuPresenter$Callback,android.support.v7.internal.view.menu.MenuBuilder$Callback)
+android.support.v7.internal.widget.DecorToolbar: android.view.Menu getMenu()
+android.support.v7.internal.widget.DecorToolbar: int getPopupTheme()
 android.support.v7.internal.widget.FitWindowsFrameLayout
 android.support.v7.internal.widget.FitWindowsFrameLayout: FitWindowsFrameLayout(android.content.Context)
 android.support.v7.internal.widget.FitWindowsFrameLayout: FitWindowsFrameLayout(android.content.Context,android.util.AttributeSet)
@@ -5157,6 +5433,16 @@ android.support.v7.internal.widget.ScrollingTabContainerView$VisibilityAnimListe
 android.support.v7.internal.widget.ScrollingTabContainerView$VisibilityAnimListener: void onAnimationCancel(android.view.View)
 android.support.v7.internal.widget.SpinnerCompat$SavedState
 android.support.v7.internal.widget.SpinnerCompat$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v7.internal.widget.TintAutoCompleteTextView
+android.support.v7.internal.widget.TintAutoCompleteTextView: TintAutoCompleteTextView(android.content.Context)
+android.support.v7.internal.widget.TintAutoCompleteTextView: TintAutoCompleteTextView(android.content.Context,android.util.AttributeSet)
+android.support.v7.internal.widget.TintAutoCompleteTextView: TintAutoCompleteTextView(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.internal.widget.TintAutoCompleteTextView: void setDropDownBackgroundResource(int)
+android.support.v7.internal.widget.TintButton
+android.support.v7.internal.widget.TintButton: TintButton(android.content.Context)
+android.support.v7.internal.widget.TintButton: TintButton(android.content.Context,android.util.AttributeSet)
+android.support.v7.internal.widget.TintButton: TintButton(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.internal.widget.TintButton: void setBackgroundResource(int)
 android.support.v7.internal.widget.TintCheckBox
 android.support.v7.internal.widget.TintCheckBox: TintCheckBox(android.content.Context)
 android.support.v7.internal.widget.TintCheckBox: TintCheckBox(android.content.Context,android.util.AttributeSet)
@@ -5180,11 +5466,22 @@ android.support.v7.internal.widget.TintManager
 android.support.v7.internal.widget.TintManager: android.graphics.drawable.Drawable getDrawable(android.content.Context,int)
 android.support.v7.internal.widget.TintManager: TintManager(android.content.Context)
 android.support.v7.internal.widget.TintManager: android.graphics.drawable.Drawable getDrawable(int)
+android.support.v7.internal.widget.TintMultiAutoCompleteTextView
+android.support.v7.internal.widget.TintMultiAutoCompleteTextView: TintMultiAutoCompleteTextView(android.content.Context)
+android.support.v7.internal.widget.TintMultiAutoCompleteTextView: TintMultiAutoCompleteTextView(android.content.Context,android.util.AttributeSet)
+android.support.v7.internal.widget.TintMultiAutoCompleteTextView: TintMultiAutoCompleteTextView(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.internal.widget.TintMultiAutoCompleteTextView: void setDropDownBackgroundResource(int)
 android.support.v7.internal.widget.TintRadioButton
 android.support.v7.internal.widget.TintRadioButton: TintRadioButton(android.content.Context)
 android.support.v7.internal.widget.TintRadioButton: TintRadioButton(android.content.Context,android.util.AttributeSet)
 android.support.v7.internal.widget.TintRadioButton: TintRadioButton(android.content.Context,android.util.AttributeSet,int)
 android.support.v7.internal.widget.TintRadioButton: void setButtonDrawable(int)
+android.support.v7.internal.widget.TintRatingBar
+android.support.v7.internal.widget.TintRatingBar: TintRatingBar(android.content.Context)
+android.support.v7.internal.widget.TintRatingBar: TintRatingBar(android.content.Context,android.util.AttributeSet)
+android.support.v7.internal.widget.TintRatingBar: TintRatingBar(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.internal.widget.TintRatingBar: android.graphics.drawable.shapes.Shape getDrawableShape()
+android.support.v7.internal.widget.TintRatingBar: void onMeasure(int,int)
 android.support.v7.internal.widget.TintSpinner
 android.support.v7.internal.widget.TintSpinner: TintSpinner(android.content.Context)
 android.support.v7.internal.widget.TintSpinner: TintSpinner(android.content.Context,android.util.AttributeSet)
@@ -5280,6 +5577,13 @@ android.support.v7.internal.widget.ToolbarWidgetWrapper: void setNavigationConte
 android.support.v7.internal.widget.ToolbarWidgetWrapper: void setNavigationContentDescription(int)
 android.support.v7.internal.widget.ToolbarWidgetWrapper: void saveHierarchyState(android.util.SparseArray)
 android.support.v7.internal.widget.ToolbarWidgetWrapper: void restoreHierarchyState(android.util.SparseArray)
+android.support.v7.internal.widget.ToolbarWidgetWrapper: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v7.internal.widget.ToolbarWidgetWrapper: int getHeight()
+android.support.v7.internal.widget.ToolbarWidgetWrapper: void setVisibility(int)
+android.support.v7.internal.widget.ToolbarWidgetWrapper: int getVisibility()
+android.support.v7.internal.widget.ToolbarWidgetWrapper: void setMenuCallbacks(android.support.v7.internal.view.menu.MenuPresenter$Callback,android.support.v7.internal.view.menu.MenuBuilder$Callback)
+android.support.v7.internal.widget.ToolbarWidgetWrapper: android.view.Menu getMenu()
+android.support.v7.internal.widget.ToolbarWidgetWrapper: int getPopupTheme()
 android.support.v7.internal.widget.ViewStubCompat
 android.support.v7.internal.widget.ViewStubCompat: ViewStubCompat(android.content.Context,android.util.AttributeSet)
 android.support.v7.internal.widget.ViewStubCompat: ViewStubCompat(android.content.Context,android.util.AttributeSet,int)
@@ -6185,7 +6489,6 @@ android.support.v7.widget.SearchView$SearchAutoComplete: SearchView$SearchAutoCo
 android.support.v7.widget.SearchView$SearchAutoComplete: SearchView$SearchAutoComplete(android.content.Context,android.util.AttributeSet,int)
 android.support.v7.widget.SearchView$SearchAutoComplete: void setSearchView(android.support.v7.widget.SearchView)
 android.support.v7.widget.SearchView$SearchAutoComplete: void setThreshold(int)
-android.support.v7.widget.SearchView$SearchAutoComplete: void setDropDownBackgroundResource(int)
 android.support.v7.widget.SearchView$SearchAutoComplete: void replaceText(java.lang.CharSequence)
 android.support.v7.widget.SearchView$SearchAutoComplete: void performCompletion()
 android.support.v7.widget.SearchView$SearchAutoComplete: void onWindowFocusChanged(boolean)
@@ -6375,6 +6678,7 @@ android.support.v7.widget.Toolbar: android.os.Parcelable onSaveInstanceState()
 android.support.v7.widget.Toolbar: void onRestoreInstanceState(android.os.Parcelable)
 android.support.v7.widget.Toolbar: void onDetachedFromWindow()
 android.support.v7.widget.Toolbar: boolean onTouchEvent(android.view.MotionEvent)
+android.support.v7.widget.Toolbar: boolean onHoverEvent(android.view.MotionEvent)
 android.support.v7.widget.Toolbar: void onMeasure(int,int)
 android.support.v7.widget.Toolbar: void onLayout(boolean,int,int,int,int)
 android.support.v7.widget.Toolbar: android.support.v7.widget.Toolbar$LayoutParams generateLayoutParams(android.util.AttributeSet)
@@ -7523,8 +7827,6 @@ com.h6ah4i.android.widget.advrecyclerview.R$dimen: int disabled_alpha_material_d
 com.h6ah4i.android.widget.advrecyclerview.R$dimen: int disabled_alpha_material_light
 com.h6ah4i.android.widget.advrecyclerview.R$dimen: R$dimen()
 com.h6ah4i.android.widget.advrecyclerview.R$drawable
-com.h6ah4i.android.widget.advrecyclerview.R$drawable: int abc_ab_share_pack_holo_dark
-com.h6ah4i.android.widget.advrecyclerview.R$drawable: int abc_ab_share_pack_holo_light
 com.h6ah4i.android.widget.advrecyclerview.R$drawable: int abc_btn_check_material
 com.h6ah4i.android.widget.advrecyclerview.R$drawable: int abc_btn_check_to_on_mtrl_000
 com.h6ah4i.android.widget.advrecyclerview.R$drawable: int abc_btn_check_to_on_mtrl_015
@@ -7652,7 +7954,6 @@ com.h6ah4i.android.widget.advrecyclerview.R$layout: int abc_action_menu_layout
 com.h6ah4i.android.widget.advrecyclerview.R$layout: int abc_action_mode_bar
 com.h6ah4i.android.widget.advrecyclerview.R$layout: int abc_action_mode_close_item_material
 com.h6ah4i.android.widget.advrecyclerview.R$layout: int abc_activity_chooser_view
-com.h6ah4i.android.widget.advrecyclerview.R$layout: int abc_activity_chooser_view_include
 com.h6ah4i.android.widget.advrecyclerview.R$layout: int abc_activity_chooser_view_list_item
 com.h6ah4i.android.widget.advrecyclerview.R$layout: int abc_expanded_menu_layout
 com.h6ah4i.android.widget.advrecyclerview.R$layout: int abc_list_menu_item_checkbox
@@ -7780,8 +8081,6 @@ com.h6ah4i.android.widget.advrecyclerview.R$style: int Base_Widget_AppCompat_Lig
 com.h6ah4i.android.widget.advrecyclerview.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabText
 com.h6ah4i.android.widget.advrecyclerview.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse
 com.h6ah4i.android.widget.advrecyclerview.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabView
-com.h6ah4i.android.widget.advrecyclerview.R$style: int Base_Widget_AppCompat_Light_ActivityChooserView
-com.h6ah4i.android.widget.advrecyclerview.R$style: int Base_Widget_AppCompat_Light_AutoCompleteTextView
 com.h6ah4i.android.widget.advrecyclerview.R$style: int Base_Widget_AppCompat_Light_PopupMenu
 com.h6ah4i.android.widget.advrecyclerview.R$style: int Base_Widget_AppCompat_Light_PopupMenu_Overflow
 com.h6ah4i.android.widget.advrecyclerview.R$style: int Base_Widget_AppCompat_ListPopupWindow
@@ -9321,6 +9620,8 @@ com.radmagnet.R: R()
 com.radmagnet.R$anim
 com.radmagnet.R$anim: int abc_fade_in
 com.radmagnet.R$anim: int abc_fade_out
+com.radmagnet.R$anim: int abc_grow_fade_in_from_bottom
+com.radmagnet.R$anim: int abc_shrink_fade_out_from_bottom
 com.radmagnet.R$anim: int abc_slide_in_bottom
 com.radmagnet.R$anim: int abc_slide_in_top
 com.radmagnet.R$anim: int abc_slide_out_bottom
@@ -9666,7 +9967,12 @@ com.radmagnet.R$dimen: int abc_action_bar_subtitle_top_margin_material
 com.radmagnet.R$dimen: int abc_action_button_min_height_material
 com.radmagnet.R$dimen: int abc_action_button_min_width_material
 com.radmagnet.R$dimen: int abc_action_button_min_width_overflow_material
+com.radmagnet.R$dimen: int abc_button_inset_horizontal_material
+com.radmagnet.R$dimen: int abc_button_inset_vertical_material
+com.radmagnet.R$dimen: int abc_button_padding_horizontal_material
+com.radmagnet.R$dimen: int abc_button_padding_vertical_material
 com.radmagnet.R$dimen: int abc_config_prefDialogWidth
+com.radmagnet.R$dimen: int abc_control_corner_material
 com.radmagnet.R$dimen: int abc_control_inset_material
 com.radmagnet.R$dimen: int abc_control_padding_material
 com.radmagnet.R$dimen: int abc_dropdownitem_icon_width
@@ -9718,14 +10024,16 @@ com.radmagnet.R$dimen: int disabled_alpha_material_dark
 com.radmagnet.R$dimen: int disabled_alpha_material_light
 com.radmagnet.R$dimen: R$dimen()
 com.radmagnet.R$drawable
-com.radmagnet.R$drawable: int abc_ab_share_pack_holo_dark
-com.radmagnet.R$drawable: int abc_ab_share_pack_holo_light
+com.radmagnet.R$drawable: int abc_ab_share_pack_mtrl_alpha
 com.radmagnet.R$drawable: int abc_btn_check_material
 com.radmagnet.R$drawable: int abc_btn_check_to_on_mtrl_000
 com.radmagnet.R$drawable: int abc_btn_check_to_on_mtrl_015
+com.radmagnet.R$drawable: int abc_btn_default_mtrl_shape
 com.radmagnet.R$drawable: int abc_btn_radio_material
 com.radmagnet.R$drawable: int abc_btn_radio_to_on_mtrl_000
 com.radmagnet.R$drawable: int abc_btn_radio_to_on_mtrl_015
+com.radmagnet.R$drawable: int abc_btn_rating_star_off_mtrl_alpha
+com.radmagnet.R$drawable: int abc_btn_rating_star_on_mtrl_alpha
 com.radmagnet.R$drawable: int abc_btn_switch_to_on_mtrl_00001
 com.radmagnet.R$drawable: int abc_btn_switch_to_on_mtrl_00012
 com.radmagnet.R$drawable: int abc_cab_background_internal_bg
@@ -9759,7 +10067,9 @@ com.radmagnet.R$drawable: int abc_list_selector_holo_dark
 com.radmagnet.R$drawable: int abc_list_selector_holo_light
 com.radmagnet.R$drawable: int abc_menu_hardkey_panel_mtrl_mult
 com.radmagnet.R$drawable: int abc_popup_background_mtrl_mult
+com.radmagnet.R$drawable: int abc_ratingbar_full_material
 com.radmagnet.R$drawable: int abc_spinner_mtrl_am_alpha
+com.radmagnet.R$drawable: int abc_spinner_textfield_background_material
 com.radmagnet.R$drawable: int abc_switch_thumb_material
 com.radmagnet.R$drawable: int abc_switch_track_mtrl_alpha
 com.radmagnet.R$drawable: int abc_tab_indicator_material
@@ -9780,6 +10090,7 @@ com.radmagnet.R$drawable: int btn_feedback
 com.radmagnet.R$drawable: int btn_start
 com.radmagnet.R$drawable: int btn_start_n
 com.radmagnet.R$drawable: int btn_start_p
+com.radmagnet.R$drawable: int btn_yellow_a
 com.radmagnet.R$drawable: int btn_yellow_n
 com.radmagnet.R$drawable: int btn_yellow_p
 com.radmagnet.R$drawable: int ic_alltherad
@@ -9788,6 +10099,7 @@ com.radmagnet.R$drawable: int ic_bookmark
 com.radmagnet.R$drawable: int ic_bookmark_a
 com.radmagnet.R$drawable: int ic_bookmark_n
 com.radmagnet.R$drawable: int ic_branding
+com.radmagnet.R$drawable: int ic_broadcast
 com.radmagnet.R$drawable: int ic_cityhotspots
 com.radmagnet.R$drawable: int ic_deals
 com.radmagnet.R$drawable: int ic_events
@@ -9935,6 +10247,8 @@ com.radmagnet.R$id: int withText
 com.radmagnet.R$id: int wrap_content
 com.radmagnet.R$id: R$id()
 com.radmagnet.R$integer
+com.radmagnet.R$integer: int abc_config_activityDefaultDur
+com.radmagnet.R$integer: int abc_config_activityShortDur
 com.radmagnet.R$integer: int abc_max_action_buttons
 com.radmagnet.R$integer: int default_circle_indicator_orientation
 com.radmagnet.R$integer: int default_title_indicator_footer_indicator_style
@@ -9951,7 +10265,6 @@ com.radmagnet.R$layout: int abc_action_menu_layout
 com.radmagnet.R$layout: int abc_action_mode_bar
 com.radmagnet.R$layout: int abc_action_mode_close_item_material
 com.radmagnet.R$layout: int abc_activity_chooser_view
-com.radmagnet.R$layout: int abc_activity_chooser_view_include
 com.radmagnet.R$layout: int abc_activity_chooser_view_list_item
 com.radmagnet.R$layout: int abc_expanded_menu_layout
 com.radmagnet.R$layout: int abc_list_menu_item_checkbox
@@ -10049,7 +10362,9 @@ com.radmagnet.R$string: int yourFeedbackCouldNotBeSend_msg
 com.radmagnet.R$string: int yourName_txt
 com.radmagnet.R$string: R$string()
 com.radmagnet.R$style
+com.radmagnet.R$style: int Animation_AppCompat_DropDownUp
 com.radmagnet.R$style: int AppTheme
+com.radmagnet.R$style: int Base_Animation_AppCompat_DropDownUp
 com.radmagnet.R$style: int Base_TextAppearance_AppCompat
 com.radmagnet.R$style: int Base_TextAppearance_AppCompat_Body1
 com.radmagnet.R$style: int Base_TextAppearance_AppCompat_Body2
@@ -10088,6 +10403,7 @@ com.radmagnet.R$style: int Base_TextAppearance_AppCompat_Widget_DropDownItem
 com.radmagnet.R$style: int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large
 com.radmagnet.R$style: int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small
 com.radmagnet.R$style: int Base_TextAppearance_AppCompat_Widget_Switch
+com.radmagnet.R$style: int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 com.radmagnet.R$style: int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 com.radmagnet.R$style: int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 com.radmagnet.R$style: int Base_TextAppearance_Widget_AppCompat_Toolbar_Title
@@ -10132,8 +10448,11 @@ com.radmagnet.R$style: int Base_Widget_AppCompat_ActionButton_Overflow
 com.radmagnet.R$style: int Base_Widget_AppCompat_ActionMode
 com.radmagnet.R$style: int Base_Widget_AppCompat_ActivityChooserView
 com.radmagnet.R$style: int Base_Widget_AppCompat_AutoCompleteTextView
+com.radmagnet.R$style: int Base_Widget_AppCompat_Button
+com.radmagnet.R$style: int Base_Widget_AppCompat_Button_Small
 com.radmagnet.R$style: int Base_Widget_AppCompat_CompoundButton_Switch
 com.radmagnet.R$style: int Base_Widget_AppCompat_DrawerArrowToggle
+com.radmagnet.R$style: int Base_Widget_AppCompat_DrawerArrowToggle_Common
 com.radmagnet.R$style: int Base_Widget_AppCompat_DropDownItem_Spinner
 com.radmagnet.R$style: int Base_Widget_AppCompat_EditText
 com.radmagnet.R$style: int Base_Widget_AppCompat_Light_ActionBar
@@ -10142,8 +10461,6 @@ com.radmagnet.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabBar
 com.radmagnet.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabText
 com.radmagnet.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse
 com.radmagnet.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabView
-com.radmagnet.R$style: int Base_Widget_AppCompat_Light_ActivityChooserView
-com.radmagnet.R$style: int Base_Widget_AppCompat_Light_AutoCompleteTextView
 com.radmagnet.R$style: int Base_Widget_AppCompat_Light_PopupMenu
 com.radmagnet.R$style: int Base_Widget_AppCompat_Light_PopupMenu_Overflow
 com.radmagnet.R$style: int Base_Widget_AppCompat_ListPopupWindow
@@ -10154,9 +10471,12 @@ com.radmagnet.R$style: int Base_Widget_AppCompat_PopupMenu_Overflow
 com.radmagnet.R$style: int Base_Widget_AppCompat_PopupWindow
 com.radmagnet.R$style: int Base_Widget_AppCompat_ProgressBar
 com.radmagnet.R$style: int Base_Widget_AppCompat_ProgressBar_Horizontal
+com.radmagnet.R$style: int Base_Widget_AppCompat_RatingBar
 com.radmagnet.R$style: int Base_Widget_AppCompat_SearchView
 com.radmagnet.R$style: int Base_Widget_AppCompat_Spinner
 com.radmagnet.R$style: int Base_Widget_AppCompat_Spinner_DropDown_ActionBar
+com.radmagnet.R$style: int Base_Widget_AppCompat_Spinner_Underlined
+com.radmagnet.R$style: int Base_Widget_AppCompat_TextView_SpinnerItem
 com.radmagnet.R$style: int Base_Widget_AppCompat_Toolbar
 com.radmagnet.R$style: int Base_Widget_AppCompat_Toolbar_Button_Navigation
 com.radmagnet.R$style: int CardView
@@ -10219,6 +10539,7 @@ com.radmagnet.R$style: int TextAppearance_AppCompat_Widget_DropDownItem
 com.radmagnet.R$style: int TextAppearance_AppCompat_Widget_PopupMenu_Large
 com.radmagnet.R$style: int TextAppearance_AppCompat_Widget_PopupMenu_Small
 com.radmagnet.R$style: int TextAppearance_AppCompat_Widget_Switch
+com.radmagnet.R$style: int TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 com.radmagnet.R$style: int TextAppearance_Black
 com.radmagnet.R$style: int TextAppearance_BlackItalics
 com.radmagnet.R$style: int TextAppearance_Bold
@@ -10255,6 +10576,8 @@ com.radmagnet.R$style: int Widget_AppCompat_ActionButton_Overflow
 com.radmagnet.R$style: int Widget_AppCompat_ActionMode
 com.radmagnet.R$style: int Widget_AppCompat_ActivityChooserView
 com.radmagnet.R$style: int Widget_AppCompat_AutoCompleteTextView
+com.radmagnet.R$style: int Widget_AppCompat_Button
+com.radmagnet.R$style: int Widget_AppCompat_Button_Small
 com.radmagnet.R$style: int Widget_AppCompat_CompoundButton_Switch
 com.radmagnet.R$style: int Widget_AppCompat_DrawerArrowToggle
 com.radmagnet.R$style: int Widget_AppCompat_DropDownItem_Spinner
@@ -10289,10 +10612,13 @@ com.radmagnet.R$style: int Widget_AppCompat_PopupMenu_Overflow
 com.radmagnet.R$style: int Widget_AppCompat_PopupWindow
 com.radmagnet.R$style: int Widget_AppCompat_ProgressBar
 com.radmagnet.R$style: int Widget_AppCompat_ProgressBar_Horizontal
+com.radmagnet.R$style: int Widget_AppCompat_RatingBar
 com.radmagnet.R$style: int Widget_AppCompat_SearchView
 com.radmagnet.R$style: int Widget_AppCompat_Spinner
 com.radmagnet.R$style: int Widget_AppCompat_Spinner_DropDown
 com.radmagnet.R$style: int Widget_AppCompat_Spinner_DropDown_ActionBar
+com.radmagnet.R$style: int Widget_AppCompat_Spinner_Underlined
+com.radmagnet.R$style: int Widget_AppCompat_TextView_SpinnerItem
 com.radmagnet.R$style: int Widget_AppCompat_Toolbar
 com.radmagnet.R$style: int Widget_AppCompat_Toolbar_Button_Navigation
 com.radmagnet.R$style: int Widget_IconPageIndicator
@@ -10479,6 +10805,10 @@ com.radmagnet.R$styleable: int SwitchCompat_switchPadding
 com.radmagnet.R$styleable: int SwitchCompat_switchTextAppearance
 com.radmagnet.R$styleable: int SwitchCompat_thumbTextPadding
 com.radmagnet.R$styleable: int SwitchCompat_track
+com.radmagnet.R$styleable: int[] SwitchCompatTextAppearance
+com.radmagnet.R$styleable: int SwitchCompatTextAppearance_android_textColor
+com.radmagnet.R$styleable: int SwitchCompatTextAppearance_android_textSize
+com.radmagnet.R$styleable: int SwitchCompatTextAppearance_textAllCaps
 com.radmagnet.R$styleable: int[] Theme
 com.radmagnet.R$styleable: int Theme_actionBarDivider
 com.radmagnet.R$styleable: int Theme_actionBarItemBackground
@@ -10511,6 +10841,7 @@ com.radmagnet.R$styleable: int Theme_actionModeWebSearchDrawable
 com.radmagnet.R$styleable: int Theme_actionOverflowButtonStyle
 com.radmagnet.R$styleable: int Theme_actionOverflowMenuStyle
 com.radmagnet.R$styleable: int Theme_activityChooserViewStyle
+com.radmagnet.R$styleable: int Theme_android_windowAnimationStyle
 com.radmagnet.R$styleable: int Theme_android_windowIsFloating
 com.radmagnet.R$styleable: int Theme_buttonBarButtonStyle
 com.radmagnet.R$styleable: int Theme_buttonBarStyle
@@ -10639,7 +10970,6 @@ com.radmagnet.activities.BaseActivity: java.lang.CharSequence highlight(java.lan
 com.radmagnet.activities.BaseActivity: void setupActionBar(boolean,android.support.v7.widget.Toolbar)
 com.radmagnet.activities.BaseActivity: android.text.SpannableString getStyledActionTitle(java.lang.CharSequence)
 com.radmagnet.activities.BaseActivity: int getValueInDp(int)
-com.radmagnet.activities.BaseActivity: java.lang.String getDateSuffix(int)
 com.radmagnet.activities.BookmarkActivity
 com.radmagnet.activities.BookmarkActivity: android.support.v7.widget.RecyclerView mBookmarksRv
 com.radmagnet.activities.BookmarkActivity: android.support.v7.widget.Toolbar mToolbar
@@ -16119,6 +16449,8 @@ jp.wasabeef.recyclerview.R: R()
 jp.wasabeef.recyclerview.R$anim
 jp.wasabeef.recyclerview.R$anim: int abc_fade_in
 jp.wasabeef.recyclerview.R$anim: int abc_fade_out
+jp.wasabeef.recyclerview.R$anim: int abc_grow_fade_in_from_bottom
+jp.wasabeef.recyclerview.R$anim: int abc_shrink_fade_out_from_bottom
 jp.wasabeef.recyclerview.R$anim: int abc_slide_in_bottom
 jp.wasabeef.recyclerview.R$anim: int abc_slide_in_top
 jp.wasabeef.recyclerview.R$anim: int abc_slide_out_bottom
@@ -16375,7 +16707,12 @@ jp.wasabeef.recyclerview.R$dimen: int abc_action_bar_subtitle_top_margin_materia
 jp.wasabeef.recyclerview.R$dimen: int abc_action_button_min_height_material
 jp.wasabeef.recyclerview.R$dimen: int abc_action_button_min_width_material
 jp.wasabeef.recyclerview.R$dimen: int abc_action_button_min_width_overflow_material
+jp.wasabeef.recyclerview.R$dimen: int abc_button_inset_horizontal_material
+jp.wasabeef.recyclerview.R$dimen: int abc_button_inset_vertical_material
+jp.wasabeef.recyclerview.R$dimen: int abc_button_padding_horizontal_material
+jp.wasabeef.recyclerview.R$dimen: int abc_button_padding_vertical_material
 jp.wasabeef.recyclerview.R$dimen: int abc_config_prefDialogWidth
+jp.wasabeef.recyclerview.R$dimen: int abc_control_corner_material
 jp.wasabeef.recyclerview.R$dimen: int abc_control_inset_material
 jp.wasabeef.recyclerview.R$dimen: int abc_control_padding_material
 jp.wasabeef.recyclerview.R$dimen: int abc_dropdownitem_icon_width
@@ -16409,14 +16746,16 @@ jp.wasabeef.recyclerview.R$dimen: int disabled_alpha_material_dark
 jp.wasabeef.recyclerview.R$dimen: int disabled_alpha_material_light
 jp.wasabeef.recyclerview.R$dimen: R$dimen()
 jp.wasabeef.recyclerview.R$drawable
-jp.wasabeef.recyclerview.R$drawable: int abc_ab_share_pack_holo_dark
-jp.wasabeef.recyclerview.R$drawable: int abc_ab_share_pack_holo_light
+jp.wasabeef.recyclerview.R$drawable: int abc_ab_share_pack_mtrl_alpha
 jp.wasabeef.recyclerview.R$drawable: int abc_btn_check_material
 jp.wasabeef.recyclerview.R$drawable: int abc_btn_check_to_on_mtrl_000
 jp.wasabeef.recyclerview.R$drawable: int abc_btn_check_to_on_mtrl_015
+jp.wasabeef.recyclerview.R$drawable: int abc_btn_default_mtrl_shape
 jp.wasabeef.recyclerview.R$drawable: int abc_btn_radio_material
 jp.wasabeef.recyclerview.R$drawable: int abc_btn_radio_to_on_mtrl_000
 jp.wasabeef.recyclerview.R$drawable: int abc_btn_radio_to_on_mtrl_015
+jp.wasabeef.recyclerview.R$drawable: int abc_btn_rating_star_off_mtrl_alpha
+jp.wasabeef.recyclerview.R$drawable: int abc_btn_rating_star_on_mtrl_alpha
 jp.wasabeef.recyclerview.R$drawable: int abc_btn_switch_to_on_mtrl_00001
 jp.wasabeef.recyclerview.R$drawable: int abc_btn_switch_to_on_mtrl_00012
 jp.wasabeef.recyclerview.R$drawable: int abc_cab_background_internal_bg
@@ -16450,7 +16789,9 @@ jp.wasabeef.recyclerview.R$drawable: int abc_list_selector_holo_dark
 jp.wasabeef.recyclerview.R$drawable: int abc_list_selector_holo_light
 jp.wasabeef.recyclerview.R$drawable: int abc_menu_hardkey_panel_mtrl_mult
 jp.wasabeef.recyclerview.R$drawable: int abc_popup_background_mtrl_mult
+jp.wasabeef.recyclerview.R$drawable: int abc_ratingbar_full_material
 jp.wasabeef.recyclerview.R$drawable: int abc_spinner_mtrl_am_alpha
+jp.wasabeef.recyclerview.R$drawable: int abc_spinner_textfield_background_material
 jp.wasabeef.recyclerview.R$drawable: int abc_switch_thumb_material
 jp.wasabeef.recyclerview.R$drawable: int abc_switch_track_mtrl_alpha
 jp.wasabeef.recyclerview.R$drawable: int abc_tab_indicator_material
@@ -16527,6 +16868,8 @@ jp.wasabeef.recyclerview.R$id: int withText
 jp.wasabeef.recyclerview.R$id: int wrap_content
 jp.wasabeef.recyclerview.R$id: R$id()
 jp.wasabeef.recyclerview.R$integer
+jp.wasabeef.recyclerview.R$integer: int abc_config_activityDefaultDur
+jp.wasabeef.recyclerview.R$integer: int abc_config_activityShortDur
 jp.wasabeef.recyclerview.R$integer: int abc_max_action_buttons
 jp.wasabeef.recyclerview.R$integer: R$integer()
 jp.wasabeef.recyclerview.R$layout
@@ -16538,7 +16881,6 @@ jp.wasabeef.recyclerview.R$layout: int abc_action_menu_layout
 jp.wasabeef.recyclerview.R$layout: int abc_action_mode_bar
 jp.wasabeef.recyclerview.R$layout: int abc_action_mode_close_item_material
 jp.wasabeef.recyclerview.R$layout: int abc_activity_chooser_view
-jp.wasabeef.recyclerview.R$layout: int abc_activity_chooser_view_include
 jp.wasabeef.recyclerview.R$layout: int abc_activity_chooser_view_list_item
 jp.wasabeef.recyclerview.R$layout: int abc_expanded_menu_layout
 jp.wasabeef.recyclerview.R$layout: int abc_list_menu_item_checkbox
@@ -16574,6 +16916,8 @@ jp.wasabeef.recyclerview.R$string: int abc_shareactionprovider_share_with_applic
 jp.wasabeef.recyclerview.R$string: int abc_toolbar_collapse_description
 jp.wasabeef.recyclerview.R$string: R$string()
 jp.wasabeef.recyclerview.R$style
+jp.wasabeef.recyclerview.R$style: int Animation_AppCompat_DropDownUp
+jp.wasabeef.recyclerview.R$style: int Base_Animation_AppCompat_DropDownUp
 jp.wasabeef.recyclerview.R$style: int Base_TextAppearance_AppCompat
 jp.wasabeef.recyclerview.R$style: int Base_TextAppearance_AppCompat_Body1
 jp.wasabeef.recyclerview.R$style: int Base_TextAppearance_AppCompat_Body2
@@ -16612,6 +16956,7 @@ jp.wasabeef.recyclerview.R$style: int Base_TextAppearance_AppCompat_Widget_DropD
 jp.wasabeef.recyclerview.R$style: int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large
 jp.wasabeef.recyclerview.R$style: int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small
 jp.wasabeef.recyclerview.R$style: int Base_TextAppearance_AppCompat_Widget_Switch
+jp.wasabeef.recyclerview.R$style: int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 jp.wasabeef.recyclerview.R$style: int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 jp.wasabeef.recyclerview.R$style: int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 jp.wasabeef.recyclerview.R$style: int Base_TextAppearance_Widget_AppCompat_Toolbar_Title
@@ -16656,8 +17001,11 @@ jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_ActionButton_Overflo
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_ActionMode
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_ActivityChooserView
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_AutoCompleteTextView
+jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Button
+jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Button_Small
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_CompoundButton_Switch
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_DrawerArrowToggle
+jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_DrawerArrowToggle_Common
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_DropDownItem_Spinner
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_EditText
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Light_ActionBar
@@ -16666,8 +17014,6 @@ jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabB
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabText
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabView
-jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Light_ActivityChooserView
-jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Light_AutoCompleteTextView
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Light_PopupMenu
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Light_PopupMenu_Overflow
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_ListPopupWindow
@@ -16678,9 +17024,12 @@ jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_PopupMenu_Overflow
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_PopupWindow
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_ProgressBar
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_ProgressBar_Horizontal
+jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_RatingBar
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_SearchView
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Spinner
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Spinner_DropDown_ActionBar
+jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Spinner_Underlined
+jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_TextView_SpinnerItem
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Toolbar
 jp.wasabeef.recyclerview.R$style: int Base_Widget_AppCompat_Toolbar_Button_Navigation
 jp.wasabeef.recyclerview.R$style: int Platform_AppCompat
@@ -16740,6 +17089,7 @@ jp.wasabeef.recyclerview.R$style: int TextAppearance_AppCompat_Widget_DropDownIt
 jp.wasabeef.recyclerview.R$style: int TextAppearance_AppCompat_Widget_PopupMenu_Large
 jp.wasabeef.recyclerview.R$style: int TextAppearance_AppCompat_Widget_PopupMenu_Small
 jp.wasabeef.recyclerview.R$style: int TextAppearance_AppCompat_Widget_Switch
+jp.wasabeef.recyclerview.R$style: int TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 jp.wasabeef.recyclerview.R$style: int TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 jp.wasabeef.recyclerview.R$style: int TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 jp.wasabeef.recyclerview.R$style: int TextAppearance_Widget_AppCompat_Toolbar_Title
@@ -16769,6 +17119,8 @@ jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_ActionButton_Overflow
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_ActionMode
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_ActivityChooserView
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_AutoCompleteTextView
+jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_Button
+jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_Button_Small
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_CompoundButton_Switch
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_DrawerArrowToggle
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_DropDownItem_Spinner
@@ -16803,10 +17155,13 @@ jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_PopupMenu_Overflow
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_PopupWindow
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_ProgressBar
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_ProgressBar_Horizontal
+jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_RatingBar
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_SearchView
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_Spinner
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_Spinner_DropDown
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_Spinner_DropDown_ActionBar
+jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_Spinner_Underlined
+jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_TextView_SpinnerItem
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_Toolbar
 jp.wasabeef.recyclerview.R$style: int Widget_AppCompat_Toolbar_Button_Navigation
 jp.wasabeef.recyclerview.R$style: R$style()
@@ -16951,6 +17306,10 @@ jp.wasabeef.recyclerview.R$styleable: int Spinner_popupPromptView
 jp.wasabeef.recyclerview.R$styleable: int Spinner_prompt
 jp.wasabeef.recyclerview.R$styleable: int Spinner_spinnerMode
 jp.wasabeef.recyclerview.R$styleable: int[] SwitchCompat
+jp.wasabeef.recyclerview.R$styleable: int[] SwitchCompatTextAppearance
+jp.wasabeef.recyclerview.R$styleable: int SwitchCompatTextAppearance_android_textColor
+jp.wasabeef.recyclerview.R$styleable: int SwitchCompatTextAppearance_android_textSize
+jp.wasabeef.recyclerview.R$styleable: int SwitchCompatTextAppearance_textAllCaps
 jp.wasabeef.recyclerview.R$styleable: int SwitchCompat_android_textOff
 jp.wasabeef.recyclerview.R$styleable: int SwitchCompat_android_textOn
 jp.wasabeef.recyclerview.R$styleable: int SwitchCompat_android_thumb
@@ -16993,6 +17352,7 @@ jp.wasabeef.recyclerview.R$styleable: int Theme_actionModeWebSearchDrawable
 jp.wasabeef.recyclerview.R$styleable: int Theme_actionOverflowButtonStyle
 jp.wasabeef.recyclerview.R$styleable: int Theme_actionOverflowMenuStyle
 jp.wasabeef.recyclerview.R$styleable: int Theme_activityChooserViewStyle
+jp.wasabeef.recyclerview.R$styleable: int Theme_android_windowAnimationStyle
 jp.wasabeef.recyclerview.R$styleable: int Theme_android_windowIsFloating
 jp.wasabeef.recyclerview.R$styleable: int Theme_buttonBarButtonStyle
 jp.wasabeef.recyclerview.R$styleable: int Theme_buttonBarStyle
@@ -17082,10 +17442,10 @@ jp.wasabeef.recyclerview.animators.BaseItemAnimator: java.util.ArrayList mAddAni
 jp.wasabeef.recyclerview.animators.BaseItemAnimator: java.util.ArrayList mRemoveAnimations
 jp.wasabeef.recyclerview.animators.BaseItemAnimator: BaseItemAnimator()
 jp.wasabeef.recyclerview.animators.BaseItemAnimator: void runPendingAnimations()
+jp.wasabeef.recyclerview.animators.BaseItemAnimator: void preAnimateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.BaseItemAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.BaseItemAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.BaseItemAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.BaseItemAnimator: void preAnimateRemove(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.BaseItemAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.BaseItemAnimator: boolean animateRemove(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.BaseItemAnimator: boolean animateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.BaseItemAnimator: boolean animateMove(android.support.v7.widget.RecyclerView$ViewHolder,int,int,int,int)
@@ -17106,119 +17466,114 @@ jp.wasabeef.recyclerview.animators.BaseItemAnimator$DefaultRemoveVpaListener: vo
 jp.wasabeef.recyclerview.animators.BaseItemAnimator$VpaListenerAdapter: void onAnimationStart(android.view.View)
 jp.wasabeef.recyclerview.animators.BaseItemAnimator$VpaListenerAdapter: void onAnimationEnd(android.view.View)
 jp.wasabeef.recyclerview.animators.BaseItemAnimator$VpaListenerAdapter: void onAnimationCancel(android.view.View)
-jp.wasabeef.recyclerview.animators.BounceInAnimator
-jp.wasabeef.recyclerview.animators.BounceInAnimator: BounceInAnimator()
-jp.wasabeef.recyclerview.animators.BounceInAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.BounceInAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.BounceInAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FadeInAnimator
 jp.wasabeef.recyclerview.animators.FadeInAnimator: FadeInAnimator()
 jp.wasabeef.recyclerview.animators.FadeInAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.FadeInAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.FadeInAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FadeInAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FadeInDownAnimator
 jp.wasabeef.recyclerview.animators.FadeInDownAnimator: FadeInDownAnimator()
 jp.wasabeef.recyclerview.animators.FadeInDownAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.FadeInDownAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.FadeInDownAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FadeInDownAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FadeInLeftAnimator
 jp.wasabeef.recyclerview.animators.FadeInLeftAnimator: FadeInLeftAnimator()
 jp.wasabeef.recyclerview.animators.FadeInLeftAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.FadeInLeftAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.FadeInLeftAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FadeInLeftAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FadeInRightAnimator
 jp.wasabeef.recyclerview.animators.FadeInRightAnimator: FadeInRightAnimator()
 jp.wasabeef.recyclerview.animators.FadeInRightAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.FadeInRightAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.FadeInRightAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FadeInRightAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FadeInUpAnimator
 jp.wasabeef.recyclerview.animators.FadeInUpAnimator: FadeInUpAnimator()
 jp.wasabeef.recyclerview.animators.FadeInUpAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.FadeInUpAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.FadeInUpAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FadeInUpAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FlipInBottomXAnimator
 jp.wasabeef.recyclerview.animators.FlipInBottomXAnimator: FlipInBottomXAnimator()
 jp.wasabeef.recyclerview.animators.FlipInBottomXAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.FlipInBottomXAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.FlipInBottomXAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FlipInBottomXAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FlipInLeftYAnimator
 jp.wasabeef.recyclerview.animators.FlipInLeftYAnimator: FlipInLeftYAnimator()
 jp.wasabeef.recyclerview.animators.FlipInLeftYAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.FlipInLeftYAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.FlipInLeftYAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FlipInLeftYAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FlipInRightYAnimator
 jp.wasabeef.recyclerview.animators.FlipInRightYAnimator: FlipInRightYAnimator()
 jp.wasabeef.recyclerview.animators.FlipInRightYAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.FlipInRightYAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.FlipInRightYAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FlipInRightYAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FlipInTopXAnimator
 jp.wasabeef.recyclerview.animators.FlipInTopXAnimator: FlipInTopXAnimator()
 jp.wasabeef.recyclerview.animators.FlipInTopXAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.FlipInTopXAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.FlipInTopXAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.FlipInTopXAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.LandingAnimator
 jp.wasabeef.recyclerview.animators.LandingAnimator: LandingAnimator()
 jp.wasabeef.recyclerview.animators.LandingAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.LandingAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.LandingAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.LandingAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.OvershootInLeftAnimator
 jp.wasabeef.recyclerview.animators.OvershootInLeftAnimator: OvershootInLeftAnimator()
 jp.wasabeef.recyclerview.animators.OvershootInLeftAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.OvershootInLeftAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.OvershootInLeftAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.OvershootInLeftAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.OvershootInRightAnimator
 jp.wasabeef.recyclerview.animators.OvershootInRightAnimator: OvershootInRightAnimator()
 jp.wasabeef.recyclerview.animators.OvershootInRightAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.OvershootInRightAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.OvershootInRightAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.OvershootInRightAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInAnimator
 jp.wasabeef.recyclerview.animators.ScaleInAnimator: ScaleInAnimator()
 jp.wasabeef.recyclerview.animators.ScaleInAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.ScaleInAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.ScaleInAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInBottomAnimator
 jp.wasabeef.recyclerview.animators.ScaleInBottomAnimator: ScaleInBottomAnimator()
-jp.wasabeef.recyclerview.animators.ScaleInBottomAnimator: void preAnimateRemove(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.ScaleInBottomAnimator: void preAnimateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInBottomAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.ScaleInBottomAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.ScaleInBottomAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInBottomAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInLeftAnimator
 jp.wasabeef.recyclerview.animators.ScaleInLeftAnimator: ScaleInLeftAnimator()
-jp.wasabeef.recyclerview.animators.ScaleInLeftAnimator: void preAnimateRemove(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.ScaleInLeftAnimator: void preAnimateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInLeftAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.ScaleInLeftAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.ScaleInLeftAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInLeftAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInRightAnimator
 jp.wasabeef.recyclerview.animators.ScaleInRightAnimator: ScaleInRightAnimator()
-jp.wasabeef.recyclerview.animators.ScaleInRightAnimator: void preAnimateRemove(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.ScaleInRightAnimator: void preAnimateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInRightAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.ScaleInRightAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.ScaleInRightAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInRightAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInTopAnimator
 jp.wasabeef.recyclerview.animators.ScaleInTopAnimator: ScaleInTopAnimator()
-jp.wasabeef.recyclerview.animators.ScaleInTopAnimator: void preAnimateRemove(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.ScaleInTopAnimator: void preAnimateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInTopAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.ScaleInTopAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.ScaleInTopAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.ScaleInTopAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.SlideInDownAnimator
 jp.wasabeef.recyclerview.animators.SlideInDownAnimator: SlideInDownAnimator()
 jp.wasabeef.recyclerview.animators.SlideInDownAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.SlideInDownAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.SlideInDownAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.SlideInDownAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.SlideInLeftAnimator
 jp.wasabeef.recyclerview.animators.SlideInLeftAnimator: SlideInLeftAnimator()
 jp.wasabeef.recyclerview.animators.SlideInLeftAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.SlideInLeftAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.SlideInLeftAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.SlideInLeftAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.SlideInRightAnimator
 jp.wasabeef.recyclerview.animators.SlideInRightAnimator: SlideInRightAnimator()
 jp.wasabeef.recyclerview.animators.SlideInRightAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.SlideInRightAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.SlideInRightAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.SlideInRightAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.SlideInUpAnimator
 jp.wasabeef.recyclerview.animators.SlideInUpAnimator: SlideInUpAnimator()
 jp.wasabeef.recyclerview.animators.SlideInUpAnimator: void animateRemoveImpl(android.support.v7.widget.RecyclerView$ViewHolder)
-jp.wasabeef.recyclerview.animators.SlideInUpAnimator: void preAnimateAdd(android.support.v7.widget.RecyclerView$ViewHolder)
+jp.wasabeef.recyclerview.animators.SlideInUpAnimator: void preAnimateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.SlideInUpAnimator: void animateAddImpl(android.support.v7.widget.RecyclerView$ViewHolder)
 jp.wasabeef.recyclerview.animators.adapters.AlphaInAnimationAdapter
 jp.wasabeef.recyclerview.animators.adapters.AlphaInAnimationAdapter: AlphaInAnimationAdapter(android.support.v7.widget.RecyclerView$Adapter)
@@ -17230,8 +17585,11 @@ jp.wasabeef.recyclerview.animators.adapters.AnimationAdapter: android.support.v7
 jp.wasabeef.recyclerview.animators.adapters.AnimationAdapter: void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int)
 jp.wasabeef.recyclerview.animators.adapters.AnimationAdapter: int getItemCount()
 jp.wasabeef.recyclerview.animators.adapters.AnimationAdapter: void setDuration(int)
+jp.wasabeef.recyclerview.animators.adapters.AnimationAdapter: void setInterpolator(android.view.animation.Interpolator)
 jp.wasabeef.recyclerview.animators.adapters.AnimationAdapter: void setStartPosition(int)
 jp.wasabeef.recyclerview.animators.adapters.AnimationAdapter: android.animation.Animator[] getAnimators(android.view.View)
+jp.wasabeef.recyclerview.animators.adapters.AnimationAdapter: void setFirstOnly(boolean)
+jp.wasabeef.recyclerview.animators.adapters.AnimationAdapter: int getItemViewType(int)
 jp.wasabeef.recyclerview.animators.adapters.ScaleInAnimationAdapter
 jp.wasabeef.recyclerview.animators.adapters.ScaleInAnimationAdapter: ScaleInAnimationAdapter(android.support.v7.widget.RecyclerView$Adapter)
 jp.wasabeef.recyclerview.animators.adapters.ScaleInAnimationAdapter: ScaleInAnimationAdapter(android.support.v7.widget.RecyclerView$Adapter,float)
@@ -17245,6 +17603,12 @@ jp.wasabeef.recyclerview.animators.adapters.SlideInLeftAnimationAdapter: android
 jp.wasabeef.recyclerview.animators.adapters.SlideInRightAnimationAdapter
 jp.wasabeef.recyclerview.animators.adapters.SlideInRightAnimationAdapter: SlideInRightAnimationAdapter(android.support.v7.widget.RecyclerView$Adapter)
 jp.wasabeef.recyclerview.animators.adapters.SlideInRightAnimationAdapter: android.animation.Animator[] getAnimators(android.view.View)
+jp.wasabeef.recyclerview.animators.holder.AnimateViewHolder
+jp.wasabeef.recyclerview.animators.holder.AnimateViewHolder: AnimateViewHolder(android.view.View)
+jp.wasabeef.recyclerview.animators.holder.AnimateViewHolder: void preAnimateAddImpl()
+jp.wasabeef.recyclerview.animators.holder.AnimateViewHolder: void preAnimateRemoveImpl()
+jp.wasabeef.recyclerview.animators.holder.AnimateViewHolder: void animateAddImpl(android.support.v4.view.ViewPropertyAnimatorListener)
+jp.wasabeef.recyclerview.animators.holder.AnimateViewHolder: void animateRemoveImpl(android.support.v4.view.ViewPropertyAnimatorListener)
 jp.wasabeef.recyclerview.animators.internal.ViewHelper
 jp.wasabeef.recyclerview.animators.internal.ViewHelper: ViewHelper()
 jp.wasabeef.recyclerview.animators.internal.ViewHelper: void clear(android.view.View)
@@ -19419,8 +19783,6 @@ uk.co.chrisjenx.calligraphy.R$dimen: int disabled_alpha_material_dark
 uk.co.chrisjenx.calligraphy.R$dimen: int disabled_alpha_material_light
 uk.co.chrisjenx.calligraphy.R$dimen: R$dimen()
 uk.co.chrisjenx.calligraphy.R$drawable
-uk.co.chrisjenx.calligraphy.R$drawable: int abc_ab_share_pack_holo_dark
-uk.co.chrisjenx.calligraphy.R$drawable: int abc_ab_share_pack_holo_light
 uk.co.chrisjenx.calligraphy.R$drawable: int abc_btn_check_material
 uk.co.chrisjenx.calligraphy.R$drawable: int abc_btn_check_to_on_mtrl_000
 uk.co.chrisjenx.calligraphy.R$drawable: int abc_btn_check_to_on_mtrl_015
@@ -19549,7 +19911,6 @@ uk.co.chrisjenx.calligraphy.R$layout: int abc_action_menu_layout
 uk.co.chrisjenx.calligraphy.R$layout: int abc_action_mode_bar
 uk.co.chrisjenx.calligraphy.R$layout: int abc_action_mode_close_item_material
 uk.co.chrisjenx.calligraphy.R$layout: int abc_activity_chooser_view
-uk.co.chrisjenx.calligraphy.R$layout: int abc_activity_chooser_view_include
 uk.co.chrisjenx.calligraphy.R$layout: int abc_activity_chooser_view_list_item
 uk.co.chrisjenx.calligraphy.R$layout: int abc_expanded_menu_layout
 uk.co.chrisjenx.calligraphy.R$layout: int abc_list_menu_item_checkbox
@@ -19677,8 +20038,6 @@ uk.co.chrisjenx.calligraphy.R$style: int Base_Widget_AppCompat_Light_ActionBar_T
 uk.co.chrisjenx.calligraphy.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabText
 uk.co.chrisjenx.calligraphy.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse
 uk.co.chrisjenx.calligraphy.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabView
-uk.co.chrisjenx.calligraphy.R$style: int Base_Widget_AppCompat_Light_ActivityChooserView
-uk.co.chrisjenx.calligraphy.R$style: int Base_Widget_AppCompat_Light_AutoCompleteTextView
 uk.co.chrisjenx.calligraphy.R$style: int Base_Widget_AppCompat_Light_PopupMenu
 uk.co.chrisjenx.calligraphy.R$style: int Base_Widget_AppCompat_Light_PopupMenu_Overflow
 uk.co.chrisjenx.calligraphy.R$style: int Base_Widget_AppCompat_ListPopupWindow

@@ -37,7 +37,7 @@ public class CheckAppReceiver extends BroadcastReceiver {
                 .setWhen(System.currentTimeMillis())
                 .setAutoCancel(true)
                 .setLocalOnly(true)
-                .setContentTitle(context.getString(com.radmagnet.R.string.notif_title))
+                .setContentTitle(context.getString(R.string.app_name))
                 .setContentText(context.getString(com.radmagnet.R.string.notif_content));
 
         Notification notification = builder.build();

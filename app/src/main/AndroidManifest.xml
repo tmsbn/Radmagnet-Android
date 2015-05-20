@@ -3,7 +3,7 @@
     package="com.radmagnet">
 
     <supports-screens
-        android:largeScreens="true"
+        android:largeScreens="false"
         android:normalScreens="true"
         android:smallScreens="false"
         android:xlargeScreens="false" />

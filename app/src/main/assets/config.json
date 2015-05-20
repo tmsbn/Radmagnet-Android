@@ -1,7 +1,13 @@
 {
   "categories": [
     {
-      "name": "University News",
+      "name": "Broadcast",
+      "color": "#00A8FF",
+      "value": "broadcast",
+      "icon": "ic_broadcast"
+    },
+    {
+      "name": "News",
       "color": "#F7931E",
       "value": "news",
       "icon": "ic_uninews"

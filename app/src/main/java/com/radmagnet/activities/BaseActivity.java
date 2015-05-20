@@ -40,7 +40,7 @@ import uk.co.chrisjenx.calligraphy.TypefaceUtils;
  */
 public abstract class BaseActivity extends ActionBarActivity {
 
-    protected static final ConfigVars sConfig = null;
+    protected static ConfigVars sConfig = null;
 
     SharedPreferences mPrefs;
 
@@ -63,16 +63,15 @@ public abstract class BaseActivity extends ActionBarActivity {
                 Gson gson = new Gson();
                 InputStream input = getAssets().open("config.json");
                 String text = IOUtils.toString(input);
-                return gson.fromJson(text, ConfigVars.class);
+                sConfig = gson.fromJson(text, ConfigVars.class);
 
             } catch (Exception e) {
                 Log.d("sConfig test", e.getMessage());
-                return null;
 
             }
 
-        } else
-            return sConfig;
+        }
+        return sConfig;
     }
 
     public int getColorFromCategory(String postType) {
@@ -87,7 +86,7 @@ public abstract class BaseActivity extends ActionBarActivity {
     }
 
 
-    public Drawable getIconFromCategory(String categoryName) throws Exception{
+    public Drawable getIconFromCategory(String categoryName) throws Exception {
 
         String drawableName = "";
         for (Category category : getConfig().categories) {
@@ -205,24 +204,5 @@ public abstract class BaseActivity extends ActionBarActivity {
 
     }
 
-    public String getDateSuffix(int day) {
 
-        switch (day) {
-            case 1:
-            case 21:
-            case 31:
-                return ("st");
-
-            case 2:
-            case 22:
-                return ("nd");
-
-            case 3:
-            case 23:
-                return ("rd");
-
-            default:
-                return ("th");
-        }
-    }
 }

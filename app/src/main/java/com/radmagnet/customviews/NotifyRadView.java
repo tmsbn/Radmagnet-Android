@@ -16,7 +16,7 @@ import java.util.ArrayList;
  */
 public class NotifyRadView extends TextView {
 
-    final int ANIMATION_DURATION = 4500;
+    final int ANIMATION_DURATION = 3500;
     boolean isAnimationStarted = false;
 
     View[] mViews;
