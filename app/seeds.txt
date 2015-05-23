@@ -10344,7 +10344,6 @@ com.radmagnet.R$string: int noLovedRads_msg
 com.radmagnet.R$string: int noRadsHere_msg
 com.radmagnet.R$string: int noUpdatesAvaliable_msg
 com.radmagnet.R$string: int notif_content
-com.radmagnet.R$string: int notif_title
 com.radmagnet.R$string: int percentage_txt
 com.radmagnet.R$string: int radsILove_txt
 com.radmagnet.R$string: int required_txt

@@ -12,7 +12,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -89,11 +88,15 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     LinearLayoutManager linearLayoutManager;
     boolean isUILoaded = false;
 
+    Bundle savedInstanceState;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        this.savedInstanceState = savedInstanceState;
 
         ButterKnife.inject(this);
         setupActionBar(false, mToolbar);
@@ -146,7 +149,11 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
     private void setupCategoriesList() {
 
         ArrayList<Category> categories = getConfig().categories;
-        categories.add(0, new Category(getString(R.string.allTheRad_txt), "#" + Integer.toHexString(getResources().getColor(android.R.color.white)), "", "ic_alltherad", true));
+
+        //for the AllRads duplication bug
+        if (savedInstanceState == null)
+            categories.add(0, new Category(getString(R.string.allTheRad_txt), "#" + Integer.toHexString(getResources().getColor(android.R.color.white)), "", "ic_alltherad", true));
+
         mCategoriesAdapter = new CategoriesAdapter(this, categories);
         mCategoriesLv.setAdapter(mCategoriesAdapter);
         mCategoriesLv.setOnItemClickListener(this);
@@ -158,8 +165,8 @@ public class MainActivity extends BaseActivity implements AdapterView.OnItemClic
 
 
         ArrayList<Category> options = new ArrayList<>();
-        options.add(new Category(getString(com.radmagnet.R.string.radsILove_txt), "#333333","ic_radilove"));
-        options.add(new Category(getString(com.radmagnet.R.string.feedback_txt), "#D9E021","ic_feedback"));
+        options.add(new Category(getString(com.radmagnet.R.string.radsILove_txt), "#333333", "ic_radilove"));
+        options.add(new Category(getString(com.radmagnet.R.string.feedback_txt), "#D9E021", "ic_feedback"));
 
         mOtherOptionsLv.setAdapter(new OtherOptionsAdapter(this, options));
 

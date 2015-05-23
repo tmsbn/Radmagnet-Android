@@ -1344,9 +1344,10 @@ com.joanzapata.android.iconify.Utils:
 com.radmagnet.activities.SplashActivity:
     private static final int REPEAT_NOTIF_AFTER_DAYS
     private static final int REPEAT_DB_MAINTAINCE_AFTER_DAYS
+    90:98:private void deleteRealmData()
 com.radmagnet.adapters.NewsAdapter:
     int height
-    253:258:private void setAnimation(android.view.View,int)
+    251:256:private void setAnimation(android.view.View,int)
 com.radmagnet.api.RadmagnetApi:
     private static final java.lang.String URL
 com.radmagnet.fragment.NewsFragment:

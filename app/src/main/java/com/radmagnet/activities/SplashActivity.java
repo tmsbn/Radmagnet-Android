@@ -60,7 +60,7 @@ public class SplashActivity extends BaseActivity {
         int SPLASH_DISPLAY_LENGTH = 2000;
         mAlarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
-        deleteRealmData();
+       // deleteRealmData();
         setupReminderNotification();
         setupRealmCleaningService();
 

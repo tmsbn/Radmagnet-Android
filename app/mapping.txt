@@ -19616,7 +19616,6 @@ com.radmagnet.R$string -> com.radmagnet.R$string:
     int noRadsHere_msg -> noRadsHere_msg
     int noUpdatesAvaliable_msg -> noUpdatesAvaliable_msg
     int notif_content -> notif_content
-    int notif_title -> notif_title
     int percentage_txt -> percentage_txt
     int radsILove_txt -> radsILove_txt
     int required_txt -> required_txt
@@ -20323,7 +20322,7 @@ com.radmagnet.activities.FeedbackActivity$2 -> afx:
     com.radmagnet.activities.FeedbackActivity this$0 -> a
     180:182:void run() -> run
 com.radmagnet.activities.MainActivity -> com.radmagnet.activities.MainActivity:
-    int SPLASH_DISPLAY_LENGTH -> w
+    int SPLASH_DISPLAY_LENGTH -> x
     android.support.v7.widget.RecyclerView mNewsRv -> mNewsRv
     android.support.v4.widget.DrawerLayout mDrawerLayout -> mDrawerLayout
     android.widget.ListView mCategoriesLv -> mCategoriesLv
@@ -20340,29 +20339,30 @@ com.radmagnet.activities.MainActivity -> com.radmagnet.activities.MainActivity:
     java.lang.String mSelectedCategory -> t
     android.support.v7.widget.LinearLayoutManager linearLayoutManager -> u
     boolean isUILoaded -> v
-    95:107:void onCreate(android.os.Bundle) -> onCreate
-    111:143:void setupNewsList() -> b
-    148:154:void setupCategoriesList() -> c
-    160:190:void setupOtherSideBarOptions() -> d
-    194:204:void setupDrawer() -> e
-    209:215:void fetchLatestNews() -> f
-    219:226:void showLoadingIcon(boolean) -> b
-    230:231:void onRefresh() -> onRefresh
-    236:238:boolean onClose() -> onClose
-    244:262:void onItemClick(com.radmagnet.models.News,int) -> onItemClick
-    319:321:void onDestroy() -> onDestroy
-    324:329:long getMaxKey() -> g
-    334:351:io.realm.RealmResults getRealmData() -> h
-    358:360:void onPostCreate(android.os.Bundle) -> onPostCreate
-    364:366:void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
-    371:383:void onBackPressed() -> onBackPressed
-    389:410:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
-    416:421:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
-    427:445:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-    449:451:boolean onQueryTextSubmit(java.lang.String) -> onQueryTextSubmit
-    458:467:boolean onQueryTextChange(java.lang.String) -> onQueryTextChange
-    49:49:long access$100(com.radmagnet.activities.MainActivity) -> a
-    49:49:void access$200(com.radmagnet.activities.MainActivity,boolean) -> a
+    android.os.Bundle savedInstanceState -> w
+    96:110:void onCreate(android.os.Bundle) -> onCreate
+    114:146:void setupNewsList() -> b
+    151:161:void setupCategoriesList() -> c
+    167:197:void setupOtherSideBarOptions() -> d
+    201:211:void setupDrawer() -> e
+    216:222:void fetchLatestNews() -> f
+    226:233:void showLoadingIcon(boolean) -> b
+    237:238:void onRefresh() -> onRefresh
+    243:245:boolean onClose() -> onClose
+    251:269:void onItemClick(com.radmagnet.models.News,int) -> onItemClick
+    326:328:void onDestroy() -> onDestroy
+    331:336:long getMaxKey() -> g
+    341:358:io.realm.RealmResults getRealmData() -> h
+    365:367:void onPostCreate(android.os.Bundle) -> onPostCreate
+    371:373:void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    378:390:void onBackPressed() -> onBackPressed
+    396:417:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    423:428:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    434:452:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+    456:458:boolean onQueryTextSubmit(java.lang.String) -> onQueryTextSubmit
+    465:474:boolean onQueryTextChange(java.lang.String) -> onQueryTextChange
+    48:48:long access$100(com.radmagnet.activities.MainActivity) -> a
+    48:48:void access$200(com.radmagnet.activities.MainActivity,boolean) -> a
 com.radmagnet.activities.MainActivity$$ViewInjector -> com.radmagnet.activities.MainActivity$$ViewInjector:
     11:27:void inject(butterknife.ButterKnife$Finder,com.radmagnet.activities.MainActivity,java.lang.Object) -> inject
     30:38:void reset(com.radmagnet.activities.MainActivity) -> reset
@@ -20370,32 +20370,32 @@ com.radmagnet.activities.MainActivity$$ViewInjector -> com.radmagnet.activities.
     8:8:void inject(butterknife.ButterKnife$Finder,java.lang.Object,java.lang.Object) -> inject
 com.radmagnet.activities.MainActivity$1 -> afy:
     com.radmagnet.activities.MainActivity this$0 -> a
-    136:137:void onClick(android.view.View) -> onClick
+    139:140:void onClick(android.view.View) -> onClick
 com.radmagnet.activities.MainActivity$2 -> afz:
     com.radmagnet.activities.MainActivity this$0 -> a
-    171:188:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+    178:195:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
 com.radmagnet.activities.MainActivity$3 -> aga:
     boolean val$visibility -> a
     com.radmagnet.activities.MainActivity this$0 -> b
-    222:223:void run() -> run
+    229:230:void run() -> run
 com.radmagnet.activities.MainActivity$4 -> agb:
     com.radmagnet.models.News val$newsItem -> a
     com.radmagnet.activities.MainActivity this$0 -> b
-    254:255:void execute(io.realm.Realm) -> execute
+    261:262:void execute(io.realm.Realm) -> execute
 com.radmagnet.activities.MainActivity$5 -> agc:
     com.radmagnet.activities.MainActivity this$0 -> a
-    395:396:boolean onMenuItemActionExpand(android.view.MenuItem) -> onMenuItemActionExpand
-    401:402:boolean onMenuItemActionCollapse(android.view.MenuItem) -> onMenuItemActionCollapse
+    402:403:boolean onMenuItemActionExpand(android.view.MenuItem) -> onMenuItemActionExpand
+    408:409:boolean onMenuItemActionCollapse(android.view.MenuItem) -> onMenuItemActionCollapse
 com.radmagnet.activities.MainActivity$GetNewsCallback -> agd:
     com.radmagnet.activities.MainActivity this$0 -> a
-    270:304:void success(com.radmagnet.models.NewsResponse,retrofit.client.Response) -> a
-    310:313:void failure(retrofit.RetrofitError) -> failure
-    264:264:void success(java.lang.Object,retrofit.client.Response) -> success
+    277:311:void success(com.radmagnet.models.NewsResponse,retrofit.client.Response) -> a
+    317:320:void failure(retrofit.RetrofitError) -> failure
+    271:271:void success(java.lang.Object,retrofit.client.Response) -> success
 com.radmagnet.activities.MainActivity$GetNewsCallback$1 -> age:
     java.util.ArrayList val$newsList -> a
     com.radmagnet.models.NewsResponse val$newsResponse -> b
     com.radmagnet.activities.MainActivity$GetNewsCallback this$1 -> c
-    293:296:void execute(io.realm.Realm) -> execute
+    300:303:void execute(io.realm.Realm) -> execute
 com.radmagnet.activities.SplashActivity -> com.radmagnet.activities.SplashActivity:
     android.app.AlarmManager mAlarmManager -> o
     com.radmagnet.customviews.AutoScrollViewPager mIntroPager -> mIntroPager
@@ -20403,7 +20403,6 @@ com.radmagnet.activities.SplashActivity -> com.radmagnet.activities.SplashActivi
     com.viewpagerindicator.CirclePageIndicator mCirclePageIndicator -> mCirclePageIndicator
     android.widget.Button mStartButton -> mStartButton
     56:85:void onCreate(android.os.Bundle) -> onCreate
-    90:98:void deleteRealmData() -> b
     102:134:void setUpPager() -> setUpPager
     139:144:void startFeed() -> startFeed
     149:174:void setupRealmCleaningService() -> setupRealmCleaningService
@@ -20498,19 +20497,19 @@ com.radmagnet.adapters.NewsAdapter -> com.radmagnet.adapters.NewsAdapter:
     com.radmagnet.adapters.NewsAdapter$NewsItemClickListener mListener -> b
     int lastPosition -> e
     java.lang.String mSearchTerm -> c
-    73:74:void setOnItemClickedListener(com.radmagnet.adapters.NewsAdapter$NewsItemClickListener) -> setOnItemClickedListener
-    79:81:com.radmagnet.adapters.NewsAdapter$NewsHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
-    87:87:long getItemId(int) -> getItemId
-    93:182:void onBindViewHolder(com.radmagnet.adapters.NewsAdapter$NewsHolder,int) -> onBindViewHolder
-    188:188:int getItemCount() -> getItemCount
-    193:193:io.realm.RealmResults getRealmResults() -> getRealmResults
-    234:236:void setSearchTerm(java.lang.String) -> setSearchTerm
-    239:243:void updateRealmResults(io.realm.RealmResults) -> updateRealmResults
-    34:34:void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onBindViewHolder
-    34:34:android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
+    72:73:void setOnItemClickedListener(com.radmagnet.adapters.NewsAdapter$NewsItemClickListener) -> setOnItemClickedListener
+    78:80:com.radmagnet.adapters.NewsAdapter$NewsHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
+    86:86:long getItemId(int) -> getItemId
+    92:180:void onBindViewHolder(com.radmagnet.adapters.NewsAdapter$NewsHolder,int) -> onBindViewHolder
+    186:186:int getItemCount() -> getItemCount
+    191:191:io.realm.RealmResults getRealmResults() -> getRealmResults
+    232:234:void setSearchTerm(java.lang.String) -> setSearchTerm
+    237:241:void updateRealmResults(io.realm.RealmResults) -> updateRealmResults
+    33:33:void onBindViewHolder(android.support.v7.widget.RecyclerView$ViewHolder,int) -> onBindViewHolder
+    33:33:android.support.v7.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int) -> onCreateViewHolder
 com.radmagnet.adapters.NewsAdapter$1 -> agl:
     com.radmagnet.adapters.NewsAdapter this$0 -> a
-    63:64:void onChange() -> onChange
+    62:63:void onChange() -> onChange
 com.radmagnet.adapters.NewsAdapter$2 -> agm:
     com.radmagnet.models.News val$news -> a
     int val$position -> b

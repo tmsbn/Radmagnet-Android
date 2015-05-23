@@ -13,15 +13,14 @@ import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.radmagnet.BaseApplication;
-import com.radmagnet.utils.CircleTransform;
-import com.radmagnet.customviews.EventsView;
 import com.radmagnet.R;
 import com.radmagnet.activities.BaseActivity;
+import com.radmagnet.customviews.EventsView;
 import com.radmagnet.models.News;
+import com.radmagnet.utils.CircleTransform;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
@@ -122,18 +121,17 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
 
 
             //category
-           // holder.categoryIv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
+            // holder.categoryIv.setText(activity.getTitleFromConfig(news.getCategory()).toUpperCase());
             holder.categoryIv.getBackground().setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
-            try{
+            try {
                 holder.categoryIv.setImageDrawable(activity.getIconFromCategory(news.getCategory()));
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
 
 
-
             //is the news item read
-            if(news.isRead())
+            if (news.isRead())
                 holder.isNewTv.setVisibility(View.GONE);
             else {
                 holder.isNewTv.setVisibility(View.VISIBLE);
@@ -144,16 +142,18 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
 
             //events
             holder.frameLayout.getBackground().setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.MULTIPLY));
+
+            //bug fix for incorrect start date issue
+            if (holder.frameLayout.getChildCount() > 0)
+                holder.frameLayout.removeViewAt(0);
+
+            //event start date and & broadcast date
             if (news.getStartDate() != null && news.getStartDate().getTime() != 0) {
 
                 EventsView eventsView = new EventsView(mContext);
                 eventsView.setDate(news.getStartDate());
-                if (holder.frameLayout.getChildCount() == 0)
-                    holder.frameLayout.addView(eventsView);
+                holder.frameLayout.addView(eventsView);
 
-            } else {
-                if (holder.frameLayout.getChildCount() > 0)
-                    holder.frameLayout.removeViewAt(0);
             }
 
             //location
@@ -175,8 +175,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
                     mListener.onItemClick(news, position);
             }
         });
-
-
 
 
     }
@@ -222,7 +220,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsHolder> {
             creatorDp = (ImageView) v.findViewById(com.radmagnet.R.id.creatorDp);
             frameLayout = (FrameLayout) v.findViewById(com.radmagnet.R.id.specific_details);
             location = (TextView) v.findViewById(R.id.location);
-            isNewTv= (TextView) v.findViewById(R.id.newItem);
+            isNewTv = (TextView) v.findViewById(R.id.newItem);
 
 
         }

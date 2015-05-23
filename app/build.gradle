@@ -11,8 +11,8 @@ android {
         applicationId "com.radmagnet"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 104
-        versionName "1.0 RC-2"
+        versionCode 106
+        versionName "1.0 RC-4"
 
     }
     buildTypes {
@@ -25,7 +25,6 @@ android {
 
         release {
             minifyEnabled true
-
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
